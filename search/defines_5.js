@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['game_5fsettings_5f0001_19064',['GAME_SETTINGS_0001',['../mm7__data_8h.html#a3382d96926ca3537f1cd42ac98039b28',1,'mm7_data.h']]],
+  ['game_5fsettings_5f0080_5fskip_5fuser_5finput_5fthis_5fframe_19065',['GAME_SETTINGS_0080_SKIP_USER_INPUT_THIS_FRAME',['../mm7__data_8h.html#a4f0b124ba0e0fa0f8126e2f6089ede70',1,'mm7_data.h']]],
+  ['game_5fsettings_5f0200_5fevent_5ftimer_19066',['GAME_SETTINGS_0200_EVENT_TIMER',['../mm7__data_8h.html#a92bab94e3d98931d4ebb3f1bdd95b3d0',1,'mm7_data.h']]],
+  ['game_5fsettings_5f0400_5fmisc_5ftimer_19067',['GAME_SETTINGS_0400_MISC_TIMER',['../mm7__data_8h.html#a69c8b18d9e5bc926973fe271086e6cd3',1,'mm7_data.h']]],
+  ['game_5fsettings_5f0800_19068',['GAME_SETTINGS_0800',['../mm7__data_8h.html#ab33b7efa1ac996549ab6f7f5231d8a45',1,'mm7_data.h']]],
+  ['game_5fsettings_5f1000_19069',['GAME_SETTINGS_1000',['../mm7__data_8h.html#a121d8f6159dcc87925b02b8b5528c342',1,'mm7_data.h']]],
+  ['game_5fsettings_5f4000_19070',['GAME_SETTINGS_4000',['../mm7__data_8h.html#ab2bc92093cbdb197d56007957ea9441f',1,'mm7_data.h']]],
+  ['game_5fsettings_5fapp_5finactive_19071',['GAME_SETTINGS_APP_INACTIVE',['../mm7__data_8h.html#af32cb062900feee7782caa710eb62f68',1,'mm7_data.h']]],
+  ['game_5fsettings_5finvalid_5fresolution_19072',['GAME_SETTINGS_INVALID_RESOLUTION',['../mm7__data_8h.html#a3af50437d191cafbfcaff58a2a06f585',1,'mm7_data.h']]],
+  ['game_5fsettings_5floading_5fsavegame_5fskip_5frespawn_19073',['GAME_SETTINGS_LOADING_SAVEGAME_SKIP_RESPAWN',['../mm7__data_8h.html#a6cb54067a17b92a7de6151b7c93e44c0',1,'mm7_data.h']]],
+  ['game_5fsettings_5fno_5fhouse_5fanim_19074',['GAME_SETTINGS_NO_HOUSE_ANIM',['../mm7__data_8h.html#a5ff6afda1e98b0e1424db049b62d6683',1,'mm7_data.h']]],
+  ['game_5fsettings_5fno_5fintro_19075',['GAME_SETTINGS_NO_INTRO',['../mm7__data_8h.html#afab7bb37f5d5cfb4cb88ae36068a436f',1,'mm7_data.h']]],
+  ['game_5fsettings_5fno_5flogo_19076',['GAME_SETTINGS_NO_LOGO',['../mm7__data_8h.html#af2ac3cbc8c256878c5cc622a5eadc71c',1,'mm7_data.h']]],
+  ['game_5fsettings_5fno_5fsound_19077',['GAME_SETTINGS_NO_SOUND',['../mm7__data_8h.html#a8ed1316556f7bf55e19809f6339166ba',1,'mm7_data.h']]],
+  ['game_5fsettings_5fno_5fwalk_5fsound_19078',['GAME_SETTINGS_NO_WALK_SOUND',['../mm7__data_8h.html#aa9d55a30473f358fa91ba3e24453af6e',1,'mm7_data.h']]],
+  ['game_5ftime_5fto_5fseconds_19079',['GAME_TIME_TO_SECONDS',['../Time_8h.html#a92d0188cd169ae2c9b9bd59af68ab5f3',1,'Time.h']]]
+];
