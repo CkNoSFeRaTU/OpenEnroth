@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['build_20from_20repository_0',['Build from repository',['../md_HACKING.html',1,'']]]
+  ['building_20instructions_20and_20guidance_0',['Building instructions and guidance',['../md_HACKING.html',1,'']]]
 ];
