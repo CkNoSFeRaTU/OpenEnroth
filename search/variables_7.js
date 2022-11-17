@@ -79,7 +79,7 @@ var searchData=
   ['gamma_5fpreview_5fimage_76',['gamma_preview_image',['../Game_8cpp.html#ac6f4e0c573a089ef4ae9dcec20e4d531',1,'gamma_preview_image():&#160;Game.cpp'],['../Game_8h.html#ae0d7c78f764d67256a5bcf2351b2bda1',1,'gamma_preview_image():&#160;Game.cpp']]],
   ['gdiplusstartupinput_77',['gdiplusStartupInput',['../classRender.html#a5378f2fb71e37e6dc7d81eb7bd3c2562',1,'Render']]],
   ['gdiplustoken_78',['gdiplusToken',['../classRender.html#a326afbe3dc8b64c46b26714229940e9e',1,'Render']]],
-  ['gems_5famount_79',['gems_amount',['../structArcomageStartConditions.html#a7a6bcd9efb108f4047cd6bc08a8bf097',1,'ArcomageStartConditions']]],
+  ['gems_5famount_79',['gems_amount',['../structArcomageStartConditions.html#a25723a754e76e76e5ec3d2357802c9a4',1,'ArcomageStartConditions']]],
   ['gender_80',['gender',['../structGenderTableEntry.html#a01a9af90782f16840ed9dd4058bddf5b',1,'GenderTableEntry']]],
   ['gender_5ftable_81',['gender_table',['../mm7text__ru_8cpp.html#aa4d4b6d178c81a28e77289f0eab918c7',1,'mm7text_ru.cpp']]],
   ['gender_5ftable_5fcaps_82',['gender_table_caps',['../mm7text__ru_8cpp.html#a9e3972d5534f46aab22dcb29b0eac287',1,'mm7text_ru.cpp']]],
@@ -98,7 +98,7 @@ var searchData=
   ['gray_95',['Gray',['../classColorTable.html#af607914fccdf7ee8a4b6a0b6bafa26b8',1,'ColorTable']]],
   ['green_96',['Green',['../classColorTable.html#a1a98a99885af0003e2d2c557f1b10f8c',1,'ColorTable']]],
   ['green_97',['green',['../structGLdecalverts.html#a40238226a73686e0edf4232d137d8b25',1,'GLdecalverts']]],
-  ['greet_98',['greet',['../structNPCData__Image__MM7.html#ade1402563dfbcd52572d325466925494',1,'NPCData_Image_MM7::greet()'],['../structNPCData.html#a2170b2c689647b237415b07cb00a916d',1,'NPCData::greet()']]],
+  ['greet_98',['greet',['../structNPCData__MM7.html#aaa8b2dac85a6ca52f07e3330c8c9531d',1,'NPCData_MM7::greet()'],['../structNPCData.html#a2170b2c689647b237415b07cb00a916d',1,'NPCData::greet()']]],
   ['ground_5ftileset_99',['ground_tileset',['../structOutdoorLocation.html#a8a2d61e12d123826b612618c3192bd95',1,'OutdoorLocation']]],
   ['guild_5fmembership_5fapproved_100',['guild_membership_approved',['../mm7__data_8cpp.html#a41e6f6a37a68a26205a85dee4621a3c2',1,'guild_membership_approved():&#160;mm7_data.cpp'],['../mm7__data_8h.html#a41e6f6a37a68a26205a85dee4621a3c2',1,'guild_membership_approved():&#160;mm7_data.cpp']]],
   ['guild_5fmembership_5fflags_101',['guild_membership_flags',['../mm7__data_8cpp.html#a17957e8d22a317dc3d10a27331a3279d',1,'guild_membership_flags():&#160;mm7_data.cpp'],['../mm7__data_8h.html#a17957e8d22a317dc3d10a27331a3279d',1,'guild_membership_flags():&#160;mm7_data.cpp']]]

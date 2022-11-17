@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rgbcolor_0',['RGBColor',['../GUIWindow_8cpp.html#acbc9da7672f18f747dcc88210702a6e9',1,'GUIWindow.cpp']]]
+  ['nodes_0',['Nodes',['../classVideoList.html#a33414b38b0010b86e7d91be7049e007c',1,'VideoList']]]
 ];
