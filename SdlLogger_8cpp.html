@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: Member List</title>
+<title>World of Might and Magic: src/Platform/Sdl/SdlLogger.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;53eee80</span>
+   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4eaecac</span>
    </div>
   </td>
  </tr>
@@ -69,21 +69,54 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceEngine__.html">Engine_</a></li><li class="navelem"><a class="el" href="classEngine___1_1CommandLine.html">CommandLine</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6d0941966393c11bd90ec42cc10d3b81.html">Platform</a></li><li class="navelem"><a class="el" href="dir_8a98aea1b729cdfc84c07408466fa643.html">Sdl</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">Engine_::CommandLine Member List</div></div>
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">SdlLogger.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="SdlLogger_8h.html">SdlLogger.h</a>&quot;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;SDL_log.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="SdlEnumTranslation_8h.html">SdlEnumTranslation.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9d9143f8b75fc764754003ad0ec8f0ed"><td class="memItemLeft" align="right" valign="top">static SDL_LogCategory&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SdlLogger_8cpp.html#a9d9143f8b75fc764754003ad0ec8f0ed">TranslatePlatformLogCategory</a> (<a class="el" href="PlatformLogger_8h.html#a295f3cae32081443bbf0a7952a17c531">PlatformLogCategory</a> category)</td></tr>
+<tr class="separator:a9d9143f8b75fc764754003ad0ec8f0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a9d9143f8b75fc764754003ad0ec8f0ed" name="a9d9143f8b75fc764754003ad0ec8f0ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d9143f8b75fc764754003ad0ec8f0ed">&#9670;&#160;</a></span>TranslatePlatformLogCategory()</h2>
 
-<p>This is the complete list of members for <a class="el" href="classEngine___1_1CommandLine.html">Engine_::CommandLine</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classEngine___1_1CommandLine.html#aa288fe005ca27fd9b789e2d8700d800d">command_line_tokens</a></td><td class="entry"><a class="el" href="classEngine___1_1CommandLine.html">Engine_::CommandLine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classEngine___1_1CommandLine.html#a4e12e7b068a37eace73c6afa61dc4f24">CommandLine</a>(const std::string &amp;command_line)</td><td class="entry"><a class="el" href="classEngine___1_1CommandLine.html">Engine_::CommandLine</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classEngine___1_1CommandLine.html#a3c23ce778e46f3be8e945bf4f80f1b45">TryFindKey</a>(const std::string &amp;key) const</td><td class="entry"><a class="el" href="classEngine___1_1CommandLine.html">Engine_::CommandLine</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classEngine___1_1CommandLine.html#a1651fcf0b20fca934d47c2816624412a">TryGetValue</a>(const std::string &amp;key, std::shared_ptr&lt; std::string &gt; *out_value) const</td><td class="entry"><a class="el" href="classEngine___1_1CommandLine.html">Engine_::CommandLine</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SDL_LogCategory TranslatePlatformLogCategory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="PlatformLogger_8h.html#a295f3cae32081443bbf0a7952a17c531">PlatformLogCategory</a>&#160;</td>
+          <td class="paramname"><em>category</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
