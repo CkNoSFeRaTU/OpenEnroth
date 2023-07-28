@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/GUI/UI/UISaveLoad.cpp File Reference</title>
+<title>OpenEnroth: src/GUI/UI/UISaveLoad.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -82,20 +82,28 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="UISaveLoad_8h.html">GUI/UI/UISaveLoad.h</a>&quot;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 <code>#include &quot;<a class="el" href="Engine_8h.html">Engine/Engine.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="EngineGlobals_8h.html">Engine/EngineGlobals.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="AssetsManager_8h.html">Engine/AssetsManager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="IRender_8h.html">Engine/Graphics/IRender.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ImageLoader_8h.html">Engine/Graphics/ImageLoader.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Viewport_8h.html">Engine/Graphics/Viewport.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Engine_2Graphics_2Image_8h.html">Engine/Graphics/Image.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="EntitySnapshots_8h.html">Engine/Snapshots/EntitySnapshots.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Localization_8h.html">Engine/Localization.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LOD_8h.html">Engine/LOD.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="MapInfo_8h.html">Engine/MapInfo.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SaveLoad_8h.html">Engine/SaveLoad.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AudioPlayer_8h.html">Media/Audio/AudioPlayer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="KeyboardInputHandler_8h.html">Io/KeyboardInputHandler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Mouse_8h.html">Io/Mouse.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIButton_8h.html">GUI/GUIButton.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIFont_8h.html">GUI/GUIFont.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="UIMainMenu_8h.html">GUI/UI/UIMainMenu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GUIMessageQueue_8h.html">GUI/GUIMessageQueue.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SnapshotSerialization_8h.html">Library/Snapshots/SnapshotSerialization.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DataPath_8h.html">Utility/DataPath.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -108,12 +116,22 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2e759526258c699de4f727e4a556a437"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#a2e759526258c699de4f727e4a556a437">saveload_ui_ls_saved</a> = nullptr</td></tr>
-<tr class="separator:a2e759526258c699de4f727e4a556a437"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acce658c3ac60cb05d32fb20601464f52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#acce658c3ac60cb05d32fb20601464f52">saveload_ui_x_d</a> = nullptr</td></tr>
-<tr class="separator:acce658c3ac60cb05d32fb20601464f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add0336445fbc5b1ddbed44580000ce5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#add0336445fbc5b1ddbed44580000ce5c">scrollstop</a> = nullptr</td></tr>
-<tr class="separator:add0336445fbc5b1ddbed44580000ce5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e2c0687bceaf86040a9f0bb708418b"><td class="memItemLeft" align="right" valign="top">std::array&lt; unsigned int, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#a65e2c0687bceaf86040a9f0bb708418b">saveload_dlg_xs</a> = {{82, 0}}</td></tr>
+<tr class="separator:a65e2c0687bceaf86040a9f0bb708418b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45194b4a2eccc7497494a5dce81a000d"><td class="memItemLeft" align="right" valign="top">std::array&lt; unsigned int, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#a45194b4a2eccc7497494a5dce81a000d">saveload_dlg_ys</a> = {{60, 0}}</td></tr>
+<tr class="separator:a45194b4a2eccc7497494a5dce81a000d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0acdf43e6ea32e81a8d9352d5e4b7349"><td class="memItemLeft" align="right" valign="top">std::array&lt; unsigned int, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#a0acdf43e6ea32e81a8d9352d5e4b7349">saveload_dlg_zs</a> = {{460, 640}}</td></tr>
+<tr class="separator:a0acdf43e6ea32e81a8d9352d5e4b7349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae05ce9242f7612c5066d6075ac1f9227"><td class="memItemLeft" align="right" valign="top">std::array&lt; unsigned int, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#ae05ce9242f7612c5066d6075ac1f9227">saveload_dlg_ws</a> = {{344, 480}}</td></tr>
+<tr class="separator:ae05ce9242f7612c5066d6075ac1f9227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2ffbd7fcad479f7f1c14e1d7bffb42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#aeb2ffbd7fcad479f7f1c14e1d7bffb42">saveload_ui_ls_saved</a> = nullptr</td></tr>
+<tr class="separator:aeb2ffbd7fcad479f7f1c14e1d7bffb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a905ae7d36d9c494c6ae2499de21c6132"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#a905ae7d36d9c494c6ae2499de21c6132">saveload_ui_x_d</a> = nullptr</td></tr>
+<tr class="separator:a905ae7d36d9c494c6ae2499de21c6132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed05540a012f883160cf3f1d81ebcf8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#a4ed05540a012f883160cf3f1d81ebcf8">scrollstop</a> = nullptr</td></tr>
+<tr class="separator:a4ed05540a012f883160cf3f1d81ebcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f26ef6c2a72f5f4990c7c68f9473cd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UISaveLoad_8cpp.html#a66f26ef6c2a72f5f4990c7c68f9473cd">isLoadSlotClicked</a> = false</td></tr>
+<tr class="separator:a66f26ef6c2a72f5f4990c7c68f9473cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="abd4de24186d4c1e4bd57168122bfed9c" name="abd4de24186d4c1e4bd57168122bfed9c"></a>
@@ -177,44 +195,130 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a2e759526258c699de4f727e4a556a437" name="a2e759526258c699de4f727e4a556a437"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e759526258c699de4f727e4a556a437">&#9670;&#160;</a></span>saveload_ui_ls_saved</h2>
+<a id="a66f26ef6c2a72f5f4990c7c68f9473cd" name="a66f26ef6c2a72f5f4990c7c68f9473cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f26ef6c2a72f5f4990c7c68f9473cd">&#9670;&#160;</a></span>isLoadSlotClicked</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isLoadSlotClicked = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae05ce9242f7612c5066d6075ac1f9227" name="ae05ce9242f7612c5066d6075ac1f9227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae05ce9242f7612c5066d6075ac1f9227">&#9670;&#160;</a></span>saveload_dlg_ws</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* saveload_ui_ls_saved = nullptr</td>
+          <td class="memname">std::array&lt;unsigned int, 2&gt; saveload_dlg_ws = {{344, 480}}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="acce658c3ac60cb05d32fb20601464f52" name="acce658c3ac60cb05d32fb20601464f52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acce658c3ac60cb05d32fb20601464f52">&#9670;&#160;</a></span>saveload_ui_x_d</h2>
+<a id="a65e2c0687bceaf86040a9f0bb708418b" name="a65e2c0687bceaf86040a9f0bb708418b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e2c0687bceaf86040a9f0bb708418b">&#9670;&#160;</a></span>saveload_dlg_xs</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* saveload_ui_x_d = nullptr</td>
+          <td class="memname">std::array&lt;unsigned int, 2&gt; saveload_dlg_xs = {{82, 0}}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="add0336445fbc5b1ddbed44580000ce5c" name="add0336445fbc5b1ddbed44580000ce5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add0336445fbc5b1ddbed44580000ce5c">&#9670;&#160;</a></span>scrollstop</h2>
+<a id="a45194b4a2eccc7497494a5dce81a000d" name="a45194b4a2eccc7497494a5dce81a000d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45194b4a2eccc7497494a5dce81a000d">&#9670;&#160;</a></span>saveload_dlg_ys</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* scrollstop = nullptr</td>
+          <td class="memname">std::array&lt;unsigned int, 2&gt; saveload_dlg_ys = {{60, 0}}</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0acdf43e6ea32e81a8d9352d5e4b7349" name="a0acdf43e6ea32e81a8d9352d5e4b7349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0acdf43e6ea32e81a8d9352d5e4b7349">&#9670;&#160;</a></span>saveload_dlg_zs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;unsigned int, 2&gt; saveload_dlg_zs = {{460, 640}}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb2ffbd7fcad479f7f1c14e1d7bffb42" name="aeb2ffbd7fcad479f7f1c14e1d7bffb42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb2ffbd7fcad479f7f1c14e1d7bffb42">&#9670;&#160;</a></span>saveload_ui_ls_saved</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* saveload_ui_ls_saved = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a905ae7d36d9c494c6ae2499de21c6132" name="a905ae7d36d9c494c6ae2499de21c6132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905ae7d36d9c494c6ae2499de21c6132">&#9670;&#160;</a></span>saveload_ui_x_d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* saveload_ui_x_d = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ed05540a012f883160cf3f1d81ebcf8" name="a4ed05540a012f883160cf3f1d81ebcf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed05540a012f883160cf3f1d81ebcf8">&#9670;&#160;</a></span>scrollstop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* scrollstop = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

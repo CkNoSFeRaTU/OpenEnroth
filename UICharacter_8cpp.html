@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/GUI/UI/UICharacter.cpp File Reference</title>
+<title>OpenEnroth: src/GUI/UI/UICharacter.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -74,43 +74,41 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">UICharacter.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="UICharacter_8h.html">GUI/UI/UICharacter.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="UICharacter_8h.html">UICharacter.h</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &quot;<a class="el" href="AssetsManager_8h.html">Engine/AssetsManager.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Awards_8h.html">Engine/Awards.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Engine_8h.html">Engine/Engine.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="EngineGlobals_8h.html">Engine/EngineGlobals.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="IRender_8h.html">Engine/Graphics/IRender.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Viewport_8h.html">Engine/Graphics/Viewport.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Engine_2Graphics_2Image_8h.html">Engine/Graphics/Image.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LOD_8h.html">Engine/LOD.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Localization_8h.html">Engine/Localization.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ItemTable_8h.html">Engine/Objects/ItemTable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Party_8h.html">Engine/Party.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="CastSpellInfo_8h.html">Engine/Spells/CastSpellInfo.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Time_8h.html">Engine/Time.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ItemTable_8h.html">Engine/Tables/ItemTable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AwardTable_8h.html">Engine/Tables/AwardTable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Spells_8h.html">Engine/Spells/Spells.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIWindow_8h.html">GUI/GUIWindow.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIButton_8h.html">GUI/GUIButton.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIFont_8h.html">GUI/GUIFont.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GUIMessageQueue_8h.html">GUI/GUIMessageQueue.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ItemGrid_8h.html">GUI/UI/ItemGrid.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="UIInventory_8h.html">GUI/UI/UIInventory.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Mouse_8h.html">Io/Mouse.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="AudioPlayer_8h.html">Media/Audio/AudioPlayer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="MapAccess_8h.html">Utility/MapAccess.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Random_8h.html">Utility/Random/Random.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Random_8h.html">Library/Random/Random.h</a>&quot;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a8df51996eaa93ee226542e4ebb9d6f14"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a8df51996eaa93ee226542e4ebb9d6f14">EngineIoc</a> = <a class="el" href="classEngine___1_1IocContainer.html">Engine_::IocContainer</a></td></tr>
-<tr class="separator:a8df51996eaa93ee226542e4ebb9d6f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a22c55e2d8907c16d3a939e5e19cefbaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a22c55e2d8907c16d3a939e5e19cefbaf">CharacterUI_LoadPaperdollTextures</a> ()</td></tr>
@@ -121,24 +119,20 @@ Functions</h2></td></tr>
 <tr class="separator:a2750510181a3547e09758419f0bf1ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8888d0243eda8777916f9d3b8a983411"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a8888d0243eda8777916f9d3b8a983411">set_default_ui_skin</a> ()</td></tr>
 <tr class="separator:a8888d0243eda8777916f9d3b8a983411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7277a70ea5f488e389a767ac60aa1ddc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a7277a70ea5f488e389a767ac60aa1ddc">CharacterUI_SkillsTab_Draw__DrawSkillTable</a> (<a class="el" href="structPlayer.html">Player</a> *player, int x, int y, const std::initializer_list&lt; <a class="el" href="PlayerEnums_8h.html#a882aeeabc7e03f0fa334764a909ab3f5">PLAYER_SKILL_TYPE</a> &gt; skill_list, int right_margin, const char *skill_group_name)</td></tr>
-<tr class="separator:a7277a70ea5f488e389a767ac60aa1ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8041286146ddfd9831d12cdb7a91b88"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ac8041286146ddfd9831d12cdb7a91b88">CharacterUI_SkillsTab_Draw__DrawSkillTable</a> (<a class="el" href="classCharacter.html">Character</a> *player, int x, int y, const std::initializer_list&lt; <a class="el" href="CharacterEnums_8h.html#afb7e1cb64c82efee699c6bd5b7467bb3">CharacterSkillType</a> &gt; skill_list, int right_margin, const char *skill_group_name)</td></tr>
+<tr class="separator:ac8041286146ddfd9831d12cdb7a91b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5561b65e15d53767d6a54e231cf3080f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a5561b65e15d53767d6a54e231cf3080f">GetSizeInInventorySlots</a> (unsigned int uNumPixels)</td></tr>
 <tr class="separator:a5561b65e15d53767d6a54e231cf3080f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6151e5c72717e701f7f8a645e231cb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af6151e5c72717e701f7f8a645e231cb7">draw_leather</a> ()</td></tr>
 <tr class="separator:af6151e5c72717e701f7f8a645e231cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31b43ffab2f0c6b49f5e7d643a956169"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a31b43ffab2f0c6b49f5e7d643a956169">CharacterUI_DrawPaperdoll</a> (<a class="el" href="structPlayer.html">Player</a> *player)</td></tr>
-<tr class="separator:a31b43ffab2f0c6b49f5e7d643a956169"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6d2febe42cd0b0e8ccb635d606c31e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ab6d2febe42cd0b0e8ccb635d606c31e2">CharacterUI_InventoryTab_Draw</a> (<a class="el" href="structPlayer.html">Player</a> *player, bool Cover_Strip)</td></tr>
-<tr class="separator:ab6d2febe42cd0b0e8ccb635d606c31e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a903e6b2e7af5c510b10b913a112b4cd5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a903e6b2e7af5c510b10b913a112b4cd5">CharacterUI_DrawItem</a> (int x, int y, <a class="el" href="structItemGen.html">ItemGen</a> *item, int id, <a class="el" href="classTexture.html">Texture</a> *item_texture, bool doZDraw)</td></tr>
-<tr class="separator:a903e6b2e7af5c510b10b913a112b4cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7f61b52ecfa773b7e621bfe40e66dbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ae7f61b52ecfa773b7e621bfe40e66dbf">CharacterUI_DrawPaperdollWithRingOverlay</a> (<a class="el" href="structPlayer.html">Player</a> *player)</td></tr>
-<tr class="separator:ae7f61b52ecfa773b7e621bfe40e66dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d82b5c47915bf30a5b659836b24326f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a0d82b5c47915bf30a5b659836b24326f">awardSort</a> (int i, int j)</td></tr>
-<tr class="separator:a0d82b5c47915bf30a5b659836b24326f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae242b23698fbbee64a996b0d900b6c03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ae242b23698fbbee64a996b0d900b6c03">FillAwardsData</a> ()</td></tr>
-<tr class="separator:ae242b23698fbbee64a996b0d900b6c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0f9b87a84dae2b0bc932ae358b132c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aac0f9b87a84dae2b0bc932ae358b132c">CharacterUI_DrawPaperdoll</a> (<a class="el" href="classCharacter.html">Character</a> *player)</td></tr>
+<tr class="separator:aac0f9b87a84dae2b0bc932ae358b132c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1766baf83a8b27a8ec3f6bc12593b098"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1766baf83a8b27a8ec3f6bc12593b098">CharacterUI_InventoryTab_Draw</a> (<a class="el" href="classCharacter.html">Character</a> *player, bool Cover_Strip)</td></tr>
+<tr class="separator:a1766baf83a8b27a8ec3f6bc12593b098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9202ee763b884c4e538a0c6aff16e5b3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a9202ee763b884c4e538a0c6aff16e5b3">CharacterUI_DrawItem</a> (int x, int y, <a class="el" href="structItemGen.html">ItemGen</a> *item, int id, <a class="el" href="classGraphicsImage.html">GraphicsImage</a> *item_texture, bool doZDraw)</td></tr>
+<tr class="separator:a9202ee763b884c4e538a0c6aff16e5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc82bd2fd4b2b316d9d380df5907c4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a3dc82bd2fd4b2b316d9d380df5907c4f">CharacterUI_DrawPaperdollWithRingOverlay</a> (<a class="el" href="classCharacter.html">Character</a> *player)</td></tr>
+<tr class="separator:a3dc82bd2fd4b2b316d9d380df5907c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad71d02b1dc110fe90d8cd14a8bc1dd92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ad71d02b1dc110fe90d8cd14a8bc1dd92">OnPaperdollLeftClick</a> ()</td></tr>
 <tr class="separator:ad71d02b1dc110fe90d8cd14a8bc1dd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb06c114747d5ebb5186805c0c71a2fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#adb06c114747d5ebb5186805c0c71a2fe">CharacterUI_ReleaseButtons</a> ()</td></tr>
@@ -150,151 +144,151 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a4a292241ee4b93c3c47b7d2638b8ecf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a4a292241ee4b93c3c47b7d2638b8ecf1">bRingsShownInCharScreen</a></td></tr>
 <tr class="separator:a4a292241ee4b93c3c47b7d2638b8ecf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26cd44fd480e54217a1cea1594e21ad4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a26cd44fd480e54217a1cea1594e21ad4">ui_mainmenu_copyright_color</a></td></tr>
-<tr class="separator:a26cd44fd480e54217a1cea1594e21ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14518df6b88a149a816fdee8fa2eb6a0"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a14518df6b88a149a816fdee8fa2eb6a0">ui_character_tooltip_header_default_color</a></td></tr>
-<tr class="separator:a14518df6b88a149a816fdee8fa2eb6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca8f8fe005e91079973ce5980950573c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aca8f8fe005e91079973ce5980950573c">ui_character_default_text_color</a></td></tr>
-<tr class="separator:aca8f8fe005e91079973ce5980950573c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af281ccb71c006c435811a8eeb92b0014"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af281ccb71c006c435811a8eeb92b0014">ui_character_skill_highlight_color</a></td></tr>
-<tr class="separator:af281ccb71c006c435811a8eeb92b0014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a196c5f3dffe24f1976e2d6dc6a971f0c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a196c5f3dffe24f1976e2d6dc6a971f0c">ui_character_header_text_color</a></td></tr>
-<tr class="separator:a196c5f3dffe24f1976e2d6dc6a971f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adca48c40796308a4d924180c054c911e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#adca48c40796308a4d924180c054c911e">ui_character_bonus_text_color</a></td></tr>
-<tr class="separator:adca48c40796308a4d924180c054c911e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8cbd1e2956463dd0ea326e5b685dd66"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af8cbd1e2956463dd0ea326e5b685dd66">ui_character_bonus_text_color_neg</a></td></tr>
-<tr class="separator:af8cbd1e2956463dd0ea326e5b685dd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a566e6e37a237b6913a2292d93684b4ef"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a566e6e37a237b6913a2292d93684b4ef">ui_character_skill_upgradeable_color</a></td></tr>
-<tr class="separator:a566e6e37a237b6913a2292d93684b4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62d488b76a62e0440dae4f6a1bffa0fb"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a62d488b76a62e0440dae4f6a1bffa0fb">ui_character_skill_default_color</a></td></tr>
-<tr class="separator:a62d488b76a62e0440dae4f6a1bffa0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36f87b1e8b626e5003fa35e1309e88fb"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a36f87b1e8b626e5003fa35e1309e88fb">ui_character_stat_default_color</a></td></tr>
-<tr class="separator:a36f87b1e8b626e5003fa35e1309e88fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac99fb9a04b14dafe24a0bffd598fc244"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ac99fb9a04b14dafe24a0bffd598fc244">ui_character_stat_buffed_color</a></td></tr>
-<tr class="separator:ac99fb9a04b14dafe24a0bffd598fc244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a717f8c9cbfbc9bd570e697ca02ff85b2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a717f8c9cbfbc9bd570e697ca02ff85b2">ui_character_stat_debuffed_color</a></td></tr>
-<tr class="separator:a717f8c9cbfbc9bd570e697ca02ff85b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1472091e40b51bfe2bdb5c36e2922156"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1472091e40b51bfe2bdb5c36e2922156">ui_character_skillinfo_can_learn</a></td></tr>
-<tr class="separator:a1472091e40b51bfe2bdb5c36e2922156"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3e95253fdc184b4ef51da882d7ab530"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ab3e95253fdc184b4ef51da882d7ab530">ui_character_skillinfo_can_learn_gm</a></td></tr>
-<tr class="separator:ab3e95253fdc184b4ef51da882d7ab530"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f6e5802f1830407d4ea57a255f2ceaf"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1f6e5802f1830407d4ea57a255f2ceaf">ui_character_skillinfo_cant_learn</a></td></tr>
-<tr class="separator:a1f6e5802f1830407d4ea57a255f2ceaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c8070f33d523a8ac459d2c79321327d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a2c8070f33d523a8ac459d2c79321327d">ui_character_condition_normal_color</a></td></tr>
-<tr class="separator:a2c8070f33d523a8ac459d2c79321327d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09cd075af6db0b058ea4393c807005cb"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a09cd075af6db0b058ea4393c807005cb">ui_character_condition_light_color</a></td></tr>
-<tr class="separator:a09cd075af6db0b058ea4393c807005cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a919582a5c65aaeb22b23fb45dfa4420c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a919582a5c65aaeb22b23fb45dfa4420c">ui_character_condition_moderate_color</a></td></tr>
-<tr class="separator:a919582a5c65aaeb22b23fb45dfa4420c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10566b60b1386fee13232b55fd104541"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a10566b60b1386fee13232b55fd104541">ui_character_condition_severe_color</a></td></tr>
-<tr class="separator:a10566b60b1386fee13232b55fd104541"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb87cd3f59c6ede1515af0a6be532c6f"><td class="memItemLeft" align="right" valign="top">std::array&lt; unsigned int, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#abb87cd3f59c6ede1515af0a6be532c6f">ui_character_award_color</a></td></tr>
-<tr class="separator:abb87cd3f59c6ede1515af0a6be532c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3ff58b56b04a83f43884a378004d9a0"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ac3ff58b56b04a83f43884a378004d9a0">ui_game_minimap_outline_color</a></td></tr>
-<tr class="separator:ac3ff58b56b04a83f43884a378004d9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37141225ff232f3e382240432feda39c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a37141225ff232f3e382240432feda39c">ui_game_minimap_actor_friendly_color</a></td></tr>
-<tr class="separator:a37141225ff232f3e382240432feda39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a432616b4a31aa73e4f46d48a5bbdc348"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a432616b4a31aa73e4f46d48a5bbdc348">ui_game_minimap_actor_hostile_color</a></td></tr>
-<tr class="separator:a432616b4a31aa73e4f46d48a5bbdc348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11ebd067a0353b8afb3938bfda337c99"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a11ebd067a0353b8afb3938bfda337c99">ui_game_minimap_actor_corpse_color</a></td></tr>
-<tr class="separator:a11ebd067a0353b8afb3938bfda337c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af42ec46bb23e702dd6f2aa1f0ef79cab"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af42ec46bb23e702dd6f2aa1f0ef79cab">ui_game_minimap_decoration_color_1</a></td></tr>
-<tr class="separator:af42ec46bb23e702dd6f2aa1f0ef79cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabe8758047dcd526c764579d381e1b1e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aabe8758047dcd526c764579d381e1b1e">ui_game_minimap_projectile_color</a></td></tr>
-<tr class="separator:aabe8758047dcd526c764579d381e1b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a146957e305d46dde9a8060598c04d277"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a146957e305d46dde9a8060598c04d277">ui_game_minimap_treasure_color</a></td></tr>
-<tr class="separator:a146957e305d46dde9a8060598c04d277"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bfe650774ef138ae02d36516884f23e"><td class="memItemLeft" align="right" valign="top">std::array&lt; unsigned int, 24 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1bfe650774ef138ae02d36516884f23e">ui_game_character_record_playerbuff_colors</a></td></tr>
-<tr class="separator:a1bfe650774ef138ae02d36516884f23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75eadc99d0979a3fabf246c8497ffb16"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a75eadc99d0979a3fabf246c8497ffb16">ui_gamemenu_video_gamma_title_color</a></td></tr>
-<tr class="separator:a75eadc99d0979a3fabf246c8497ffb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68c3f123c575a78ee6a2a4139d0c9aff"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a68c3f123c575a78ee6a2a4139d0c9aff">ui_gamemenu_keys_action_name_color</a></td></tr>
-<tr class="separator:a68c3f123c575a78ee6a2a4139d0c9aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae751f9d3040ac9846ce3cc17082b91ed"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ae751f9d3040ac9846ce3cc17082b91ed">ui_gamemenu_keys_key_selection_blink_color_1</a></td></tr>
-<tr class="separator:ae751f9d3040ac9846ce3cc17082b91ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92cde211b746ae5c7195a360ef1e6240"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a92cde211b746ae5c7195a360ef1e6240">ui_gamemenu_keys_key_selection_blink_color_2</a></td></tr>
-<tr class="separator:a92cde211b746ae5c7195a360ef1e6240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa945c84196f7f357411d07cb5ff3c931"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aa945c84196f7f357411d07cb5ff3c931">ui_gamemenu_keys_key_default_color</a></td></tr>
-<tr class="separator:aa945c84196f7f357411d07cb5ff3c931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0de23cb7df2f2eba8bb4c7082fd42448"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a0de23cb7df2f2eba8bb4c7082fd42448">ui_book_quests_title_color</a></td></tr>
-<tr class="separator:a0de23cb7df2f2eba8bb4c7082fd42448"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb2dc01a8464b82ce20ec6723715c096"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aeb2dc01a8464b82ce20ec6723715c096">ui_book_quests_text_color</a></td></tr>
-<tr class="separator:aeb2dc01a8464b82ce20ec6723715c096"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08828dcdff3f58df38110a4ccfcf2467"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a08828dcdff3f58df38110a4ccfcf2467">ui_book_autonotes_title_color</a></td></tr>
-<tr class="separator:a08828dcdff3f58df38110a4ccfcf2467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34e599c9df27d4489b6ff00390d559f2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a34e599c9df27d4489b6ff00390d559f2">ui_book_autonotes_text_color</a></td></tr>
-<tr class="separator:a34e599c9df27d4489b6ff00390d559f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18c090527cc92eb6d3fc202d1a988f0b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a18c090527cc92eb6d3fc202d1a988f0b">ui_book_map_title_color</a></td></tr>
-<tr class="separator:a18c090527cc92eb6d3fc202d1a988f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af32286a2b729ecb6d929e4375cadd358"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af32286a2b729ecb6d929e4375cadd358">ui_book_map_coordinates_color</a></td></tr>
-<tr class="separator:af32286a2b729ecb6d929e4375cadd358"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a822ed1edcf8be661d979e2d3bf5f12"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a0a822ed1edcf8be661d979e2d3bf5f12">ui_book_calendar_title_color</a></td></tr>
-<tr class="separator:a0a822ed1edcf8be661d979e2d3bf5f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1153aab77df3ca94701f9a2a7cc2e99c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1153aab77df3ca94701f9a2a7cc2e99c">ui_book_calendar_time_color</a></td></tr>
-<tr class="separator:a1153aab77df3ca94701f9a2a7cc2e99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc475d798775deba6fbc4c98ed75b8a8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#adc475d798775deba6fbc4c98ed75b8a8">ui_book_calendar_day_color</a></td></tr>
-<tr class="separator:adc475d798775deba6fbc4c98ed75b8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a225400a178c6575b25f6c91a62551d07"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a225400a178c6575b25f6c91a62551d07">ui_book_calendar_month_color</a></td></tr>
-<tr class="separator:a225400a178c6575b25f6c91a62551d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33bc9accdfbf89b7d1c8b273dbed3c5a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a33bc9accdfbf89b7d1c8b273dbed3c5a">ui_book_calendar_year_color</a></td></tr>
-<tr class="separator:a33bc9accdfbf89b7d1c8b273dbed3c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf4c49d39a4a257cacfaaa73ddb641b0"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#abf4c49d39a4a257cacfaaa73ddb641b0">ui_book_calendar_moon_color</a></td></tr>
-<tr class="separator:abf4c49d39a4a257cacfaaa73ddb641b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2911b08e059b7e2cbb17e1da01c258e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aa2911b08e059b7e2cbb17e1da01c258e">ui_book_calendar_location_color</a></td></tr>
-<tr class="separator:aa2911b08e059b7e2cbb17e1da01c258e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe4ef2fac66439514966705140b3fb72"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#abe4ef2fac66439514966705140b3fb72">ui_book_journal_title_color</a></td></tr>
-<tr class="separator:abe4ef2fac66439514966705140b3fb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0014c2c8d25ad9769c64bc4e690b5efa"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a0014c2c8d25ad9769c64bc4e690b5efa">ui_book_journal_text_color</a></td></tr>
-<tr class="separator:a0014c2c8d25ad9769c64bc4e690b5efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8e1fc6377ad57a77e0368c3c239397a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ab8e1fc6377ad57a77e0368c3c239397a">ui_book_journal_text_shadow</a></td></tr>
-<tr class="separator:ab8e1fc6377ad57a77e0368c3c239397a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a988dd0f45fb105bba558cc454db9fe1f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a988dd0f45fb105bba558cc454db9fe1f">ui_game_dialogue_npc_name_color</a></td></tr>
-<tr class="separator:a988dd0f45fb105bba558cc454db9fe1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af129fc8721b24d362ce21b9d50012b27"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af129fc8721b24d362ce21b9d50012b27">ui_game_dialogue_option_highlight_color</a></td></tr>
-<tr class="separator:af129fc8721b24d362ce21b9d50012b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78be7443c442c48d6cadc0e8227dbc4b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a78be7443c442c48d6cadc0e8227dbc4b">ui_game_dialogue_option_normal_color</a></td></tr>
-<tr class="separator:a78be7443c442c48d6cadc0e8227dbc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad69af64489c0ce0c9c1f00fe547f36a5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ad69af64489c0ce0c9c1f00fe547f36a5">ui_house_player_cant_interact_color</a></td></tr>
-<tr class="separator:ad69af64489c0ce0c9c1f00fe547f36a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeac8bf1b4f22d22027ccb49bfe786df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#afeac8bf1b4f22d22027ccb49bfe786df">paperdoll_drhs</a> [4]</td></tr>
-<tr class="separator:afeac8bf1b4f22d22027ccb49bfe786df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad209a98f1685920b79f06ad37fe2d339"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ad209a98f1685920b79f06ad37fe2d339">paperdoll_dlhus</a> [4]</td></tr>
-<tr class="separator:ad209a98f1685920b79f06ad37fe2d339"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8edf263877a7aca3c315b7bd3a3bff24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a8edf263877a7aca3c315b7bd3a3bff24">paperdoll_dlhs</a> [4]</td></tr>
-<tr class="separator:a8edf263877a7aca3c315b7bd3a3bff24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a26710589de11a5beec21b7bb3ed0d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a2a26710589de11a5beec21b7bb3ed0d9">paperdoll_dbods</a> [5]</td></tr>
-<tr class="separator:a2a26710589de11a5beec21b7bb3ed0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40989225f8f45e1e804103240e62b85d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a40989225f8f45e1e804103240e62b85d">paperdoll_armor_texture</a> [4][17][3]</td></tr>
-<tr class="separator:a40989225f8f45e1e804103240e62b85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83b73a4cd53d336b72b789e7dc571d34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a83b73a4cd53d336b72b789e7dc571d34">paperdoll_dlaus</a> [5]</td></tr>
-<tr class="separator:a83b73a4cd53d336b72b789e7dc571d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2cbf77a97f5b5e3e8e8778f9386b3f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ae2cbf77a97f5b5e3e8e8778f9386b3f4">paperdoll_dlads</a> [4]</td></tr>
-<tr class="separator:ae2cbf77a97f5b5e3e8e8778f9386b3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acff5af51f7d15e0fccd46bcb958ed929"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#acff5af51f7d15e0fccd46bcb958ed929">paperdoll_flying_feet</a> [22]</td></tr>
-<tr class="separator:acff5af51f7d15e0fccd46bcb958ed929"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bfdbaa013e98e175a6f13fe728dddb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1bfdbaa013e98e175a6f13fe728dddb2">paperdoll_boots_texture</a> [4][6]</td></tr>
-<tr class="separator:a1bfdbaa013e98e175a6f13fe728dddb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb1176547b43fe2cf0d2022158a3950c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#afb1176547b43fe2cf0d2022158a3950c">paperdoll_cloak_collar_texture</a> [4][10]</td></tr>
-<tr class="separator:afb1176547b43fe2cf0d2022158a3950c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26e15df9cfc7113edb42d4eefbe3477c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a26e15df9cfc7113edb42d4eefbe3477c">paperdoll_cloak_texture</a> [4][10]</td></tr>
-<tr class="separator:a26e15df9cfc7113edb42d4eefbe3477c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa691e158398f7f70af568529bc117c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#afa691e158398f7f70af568529bc117c9">paperdoll_helm_texture</a> [2][16]</td></tr>
-<tr class="separator:afa691e158398f7f70af568529bc117c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0f335a504082954607a673aa51945fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ae0f335a504082954607a673aa51945fb">paperdoll_belt_texture</a> [4][7]</td></tr>
-<tr class="separator:ae0f335a504082954607a673aa51945fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf2b9fafb05d479e5e5eda37acdfff01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#acf2b9fafb05d479e5e5eda37acdfff01">ui_mainmenu_copyright_color</a></td></tr>
+<tr class="separator:acf2b9fafb05d479e5e5eda37acdfff01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa54e2799b40d3d62230e63f534a865a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aa54e2799b40d3d62230e63f534a865a9">ui_character_tooltip_header_default_color</a></td></tr>
+<tr class="separator:aa54e2799b40d3d62230e63f534a865a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1d448c2ffcb377fceadaa9a61dc33e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a3b1d448c2ffcb377fceadaa9a61dc33e">ui_character_default_text_color</a></td></tr>
+<tr class="separator:a3b1d448c2ffcb377fceadaa9a61dc33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352f8bd2a78825ead4ce1ea6027b97bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a352f8bd2a78825ead4ce1ea6027b97bd">ui_character_skill_highlight_color</a></td></tr>
+<tr class="separator:a352f8bd2a78825ead4ce1ea6027b97bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19f6e0df0a6a3743a3ea7f558dc0ea3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af19f6e0df0a6a3743a3ea7f558dc0ea3">ui_character_header_text_color</a></td></tr>
+<tr class="separator:af19f6e0df0a6a3743a3ea7f558dc0ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ab4f7665c8ffce3115c16656f1b9080"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a6ab4f7665c8ffce3115c16656f1b9080">ui_character_bonus_text_color</a></td></tr>
+<tr class="separator:a6ab4f7665c8ffce3115c16656f1b9080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1f82967f0c9478728b0be158f09d99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1e1f82967f0c9478728b0be158f09d99">ui_character_bonus_text_color_neg</a></td></tr>
+<tr class="separator:a1e1f82967f0c9478728b0be158f09d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a50e1ca7fe5b03871fccd4a7e16fd87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1a50e1ca7fe5b03871fccd4a7e16fd87">ui_character_skill_upgradeable_color</a></td></tr>
+<tr class="separator:a1a50e1ca7fe5b03871fccd4a7e16fd87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af064b2a5ecfd836be50a010b2d331081"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af064b2a5ecfd836be50a010b2d331081">ui_character_skill_default_color</a></td></tr>
+<tr class="separator:af064b2a5ecfd836be50a010b2d331081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fdfbebf3f31401297fbb8ec972b78ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a6fdfbebf3f31401297fbb8ec972b78ba">ui_character_stat_default_color</a></td></tr>
+<tr class="separator:a6fdfbebf3f31401297fbb8ec972b78ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0faad8b0b60bad6aba27b3d4e8905caf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a0faad8b0b60bad6aba27b3d4e8905caf">ui_character_stat_buffed_color</a></td></tr>
+<tr class="separator:a0faad8b0b60bad6aba27b3d4e8905caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac834f9aa1e3732281f50cf4436672e53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ac834f9aa1e3732281f50cf4436672e53">ui_character_stat_debuffed_color</a></td></tr>
+<tr class="separator:ac834f9aa1e3732281f50cf4436672e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa8634615dc4f64506d5947bd1214e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aefa8634615dc4f64506d5947bd1214e8">ui_character_skillinfo_can_learn</a></td></tr>
+<tr class="separator:aefa8634615dc4f64506d5947bd1214e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcfc75d07361db49da493cd432c98f04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#afcfc75d07361db49da493cd432c98f04">ui_character_skillinfo_can_learn_gm</a></td></tr>
+<tr class="separator:afcfc75d07361db49da493cd432c98f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b51895614cb507c10601b62248c9b61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a0b51895614cb507c10601b62248c9b61">ui_character_skillinfo_cant_learn</a></td></tr>
+<tr class="separator:a0b51895614cb507c10601b62248c9b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682d3cecf48f0b6cb15a2ab817bdd223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a682d3cecf48f0b6cb15a2ab817bdd223">ui_character_condition_normal_color</a></td></tr>
+<tr class="separator:a682d3cecf48f0b6cb15a2ab817bdd223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ed1e700c92799b7191c8cb79a325d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a33ed1e700c92799b7191c8cb79a325d8">ui_character_condition_light_color</a></td></tr>
+<tr class="separator:a33ed1e700c92799b7191c8cb79a325d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fdff6d2f04b9174650ae0b18aec4e31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a8fdff6d2f04b9174650ae0b18aec4e31">ui_character_condition_moderate_color</a></td></tr>
+<tr class="separator:a8fdff6d2f04b9174650ae0b18aec4e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345e1f9e890850374fa203faeb084a7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a345e1f9e890850374fa203faeb084a7a">ui_character_condition_severe_color</a></td></tr>
+<tr class="separator:a345e1f9e890850374fa203faeb084a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e716a052e90f162311191d459f123e"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="structColor.html">Color</a>, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a51e716a052e90f162311191d459f123e">ui_character_award_color</a></td></tr>
+<tr class="separator:a51e716a052e90f162311191d459f123e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a165e52c44abf110a98e3a22da374699e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a165e52c44abf110a98e3a22da374699e">ui_game_minimap_outline_color</a></td></tr>
+<tr class="separator:a165e52c44abf110a98e3a22da374699e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad969197b67bb45302739a58d7733725a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ad969197b67bb45302739a58d7733725a">ui_game_minimap_actor_friendly_color</a></td></tr>
+<tr class="separator:ad969197b67bb45302739a58d7733725a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d2e64a9fee049f24df2630f27acda7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a78d2e64a9fee049f24df2630f27acda7">ui_game_minimap_actor_hostile_color</a></td></tr>
+<tr class="separator:a78d2e64a9fee049f24df2630f27acda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4894f61ff968d4b31e034353890a0309"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a4894f61ff968d4b31e034353890a0309">ui_game_minimap_actor_corpse_color</a></td></tr>
+<tr class="separator:a4894f61ff968d4b31e034353890a0309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a917b986012d58dd0d5e6c4deb09bf785"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a917b986012d58dd0d5e6c4deb09bf785">ui_game_minimap_decoration_color_1</a></td></tr>
+<tr class="separator:a917b986012d58dd0d5e6c4deb09bf785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e6c36d4a2e10e720a2073e71a18b80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a76e6c36d4a2e10e720a2073e71a18b80">ui_game_minimap_projectile_color</a></td></tr>
+<tr class="separator:a76e6c36d4a2e10e720a2073e71a18b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d96fc5c21600c278ecb54462dfb65b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a7d96fc5c21600c278ecb54462dfb65b6">ui_game_minimap_treasure_color</a></td></tr>
+<tr class="separator:a7d96fc5c21600c278ecb54462dfb65b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3e18d047a69092efece4a7acbbd18b"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="structColor.html">Color</a>, 24 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a4b3e18d047a69092efece4a7acbbd18b">ui_game_character_record_playerbuff_colors</a></td></tr>
+<tr class="separator:a4b3e18d047a69092efece4a7acbbd18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bd221c98ae8e1a59412b2cf877198b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a4bd221c98ae8e1a59412b2cf877198b9">ui_gamemenu_video_gamma_title_color</a></td></tr>
+<tr class="separator:a4bd221c98ae8e1a59412b2cf877198b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70964eb2068bfab75a073a61af738b9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a70964eb2068bfab75a073a61af738b9a">ui_gamemenu_keys_action_name_color</a></td></tr>
+<tr class="separator:a70964eb2068bfab75a073a61af738b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b5451e2429a0885964d20c5553da72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a20b5451e2429a0885964d20c5553da72">ui_gamemenu_keys_key_selection_blink_color_1</a></td></tr>
+<tr class="separator:a20b5451e2429a0885964d20c5553da72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112a80db2608d7a080eb9e668a682810"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a112a80db2608d7a080eb9e668a682810">ui_gamemenu_keys_key_selection_blink_color_2</a></td></tr>
+<tr class="separator:a112a80db2608d7a080eb9e668a682810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf67de91d6ff0169227ff661ced3108"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a2bf67de91d6ff0169227ff661ced3108">ui_gamemenu_keys_key_default_color</a></td></tr>
+<tr class="separator:a2bf67de91d6ff0169227ff661ced3108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ccac1e4e6149233760785ef1a69a6ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a6ccac1e4e6149233760785ef1a69a6ae">ui_book_quests_title_color</a></td></tr>
+<tr class="separator:a6ccac1e4e6149233760785ef1a69a6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3212408cc32c7f18792b096be79e352c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a3212408cc32c7f18792b096be79e352c">ui_book_quests_text_color</a></td></tr>
+<tr class="separator:a3212408cc32c7f18792b096be79e352c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14913e3dba5e609539a1725d3b74705"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af14913e3dba5e609539a1725d3b74705">ui_book_autonotes_title_color</a></td></tr>
+<tr class="separator:af14913e3dba5e609539a1725d3b74705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82879d0e32d186c1a2b9a493588d9dcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a82879d0e32d186c1a2b9a493588d9dcc">ui_book_autonotes_text_color</a></td></tr>
+<tr class="separator:a82879d0e32d186c1a2b9a493588d9dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d3a517befef5b038445c02679f9424a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a6d3a517befef5b038445c02679f9424a">ui_book_map_title_color</a></td></tr>
+<tr class="separator:a6d3a517befef5b038445c02679f9424a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d894e1084eaa66958436cfa8593ec2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ab9d894e1084eaa66958436cfa8593ec2">ui_book_map_coordinates_color</a></td></tr>
+<tr class="separator:ab9d894e1084eaa66958436cfa8593ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4449ce506ec16567b387c98e154633f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ad4449ce506ec16567b387c98e154633f">ui_book_calendar_title_color</a></td></tr>
+<tr class="separator:ad4449ce506ec16567b387c98e154633f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d0d734c0829bc92ca24533c33b73ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a18d0d734c0829bc92ca24533c33b73ec">ui_book_calendar_time_color</a></td></tr>
+<tr class="separator:a18d0d734c0829bc92ca24533c33b73ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d610de0536fdd1ee1e03aafc33b16f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a24d610de0536fdd1ee1e03aafc33b16f">ui_book_calendar_day_color</a></td></tr>
+<tr class="separator:a24d610de0536fdd1ee1e03aafc33b16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d5490c22ac461b41ed4e69b0d4e18b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af7d5490c22ac461b41ed4e69b0d4e18b">ui_book_calendar_month_color</a></td></tr>
+<tr class="separator:af7d5490c22ac461b41ed4e69b0d4e18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca14baef0da27ce8bdfaa7b7e21b9e3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aca14baef0da27ce8bdfaa7b7e21b9e3d">ui_book_calendar_year_color</a></td></tr>
+<tr class="separator:aca14baef0da27ce8bdfaa7b7e21b9e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b3ca41fc8d430fd3902c5dec5c2ff2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a08b3ca41fc8d430fd3902c5dec5c2ff2">ui_book_calendar_moon_color</a></td></tr>
+<tr class="separator:a08b3ca41fc8d430fd3902c5dec5c2ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af40fb7acbec072a553318f6b7625ee71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af40fb7acbec072a553318f6b7625ee71">ui_book_calendar_location_color</a></td></tr>
+<tr class="separator:af40fb7acbec072a553318f6b7625ee71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae46fdd869e665fe624cc816716166396"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ae46fdd869e665fe624cc816716166396">ui_book_journal_title_color</a></td></tr>
+<tr class="separator:ae46fdd869e665fe624cc816716166396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a781ef461d9a13963a24010947c3d1a03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a781ef461d9a13963a24010947c3d1a03">ui_book_journal_text_color</a></td></tr>
+<tr class="separator:a781ef461d9a13963a24010947c3d1a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d8a3bf44d1422e70768542c74ad756e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a9d8a3bf44d1422e70768542c74ad756e">ui_book_journal_text_shadow</a></td></tr>
+<tr class="separator:a9d8a3bf44d1422e70768542c74ad756e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4571d53a134d4d68de66d55f00a792f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a4571d53a134d4d68de66d55f00a792f1">ui_game_dialogue_npc_name_color</a></td></tr>
+<tr class="separator:a4571d53a134d4d68de66d55f00a792f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5700ceb8778b4803b4d180c64281c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aae5700ceb8778b4803b4d180c64281c6">ui_game_dialogue_option_highlight_color</a></td></tr>
+<tr class="separator:aae5700ceb8778b4803b4d180c64281c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c20f404c52dcf87520cf8d7e9d4a4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a88c20f404c52dcf87520cf8d7e9d4a4e">ui_game_dialogue_option_normal_color</a></td></tr>
+<tr class="separator:a88c20f404c52dcf87520cf8d7e9d4a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd49f9e1909a61c684bed8926add8cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a0dd49f9e1909a61c684bed8926add8cd">ui_house_player_cant_interact_color</a></td></tr>
+<tr class="separator:a0dd49f9e1909a61c684bed8926add8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affab9120eb7cd7f7ec1d9c95ba48528e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#affab9120eb7cd7f7ec1d9c95ba48528e">paperdoll_drhs</a> [4]</td></tr>
+<tr class="separator:affab9120eb7cd7f7ec1d9c95ba48528e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bd583578fb98f0dde8222ebeb44cb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a8bd583578fb98f0dde8222ebeb44cb6c">paperdoll_dlhus</a> [4]</td></tr>
+<tr class="separator:a8bd583578fb98f0dde8222ebeb44cb6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0879bd6c43f83bc541ae889acac7f8d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a0879bd6c43f83bc541ae889acac7f8d5">paperdoll_dlhs</a> [4]</td></tr>
+<tr class="separator:a0879bd6c43f83bc541ae889acac7f8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8cb100676344e71f9a52949577e8c3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aa8cb100676344e71f9a52949577e8c3c">paperdoll_dbods</a> [5]</td></tr>
+<tr class="separator:aa8cb100676344e71f9a52949577e8c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf2004e02c97e6b27618b37acb06e83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a5cf2004e02c97e6b27618b37acb06e83">paperdoll_armor_texture</a> [4][17][3]</td></tr>
+<tr class="separator:a5cf2004e02c97e6b27618b37acb06e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a022275213f33a56251dce319dbcc07ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a022275213f33a56251dce319dbcc07ed">paperdoll_dlaus</a> [5]</td></tr>
+<tr class="separator:a022275213f33a56251dce319dbcc07ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad08f51bd0fc2c1573d15d1fc8454d0c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ad08f51bd0fc2c1573d15d1fc8454d0c6">paperdoll_dlads</a> [4]</td></tr>
+<tr class="separator:ad08f51bd0fc2c1573d15d1fc8454d0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd8ecc6d1ae6aee4bf4b2f888f5e3d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a2dd8ecc6d1ae6aee4bf4b2f888f5e3d4">paperdoll_flying_feet</a> [22]</td></tr>
+<tr class="separator:a2dd8ecc6d1ae6aee4bf4b2f888f5e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59effb49b7b3cc4d98eef24d5e133438"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a59effb49b7b3cc4d98eef24d5e133438">paperdoll_boots_texture</a> [4][6]</td></tr>
+<tr class="separator:a59effb49b7b3cc4d98eef24d5e133438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e9db6f98b7d2e6a39589dd30a9bfb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a82e9db6f98b7d2e6a39589dd30a9bfb8">paperdoll_cloak_collar_texture</a> [4][10]</td></tr>
+<tr class="separator:a82e9db6f98b7d2e6a39589dd30a9bfb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c694444e8ddc206de9bf62c9db83d23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a3c694444e8ddc206de9bf62c9db83d23">paperdoll_cloak_texture</a> [4][10]</td></tr>
+<tr class="separator:a3c694444e8ddc206de9bf62c9db83d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d68142113549144e878cf8e179d3aea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a2d68142113549144e878cf8e179d3aea">paperdoll_helm_texture</a> [2][16]</td></tr>
+<tr class="separator:a2d68142113549144e878cf8e179d3aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca26dc1246bcb52e12646ee43bd9535"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aeca26dc1246bcb52e12646ee43bd9535">paperdoll_belt_texture</a> [4][7]</td></tr>
+<tr class="separator:aeca26dc1246bcb52e12646ee43bd9535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a159b06a77a79895d5d0bb3b26aa8d1ce"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a159b06a77a79895d5d0bb3b26aa8d1ce">paperdoll_Weapon</a> [4][16][2]</td></tr>
 <tr class="separator:a159b06a77a79895d5d0bb3b26aa8d1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eafac37663e464bd98b840bd9c88fb7"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a4eafac37663e464bd98b840bd9c88fb7">paperdoll_Boot</a> [4][7][2]</td></tr>
 <tr class="separator:a4eafac37663e464bd98b840bd9c88fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12984fb92a15b0d050c209066caa678c"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a12984fb92a15b0d050c209066caa678c">paperdoll_boots_indexByType</a></td></tr>
 <tr class="separator:a12984fb92a15b0d050c209066caa678c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a1cd539639bb8e1302882b478366123"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1a1cd539639bb8e1302882b478366123">paperdoll_boots_typeByIndex</a> = <a class="el" href="MapAccess_8h.html#a643e268672c6d9c3e981c966014ddeca">Inverted</a>(<a class="el" href="UICharacter_8cpp.html#a12984fb92a15b0d050c209066caa678c">paperdoll_boots_indexByType</a>)</td></tr>
+<tr class="memitem:a1a1cd539639bb8e1302882b478366123"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1a1cd539639bb8e1302882b478366123">paperdoll_boots_typeByIndex</a> = <a class="el" href="MapAccess_8h.html#a2aed0bc8463ae11d4e4926066c245f8d">inverted</a>(<a class="el" href="UICharacter_8cpp.html#a12984fb92a15b0d050c209066caa678c">paperdoll_boots_indexByType</a>)</td></tr>
 <tr class="separator:a1a1cd539639bb8e1302882b478366123"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af218cbf336d43be12acf6aa0fa5fbec0"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af218cbf336d43be12acf6aa0fa5fbec0">paperdoll_Cloak</a> [4][10][2]</td></tr>
 <tr class="separator:af218cbf336d43be12acf6aa0fa5fbec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e9541bb38ffe26f76f3799825c7cf1f"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a6e9541bb38ffe26f76f3799825c7cf1f">paperdoll_cloak_indexByType</a></td></tr>
 <tr class="separator:a6e9541bb38ffe26f76f3799825c7cf1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc2730b682585bb525ae45eccb9d73a"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a6cc2730b682585bb525ae45eccb9d73a">paperdoll_cloak_typeByIndex</a> = <a class="el" href="MapAccess_8h.html#a643e268672c6d9c3e981c966014ddeca">Inverted</a>(<a class="el" href="UICharacter_8cpp.html#a6e9541bb38ffe26f76f3799825c7cf1f">paperdoll_cloak_indexByType</a>)</td></tr>
+<tr class="memitem:a6cc2730b682585bb525ae45eccb9d73a"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a6cc2730b682585bb525ae45eccb9d73a">paperdoll_cloak_typeByIndex</a> = <a class="el" href="MapAccess_8h.html#a2aed0bc8463ae11d4e4926066c245f8d">inverted</a>(<a class="el" href="UICharacter_8cpp.html#a6e9541bb38ffe26f76f3799825c7cf1f">paperdoll_cloak_indexByType</a>)</td></tr>
 <tr class="separator:a6cc2730b682585bb525ae45eccb9d73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff0ec5a1c6f2d12ff79e8cbdcbbf6961"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aff0ec5a1c6f2d12ff79e8cbdcbbf6961">paperdoll_CloakCollar</a> [4][10][2]</td></tr>
 <tr class="separator:aff0ec5a1c6f2d12ff79e8cbdcbbf6961"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -302,13 +296,13 @@ Variables</h2></td></tr>
 <tr class="separator:a80d69d4867629b919a15b3be80d0dd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa89eda9796a78b3fa8b5709ec631be63"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aa89eda9796a78b3fa8b5709ec631be63">paperdoll_belt_indexByType</a></td></tr>
 <tr class="separator:aa89eda9796a78b3fa8b5709ec631be63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe2d626fb956c8d8812ac30b4fd649a4"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#afe2d626fb956c8d8812ac30b4fd649a4">paperdoll_belt_typeByIndex</a> = <a class="el" href="MapAccess_8h.html#a643e268672c6d9c3e981c966014ddeca">Inverted</a>(<a class="el" href="UICharacter_8cpp.html#aa89eda9796a78b3fa8b5709ec631be63">paperdoll_belt_indexByType</a>)</td></tr>
+<tr class="memitem:afe2d626fb956c8d8812ac30b4fd649a4"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#afe2d626fb956c8d8812ac30b4fd649a4">paperdoll_belt_typeByIndex</a> = <a class="el" href="MapAccess_8h.html#a2aed0bc8463ae11d4e4926066c245f8d">inverted</a>(<a class="el" href="UICharacter_8cpp.html#aa89eda9796a78b3fa8b5709ec631be63">paperdoll_belt_indexByType</a>)</td></tr>
 <tr class="separator:afe2d626fb956c8d8812ac30b4fd649a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a433221938659cd5f6fa8ae1f24969afc"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a433221938659cd5f6fa8ae1f24969afc">paperdoll_Helm</a> [4][16][2]</td></tr>
 <tr class="separator:a433221938659cd5f6fa8ae1f24969afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7995ddfd49caa46161ce3b9cd2efb68d"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a7995ddfd49caa46161ce3b9cd2efb68d">paperdoll_helm_indexByType</a></td></tr>
 <tr class="separator:a7995ddfd49caa46161ce3b9cd2efb68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc67890587048bdaf7eba4c6edbf3f3e"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#afc67890587048bdaf7eba4c6edbf3f3e">paperdoll_helm_typeByIndex</a> = <a class="el" href="MapAccess_8h.html#a643e268672c6d9c3e981c966014ddeca">Inverted</a>(<a class="el" href="UICharacter_8cpp.html#a7995ddfd49caa46161ce3b9cd2efb68d">paperdoll_helm_indexByType</a>)</td></tr>
+<tr class="memitem:afc67890587048bdaf7eba4c6edbf3f3e"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#afc67890587048bdaf7eba4c6edbf3f3e">paperdoll_helm_typeByIndex</a> = <a class="el" href="MapAccess_8h.html#a2aed0bc8463ae11d4e4926066c245f8d">inverted</a>(<a class="el" href="UICharacter_8cpp.html#a7995ddfd49caa46161ce3b9cd2efb68d">paperdoll_helm_indexByType</a>)</td></tr>
 <tr class="separator:afc67890587048bdaf7eba4c6edbf3f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67eeeaabf7adf339f5404d9cfd2cbf59"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a67eeeaabf7adf339f5404d9cfd2cbf59">pPaperdoll_Beards</a> [4]</td></tr>
 <tr class="separator:a67eeeaabf7adf339f5404d9cfd2cbf59"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,7 +322,7 @@ Variables</h2></td></tr>
 <tr class="separator:ad471b00a1581c28c52b2ff8094a50a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5b7c379f514a7dd4bdbcf4cc239919b"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ad5b7c379f514a7dd4bdbcf4cc239919b">paperdoll_armor_indexByType</a></td></tr>
 <tr class="separator:ad5b7c379f514a7dd4bdbcf4cc239919b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2645346d5619ab7234b0b047beca9f57"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a2645346d5619ab7234b0b047beca9f57">paperdoll_armor_typeByIndex</a> = <a class="el" href="MapAccess_8h.html#a643e268672c6d9c3e981c966014ddeca">Inverted</a>(<a class="el" href="UICharacter_8cpp.html#ad5b7c379f514a7dd4bdbcf4cc239919b">paperdoll_armor_indexByType</a>)</td></tr>
+<tr class="memitem:a2645346d5619ab7234b0b047beca9f57"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a2645346d5619ab7234b0b047beca9f57">paperdoll_armor_typeByIndex</a> = <a class="el" href="MapAccess_8h.html#a2aed0bc8463ae11d4e4926066c245f8d">inverted</a>(<a class="el" href="UICharacter_8cpp.html#ad5b7c379f514a7dd4bdbcf4cc239919b">paperdoll_armor_indexByType</a>)</td></tr>
 <tr class="separator:a2645346d5619ab7234b0b047beca9f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af632e1d0a7565e45e7dcbb91449562c6"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af632e1d0a7565e45e7dcbb91449562c6">paperdoll_shoulder_coord</a> [4][17][2]</td></tr>
 <tr class="separator:af632e1d0a7565e45e7dcbb91449562c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -346,73 +340,38 @@ Variables</h2></td></tr>
 <tr class="separator:abacbb4e3d268e30060133e13d26f5bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af330a6668e540eacd5e6385f3acac28a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af330a6668e540eacd5e6385f3acac28a">dlhu_texnames_by_face</a> [25]</td></tr>
 <tr class="separator:af330a6668e540eacd5e6385f3acac28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a802d754a6028d6d48ac55ce0826b7830"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a802d754a6028d6d48ac55ce0826b7830">ui_character_skills_background</a> = nullptr</td></tr>
-<tr class="separator:a802d754a6028d6d48ac55ce0826b7830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb3155bde482686a6b6b6fb32416d12a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#afb3155bde482686a6b6b6fb32416d12a">ui_character_awards_background</a> = nullptr</td></tr>
-<tr class="separator:afb3155bde482686a6b6b6fb32416d12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f0eea23b71efa01601040ac558ff3c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a3f0eea23b71efa01601040ac558ff3c1">ui_character_stats_background</a> = nullptr</td></tr>
-<tr class="separator:a3f0eea23b71efa01601040ac558ff3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dd49cee93455afca023072a45062c9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a6dd49cee93455afca023072a45062c9a">ui_character_inventory_background</a> = nullptr</td></tr>
-<tr class="separator:a6dd49cee93455afca023072a45062c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4fb135d131265ae1758779cc6af26e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ab4fb135d131265ae1758779cc6af26e2">ui_character_inventory_background_strip</a> = nullptr</td></tr>
-<tr class="separator:ab4fb135d131265ae1758779cc6af26e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78396a25878c94557d0d377abbd9e82e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a78396a25878c94557d0d377abbd9e82e">ui_character_inventory_magnification_glass</a> = nullptr</td></tr>
-<tr class="separator:a78396a25878c94557d0d377abbd9e82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad73ce1651b4f0eb2addac4e78913a86b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ad73ce1651b4f0eb2addac4e78913a86b">ui_character_inventory_paperdoll_background</a> = nullptr</td></tr>
-<tr class="separator:ad73ce1651b4f0eb2addac4e78913a86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bb65664bfb504877f1d67d92d4daece"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a2bb65664bfb504877f1d67d92d4daece">ui_character_inventory_paperdoll_rings_background</a> = nullptr</td></tr>
-<tr class="separator:a2bb65664bfb504877f1d67d92d4daece"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8347cdd3827b2b002acee0cc88daf04b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a8347cdd3827b2b002acee0cc88daf04b">ui_character_inventory_paperdoll_rings_close</a> = nullptr</td></tr>
-<tr class="separator:a8347cdd3827b2b002acee0cc88daf04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a853a86402287afa6e1500b87094a16c2"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="classImage.html">Image</a> *, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a853a86402287afa6e1500b87094a16c2">paperdoll_dbrds</a></td></tr>
-<tr class="separator:a853a86402287afa6e1500b87094a16c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b1540c38b091fe46c81c21bc213645"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a31b1540c38b091fe46c81c21bc213645">ui_character_skills_background</a> = nullptr</td></tr>
+<tr class="separator:a31b1540c38b091fe46c81c21bc213645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08606c87f60e4cf769d6a108e1b1bfae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a08606c87f60e4cf769d6a108e1b1bfae">ui_character_awards_background</a> = nullptr</td></tr>
+<tr class="separator:a08606c87f60e4cf769d6a108e1b1bfae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75abd8df8d2d2bcfaf17ae3687ede07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ae75abd8df8d2d2bcfaf17ae3687ede07">ui_character_stats_background</a> = nullptr</td></tr>
+<tr class="separator:ae75abd8df8d2d2bcfaf17ae3687ede07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b179d180c46cc5d79fca6f4b1982662"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a1b179d180c46cc5d79fca6f4b1982662">ui_character_inventory_background</a> = nullptr</td></tr>
+<tr class="separator:a1b179d180c46cc5d79fca6f4b1982662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c56317016b062d03296c9debe271e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a72c56317016b062d03296c9debe271e0">ui_character_inventory_background_strip</a> = nullptr</td></tr>
+<tr class="separator:a72c56317016b062d03296c9debe271e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabf8160a40ee2df68f22d0c87c518cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#adabf8160a40ee2df68f22d0c87c518cf">ui_character_inventory_magnification_glass</a> = nullptr</td></tr>
+<tr class="separator:adabf8160a40ee2df68f22d0c87c518cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f211cd9ff1f7c561c3b2ee813a2e81f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a7f211cd9ff1f7c561c3b2ee813a2e81f">ui_character_inventory_paperdoll_background</a> = nullptr</td></tr>
+<tr class="separator:a7f211cd9ff1f7c561c3b2ee813a2e81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec16011bf0156fb5afa5650fe06c1f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a8ec16011bf0156fb5afa5650fe06c1f1">ui_character_inventory_paperdoll_rings_background</a> = nullptr</td></tr>
+<tr class="separator:a8ec16011bf0156fb5afa5650fe06c1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed05540a012f883160cf3f1d81ebcf8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a4ed05540a012f883160cf3f1d81ebcf8">scrollstop</a> = nullptr</td></tr>
+<tr class="separator:a4ed05540a012f883160cf3f1d81ebcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d8f1a03147042f3555aafdf38e390b"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="classGraphicsImage.html">GraphicsImage</a> *, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#aa1d8f1a03147042f3555aafdf38e390b">paperdoll_dbrds</a></td></tr>
+<tr class="separator:aa1d8f1a03147042f3555aafdf38e390b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab17f5b262e9eb4fb45e8534501ee1305"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ab17f5b262e9eb4fb45e8534501ee1305">savedInventoryLeftClickButtonW</a></td></tr>
+<tr class="separator:ab17f5b262e9eb4fb45e8534501ee1305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b2955a3ce41b0a06130758b3526da2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#ae9b2955a3ce41b0a06130758b3526da2">savedInventoryLeftClickButtonZ</a></td></tr>
+<tr class="separator:ae9b2955a3ce41b0a06130758b3526da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5604a7ae703e4d2d8c1426bba4c73f79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#a5604a7ae703e4d2d8c1426bba4c73f79">savedInventoryLeftClickButtonY</a></td></tr>
+<tr class="separator:a5604a7ae703e4d2d8c1426bba4c73f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2a2853efd4b0cfe6a6c5e2303a974f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UICharacter_8cpp.html#af2a2853efd4b0cfe6a6c5e2303a974f4">savedInventoryLeftClickButtonX</a></td></tr>
+<tr class="separator:af2a2853efd4b0cfe6a6c5e2303a974f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a8df51996eaa93ee226542e4ebb9d6f14" name="a8df51996eaa93ee226542e4ebb9d6f14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8df51996eaa93ee226542e4ebb9d6f14">&#9670;&#160;</a></span>EngineIoc</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="Game_8h.html#a8df51996eaa93ee226542e4ebb9d6f14">EngineIoc</a> =  <a class="el" href="classEngine___1_1IocContainer.html">Engine_::IocContainer</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0d82b5c47915bf30a5b659836b24326f" name="a0d82b5c47915bf30a5b659836b24326f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d82b5c47915bf30a5b659836b24326f">&#9670;&#160;</a></span>awardSort()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool awardSort </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>j</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a903e6b2e7af5c510b10b913a112b4cd5" name="a903e6b2e7af5c510b10b913a112b4cd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a903e6b2e7af5c510b10b913a112b4cd5">&#9670;&#160;</a></span>CharacterUI_DrawItem()</h2>
+<a id="a9202ee763b884c4e538a0c6aff16e5b3" name="a9202ee763b884c4e538a0c6aff16e5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9202ee763b884c4e538a0c6aff16e5b3">&#9670;&#160;</a></span>CharacterUI_DrawItem()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -447,7 +406,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classTexture.html">Texture</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td>
           <td class="paramname"><em>item_texture</em>, </td>
         </tr>
         <tr>
@@ -471,8 +430,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a31b43ffab2f0c6b49f5e7d643a956169" name="a31b43ffab2f0c6b49f5e7d643a956169"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31b43ffab2f0c6b49f5e7d643a956169">&#9670;&#160;</a></span>CharacterUI_DrawPaperdoll()</h2>
+<a id="aac0f9b87a84dae2b0bc932ae358b132c" name="aac0f9b87a84dae2b0bc932ae358b132c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0f9b87a84dae2b0bc932ae358b132c">&#9670;&#160;</a></span>CharacterUI_DrawPaperdoll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -480,7 +439,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void CharacterUI_DrawPaperdoll </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlayer.html">Player</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classCharacter.html">Character</a> *&#160;</td>
           <td class="paramname"><em>player</em></td><td>)</td>
           <td></td>
         </tr>
@@ -489,8 +448,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae7f61b52ecfa773b7e621bfe40e66dbf" name="ae7f61b52ecfa773b7e621bfe40e66dbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7f61b52ecfa773b7e621bfe40e66dbf">&#9670;&#160;</a></span>CharacterUI_DrawPaperdollWithRingOverlay()</h2>
+<a id="a3dc82bd2fd4b2b316d9d380df5907c4f" name="a3dc82bd2fd4b2b316d9d380df5907c4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc82bd2fd4b2b316d9d380df5907c4f">&#9670;&#160;</a></span>CharacterUI_DrawPaperdollWithRingOverlay()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -498,7 +457,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void CharacterUI_DrawPaperdollWithRingOverlay </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlayer.html">Player</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classCharacter.html">Character</a> *&#160;</td>
           <td class="paramname"><em>player</em></td><td>)</td>
           <td></td>
         </tr>
@@ -507,8 +466,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ab6d2febe42cd0b0e8ccb635d606c31e2" name="ab6d2febe42cd0b0e8ccb635d606c31e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6d2febe42cd0b0e8ccb635d606c31e2">&#9670;&#160;</a></span>CharacterUI_InventoryTab_Draw()</h2>
+<a id="a1766baf83a8b27a8ec3f6bc12593b098" name="a1766baf83a8b27a8ec3f6bc12593b098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1766baf83a8b27a8ec3f6bc12593b098">&#9670;&#160;</a></span>CharacterUI_InventoryTab_Draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -516,7 +475,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void CharacterUI_InventoryTab_Draw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlayer.html">Player</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classCharacter.html">Character</a> *&#160;</td>
           <td class="paramname"><em>player</em>, </td>
         </tr>
         <tr>
@@ -569,8 +528,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a7277a70ea5f488e389a767ac60aa1ddc" name="a7277a70ea5f488e389a767ac60aa1ddc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7277a70ea5f488e389a767ac60aa1ddc">&#9670;&#160;</a></span>CharacterUI_SkillsTab_Draw__DrawSkillTable()</h2>
+<a id="ac8041286146ddfd9831d12cdb7a91b88" name="ac8041286146ddfd9831d12cdb7a91b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8041286146ddfd9831d12cdb7a91b88">&#9670;&#160;</a></span>CharacterUI_SkillsTab_Draw__DrawSkillTable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -581,7 +540,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">static int CharacterUI_SkillsTab_Draw__DrawSkillTable </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlayer.html">Player</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classCharacter.html">Character</a> *&#160;</td>
           <td class="paramname"><em>player</em>, </td>
         </tr>
         <tr>
@@ -599,7 +558,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::initializer_list&lt; <a class="el" href="PlayerEnums_8h.html#a882aeeabc7e03f0fa334764a909ab3f5">PLAYER_SKILL_TYPE</a> &gt;&#160;</td>
+          <td class="paramtype">const std::initializer_list&lt; <a class="el" href="CharacterEnums_8h.html#afb7e1cb64c82efee699c6bd5b7467bb3">CharacterSkillType</a> &gt;&#160;</td>
           <td class="paramname"><em>skill_list</em>, </td>
         </tr>
         <tr>
@@ -637,23 +596,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void draw_leather </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae242b23698fbbee64a996b0d900b6c03" name="ae242b23698fbbee64a996b0d900b6c03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae242b23698fbbee64a996b0d900b6c03">&#9670;&#160;</a></span>FillAwardsData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void FillAwardsData </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -747,6 +689,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Prepare textures of character doll with wetsuit off.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uPlayerID</td><td>ID of player, 1-based. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x43F0BD </dd></dl>
 
 </div>
 </div>
@@ -765,6 +715,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Prepare textures of character doll with wetsuit on.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uPlayerID</td><td>ID of player, 1-based. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x43EF2B </dd></dl>
 
 </div>
 </div>
@@ -978,14 +936,14 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a40989225f8f45e1e804103240e62b85d" name="a40989225f8f45e1e804103240e62b85d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40989225f8f45e1e804103240e62b85d">&#9670;&#160;</a></span>paperdoll_armor_texture</h2>
+<a id="a5cf2004e02c97e6b27618b37acb06e83" name="a5cf2004e02c97e6b27618b37acb06e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf2004e02c97e6b27618b37acb06e83">&#9670;&#160;</a></span>paperdoll_armor_texture</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_armor_texture[4][17][3]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_armor_texture[4][17][3]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -999,7 +957,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::unordered_map&lt;int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&gt; paperdoll_armor_typeByIndex = <a class="el" href="MapAccess_8h.html#a643e268672c6d9c3e981c966014ddeca">Inverted</a>(<a class="el" href="UICharacter_8cpp.html#ad5b7c379f514a7dd4bdbcf4cc239919b">paperdoll_armor_indexByType</a>)</td>
+          <td class="memname">const std::unordered_map&lt;int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&gt; paperdoll_armor_typeByIndex = <a class="el" href="MapAccess_8h.html#a2aed0bc8463ae11d4e4926066c245f8d">inverted</a>(<a class="el" href="UICharacter_8cpp.html#ad5b7c379f514a7dd4bdbcf4cc239919b">paperdoll_armor_indexByType</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1063,14 +1021,14 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ae0f335a504082954607a673aa51945fb" name="ae0f335a504082954607a673aa51945fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0f335a504082954607a673aa51945fb">&#9670;&#160;</a></span>paperdoll_belt_texture</h2>
+<a id="aeca26dc1246bcb52e12646ee43bd9535" name="aeca26dc1246bcb52e12646ee43bd9535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca26dc1246bcb52e12646ee43bd9535">&#9670;&#160;</a></span>paperdoll_belt_texture</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_belt_texture[4][7]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_belt_texture[4][7]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1084,7 +1042,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::unordered_map&lt;int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&gt; paperdoll_belt_typeByIndex = <a class="el" href="MapAccess_8h.html#a643e268672c6d9c3e981c966014ddeca">Inverted</a>(<a class="el" href="UICharacter_8cpp.html#aa89eda9796a78b3fa8b5709ec631be63">paperdoll_belt_indexByType</a>)</td>
+          <td class="memname">const std::unordered_map&lt;int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&gt; paperdoll_belt_typeByIndex = <a class="el" href="MapAccess_8h.html#a2aed0bc8463ae11d4e4926066c245f8d">inverted</a>(<a class="el" href="UICharacter_8cpp.html#aa89eda9796a78b3fa8b5709ec631be63">paperdoll_belt_indexByType</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1152,14 +1110,14 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a1bfdbaa013e98e175a6f13fe728dddb2" name="a1bfdbaa013e98e175a6f13fe728dddb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bfdbaa013e98e175a6f13fe728dddb2">&#9670;&#160;</a></span>paperdoll_boots_texture</h2>
+<a id="a59effb49b7b3cc4d98eef24d5e133438" name="a59effb49b7b3cc4d98eef24d5e133438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59effb49b7b3cc4d98eef24d5e133438">&#9670;&#160;</a></span>paperdoll_boots_texture</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_boots_texture[4][6]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_boots_texture[4][6]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1173,7 +1131,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::unordered_map&lt;int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&gt; paperdoll_boots_typeByIndex = <a class="el" href="MapAccess_8h.html#a643e268672c6d9c3e981c966014ddeca">Inverted</a>(<a class="el" href="UICharacter_8cpp.html#a12984fb92a15b0d050c209066caa678c">paperdoll_boots_indexByType</a>)</td>
+          <td class="memname">const std::unordered_map&lt;int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&gt; paperdoll_boots_typeByIndex = <a class="el" href="MapAccess_8h.html#a2aed0bc8463ae11d4e4926066c245f8d">inverted</a>(<a class="el" href="UICharacter_8cpp.html#a12984fb92a15b0d050c209066caa678c">paperdoll_boots_indexByType</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1207,14 +1165,14 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="afb1176547b43fe2cf0d2022158a3950c" name="afb1176547b43fe2cf0d2022158a3950c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb1176547b43fe2cf0d2022158a3950c">&#9670;&#160;</a></span>paperdoll_cloak_collar_texture</h2>
+<a id="a82e9db6f98b7d2e6a39589dd30a9bfb8" name="a82e9db6f98b7d2e6a39589dd30a9bfb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e9db6f98b7d2e6a39589dd30a9bfb8">&#9670;&#160;</a></span>paperdoll_cloak_collar_texture</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_cloak_collar_texture[4][10]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_cloak_collar_texture[4][10]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1257,14 +1215,14 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a26e15df9cfc7113edb42d4eefbe3477c" name="a26e15df9cfc7113edb42d4eefbe3477c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26e15df9cfc7113edb42d4eefbe3477c">&#9670;&#160;</a></span>paperdoll_cloak_texture</h2>
+<a id="a3c694444e8ddc206de9bf62c9db83d23" name="a3c694444e8ddc206de9bf62c9db83d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c694444e8ddc206de9bf62c9db83d23">&#9670;&#160;</a></span>paperdoll_cloak_texture</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_cloak_texture[4][10]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_cloak_texture[4][10]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1278,7 +1236,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::unordered_map&lt;int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&gt; paperdoll_cloak_typeByIndex = <a class="el" href="MapAccess_8h.html#a643e268672c6d9c3e981c966014ddeca">Inverted</a>(<a class="el" href="UICharacter_8cpp.html#a6e9541bb38ffe26f76f3799825c7cf1f">paperdoll_cloak_indexByType</a>)</td>
+          <td class="memname">const std::unordered_map&lt;int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&gt; paperdoll_cloak_typeByIndex = <a class="el" href="MapAccess_8h.html#a2aed0bc8463ae11d4e4926066c245f8d">inverted</a>(<a class="el" href="UICharacter_8cpp.html#a6e9541bb38ffe26f76f3799825c7cf1f">paperdoll_cloak_indexByType</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1312,112 +1270,112 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a2a26710589de11a5beec21b7bb3ed0d9" name="a2a26710589de11a5beec21b7bb3ed0d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a26710589de11a5beec21b7bb3ed0d9">&#9670;&#160;</a></span>paperdoll_dbods</h2>
+<a id="aa8cb100676344e71f9a52949577e8c3c" name="aa8cb100676344e71f9a52949577e8c3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cb100676344e71f9a52949577e8c3c">&#9670;&#160;</a></span>paperdoll_dbods</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_dbods[5]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_dbods[5]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a853a86402287afa6e1500b87094a16c2" name="a853a86402287afa6e1500b87094a16c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a853a86402287afa6e1500b87094a16c2">&#9670;&#160;</a></span>paperdoll_dbrds</h2>
+<a id="aa1d8f1a03147042f3555aafdf38e390b" name="aa1d8f1a03147042f3555aafdf38e390b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d8f1a03147042f3555aafdf38e390b">&#9670;&#160;</a></span>paperdoll_dbrds</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;<a class="el" href="classImage.html">Image</a> *, 16&gt; paperdoll_dbrds</td>
+          <td class="memname">std::array&lt;<a class="el" href="classGraphicsImage.html">GraphicsImage</a> *, 16&gt; paperdoll_dbrds</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae2cbf77a97f5b5e3e8e8778f9386b3f4" name="ae2cbf77a97f5b5e3e8e8778f9386b3f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2cbf77a97f5b5e3e8e8778f9386b3f4">&#9670;&#160;</a></span>paperdoll_dlads</h2>
+<a id="ad08f51bd0fc2c1573d15d1fc8454d0c6" name="ad08f51bd0fc2c1573d15d1fc8454d0c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad08f51bd0fc2c1573d15d1fc8454d0c6">&#9670;&#160;</a></span>paperdoll_dlads</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_dlads[4]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_dlads[4]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a83b73a4cd53d336b72b789e7dc571d34" name="a83b73a4cd53d336b72b789e7dc571d34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83b73a4cd53d336b72b789e7dc571d34">&#9670;&#160;</a></span>paperdoll_dlaus</h2>
+<a id="a022275213f33a56251dce319dbcc07ed" name="a022275213f33a56251dce319dbcc07ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a022275213f33a56251dce319dbcc07ed">&#9670;&#160;</a></span>paperdoll_dlaus</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_dlaus[5]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_dlaus[5]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8edf263877a7aca3c315b7bd3a3bff24" name="a8edf263877a7aca3c315b7bd3a3bff24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8edf263877a7aca3c315b7bd3a3bff24">&#9670;&#160;</a></span>paperdoll_dlhs</h2>
+<a id="a0879bd6c43f83bc541ae889acac7f8d5" name="a0879bd6c43f83bc541ae889acac7f8d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0879bd6c43f83bc541ae889acac7f8d5">&#9670;&#160;</a></span>paperdoll_dlhs</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_dlhs[4]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_dlhs[4]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad209a98f1685920b79f06ad37fe2d339" name="ad209a98f1685920b79f06ad37fe2d339"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad209a98f1685920b79f06ad37fe2d339">&#9670;&#160;</a></span>paperdoll_dlhus</h2>
+<a id="a8bd583578fb98f0dde8222ebeb44cb6c" name="a8bd583578fb98f0dde8222ebeb44cb6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd583578fb98f0dde8222ebeb44cb6c">&#9670;&#160;</a></span>paperdoll_dlhus</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_dlhus[4]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_dlhus[4]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="afeac8bf1b4f22d22027ccb49bfe786df" name="afeac8bf1b4f22d22027ccb49bfe786df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afeac8bf1b4f22d22027ccb49bfe786df">&#9670;&#160;</a></span>paperdoll_drhs</h2>
+<a id="affab9120eb7cd7f7ec1d9c95ba48528e" name="affab9120eb7cd7f7ec1d9c95ba48528e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affab9120eb7cd7f7ec1d9c95ba48528e">&#9670;&#160;</a></span>paperdoll_drhs</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_drhs[4]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_drhs[4]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="acff5af51f7d15e0fccd46bcb958ed929" name="acff5af51f7d15e0fccd46bcb958ed929"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acff5af51f7d15e0fccd46bcb958ed929">&#9670;&#160;</a></span>paperdoll_flying_feet</h2>
+<a id="a2dd8ecc6d1ae6aee4bf4b2f888f5e3d4" name="a2dd8ecc6d1ae6aee4bf4b2f888f5e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd8ecc6d1ae6aee4bf4b2f888f5e3d4">&#9670;&#160;</a></span>paperdoll_flying_feet</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_flying_feet[22]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_flying_feet[22]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1503,14 +1461,14 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="afa691e158398f7f70af568529bc117c9" name="afa691e158398f7f70af568529bc117c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa691e158398f7f70af568529bc117c9">&#9670;&#160;</a></span>paperdoll_helm_texture</h2>
+<a id="a2d68142113549144e878cf8e179d3aea" name="a2d68142113549144e878cf8e179d3aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d68142113549144e878cf8e179d3aea">&#9670;&#160;</a></span>paperdoll_helm_texture</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* paperdoll_helm_texture[2][16]</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* paperdoll_helm_texture[2][16]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1524,7 +1482,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::unordered_map&lt;int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&gt; paperdoll_helm_typeByIndex = <a class="el" href="MapAccess_8h.html#a643e268672c6d9c3e981c966014ddeca">Inverted</a>(<a class="el" href="UICharacter_8cpp.html#a7995ddfd49caa46161ce3b9cd2efb68d">paperdoll_helm_indexByType</a>)</td>
+          <td class="memname">const std::unordered_map&lt;int, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&gt; paperdoll_helm_typeByIndex = <a class="el" href="MapAccess_8h.html#a2aed0bc8463ae11d4e4926066c245f8d">inverted</a>(<a class="el" href="UICharacter_8cpp.html#a7995ddfd49caa46161ce3b9cd2efb68d">paperdoll_helm_indexByType</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1723,868 +1681,932 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a34e599c9df27d4489b6ff00390d559f2" name="a34e599c9df27d4489b6ff00390d559f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34e599c9df27d4489b6ff00390d559f2">&#9670;&#160;</a></span>ui_book_autonotes_text_color</h2>
+<a id="ab17f5b262e9eb4fb45e8534501ee1305" name="ab17f5b262e9eb4fb45e8534501ee1305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab17f5b262e9eb4fb45e8534501ee1305">&#9670;&#160;</a></span>savedInventoryLeftClickButtonW</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_autonotes_text_color</td>
+          <td class="memname">int savedInventoryLeftClickButtonW</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a08828dcdff3f58df38110a4ccfcf2467" name="a08828dcdff3f58df38110a4ccfcf2467"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08828dcdff3f58df38110a4ccfcf2467">&#9670;&#160;</a></span>ui_book_autonotes_title_color</h2>
+<a id="af2a2853efd4b0cfe6a6c5e2303a974f4" name="af2a2853efd4b0cfe6a6c5e2303a974f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2a2853efd4b0cfe6a6c5e2303a974f4">&#9670;&#160;</a></span>savedInventoryLeftClickButtonX</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_autonotes_title_color</td>
+          <td class="memname">int savedInventoryLeftClickButtonX</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="adc475d798775deba6fbc4c98ed75b8a8" name="adc475d798775deba6fbc4c98ed75b8a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc475d798775deba6fbc4c98ed75b8a8">&#9670;&#160;</a></span>ui_book_calendar_day_color</h2>
+<a id="a5604a7ae703e4d2d8c1426bba4c73f79" name="a5604a7ae703e4d2d8c1426bba4c73f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5604a7ae703e4d2d8c1426bba4c73f79">&#9670;&#160;</a></span>savedInventoryLeftClickButtonY</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_calendar_day_color</td>
+          <td class="memname">int savedInventoryLeftClickButtonY</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aa2911b08e059b7e2cbb17e1da01c258e" name="aa2911b08e059b7e2cbb17e1da01c258e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2911b08e059b7e2cbb17e1da01c258e">&#9670;&#160;</a></span>ui_book_calendar_location_color</h2>
+<a id="ae9b2955a3ce41b0a06130758b3526da2" name="ae9b2955a3ce41b0a06130758b3526da2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b2955a3ce41b0a06130758b3526da2">&#9670;&#160;</a></span>savedInventoryLeftClickButtonZ</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_calendar_location_color</td>
+          <td class="memname">int savedInventoryLeftClickButtonZ</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a225400a178c6575b25f6c91a62551d07" name="a225400a178c6575b25f6c91a62551d07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a225400a178c6575b25f6c91a62551d07">&#9670;&#160;</a></span>ui_book_calendar_month_color</h2>
+<a id="a4ed05540a012f883160cf3f1d81ebcf8" name="a4ed05540a012f883160cf3f1d81ebcf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed05540a012f883160cf3f1d81ebcf8">&#9670;&#160;</a></span>scrollstop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* scrollstop = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82879d0e32d186c1a2b9a493588d9dcc" name="a82879d0e32d186c1a2b9a493588d9dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82879d0e32d186c1a2b9a493588d9dcc">&#9670;&#160;</a></span>ui_book_autonotes_text_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_calendar_month_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_autonotes_text_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="abf4c49d39a4a257cacfaaa73ddb641b0" name="abf4c49d39a4a257cacfaaa73ddb641b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf4c49d39a4a257cacfaaa73ddb641b0">&#9670;&#160;</a></span>ui_book_calendar_moon_color</h2>
+<a id="af14913e3dba5e609539a1725d3b74705" name="af14913e3dba5e609539a1725d3b74705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af14913e3dba5e609539a1725d3b74705">&#9670;&#160;</a></span>ui_book_autonotes_title_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_calendar_moon_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_autonotes_title_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1153aab77df3ca94701f9a2a7cc2e99c" name="a1153aab77df3ca94701f9a2a7cc2e99c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1153aab77df3ca94701f9a2a7cc2e99c">&#9670;&#160;</a></span>ui_book_calendar_time_color</h2>
+<a id="a24d610de0536fdd1ee1e03aafc33b16f" name="a24d610de0536fdd1ee1e03aafc33b16f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d610de0536fdd1ee1e03aafc33b16f">&#9670;&#160;</a></span>ui_book_calendar_day_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_calendar_time_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_calendar_day_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a0a822ed1edcf8be661d979e2d3bf5f12" name="a0a822ed1edcf8be661d979e2d3bf5f12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a822ed1edcf8be661d979e2d3bf5f12">&#9670;&#160;</a></span>ui_book_calendar_title_color</h2>
+<a id="af40fb7acbec072a553318f6b7625ee71" name="af40fb7acbec072a553318f6b7625ee71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af40fb7acbec072a553318f6b7625ee71">&#9670;&#160;</a></span>ui_book_calendar_location_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_calendar_title_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_calendar_location_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a33bc9accdfbf89b7d1c8b273dbed3c5a" name="a33bc9accdfbf89b7d1c8b273dbed3c5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33bc9accdfbf89b7d1c8b273dbed3c5a">&#9670;&#160;</a></span>ui_book_calendar_year_color</h2>
+<a id="af7d5490c22ac461b41ed4e69b0d4e18b" name="af7d5490c22ac461b41ed4e69b0d4e18b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d5490c22ac461b41ed4e69b0d4e18b">&#9670;&#160;</a></span>ui_book_calendar_month_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_calendar_year_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_calendar_month_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a0014c2c8d25ad9769c64bc4e690b5efa" name="a0014c2c8d25ad9769c64bc4e690b5efa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0014c2c8d25ad9769c64bc4e690b5efa">&#9670;&#160;</a></span>ui_book_journal_text_color</h2>
+<a id="a08b3ca41fc8d430fd3902c5dec5c2ff2" name="a08b3ca41fc8d430fd3902c5dec5c2ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b3ca41fc8d430fd3902c5dec5c2ff2">&#9670;&#160;</a></span>ui_book_calendar_moon_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_journal_text_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_calendar_moon_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ab8e1fc6377ad57a77e0368c3c239397a" name="ab8e1fc6377ad57a77e0368c3c239397a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8e1fc6377ad57a77e0368c3c239397a">&#9670;&#160;</a></span>ui_book_journal_text_shadow</h2>
+<a id="a18d0d734c0829bc92ca24533c33b73ec" name="a18d0d734c0829bc92ca24533c33b73ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18d0d734c0829bc92ca24533c33b73ec">&#9670;&#160;</a></span>ui_book_calendar_time_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_journal_text_shadow</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_calendar_time_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="abe4ef2fac66439514966705140b3fb72" name="abe4ef2fac66439514966705140b3fb72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe4ef2fac66439514966705140b3fb72">&#9670;&#160;</a></span>ui_book_journal_title_color</h2>
+<a id="ad4449ce506ec16567b387c98e154633f" name="ad4449ce506ec16567b387c98e154633f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4449ce506ec16567b387c98e154633f">&#9670;&#160;</a></span>ui_book_calendar_title_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_journal_title_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_calendar_title_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af32286a2b729ecb6d929e4375cadd358" name="af32286a2b729ecb6d929e4375cadd358"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af32286a2b729ecb6d929e4375cadd358">&#9670;&#160;</a></span>ui_book_map_coordinates_color</h2>
+<a id="aca14baef0da27ce8bdfaa7b7e21b9e3d" name="aca14baef0da27ce8bdfaa7b7e21b9e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca14baef0da27ce8bdfaa7b7e21b9e3d">&#9670;&#160;</a></span>ui_book_calendar_year_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_map_coordinates_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_calendar_year_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a18c090527cc92eb6d3fc202d1a988f0b" name="a18c090527cc92eb6d3fc202d1a988f0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18c090527cc92eb6d3fc202d1a988f0b">&#9670;&#160;</a></span>ui_book_map_title_color</h2>
+<a id="a781ef461d9a13963a24010947c3d1a03" name="a781ef461d9a13963a24010947c3d1a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a781ef461d9a13963a24010947c3d1a03">&#9670;&#160;</a></span>ui_book_journal_text_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_map_title_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_journal_text_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aeb2dc01a8464b82ce20ec6723715c096" name="aeb2dc01a8464b82ce20ec6723715c096"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb2dc01a8464b82ce20ec6723715c096">&#9670;&#160;</a></span>ui_book_quests_text_color</h2>
+<a id="a9d8a3bf44d1422e70768542c74ad756e" name="a9d8a3bf44d1422e70768542c74ad756e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d8a3bf44d1422e70768542c74ad756e">&#9670;&#160;</a></span>ui_book_journal_text_shadow</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_quests_text_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_journal_text_shadow</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a0de23cb7df2f2eba8bb4c7082fd42448" name="a0de23cb7df2f2eba8bb4c7082fd42448"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0de23cb7df2f2eba8bb4c7082fd42448">&#9670;&#160;</a></span>ui_book_quests_title_color</h2>
+<a id="ae46fdd869e665fe624cc816716166396" name="ae46fdd869e665fe624cc816716166396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46fdd869e665fe624cc816716166396">&#9670;&#160;</a></span>ui_book_journal_title_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_book_quests_title_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_journal_title_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="abb87cd3f59c6ede1515af0a6be532c6f" name="abb87cd3f59c6ede1515af0a6be532c6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb87cd3f59c6ede1515af0a6be532c6f">&#9670;&#160;</a></span>ui_character_award_color</h2>
+<a id="ab9d894e1084eaa66958436cfa8593ec2" name="ab9d894e1084eaa66958436cfa8593ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d894e1084eaa66958436cfa8593ec2">&#9670;&#160;</a></span>ui_book_map_coordinates_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;unsigned int, 6&gt; ui_character_award_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_map_coordinates_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="afb3155bde482686a6b6b6fb32416d12a" name="afb3155bde482686a6b6b6fb32416d12a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb3155bde482686a6b6b6fb32416d12a">&#9670;&#160;</a></span>ui_character_awards_background</h2>
+<a id="a6d3a517befef5b038445c02679f9424a" name="a6d3a517befef5b038445c02679f9424a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d3a517befef5b038445c02679f9424a">&#9670;&#160;</a></span>ui_book_map_title_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* ui_character_awards_background = nullptr</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_map_title_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="adca48c40796308a4d924180c054c911e" name="adca48c40796308a4d924180c054c911e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adca48c40796308a4d924180c054c911e">&#9670;&#160;</a></span>ui_character_bonus_text_color</h2>
+<a id="a3212408cc32c7f18792b096be79e352c" name="a3212408cc32c7f18792b096be79e352c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3212408cc32c7f18792b096be79e352c">&#9670;&#160;</a></span>ui_book_quests_text_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_bonus_text_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_quests_text_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af8cbd1e2956463dd0ea326e5b685dd66" name="af8cbd1e2956463dd0ea326e5b685dd66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8cbd1e2956463dd0ea326e5b685dd66">&#9670;&#160;</a></span>ui_character_bonus_text_color_neg</h2>
+<a id="a6ccac1e4e6149233760785ef1a69a6ae" name="a6ccac1e4e6149233760785ef1a69a6ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ccac1e4e6149233760785ef1a69a6ae">&#9670;&#160;</a></span>ui_book_quests_title_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_bonus_text_color_neg</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_book_quests_title_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a09cd075af6db0b058ea4393c807005cb" name="a09cd075af6db0b058ea4393c807005cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09cd075af6db0b058ea4393c807005cb">&#9670;&#160;</a></span>ui_character_condition_light_color</h2>
+<a id="a51e716a052e90f162311191d459f123e" name="a51e716a052e90f162311191d459f123e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e716a052e90f162311191d459f123e">&#9670;&#160;</a></span>ui_character_award_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_condition_light_color</td>
+          <td class="memname">std::array&lt;<a class="el" href="structColor.html">Color</a>, 6&gt; ui_character_award_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a919582a5c65aaeb22b23fb45dfa4420c" name="a919582a5c65aaeb22b23fb45dfa4420c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a919582a5c65aaeb22b23fb45dfa4420c">&#9670;&#160;</a></span>ui_character_condition_moderate_color</h2>
+<a id="a08606c87f60e4cf769d6a108e1b1bfae" name="a08606c87f60e4cf769d6a108e1b1bfae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08606c87f60e4cf769d6a108e1b1bfae">&#9670;&#160;</a></span>ui_character_awards_background</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_condition_moderate_color</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* ui_character_awards_background = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a2c8070f33d523a8ac459d2c79321327d" name="a2c8070f33d523a8ac459d2c79321327d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c8070f33d523a8ac459d2c79321327d">&#9670;&#160;</a></span>ui_character_condition_normal_color</h2>
+<a id="a6ab4f7665c8ffce3115c16656f1b9080" name="a6ab4f7665c8ffce3115c16656f1b9080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ab4f7665c8ffce3115c16656f1b9080">&#9670;&#160;</a></span>ui_character_bonus_text_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_condition_normal_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_bonus_text_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a10566b60b1386fee13232b55fd104541" name="a10566b60b1386fee13232b55fd104541"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10566b60b1386fee13232b55fd104541">&#9670;&#160;</a></span>ui_character_condition_severe_color</h2>
+<a id="a1e1f82967f0c9478728b0be158f09d99" name="a1e1f82967f0c9478728b0be158f09d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1f82967f0c9478728b0be158f09d99">&#9670;&#160;</a></span>ui_character_bonus_text_color_neg</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_condition_severe_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_bonus_text_color_neg</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aca8f8fe005e91079973ce5980950573c" name="aca8f8fe005e91079973ce5980950573c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca8f8fe005e91079973ce5980950573c">&#9670;&#160;</a></span>ui_character_default_text_color</h2>
+<a id="a33ed1e700c92799b7191c8cb79a325d8" name="a33ed1e700c92799b7191c8cb79a325d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ed1e700c92799b7191c8cb79a325d8">&#9670;&#160;</a></span>ui_character_condition_light_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_default_text_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_condition_light_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a196c5f3dffe24f1976e2d6dc6a971f0c" name="a196c5f3dffe24f1976e2d6dc6a971f0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a196c5f3dffe24f1976e2d6dc6a971f0c">&#9670;&#160;</a></span>ui_character_header_text_color</h2>
+<a id="a8fdff6d2f04b9174650ae0b18aec4e31" name="a8fdff6d2f04b9174650ae0b18aec4e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fdff6d2f04b9174650ae0b18aec4e31">&#9670;&#160;</a></span>ui_character_condition_moderate_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_header_text_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_condition_moderate_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a6dd49cee93455afca023072a45062c9a" name="a6dd49cee93455afca023072a45062c9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dd49cee93455afca023072a45062c9a">&#9670;&#160;</a></span>ui_character_inventory_background</h2>
+<a id="a682d3cecf48f0b6cb15a2ab817bdd223" name="a682d3cecf48f0b6cb15a2ab817bdd223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682d3cecf48f0b6cb15a2ab817bdd223">&#9670;&#160;</a></span>ui_character_condition_normal_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* ui_character_inventory_background = nullptr</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_condition_normal_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ab4fb135d131265ae1758779cc6af26e2" name="ab4fb135d131265ae1758779cc6af26e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4fb135d131265ae1758779cc6af26e2">&#9670;&#160;</a></span>ui_character_inventory_background_strip</h2>
+<a id="a345e1f9e890850374fa203faeb084a7a" name="a345e1f9e890850374fa203faeb084a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345e1f9e890850374fa203faeb084a7a">&#9670;&#160;</a></span>ui_character_condition_severe_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* ui_character_inventory_background_strip = nullptr</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_condition_severe_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a78396a25878c94557d0d377abbd9e82e" name="a78396a25878c94557d0d377abbd9e82e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78396a25878c94557d0d377abbd9e82e">&#9670;&#160;</a></span>ui_character_inventory_magnification_glass</h2>
+<a id="a3b1d448c2ffcb377fceadaa9a61dc33e" name="a3b1d448c2ffcb377fceadaa9a61dc33e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1d448c2ffcb377fceadaa9a61dc33e">&#9670;&#160;</a></span>ui_character_default_text_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* ui_character_inventory_magnification_glass = nullptr</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_default_text_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad73ce1651b4f0eb2addac4e78913a86b" name="ad73ce1651b4f0eb2addac4e78913a86b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad73ce1651b4f0eb2addac4e78913a86b">&#9670;&#160;</a></span>ui_character_inventory_paperdoll_background</h2>
+<a id="af19f6e0df0a6a3743a3ea7f558dc0ea3" name="af19f6e0df0a6a3743a3ea7f558dc0ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19f6e0df0a6a3743a3ea7f558dc0ea3">&#9670;&#160;</a></span>ui_character_header_text_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* ui_character_inventory_paperdoll_background = nullptr</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_header_text_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a2bb65664bfb504877f1d67d92d4daece" name="a2bb65664bfb504877f1d67d92d4daece"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bb65664bfb504877f1d67d92d4daece">&#9670;&#160;</a></span>ui_character_inventory_paperdoll_rings_background</h2>
+<a id="a1b179d180c46cc5d79fca6f4b1982662" name="a1b179d180c46cc5d79fca6f4b1982662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b179d180c46cc5d79fca6f4b1982662">&#9670;&#160;</a></span>ui_character_inventory_background</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* ui_character_inventory_paperdoll_rings_background = nullptr</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* ui_character_inventory_background = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8347cdd3827b2b002acee0cc88daf04b" name="a8347cdd3827b2b002acee0cc88daf04b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8347cdd3827b2b002acee0cc88daf04b">&#9670;&#160;</a></span>ui_character_inventory_paperdoll_rings_close</h2>
+<a id="a72c56317016b062d03296c9debe271e0" name="a72c56317016b062d03296c9debe271e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c56317016b062d03296c9debe271e0">&#9670;&#160;</a></span>ui_character_inventory_background_strip</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* ui_character_inventory_paperdoll_rings_close = nullptr</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* ui_character_inventory_background_strip = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a62d488b76a62e0440dae4f6a1bffa0fb" name="a62d488b76a62e0440dae4f6a1bffa0fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62d488b76a62e0440dae4f6a1bffa0fb">&#9670;&#160;</a></span>ui_character_skill_default_color</h2>
+<a id="adabf8160a40ee2df68f22d0c87c518cf" name="adabf8160a40ee2df68f22d0c87c518cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabf8160a40ee2df68f22d0c87c518cf">&#9670;&#160;</a></span>ui_character_inventory_magnification_glass</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_skill_default_color</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* ui_character_inventory_magnification_glass = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af281ccb71c006c435811a8eeb92b0014" name="af281ccb71c006c435811a8eeb92b0014"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af281ccb71c006c435811a8eeb92b0014">&#9670;&#160;</a></span>ui_character_skill_highlight_color</h2>
+<a id="a7f211cd9ff1f7c561c3b2ee813a2e81f" name="a7f211cd9ff1f7c561c3b2ee813a2e81f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f211cd9ff1f7c561c3b2ee813a2e81f">&#9670;&#160;</a></span>ui_character_inventory_paperdoll_background</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_skill_highlight_color</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* ui_character_inventory_paperdoll_background = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a566e6e37a237b6913a2292d93684b4ef" name="a566e6e37a237b6913a2292d93684b4ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a566e6e37a237b6913a2292d93684b4ef">&#9670;&#160;</a></span>ui_character_skill_upgradeable_color</h2>
+<a id="a8ec16011bf0156fb5afa5650fe06c1f1" name="a8ec16011bf0156fb5afa5650fe06c1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec16011bf0156fb5afa5650fe06c1f1">&#9670;&#160;</a></span>ui_character_inventory_paperdoll_rings_background</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_skill_upgradeable_color</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* ui_character_inventory_paperdoll_rings_background = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1472091e40b51bfe2bdb5c36e2922156" name="a1472091e40b51bfe2bdb5c36e2922156"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1472091e40b51bfe2bdb5c36e2922156">&#9670;&#160;</a></span>ui_character_skillinfo_can_learn</h2>
+<a id="af064b2a5ecfd836be50a010b2d331081" name="af064b2a5ecfd836be50a010b2d331081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af064b2a5ecfd836be50a010b2d331081">&#9670;&#160;</a></span>ui_character_skill_default_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_skillinfo_can_learn</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_skill_default_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ab3e95253fdc184b4ef51da882d7ab530" name="ab3e95253fdc184b4ef51da882d7ab530"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3e95253fdc184b4ef51da882d7ab530">&#9670;&#160;</a></span>ui_character_skillinfo_can_learn_gm</h2>
+<a id="a352f8bd2a78825ead4ce1ea6027b97bd" name="a352f8bd2a78825ead4ce1ea6027b97bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352f8bd2a78825ead4ce1ea6027b97bd">&#9670;&#160;</a></span>ui_character_skill_highlight_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_skillinfo_can_learn_gm</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_skill_highlight_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1f6e5802f1830407d4ea57a255f2ceaf" name="a1f6e5802f1830407d4ea57a255f2ceaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f6e5802f1830407d4ea57a255f2ceaf">&#9670;&#160;</a></span>ui_character_skillinfo_cant_learn</h2>
+<a id="a1a50e1ca7fe5b03871fccd4a7e16fd87" name="a1a50e1ca7fe5b03871fccd4a7e16fd87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a50e1ca7fe5b03871fccd4a7e16fd87">&#9670;&#160;</a></span>ui_character_skill_upgradeable_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_skillinfo_cant_learn</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_skill_upgradeable_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a802d754a6028d6d48ac55ce0826b7830" name="a802d754a6028d6d48ac55ce0826b7830"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a802d754a6028d6d48ac55ce0826b7830">&#9670;&#160;</a></span>ui_character_skills_background</h2>
+<a id="aefa8634615dc4f64506d5947bd1214e8" name="aefa8634615dc4f64506d5947bd1214e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa8634615dc4f64506d5947bd1214e8">&#9670;&#160;</a></span>ui_character_skillinfo_can_learn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* ui_character_skills_background = nullptr</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_skillinfo_can_learn</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac99fb9a04b14dafe24a0bffd598fc244" name="ac99fb9a04b14dafe24a0bffd598fc244"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac99fb9a04b14dafe24a0bffd598fc244">&#9670;&#160;</a></span>ui_character_stat_buffed_color</h2>
+<a id="afcfc75d07361db49da493cd432c98f04" name="afcfc75d07361db49da493cd432c98f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcfc75d07361db49da493cd432c98f04">&#9670;&#160;</a></span>ui_character_skillinfo_can_learn_gm</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_stat_buffed_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_skillinfo_can_learn_gm</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a717f8c9cbfbc9bd570e697ca02ff85b2" name="a717f8c9cbfbc9bd570e697ca02ff85b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a717f8c9cbfbc9bd570e697ca02ff85b2">&#9670;&#160;</a></span>ui_character_stat_debuffed_color</h2>
+<a id="a0b51895614cb507c10601b62248c9b61" name="a0b51895614cb507c10601b62248c9b61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b51895614cb507c10601b62248c9b61">&#9670;&#160;</a></span>ui_character_skillinfo_cant_learn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_stat_debuffed_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_skillinfo_cant_learn</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a36f87b1e8b626e5003fa35e1309e88fb" name="a36f87b1e8b626e5003fa35e1309e88fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36f87b1e8b626e5003fa35e1309e88fb">&#9670;&#160;</a></span>ui_character_stat_default_color</h2>
+<a id="a31b1540c38b091fe46c81c21bc213645" name="a31b1540c38b091fe46c81c21bc213645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b1540c38b091fe46c81c21bc213645">&#9670;&#160;</a></span>ui_character_skills_background</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_stat_default_color</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* ui_character_skills_background = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a3f0eea23b71efa01601040ac558ff3c1" name="a3f0eea23b71efa01601040ac558ff3c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f0eea23b71efa01601040ac558ff3c1">&#9670;&#160;</a></span>ui_character_stats_background</h2>
+<a id="a0faad8b0b60bad6aba27b3d4e8905caf" name="a0faad8b0b60bad6aba27b3d4e8905caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0faad8b0b60bad6aba27b3d4e8905caf">&#9670;&#160;</a></span>ui_character_stat_buffed_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classImage.html">Image</a>* ui_character_stats_background = nullptr</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_stat_buffed_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a14518df6b88a149a816fdee8fa2eb6a0" name="a14518df6b88a149a816fdee8fa2eb6a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14518df6b88a149a816fdee8fa2eb6a0">&#9670;&#160;</a></span>ui_character_tooltip_header_default_color</h2>
+<a id="ac834f9aa1e3732281f50cf4436672e53" name="ac834f9aa1e3732281f50cf4436672e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac834f9aa1e3732281f50cf4436672e53">&#9670;&#160;</a></span>ui_character_stat_debuffed_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_character_tooltip_header_default_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_stat_debuffed_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1bfe650774ef138ae02d36516884f23e" name="a1bfe650774ef138ae02d36516884f23e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bfe650774ef138ae02d36516884f23e">&#9670;&#160;</a></span>ui_game_character_record_playerbuff_colors</h2>
+<a id="a6fdfbebf3f31401297fbb8ec972b78ba" name="a6fdfbebf3f31401297fbb8ec972b78ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fdfbebf3f31401297fbb8ec972b78ba">&#9670;&#160;</a></span>ui_character_stat_default_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;unsigned int, 24&gt; ui_game_character_record_playerbuff_colors</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_stat_default_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a988dd0f45fb105bba558cc454db9fe1f" name="a988dd0f45fb105bba558cc454db9fe1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a988dd0f45fb105bba558cc454db9fe1f">&#9670;&#160;</a></span>ui_game_dialogue_npc_name_color</h2>
+<a id="ae75abd8df8d2d2bcfaf17ae3687ede07" name="ae75abd8df8d2d2bcfaf17ae3687ede07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75abd8df8d2d2bcfaf17ae3687ede07">&#9670;&#160;</a></span>ui_character_stats_background</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_game_dialogue_npc_name_color</td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a>* ui_character_stats_background = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af129fc8721b24d362ce21b9d50012b27" name="af129fc8721b24d362ce21b9d50012b27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af129fc8721b24d362ce21b9d50012b27">&#9670;&#160;</a></span>ui_game_dialogue_option_highlight_color</h2>
+<a id="aa54e2799b40d3d62230e63f534a865a9" name="aa54e2799b40d3d62230e63f534a865a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa54e2799b40d3d62230e63f534a865a9">&#9670;&#160;</a></span>ui_character_tooltip_header_default_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_game_dialogue_option_highlight_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_character_tooltip_header_default_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a78be7443c442c48d6cadc0e8227dbc4b" name="a78be7443c442c48d6cadc0e8227dbc4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78be7443c442c48d6cadc0e8227dbc4b">&#9670;&#160;</a></span>ui_game_dialogue_option_normal_color</h2>
+<a id="a4b3e18d047a69092efece4a7acbbd18b" name="a4b3e18d047a69092efece4a7acbbd18b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b3e18d047a69092efece4a7acbbd18b">&#9670;&#160;</a></span>ui_game_character_record_playerbuff_colors</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_game_dialogue_option_normal_color</td>
+          <td class="memname">std::array&lt;<a class="el" href="structColor.html">Color</a>, 24&gt; ui_game_character_record_playerbuff_colors</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a11ebd067a0353b8afb3938bfda337c99" name="a11ebd067a0353b8afb3938bfda337c99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11ebd067a0353b8afb3938bfda337c99">&#9670;&#160;</a></span>ui_game_minimap_actor_corpse_color</h2>
+<a id="a4571d53a134d4d68de66d55f00a792f1" name="a4571d53a134d4d68de66d55f00a792f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4571d53a134d4d68de66d55f00a792f1">&#9670;&#160;</a></span>ui_game_dialogue_npc_name_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_game_minimap_actor_corpse_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_game_dialogue_npc_name_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a37141225ff232f3e382240432feda39c" name="a37141225ff232f3e382240432feda39c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37141225ff232f3e382240432feda39c">&#9670;&#160;</a></span>ui_game_minimap_actor_friendly_color</h2>
+<a id="aae5700ceb8778b4803b4d180c64281c6" name="aae5700ceb8778b4803b4d180c64281c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5700ceb8778b4803b4d180c64281c6">&#9670;&#160;</a></span>ui_game_dialogue_option_highlight_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_game_minimap_actor_friendly_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_game_dialogue_option_highlight_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a432616b4a31aa73e4f46d48a5bbdc348" name="a432616b4a31aa73e4f46d48a5bbdc348"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a432616b4a31aa73e4f46d48a5bbdc348">&#9670;&#160;</a></span>ui_game_minimap_actor_hostile_color</h2>
+<a id="a88c20f404c52dcf87520cf8d7e9d4a4e" name="a88c20f404c52dcf87520cf8d7e9d4a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c20f404c52dcf87520cf8d7e9d4a4e">&#9670;&#160;</a></span>ui_game_dialogue_option_normal_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_game_minimap_actor_hostile_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_game_dialogue_option_normal_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af42ec46bb23e702dd6f2aa1f0ef79cab" name="af42ec46bb23e702dd6f2aa1f0ef79cab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af42ec46bb23e702dd6f2aa1f0ef79cab">&#9670;&#160;</a></span>ui_game_minimap_decoration_color_1</h2>
+<a id="a4894f61ff968d4b31e034353890a0309" name="a4894f61ff968d4b31e034353890a0309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4894f61ff968d4b31e034353890a0309">&#9670;&#160;</a></span>ui_game_minimap_actor_corpse_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_game_minimap_decoration_color_1</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_game_minimap_actor_corpse_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac3ff58b56b04a83f43884a378004d9a0" name="ac3ff58b56b04a83f43884a378004d9a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3ff58b56b04a83f43884a378004d9a0">&#9670;&#160;</a></span>ui_game_minimap_outline_color</h2>
+<a id="ad969197b67bb45302739a58d7733725a" name="ad969197b67bb45302739a58d7733725a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad969197b67bb45302739a58d7733725a">&#9670;&#160;</a></span>ui_game_minimap_actor_friendly_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_game_minimap_outline_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_game_minimap_actor_friendly_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aabe8758047dcd526c764579d381e1b1e" name="aabe8758047dcd526c764579d381e1b1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabe8758047dcd526c764579d381e1b1e">&#9670;&#160;</a></span>ui_game_minimap_projectile_color</h2>
+<a id="a78d2e64a9fee049f24df2630f27acda7" name="a78d2e64a9fee049f24df2630f27acda7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78d2e64a9fee049f24df2630f27acda7">&#9670;&#160;</a></span>ui_game_minimap_actor_hostile_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_game_minimap_projectile_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_game_minimap_actor_hostile_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a146957e305d46dde9a8060598c04d277" name="a146957e305d46dde9a8060598c04d277"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a146957e305d46dde9a8060598c04d277">&#9670;&#160;</a></span>ui_game_minimap_treasure_color</h2>
+<a id="a917b986012d58dd0d5e6c4deb09bf785" name="a917b986012d58dd0d5e6c4deb09bf785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a917b986012d58dd0d5e6c4deb09bf785">&#9670;&#160;</a></span>ui_game_minimap_decoration_color_1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_game_minimap_treasure_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_game_minimap_decoration_color_1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a68c3f123c575a78ee6a2a4139d0c9aff" name="a68c3f123c575a78ee6a2a4139d0c9aff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68c3f123c575a78ee6a2a4139d0c9aff">&#9670;&#160;</a></span>ui_gamemenu_keys_action_name_color</h2>
+<a id="a165e52c44abf110a98e3a22da374699e" name="a165e52c44abf110a98e3a22da374699e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a165e52c44abf110a98e3a22da374699e">&#9670;&#160;</a></span>ui_game_minimap_outline_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_gamemenu_keys_action_name_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_game_minimap_outline_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aa945c84196f7f357411d07cb5ff3c931" name="aa945c84196f7f357411d07cb5ff3c931"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa945c84196f7f357411d07cb5ff3c931">&#9670;&#160;</a></span>ui_gamemenu_keys_key_default_color</h2>
+<a id="a76e6c36d4a2e10e720a2073e71a18b80" name="a76e6c36d4a2e10e720a2073e71a18b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e6c36d4a2e10e720a2073e71a18b80">&#9670;&#160;</a></span>ui_game_minimap_projectile_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_gamemenu_keys_key_default_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_game_minimap_projectile_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae751f9d3040ac9846ce3cc17082b91ed" name="ae751f9d3040ac9846ce3cc17082b91ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae751f9d3040ac9846ce3cc17082b91ed">&#9670;&#160;</a></span>ui_gamemenu_keys_key_selection_blink_color_1</h2>
+<a id="a7d96fc5c21600c278ecb54462dfb65b6" name="a7d96fc5c21600c278ecb54462dfb65b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d96fc5c21600c278ecb54462dfb65b6">&#9670;&#160;</a></span>ui_game_minimap_treasure_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_gamemenu_keys_key_selection_blink_color_1</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_game_minimap_treasure_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a92cde211b746ae5c7195a360ef1e6240" name="a92cde211b746ae5c7195a360ef1e6240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92cde211b746ae5c7195a360ef1e6240">&#9670;&#160;</a></span>ui_gamemenu_keys_key_selection_blink_color_2</h2>
+<a id="a70964eb2068bfab75a073a61af738b9a" name="a70964eb2068bfab75a073a61af738b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70964eb2068bfab75a073a61af738b9a">&#9670;&#160;</a></span>ui_gamemenu_keys_action_name_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_gamemenu_keys_key_selection_blink_color_2</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_gamemenu_keys_action_name_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a75eadc99d0979a3fabf246c8497ffb16" name="a75eadc99d0979a3fabf246c8497ffb16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75eadc99d0979a3fabf246c8497ffb16">&#9670;&#160;</a></span>ui_gamemenu_video_gamma_title_color</h2>
+<a id="a2bf67de91d6ff0169227ff661ced3108" name="a2bf67de91d6ff0169227ff661ced3108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf67de91d6ff0169227ff661ced3108">&#9670;&#160;</a></span>ui_gamemenu_keys_key_default_color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_gamemenu_video_gamma_title_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_gamemenu_keys_key_default_color</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad69af64489c0ce0c9c1f00fe547f36a5" name="ad69af64489c0ce0c9c1f00fe547f36a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad69af64489c0ce0c9c1f00fe547f36a5">&#9670;&#160;</a></span>ui_house_player_cant_interact_color</h2>
+<a id="a20b5451e2429a0885964d20c5553da72" name="a20b5451e2429a0885964d20c5553da72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b5451e2429a0885964d20c5553da72">&#9670;&#160;</a></span>ui_gamemenu_keys_key_selection_blink_color_1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_house_player_cant_interact_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_gamemenu_keys_key_selection_blink_color_1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a26cd44fd480e54217a1cea1594e21ad4" name="a26cd44fd480e54217a1cea1594e21ad4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26cd44fd480e54217a1cea1594e21ad4">&#9670;&#160;</a></span>ui_mainmenu_copyright_color</h2>
+<a id="a112a80db2608d7a080eb9e668a682810" name="a112a80db2608d7a080eb9e668a682810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a112a80db2608d7a080eb9e668a682810">&#9670;&#160;</a></span>ui_gamemenu_keys_key_selection_blink_color_2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ui_mainmenu_copyright_color</td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_gamemenu_keys_key_selection_blink_color_2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bd221c98ae8e1a59412b2cf877198b9" name="a4bd221c98ae8e1a59412b2cf877198b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd221c98ae8e1a59412b2cf877198b9">&#9670;&#160;</a></span>ui_gamemenu_video_gamma_title_color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_gamemenu_video_gamma_title_color</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0dd49f9e1909a61c684bed8926add8cd" name="a0dd49f9e1909a61c684bed8926add8cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd49f9e1909a61c684bed8926add8cd">&#9670;&#160;</a></span>ui_house_player_cant_interact_color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_house_player_cant_interact_color</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf2b9fafb05d479e5e5eda37acdfff01" name="acf2b9fafb05d479e5e5eda37acdfff01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf2b9fafb05d479e5e5eda37acdfff01">&#9670;&#160;</a></span>ui_mainmenu_copyright_color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ui_mainmenu_copyright_color</td>
         </tr>
       </table>
 </div><div class="memdoc">

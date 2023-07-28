@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Engine/Graphics/Collisions.cpp File Reference</title>
+<title>OpenEnroth: src/Engine/Graphics/Collisions.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -82,17 +82,21 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="Collisions_8h.html">Collisions.h</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
+<code>#include &quot;<a class="el" href="Processor_8h.html">Engine/Events/Processor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="DecorationList_8h.html">Engine/Graphics/DecorationList.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Decoration_8h.html">Engine/Graphics/Level/Decoration.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Outdoor_8h.html">Engine/Graphics/Outdoor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Indoor_8h.html">Engine/Graphics/Indoor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="MM7_8h.html">Engine/MM7.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Actor_8h.html">Engine/Objects/Actor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ObjectList_8h.html">Engine/Objects/ObjectList.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SpriteObject_8h.html">Engine/Objects/SpriteObject.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TurnEngine_8h.html">Engine/TurnEngine/TurnEngine.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Viewport_8h.html">Engine/Graphics/Viewport.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="OurMath_8h.html">Engine/OurMath.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Party_8h.html">Engine/Party.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Float_8h.html">Utility/Math/Float.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TrigLut_8h.html">Utility/Math/TrigLut.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FixPoint_8h.html">Utility/Math/FixPoint.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -100,10 +104,10 @@ Functions</h2></td></tr>
 <tr class="separator:a655ea37401ef9dfb782f732a63447450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab13618a0d4aed0bbf49190322093c789"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#ab13618a0d4aed0bbf49190322093c789">CollidePointWithFace</a> (<a class="el" href="structBLVFace.html">BLVFace</a> *face, const <a class="el" href="Vec_8h.html#a40b8356e33151c22cb4d1adaf2b762a8">Vec3f</a> &amp;pos, const <a class="el" href="Vec_8h.html#a40b8356e33151c22cb4d1adaf2b762a8">Vec3f</a> &amp;dir, float *out_move_distance, int model_idx)</td></tr>
 <tr class="separator:ab13618a0d4aed0bbf49190322093c789"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2701a97658403e7fdda9d074a1666926"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a2701a97658403e7fdda9d074a1666926">CollideBodyWithFace</a> (<a class="el" href="structBLVFace.html">BLVFace</a> *face, int face_pid, bool ignore_ethereal, int model_idx)</td></tr>
-<tr class="separator:a2701a97658403e7fdda9d074a1666926"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1622aa5d77381935f0769c419b443de8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a1622aa5d77381935f0769c419b443de8">CollideWithCylinder</a> (const <a class="el" href="Vec_8h.html#a40b8356e33151c22cb4d1adaf2b762a8">Vec3f</a> &amp;center_lo, float radius, float height, int pid, bool jagged_top)</td></tr>
-<tr class="separator:a1622aa5d77381935f0769c419b443de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e058fb1c000286fbbce64396f64eb8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a69e058fb1c000286fbbce64396f64eb8">CollideBodyWithFace</a> (<a class="el" href="structBLVFace.html">BLVFace</a> *face, <a class="el" href="classPid.html">Pid</a> face_pid, bool ignore_ethereal, int model_idx)</td></tr>
+<tr class="separator:a69e058fb1c000286fbbce64396f64eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3602d16525b37128185de77fa91e574a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a3602d16525b37128185de77fa91e574a">CollideWithCylinder</a> (const <a class="el" href="Vec_8h.html#a40b8356e33151c22cb4d1adaf2b762a8">Vec3f</a> &amp;center_lo, float radius, float height, <a class="el" href="classPid.html">Pid</a> pid, bool jagged_top)</td></tr>
+<tr class="separator:a3602d16525b37128185de77fa91e574a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a923f898f6deb9db4826f20993aa7bfd3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a923f898f6deb9db4826f20993aa7bfd3">CollideWithDecoration</a> (int id)</td></tr>
 <tr class="separator:a923f898f6deb9db4826f20993aa7bfd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f30ed1b280bdd8ec00aa81b409e1c15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a7f30ed1b280bdd8ec00aa81b409e1c15">CollideIndoorWithGeometry</a> (bool ignore_ethereal)</td></tr>
@@ -118,12 +122,14 @@ Functions</h2></td></tr>
 <tr class="separator:a3be52d612a02bfeaddc0c6af8b5cb9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cb22fd2a07d5277ab32b3cc6151b7de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a3cb22fd2a07d5277ab32b3cc6151b7de">CollideWithActor</a> (int actor_idx, int override_radius)</td></tr>
 <tr class="separator:a3cb22fd2a07d5277ab32b3cc6151b7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bebac6f421accf5342fd1a688be271e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a4bebac6f421accf5342fd1a688be271e">_46ED8A_collide_against_sprite_objects</a> (unsigned int pid)</td></tr>
-<tr class="separator:a4bebac6f421accf5342fd1a688be271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98784da89e6ffe6e9ec6627a3378b72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#ae98784da89e6ffe6e9ec6627a3378b72">_46ED8A_collide_against_sprite_objects</a> (<a class="el" href="classPid.html">Pid</a> pid)</td></tr>
+<tr class="separator:ae98784da89e6ffe6e9ec6627a3378b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cdd9e6db8e019634d19bd556b187a7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a8cdd9e6db8e019634d19bd556b187a7d">CollideWithParty</a> (bool jagged_top)</td></tr>
 <tr class="separator:a8cdd9e6db8e019634d19bd556b187a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53c86328c9b208ab454cff1b44c7601e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a53c86328c9b208ab454cff1b44c7601e">ProcessActorCollisionsBLV</a> (<a class="el" href="classActor.html">Actor</a> &amp;actor, bool isAboveGround, bool isFlying)</td></tr>
 <tr class="separator:a53c86328c9b208ab454cff1b44c7601e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a588684855a7b01d3b92602367961a0d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collisions_8cpp.html#a588684855a7b01d3b92602367961a0d8">ProcessActorCollisionsODM</a> (<a class="el" href="classActor.html">Actor</a> &amp;actor, bool isFlying)</td></tr>
+<tr class="separator:a588684855a7b01d3b92602367961a0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -131,8 +137,8 @@ Variables</h2></td></tr>
 <tr class="separator:afa942db16fb3e12af9db7a77736d578b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a4bebac6f421accf5342fd1a688be271e" name="a4bebac6f421accf5342fd1a688be271e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bebac6f421accf5342fd1a688be271e">&#9670;&#160;</a></span>_46ED8A_collide_against_sprite_objects()</h2>
+<a id="ae98784da89e6ffe6e9ec6627a3378b72" name="ae98784da89e6ffe6e9ec6627a3378b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98784da89e6ffe6e9ec6627a3378b72">&#9670;&#160;</a></span>_46ED8A_collide_against_sprite_objects()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,7 +146,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void _46ED8A_collide_against_sprite_objects </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
           <td class="paramname"><em>pid</em></td><td>)</td>
           <td></td>
         </tr>
@@ -149,8 +155,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2701a97658403e7fdda9d074a1666926" name="a2701a97658403e7fdda9d074a1666926"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2701a97658403e7fdda9d074a1666926">&#9670;&#160;</a></span>CollideBodyWithFace()</h2>
+<a id="a69e058fb1c000286fbbce64396f64eb8" name="a69e058fb1c000286fbbce64396f64eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e058fb1c000286fbbce64396f64eb8">&#9670;&#160;</a></span>CollideBodyWithFace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +173,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
           <td class="paramname"><em>face_pid</em>, </td>
         </tr>
         <tr>
@@ -198,7 +204,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">face</td><td>Face to check. </td></tr>
-    <tr><td class="paramname">face_pid</td><td>Pid of the provided face. </td></tr>
+    <tr><td class="paramname">face_pid</td><td><a class="el" href="classPid.html">Pid</a> of the provided face. </td></tr>
     <tr><td class="paramname">ignore_ethereal</td><td>Whether ethereal faces should be ignored by this function. </td></tr>
     <tr><td class="paramname">model_idx</td><td>Model index, or <code>MODEL_INDOOR</code>. </td></tr>
   </table>
@@ -516,8 +522,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a1622aa5d77381935f0769c419b443de8" name="a1622aa5d77381935f0769c419b443de8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1622aa5d77381935f0769c419b443de8">&#9670;&#160;</a></span>CollideWithCylinder()</h2>
+<a id="a3602d16525b37128185de77fa91e574a" name="a3602d16525b37128185de77fa91e574a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3602d16525b37128185de77fa91e574a">&#9670;&#160;</a></span>CollideWithCylinder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,7 +552,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
           <td class="paramname"><em>pid</em>, </td>
         </tr>
         <tr>
@@ -573,7 +579,7 @@ Variables</h2></td></tr>
     <tr><td class="paramname">center_lo</td><td>Center of the cylinder's base. </td></tr>
     <tr><td class="paramname">radius</td><td>Cylinder radius. </td></tr>
     <tr><td class="paramname">height</td><td>Cylinder height. </td></tr>
-    <tr><td class="paramname">pid</td><td>Pid of the object represented by the cylinder. </td></tr>
+    <tr><td class="paramname">pid</td><td><a class="el" href="classPid.html">Pid</a> of the object represented by the cylinder. </td></tr>
     <tr><td class="paramname">jagged_top</td><td>See <code>CollideWithParty</code>. </td></tr>
   </table>
   </dd>
@@ -673,6 +679,34 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a588684855a7b01d3b92602367961a0d8" name="a588684855a7b01d3b92602367961a0d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a588684855a7b01d3b92602367961a0d8">&#9670;&#160;</a></span>ProcessActorCollisionsODM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProcessActorCollisionsODM </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classActor.html">Actor</a> &amp;&#160;</td>
+          <td class="paramname"><em>actor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isFlying</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Engine/SpellFxRenderer.cpp File Reference</title>
+<title>OpenEnroth: src/Engine/SpellFxRenderer.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -85,6 +85,8 @@ $(function() {
 <code>#include &quot;<a class="el" href="OurMath_8h.html">Engine/OurMath.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Time_8h.html">Engine/Time.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="stru160_8h.html">Engine/stru160.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Party_8h.html">Engine/Party.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AssetsManager_8h.html">Engine/AssetsManager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Camera_8h.html">Engine/Graphics/Camera.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Indoor_8h.html">Engine/Graphics/Indoor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LightmapBuilder_8h.html">Engine/Graphics/LightmapBuilder.h</a>&quot;</code><br />
@@ -92,31 +94,31 @@ $(function() {
 <code>#include &quot;<a class="el" href="Overlays_8h.html">Engine/Graphics/Overlays.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ParticleEngine_8h.html">Engine/Graphics/ParticleEngine.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Sprites_8h.html">Engine/Graphics/Sprites.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Texture_8h.html">Engine/Graphics/Texture.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Viewport_8h.html">Engine/Graphics/Viewport.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IRender_8h.html">Engine/Graphics/IRender.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Actor_8h.html">Engine/Objects/Actor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SpriteObject_8h.html">Engine/Objects/SpriteObject.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="IconFrameTable_8h.html">Engine/Tables/IconFrameTable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Random_8h.html">Utility/Random/Random.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Random_8h.html">Library/Random/Random.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a53b9e5af222a3fbc8bd7c5a297b1dcde"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpellFxRenderer_8cpp.html#a53b9e5af222a3fbc8bd7c5a297b1dcde">ModulateColor</a> (unsigned int diffuse, float multiplier)</td></tr>
-<tr class="separator:a53b9e5af222a3fbc8bd7c5a297b1dcde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfdca3528ea63b77b0ae62825f5a1d7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpellFxRenderer_8cpp.html#adfdca3528ea63b77b0ae62825f5a1d7b">ModulateColor</a> (<a class="el" href="structColor.html">Color</a> diffuse, float multiplier)</td></tr>
+<tr class="separator:adfdca3528ea63b77b0ae62825f5a1d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa97d07e8f9dcd48e23efa7be5eebc100"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpellFxRenderer_8cpp.html#aa97d07e8f9dcd48e23efa7be5eebc100">sr_42620A</a> (<a class="el" href="structRenderVertexSoft.html">RenderVertexSoft</a> *p)</td></tr>
 <tr class="separator:aa97d07e8f9dcd48e23efa7be5eebc100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a53b9e5af222a3fbc8bd7c5a297b1dcde" name="a53b9e5af222a3fbc8bd7c5a297b1dcde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53b9e5af222a3fbc8bd7c5a297b1dcde">&#9670;&#160;</a></span>ModulateColor()</h2>
+<a id="adfdca3528ea63b77b0ae62825f5a1d7b" name="adfdca3528ea63b77b0ae62825f5a1d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfdca3528ea63b77b0ae62825f5a1d7b">&#9670;&#160;</a></span>ModulateColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ModulateColor </td>
+          <td class="memname"><a class="el" href="structColor.html">Color</a> ModulateColor </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype"><a class="el" href="structColor.html">Color</a>&#160;</td>
           <td class="paramname"><em>diffuse</em>, </td>
         </tr>
         <tr>

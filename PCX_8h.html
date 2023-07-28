@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Engine/Graphics/PCX.h File Reference</title>
+<title>OpenEnroth: src/Library/Image/PCX.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3072bc1f55ed1280fe4fbe6b21c78379.html">Engine</a></li><li class="navelem"><a class="el" href="dir_32f76bd42096cb3656f6b4adb3ae4055.html">Graphics</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f741251061e5c7c7ed48ab45c3348f11.html">Library</a></li><li class="navelem"><a class="el" href="dir_ef65c38198b18e6be671cac679dd25b4.html">Image</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -80,7 +80,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
-<code>#include &quot;<a class="el" href="Image_8h.html">Image.h</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="Library_2Image_2Image_8h.html">Library/Image/Image.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Blob_8h.html">Utility/Memory/Blob.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -89,12 +91,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af936c6b5be7bf44b68e869081f00d1e9"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePCX.html#af936c6b5be7bf44b68e869081f00d1e9">PCX::Decode</a> (const void *pcx_data, size_t filesize, unsigned int *width, unsigned int *height, <a class="el" href="Image_8h.html#a9852684147e651e988ed71ddc71426d5">IMAGE_FORMAT</a> *format, <a class="el" href="Image_8h.html#a9852684147e651e988ed71ddc71426d5">IMAGE_FORMAT</a> requested_format)</td></tr>
-<tr class="separator:af936c6b5be7bf44b68e869081f00d1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a151713aa9441a236085d884ecbb4d9be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePCX.html#a151713aa9441a236085d884ecbb4d9be">PCX::Encode16</a> (const void *picture_data, unsigned int width, unsigned int height, void *pcx_data, int max_buff_size, unsigned int *packed_size)</td></tr>
-<tr class="separator:a151713aa9441a236085d884ecbb4d9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd7bffd17367adb0c17dbd0a5ecf64c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePCX.html#abd7bffd17367adb0c17dbd0a5ecf64c8">PCX::Encode32</a> (const void *picture_data, unsigned int width, unsigned int height, void *pcx_data, int max_buff_size, unsigned int *packed_size)</td></tr>
-<tr class="separator:abd7bffd17367adb0c17dbd0a5ecf64c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960fb035405eb59a469f9bf52119ae30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Library_2Image_2Image_8h.html#ada8411436fef9ac499121bebb98f43cd">RgbaImage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePCX.html#a960fb035405eb59a469f9bf52119ae30">PCX::Decode</a> (const <a class="el" href="classBlob.html">Blob</a> &amp;data)</td></tr>
+<tr class="separator:a960fb035405eb59a469f9bf52119ae30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae16849e9f6dca83e168bab6359d0e18d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBlob.html">Blob</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePCX.html#ae16849e9f6dca83e168bab6359d0e18d">PCX::Encode</a> (<a class="el" href="Library_2Image_2Image_8h.html#ab46117a6bb4ec93c50bc59858278d567">RgbaImageView</a> image)</td></tr>
+<tr class="separator:ae16849e9f6dca83e168bab6359d0e18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

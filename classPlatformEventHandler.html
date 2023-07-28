@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: PlatformEventHandler Class Reference</title>
+<title>OpenEnroth: PlatformEventHandler Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -84,8 +84,7 @@ Inheritance diagram for PlatformEventHandler:</div>
  <div class="center">
   <img src="classPlatformEventHandler.png" usemap="#PlatformEventHandler_map" alt=""/>
   <map id="PlatformEventHandler_map" name="PlatformEventHandler_map">
-<area href="classApplication_1_1GameWindowHandler.html" alt="Application::GameWindowHandler" shape="rect" coords="0,56,202,80"/>
-<area href="classNuklearEventHandler.html" alt="NuklearEventHandler" shape="rect" coords="212,56,414,80"/>
+<area href="classFilteringEventHandler.html" alt="FilteringEventHandler" shape="rect" coords="0,56,135,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -93,33 +92,47 @@ Inheritance diagram for PlatformEventHandler:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ade68488fc74103233ef01500578773d0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#ade68488fc74103233ef01500578773d0">~PlatformEventHandler</a> ()=default</td></tr>
 <tr class="separator:ade68488fc74103233ef01500578773d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60529d509eb487c0192b4c8c6d4d2eb5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a60529d509eb487c0192b4c8c6d4d2eb5">Event</a> (<a class="el" href="classPlatformWindow.html">PlatformWindow</a> *<a class="el" href="EngineGlobals_8cpp.html#a88500cd1785fee2e88c7a54241cb6a4e">window</a>, const <a class="el" href="classPlatformEvent.html">PlatformEvent</a> *event)</td></tr>
-<tr class="separator:a60529d509eb487c0192b4c8c6d4d2eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafaf9bd185374c0dc80312afc09861ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a> (const <a class="el" href="classPlatformEvent.html">PlatformEvent</a> *event)</td></tr>
+<tr class="separator:aafaf9bd185374c0dc80312afc09861ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a1b912e28952f96083d6af11f2cb40046"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a1b912e28952f96083d6af11f2cb40046">KeyPressEvent</a> (<a class="el" href="classPlatformWindow.html">PlatformWindow</a> *<a class="el" href="EngineGlobals_8cpp.html#a88500cd1785fee2e88c7a54241cb6a4e">window</a>, const <a class="el" href="classPlatformKeyEvent.html">PlatformKeyEvent</a> *event)</td></tr>
-<tr class="separator:a1b912e28952f96083d6af11f2cb40046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa313292606e4feb9ec08e64561dd51be"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#aa313292606e4feb9ec08e64561dd51be">KeyReleaseEvent</a> (<a class="el" href="classPlatformWindow.html">PlatformWindow</a> *<a class="el" href="EngineGlobals_8cpp.html#a88500cd1785fee2e88c7a54241cb6a4e">window</a>, const <a class="el" href="classPlatformKeyEvent.html">PlatformKeyEvent</a> *event)</td></tr>
-<tr class="separator:aa313292606e4feb9ec08e64561dd51be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af44eb0dfa969dc4e868f25b9e46b8874"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#af44eb0dfa969dc4e868f25b9e46b8874">MouseMoveEvent</a> (<a class="el" href="classPlatformWindow.html">PlatformWindow</a> *<a class="el" href="EngineGlobals_8cpp.html#a88500cd1785fee2e88c7a54241cb6a4e">window</a>, const <a class="el" href="classPlatformMouseEvent.html">PlatformMouseEvent</a> *event)</td></tr>
-<tr class="separator:af44eb0dfa969dc4e868f25b9e46b8874"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a425cf8efab49907987d14bcbd542552e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a425cf8efab49907987d14bcbd542552e">MousePressEvent</a> (<a class="el" href="classPlatformWindow.html">PlatformWindow</a> *<a class="el" href="EngineGlobals_8cpp.html#a88500cd1785fee2e88c7a54241cb6a4e">window</a>, const <a class="el" href="classPlatformMouseEvent.html">PlatformMouseEvent</a> *event)</td></tr>
-<tr class="separator:a425cf8efab49907987d14bcbd542552e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab13ba703336eb83fdea397cd615347cf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#ab13ba703336eb83fdea397cd615347cf">MouseReleaseEvent</a> (<a class="el" href="classPlatformWindow.html">PlatformWindow</a> *<a class="el" href="EngineGlobals_8cpp.html#a88500cd1785fee2e88c7a54241cb6a4e">window</a>, const <a class="el" href="classPlatformMouseEvent.html">PlatformMouseEvent</a> *event)</td></tr>
-<tr class="separator:ab13ba703336eb83fdea397cd615347cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab89fea025cb55e8cc4b2f85a586ed67f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#ab89fea025cb55e8cc4b2f85a586ed67f">WheelEvent</a> (<a class="el" href="classPlatformWindow.html">PlatformWindow</a> *<a class="el" href="EngineGlobals_8cpp.html#a88500cd1785fee2e88c7a54241cb6a4e">window</a>, const <a class="el" href="classPlatformWheelEvent.html">PlatformWheelEvent</a> *event)</td></tr>
-<tr class="separator:ab89fea025cb55e8cc4b2f85a586ed67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e2a01afe09ad116758a21175781211e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a7e2a01afe09ad116758a21175781211e">MoveEvent</a> (<a class="el" href="classPlatformWindow.html">PlatformWindow</a> *<a class="el" href="EngineGlobals_8cpp.html#a88500cd1785fee2e88c7a54241cb6a4e">window</a>, const <a class="el" href="classPlatformMoveEvent.html">PlatformMoveEvent</a> *event)</td></tr>
-<tr class="separator:a7e2a01afe09ad116758a21175781211e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8c0dddd55a3e3aab7427211971a5b66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#ab8c0dddd55a3e3aab7427211971a5b66">ActivationEvent</a> (<a class="el" href="classPlatformWindow.html">PlatformWindow</a> *<a class="el" href="EngineGlobals_8cpp.html#a88500cd1785fee2e88c7a54241cb6a4e">window</a>, const <a class="el" href="classPlatformEvent.html">PlatformEvent</a> *event)</td></tr>
-<tr class="separator:ab8c0dddd55a3e3aab7427211971a5b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d9620b7c2304642d6ef318528c1bb01"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a9d9620b7c2304642d6ef318528c1bb01">CloseEvent</a> (<a class="el" href="classPlatformWindow.html">PlatformWindow</a> *<a class="el" href="EngineGlobals_8cpp.html#a88500cd1785fee2e88c7a54241cb6a4e">window</a>, const <a class="el" href="classPlatformEvent.html">PlatformEvent</a> *event)</td></tr>
-<tr class="separator:a9d9620b7c2304642d6ef318528c1bb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa61e05d7964c1ee873a72176209a1aa1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#aa61e05d7964c1ee873a72176209a1aa1">keyPressEvent</a> (const <a class="el" href="classPlatformKeyEvent.html">PlatformKeyEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:aa61e05d7964c1ee873a72176209a1aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9292d2132651bc487858ddc05971963e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a9292d2132651bc487858ddc05971963e">keyReleaseEvent</a> (const <a class="el" href="classPlatformKeyEvent.html">PlatformKeyEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:a9292d2132651bc487858ddc05971963e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c9b90bd00ff8925b7b6c69841ec4b5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a05c9b90bd00ff8925b7b6c69841ec4b5">mouseMoveEvent</a> (const <a class="el" href="classPlatformMouseEvent.html">PlatformMouseEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:a05c9b90bd00ff8925b7b6c69841ec4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60053c2179190926fbc306889805375"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#ae60053c2179190926fbc306889805375">mousePressEvent</a> (const <a class="el" href="classPlatformMouseEvent.html">PlatformMouseEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:ae60053c2179190926fbc306889805375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79591a24f54ec42fbef1327fb0ee3b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#aa79591a24f54ec42fbef1327fb0ee3b1">mouseReleaseEvent</a> (const <a class="el" href="classPlatformMouseEvent.html">PlatformMouseEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:aa79591a24f54ec42fbef1327fb0ee3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c234c5588cda7f556991d4cdb0174ec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a6c234c5588cda7f556991d4cdb0174ec">wheelEvent</a> (const <a class="el" href="classPlatformWheelEvent.html">PlatformWheelEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:a6c234c5588cda7f556991d4cdb0174ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e7068eaee60168af9a11ac4ab29143d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a7e7068eaee60168af9a11ac4ab29143d">moveEvent</a> (const <a class="el" href="classPlatformMoveEvent.html">PlatformMoveEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:a7e7068eaee60168af9a11ac4ab29143d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf903ae9fee2c16ce9232e38fb1515c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a3bf903ae9fee2c16ce9232e38fb1515c">resizeEvent</a> (const <a class="el" href="classPlatformResizeEvent.html">PlatformResizeEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:a3bf903ae9fee2c16ce9232e38fb1515c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff58bbe3a59e85ca8288ba03f70137d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a7ff58bbe3a59e85ca8288ba03f70137d">activationEvent</a> (const <a class="el" href="classPlatformWindowEvent.html">PlatformWindowEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:a7ff58bbe3a59e85ca8288ba03f70137d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e18cdd5d3d2a9b3ff827621add2b84"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a54e18cdd5d3d2a9b3ff827621add2b84">closeEvent</a> (const <a class="el" href="classPlatformWindowEvent.html">PlatformWindowEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:a54e18cdd5d3d2a9b3ff827621add2b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db897a9735e850b39402acabdfb8fdb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a1db897a9735e850b39402acabdfb8fdb">gamepadConnectionEvent</a> (const <a class="el" href="classPlatformGamepadEvent.html">PlatformGamepadEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:a1db897a9735e850b39402acabdfb8fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257be4e729e9c66ea5ea2058edeff557"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a257be4e729e9c66ea5ea2058edeff557">gamepadKeyPressEvent</a> (const <a class="el" href="classPlatformGamepadKeyEvent.html">PlatformGamepadKeyEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:a257be4e729e9c66ea5ea2058edeff557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc4d1404338edbcfbb71645d9bd24bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#aebc4d1404338edbcfbb71645d9bd24bd">gamepadKeyReleaseEvent</a> (const <a class="el" href="classPlatformGamepadKeyEvent.html">PlatformGamepadKeyEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:aebc4d1404338edbcfbb71645d9bd24bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f878333c0086028117c519bc6245103"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#a4f878333c0086028117c519bc6245103">gamepadAxisEvent</a> (const <a class="el" href="classPlatformGamepadAxisEvent.html">PlatformGamepadAxisEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:a4f878333c0086028117c519bc6245103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a2ee8316c15dc68dba24361aba6706"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlatformEventHandler.html#aa7a2ee8316c15dc68dba24361aba6706">nativeEvent</a> (const <a class="el" href="classPlatformNativeEvent.html">PlatformNativeEvent</a> *<a class="el" href="classPlatformEventHandler.html#aafaf9bd185374c0dc80312afc09861ba">event</a>)</td></tr>
+<tr class="separator:aa7a2ee8316c15dc68dba24361aba6706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Event handler interface, to be implemented in user code.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classPlatformEventLoop.html">PlatformEventLoop</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classPlatformEventLoop.html">PlatformEventLoop</a> </dd>
+<dd>
+<a class="el" href="classFilteringEventHandler.html">FilteringEventHandler</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ade68488fc74103233ef01500578773d0" name="ade68488fc74103233ef01500578773d0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade68488fc74103233ef01500578773d0">&#9670;&#160;</a></span>~PlatformEventHandler()</h2>
@@ -147,8 +160,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab8c0dddd55a3e3aab7427211971a5b66" name="ab8c0dddd55a3e3aab7427211971a5b66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8c0dddd55a3e3aab7427211971a5b66">&#9670;&#160;</a></span>ActivationEvent()</h2>
+<a id="a7ff58bbe3a59e85ca8288ba03f70137d" name="a7ff58bbe3a59e85ca8288ba03f70137d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff58bbe3a59e85ca8288ba03f70137d">&#9670;&#160;</a></span>activationEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,21 +170,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlatformEventHandler::ActivationEvent </td>
+          <td class="memname">void PlatformEventHandler::activationEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlatformWindow.html">PlatformWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="classPlatformWindowEvent.html">PlatformWindowEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classPlatformEvent.html">PlatformEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -181,12 +184,10 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classApplication_1_1GameWindowHandler.html#af2ba428825708ed9871a17f2e8b5ec9c">Application::GameWindowHandler</a>.</p>
-
 </div>
 </div>
-<a id="a9d9620b7c2304642d6ef318528c1bb01" name="a9d9620b7c2304642d6ef318528c1bb01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d9620b7c2304642d6ef318528c1bb01">&#9670;&#160;</a></span>CloseEvent()</h2>
+<a id="a54e18cdd5d3d2a9b3ff827621add2b84" name="a54e18cdd5d3d2a9b3ff827621add2b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e18cdd5d3d2a9b3ff827621add2b84">&#9670;&#160;</a></span>closeEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,21 +196,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlatformEventHandler::CloseEvent </td>
+          <td class="memname">void PlatformEventHandler::closeEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlatformWindow.html">PlatformWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="classPlatformWindowEvent.html">PlatformWindowEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classPlatformEvent.html">PlatformEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -219,12 +210,10 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classApplication_1_1GameWindowHandler.html#af7c765dd6733c5e4add8dd32245766e6">Application::GameWindowHandler</a>.</p>
-
 </div>
 </div>
-<a id="a60529d509eb487c0192b4c8c6d4d2eb5" name="a60529d509eb487c0192b4c8c6d4d2eb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60529d509eb487c0192b4c8c6d4d2eb5">&#9670;&#160;</a></span>Event()</h2>
+<a id="aafaf9bd185374c0dc80312afc09861ba" name="aafaf9bd185374c0dc80312afc09861ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafaf9bd185374c0dc80312afc09861ba">&#9670;&#160;</a></span>event()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,21 +222,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlatformEventHandler::Event </td>
+          <td class="memname">void PlatformEventHandler::event </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlatformWindow.html">PlatformWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classPlatformEvent.html">PlatformEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -256,20 +235,13 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">window</td><td><a class="el" href="classPlatform.html">Platform</a> window that generated the event. </td></tr>
-    <tr><td class="paramname">event</td><td>Event. </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p>Reimplemented in <a class="el" href="classApplication_1_1GameWindowHandler.html#a565322eb3bac39a3776543c15267c3db">Application::GameWindowHandler</a>.</p>
+<p>Reimplemented in <a class="el" href="classFilteringEventHandler.html#a4cfe381b1c6959584ecc3ae39b36b3e0">FilteringEventHandler</a>.</p>
 
 </div>
 </div>
-<a id="a1b912e28952f96083d6af11f2cb40046" name="a1b912e28952f96083d6af11f2cb40046"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b912e28952f96083d6af11f2cb40046">&#9670;&#160;</a></span>KeyPressEvent()</h2>
+<a id="a4f878333c0086028117c519bc6245103" name="a4f878333c0086028117c519bc6245103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f878333c0086028117c519bc6245103">&#9670;&#160;</a></span>gamepadAxisEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,21 +250,115 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlatformEventHandler::KeyPressEvent </td>
+          <td class="memname">void PlatformEventHandler::gamepadAxisEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlatformWindow.html">PlatformWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="classPlatformGamepadAxisEvent.html">PlatformGamepadAxisEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1db897a9735e850b39402acabdfb8fdb" name="a1db897a9735e850b39402acabdfb8fdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db897a9735e850b39402acabdfb8fdb">&#9670;&#160;</a></span>gamepadConnectionEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlatformEventHandler::gamepadConnectionEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPlatformGamepadEvent.html">PlatformGamepadEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a257be4e729e9c66ea5ea2058edeff557" name="a257be4e729e9c66ea5ea2058edeff557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a257be4e729e9c66ea5ea2058edeff557">&#9670;&#160;</a></span>gamepadKeyPressEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlatformEventHandler::gamepadKeyPressEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPlatformGamepadKeyEvent.html">PlatformGamepadKeyEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebc4d1404338edbcfbb71645d9bd24bd" name="aebc4d1404338edbcfbb71645d9bd24bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc4d1404338edbcfbb71645d9bd24bd">&#9670;&#160;</a></span>gamepadKeyReleaseEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlatformEventHandler::gamepadKeyReleaseEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPlatformGamepadKeyEvent.html">PlatformGamepadKeyEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa61e05d7964c1ee873a72176209a1aa1" name="aa61e05d7964c1ee873a72176209a1aa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa61e05d7964c1ee873a72176209a1aa1">&#9670;&#160;</a></span>keyPressEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlatformEventHandler::keyPressEvent </td>
+          <td>(</td>
           <td class="paramtype">const <a class="el" href="classPlatformKeyEvent.html">PlatformKeyEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -302,12 +368,10 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classApplication_1_1GameWindowHandler.html#ac28187bfbffd0f5023f0ca29b713b749">Application::GameWindowHandler</a>, and <a class="el" href="classNuklearEventHandler.html#a41188ce3f65625241d261ea992e52940">NuklearEventHandler</a>.</p>
-
 </div>
 </div>
-<a id="aa313292606e4feb9ec08e64561dd51be" name="aa313292606e4feb9ec08e64561dd51be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa313292606e4feb9ec08e64561dd51be">&#9670;&#160;</a></span>KeyReleaseEvent()</h2>
+<a id="a9292d2132651bc487858ddc05971963e" name="a9292d2132651bc487858ddc05971963e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9292d2132651bc487858ddc05971963e">&#9670;&#160;</a></span>keyReleaseEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,21 +380,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlatformEventHandler::KeyReleaseEvent </td>
+          <td class="memname">void PlatformEventHandler::keyReleaseEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlatformWindow.html">PlatformWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classPlatformKeyEvent.html">PlatformKeyEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -340,12 +394,10 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classApplication_1_1GameWindowHandler.html#a2b05bef3e92d7048c90482d1fe0b9434">Application::GameWindowHandler</a>, and <a class="el" href="classNuklearEventHandler.html#a9e2aae6769cbcff77204c833df5e7906">NuklearEventHandler</a>.</p>
-
 </div>
 </div>
-<a id="af44eb0dfa969dc4e868f25b9e46b8874" name="af44eb0dfa969dc4e868f25b9e46b8874"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af44eb0dfa969dc4e868f25b9e46b8874">&#9670;&#160;</a></span>MouseMoveEvent()</h2>
+<a id="a05c9b90bd00ff8925b7b6c69841ec4b5" name="a05c9b90bd00ff8925b7b6c69841ec4b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c9b90bd00ff8925b7b6c69841ec4b5">&#9670;&#160;</a></span>mouseMoveEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,21 +406,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlatformEventHandler::MouseMoveEvent </td>
+          <td class="memname">void PlatformEventHandler::mouseMoveEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlatformWindow.html">PlatformWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classPlatformMouseEvent.html">PlatformMouseEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -378,12 +420,10 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classApplication_1_1GameWindowHandler.html#a6882612307f84d22056c70affaaabdd3">Application::GameWindowHandler</a>, and <a class="el" href="classNuklearEventHandler.html#a20071231ca746d187965c9f49e5c1276">NuklearEventHandler</a>.</p>
-
 </div>
 </div>
-<a id="a425cf8efab49907987d14bcbd542552e" name="a425cf8efab49907987d14bcbd542552e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a425cf8efab49907987d14bcbd542552e">&#9670;&#160;</a></span>MousePressEvent()</h2>
+<a id="ae60053c2179190926fbc306889805375" name="ae60053c2179190926fbc306889805375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae60053c2179190926fbc306889805375">&#9670;&#160;</a></span>mousePressEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -392,21 +432,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlatformEventHandler::MousePressEvent </td>
+          <td class="memname">void PlatformEventHandler::mousePressEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlatformWindow.html">PlatformWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classPlatformMouseEvent.html">PlatformMouseEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -416,12 +446,10 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classApplication_1_1GameWindowHandler.html#ae238a82ebb0c98e4a30688bd4dc229c4">Application::GameWindowHandler</a>, and <a class="el" href="classNuklearEventHandler.html#a6f92bbd7e57f5665309cff75fb0a5728">NuklearEventHandler</a>.</p>
-
 </div>
 </div>
-<a id="ab13ba703336eb83fdea397cd615347cf" name="ab13ba703336eb83fdea397cd615347cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab13ba703336eb83fdea397cd615347cf">&#9670;&#160;</a></span>MouseReleaseEvent()</h2>
+<a id="aa79591a24f54ec42fbef1327fb0ee3b1" name="aa79591a24f54ec42fbef1327fb0ee3b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa79591a24f54ec42fbef1327fb0ee3b1">&#9670;&#160;</a></span>mouseReleaseEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,21 +458,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlatformEventHandler::MouseReleaseEvent </td>
+          <td class="memname">void PlatformEventHandler::mouseReleaseEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlatformWindow.html">PlatformWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classPlatformMouseEvent.html">PlatformMouseEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -454,12 +472,10 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classApplication_1_1GameWindowHandler.html#af841538150fa01f7a0311724323b30ff">Application::GameWindowHandler</a>, and <a class="el" href="classNuklearEventHandler.html#afbe2535effeb090ac261a39aab57c781">NuklearEventHandler</a>.</p>
-
 </div>
 </div>
-<a id="a7e2a01afe09ad116758a21175781211e" name="a7e2a01afe09ad116758a21175781211e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e2a01afe09ad116758a21175781211e">&#9670;&#160;</a></span>MoveEvent()</h2>
+<a id="a7e7068eaee60168af9a11ac4ab29143d" name="a7e7068eaee60168af9a11ac4ab29143d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7068eaee60168af9a11ac4ab29143d">&#9670;&#160;</a></span>moveEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -468,21 +484,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlatformEventHandler::MoveEvent </td>
+          <td class="memname">void PlatformEventHandler::moveEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlatformWindow.html">PlatformWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classPlatformMoveEvent.html">PlatformMoveEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -492,12 +498,10 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classApplication_1_1GameWindowHandler.html#ac5cfb9541211531385713bd6b3bf6024">Application::GameWindowHandler</a>.</p>
-
 </div>
 </div>
-<a id="ab89fea025cb55e8cc4b2f85a586ed67f" name="ab89fea025cb55e8cc4b2f85a586ed67f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab89fea025cb55e8cc4b2f85a586ed67f">&#9670;&#160;</a></span>WheelEvent()</h2>
+<a id="aa7a2ee8316c15dc68dba24361aba6706" name="aa7a2ee8316c15dc68dba24361aba6706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7a2ee8316c15dc68dba24361aba6706">&#9670;&#160;</a></span>nativeEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -506,21 +510,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlatformEventHandler::WheelEvent </td>
+          <td class="memname">void PlatformEventHandler::nativeEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPlatformWindow.html">PlatformWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="classPlatformNativeEvent.html">PlatformNativeEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classPlatformWheelEvent.html">PlatformWheelEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -530,7 +524,57 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classApplication_1_1GameWindowHandler.html#ad2dcdfbca5a08d645d27309379047814">Application::GameWindowHandler</a>, and <a class="el" href="classNuklearEventHandler.html#afc41fa4827d83ae8cde166af45cf885b">NuklearEventHandler</a>.</p>
+</div>
+</div>
+<a id="a3bf903ae9fee2c16ce9232e38fb1515c" name="a3bf903ae9fee2c16ce9232e38fb1515c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf903ae9fee2c16ce9232e38fb1515c">&#9670;&#160;</a></span>resizeEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlatformEventHandler::resizeEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPlatformResizeEvent.html">PlatformResizeEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c234c5588cda7f556991d4cdb0174ec" name="a6c234c5588cda7f556991d4cdb0174ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c234c5588cda7f556991d4cdb0174ec">&#9670;&#160;</a></span>wheelEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlatformEventHandler::wheelEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPlatformWheelEvent.html">PlatformWheelEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

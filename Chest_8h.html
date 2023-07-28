@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Engine/Objects/Chest.h File Reference</title>
+<title>OpenEnroth: src/Engine/Objects/Chest.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -75,7 +75,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">Chest.h File Reference</div></div>
@@ -84,8 +83,9 @@ $(function() {
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="Items_8h.html">Engine/Objects/Items.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Blob_8h.html">Utility/Blob.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Flags_8h.html">Utility/Flags.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Pid_8h.html">Engine/Pid.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Blob_8h.html">Utility/Memory/Blob.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ChestEnums_8h.html">ChestEnums.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -96,22 +96,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html">Chest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a8f7fde712c696f88932a1416622a983c"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Chest_8h.html#a8f7fde712c696f88932a1416622a983c">CHEST_FLAG</a> : uint16_t { <a class="el" href="Chest_8h.html#a8f7fde712c696f88932a1416622a983ca65f3e869bbb82ed955919475928b6d92">CHEST_TRAPPED</a> = 0x1
-, <a class="el" href="Chest_8h.html#a8f7fde712c696f88932a1416622a983caf910ee80d491accd0ac5d622746a5901">CHEST_ITEMS_PLACED</a> = 0x2
-, <a class="el" href="Chest_8h.html#a8f7fde712c696f88932a1416622a983caf988014be511c3c6e8d146ba63ba9194">CHEST_OPENED</a> = 0x4
- }</td></tr>
-<tr class="separator:a8f7fde712c696f88932a1416622a983c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5d5df27af9a0319f240d34f83a27abda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Chest_8h.html#a5d5df27af9a0319f240d34f83a27abda">RemoveItemAtChestIndex</a> (int index)</td></tr>
 <tr class="separator:a5d5df27af9a0319f240d34f83a27abda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a605ec4a4eb2b8920c9e67e57f44a9f85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Chest_8h.html#a605ec4a4eb2b8920c9e67e57f44a9f85">GenerateItemsInChest</a> ()</td></tr>
 <tr class="separator:a605ec4a4eb2b8920c9e67e57f44a9f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6f74860cc33c22a440b82e4cd3be84e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Chest_8h.html#ab6f74860cc33c22a440b82e4cd3be84e">ChestsSerialize</a> (char *pData)</td></tr>
-<tr class="separator:ab6f74860cc33c22a440b82e4cd3be84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -120,53 +110,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a69b8af73220304518033692198679e17"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structChest.html">Chest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Chest_8h.html#a69b8af73220304518033692198679e17">vChests</a></td></tr>
 <tr class="separator:a69b8af73220304518033692198679e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a8f7fde712c696f88932a1416622a983c" name="a8f7fde712c696f88932a1416622a983c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f7fde712c696f88932a1416622a983c">&#9670;&#160;</a></span>CHEST_FLAG</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="Chest_8h.html#a8f7fde712c696f88932a1416622a983c">CHEST_FLAG</a> : uint16_t</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8f7fde712c696f88932a1416622a983ca65f3e869bbb82ed955919475928b6d92" name="a8f7fde712c696f88932a1416622a983ca65f3e869bbb82ed955919475928b6d92"></a>CHEST_TRAPPED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8f7fde712c696f88932a1416622a983caf910ee80d491accd0ac5d622746a5901" name="a8f7fde712c696f88932a1416622a983caf910ee80d491accd0ac5d622746a5901"></a>CHEST_ITEMS_PLACED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8f7fde712c696f88932a1416622a983caf988014be511c3c6e8d146ba63ba9194" name="a8f7fde712c696f88932a1416622a983caf988014be511c3c6e8d146ba63ba9194"></a>CHEST_OPENED&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab6f74860cc33c22a440b82e4cd3be84e" name="ab6f74860cc33c22a440b82e4cd3be84e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6f74860cc33c22a440b82e4cd3be84e">&#9670;&#160;</a></span>ChestsSerialize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t ChestsSerialize </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>pData</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a605ec4a4eb2b8920c9e67e57f44a9f85" name="a605ec4a4eb2b8920c9e67e57f44a9f85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a605ec4a4eb2b8920c9e67e57f44a9f85">&#9670;&#160;</a></span>GenerateItemsInChest()</h2>
 

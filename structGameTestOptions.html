@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: GameTestOptions Struct Reference</title>
+<title>OpenEnroth: GameTestOptions Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structGameTestOptions-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">GameTestOptions Struct Reference</div></div>
@@ -78,30 +78,51 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;GameTestOptions.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for GameTestOptions:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="structGameTestOptions.png" usemap="#GameTestOptions_map" alt=""/>
+  <map id="GameTestOptions_map" name="GameTestOptions_map">
+<area href="structGameStarterOptions.html" alt="GameStarterOptions" shape="rect" coords="0,0,125,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ad19c61ed5c66381435b60c360bf85241"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameTestOptions.html#ad19c61ed5c66381435b60c360bf85241">Parse</a> (int argc, char **argv)</td></tr>
-<tr class="separator:ad19c61ed5c66381435b60c360bf85241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a1e5f0a582a0f0387850dd06f84c147a0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structGameTestOptions.html">GameTestOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameTestOptions.html#a1e5f0a582a0f0387850dd06f84c147a0">parse</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a1e5f0a582a0f0387850dd06f84c147a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a9aa70f753b44f786898e5cbce1b6f6ab"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameTestOptions.html#a9aa70f753b44f786898e5cbce1b6f6ab">testDataDir</a></td></tr>
-<tr class="separator:a9aa70f753b44f786898e5cbce1b6f6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4510cba13fdf66833f01db1445910aa1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameTestOptions.html#a4510cba13fdf66833f01db1445910aa1">gameDataDir</a></td></tr>
-<tr class="separator:a4510cba13fdf66833f01db1445910aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0461048914836534896a9dc574bc0aac"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameTestOptions.html#a0461048914836534896a9dc574bc0aac">testPath</a></td></tr>
+<tr class="separator:a0461048914836534896a9dc574bc0aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33ac23ffdda63f5a5ec8db22d5af79af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameTestOptions.html#a33ac23ffdda63f5a5ec8db22d5af79af">helpRequested</a> = false</td></tr>
 <tr class="separator:a33ac23ffdda63f5a5ec8db22d5af79af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b4db5347a4117a7c47ff7548550960"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="RenderEnums_8h.html#ae9c668e3a273ce92b9f4e134d0cbd6ce">RendererType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameTestOptions.html#a74b4db5347a4117a7c47ff7548550960">renderer</a></td></tr>
+<tr class="separator:a74b4db5347a4117a7c47ff7548550960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_structGameStarterOptions"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structGameStarterOptions')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structGameStarterOptions.html">GameStarterOptions</a></td></tr>
+<tr class="memitem:a8ffeadb9343c54fcda560085cb9ac9d2 inherit pub_attribs_structGameStarterOptions"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameStarterOptions.html#a8ffeadb9343c54fcda560085cb9ac9d2">useConfig</a> = true</td></tr>
+<tr class="separator:a8ffeadb9343c54fcda560085cb9ac9d2 inherit pub_attribs_structGameStarterOptions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ce1dba55d4654e06b7c79ae0df44b8 inherit pub_attribs_structGameStarterOptions"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameStarterOptions.html#a65ce1dba55d4654e06b7c79ae0df44b8">configPath</a></td></tr>
+<tr class="separator:a65ce1dba55d4654e06b7c79ae0df44b8 inherit pub_attribs_structGameStarterOptions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064bd98845a858ba53f098c04f57c1cd inherit pub_attribs_structGameStarterOptions"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameStarterOptions.html#a064bd98845a858ba53f098c04f57c1cd">dataPath</a></td></tr>
+<tr class="separator:a064bd98845a858ba53f098c04f57c1cd inherit pub_attribs_structGameStarterOptions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3637a1cfe5d0cb8503e33e9f494931 inherit pub_attribs_structGameStarterOptions"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="PlatformEnums_8h.html#aadaf937443899628d663afc0e3f95f7b">PlatformLogLevel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGameStarterOptions.html#a8f3637a1cfe5d0cb8503e33e9f494931">logLevel</a></td></tr>
+<tr class="separator:a8f3637a1cfe5d0cb8503e33e9f494931 inherit pub_attribs_structGameStarterOptions"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad19c61ed5c66381435b60c360bf85241" name="ad19c61ed5c66381435b60c360bf85241"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad19c61ed5c66381435b60c360bf85241">&#9670;&#160;</a></span>Parse()</h2>
+<a id="a1e5f0a582a0f0387850dd06f84c147a0" name="a1e5f0a582a0f0387850dd06f84c147a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e5f0a582a0f0387850dd06f84c147a0">&#9670;&#160;</a></span>parse()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool GameTestOptions::Parse </td>
+          <td class="memname"><a class="el" href="structGameTestOptions.html">GameTestOptions</a> GameTestOptions::parse </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
@@ -118,25 +139,16 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a4510cba13fdf66833f01db1445910aa1" name="a4510cba13fdf66833f01db1445910aa1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4510cba13fdf66833f01db1445910aa1">&#9670;&#160;</a></span>gameDataDir</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GameTestOptions::gameDataDir</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a33ac23ffdda63f5a5ec8db22d5af79af" name="a33ac23ffdda63f5a5ec8db22d5af79af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33ac23ffdda63f5a5ec8db22d5af79af">&#9670;&#160;</a></span>helpRequested</h2>
 
@@ -151,14 +163,28 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9aa70f753b44f786898e5cbce1b6f6ab" name="a9aa70f753b44f786898e5cbce1b6f6ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aa70f753b44f786898e5cbce1b6f6ab">&#9670;&#160;</a></span>testDataDir</h2>
+<a id="a74b4db5347a4117a7c47ff7548550960" name="a74b4db5347a4117a7c47ff7548550960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b4db5347a4117a7c47ff7548550960">&#9670;&#160;</a></span>renderer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string GameTestOptions::testDataDir</td>
+          <td class="memname">std::optional&lt;<a class="el" href="RenderEnums_8h.html#ae9c668e3a273ce92b9f4e134d0cbd6ce">RendererType</a>&gt; GameTestOptions::renderer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0461048914836534896a9dc574bc0aac" name="a0461048914836534896a9dc574bc0aac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0461048914836534896a9dc574bc0aac">&#9670;&#160;</a></span>testPath</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GameTestOptions::testPath</td>
         </tr>
       </table>
 </div><div class="memdoc">

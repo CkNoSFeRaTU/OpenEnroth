@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: ODMFace Struct Reference</title>
+<title>OpenEnroth: ODMFace Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -105,8 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af26b532bff4c05bf56276ce986000f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7f45cd0ae488799fb8502b815c3baef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#af7f45cd0ae488799fb8502b815c3baef">SetTexture</a> (const std::string &amp;filename)</td></tr>
 <tr class="separator:af7f45cd0ae488799fb8502b815c3baef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1976ef5bca3950db4f02443406e4ae39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTexture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a1976ef5bca3950db4f02443406e4ae39">GetTexture</a> ()</td></tr>
-<tr class="separator:a1976ef5bca3950db4f02443406e4ae39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae09168196203a4b98257dad3b27ab221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#ae09168196203a4b98257dad3b27ab221">GetTexture</a> ()</td></tr>
+<tr class="separator:ae09168196203a4b98257dad3b27ab221"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5baecbd829c3d16e503a8af8d2595d2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a5baecbd829c3d16e503a8af8d2595d2b">Contains</a> (const <a class="el" href="Vec_8h.html#adf6e1d7d066bb09da957cc89f2b3ceb2">Vec3i</a> &amp;pos, int model_idx, int slack=0, FaceAttributes override_plane=0) const</td></tr>
 <tr class="separator:a5baecbd829c3d16e503a8af8d2595d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -114,26 +114,18 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a7d1db4f64ea08aef6d3b0f6b9c08b680"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a7d1db4f64ea08aef6d3b0f6b9c08b680">index</a> = 0</td></tr>
 <tr class="separator:a7d1db4f64ea08aef6d3b0f6b9c08b680"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace32d7400221884427d376c2785e5dcd"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structPlanef.html">Planef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#ace32d7400221884427d376c2785e5dcd">pFacePlane</a></td></tr>
-<tr class="separator:ace32d7400221884427d376c2785e5dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76b12aec874f17cb98c9be5c71672822"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structPlanei.html">Planei</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a76b12aec874f17cb98c9be5c71672822">pFacePlaneOLD</a></td></tr>
-<tr class="separator:a76b12aec874f17cb98c9be5c71672822"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec5c3cd27b5359a8ba853665b632d5d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPlaneZCalcll.html">PlaneZCalcll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#aec5c3cd27b5359a8ba853665b632d5d2">zCalc</a></td></tr>
-<tr class="separator:aec5c3cd27b5359a8ba853665b632d5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a5273377ffa115b61316a89feea466"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPlanef.html">Planef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a54a5273377ffa115b61316a89feea466">facePlane</a></td></tr>
+<tr class="separator:a54a5273377ffa115b61316a89feea466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d369cb5bfedef2ab3cd688a4839ebb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPlaneZCalcf.html">PlaneZCalcf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a95d369cb5bfedef2ab3cd688a4839ebb">zCalc</a></td></tr>
+<tr class="separator:a95d369cb5bfedef2ab3cd688a4839ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94a3da1a81766cd91795a4e86e17364a"><td class="memItemLeft" align="right" valign="top">FaceAttributes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a94a3da1a81766cd91795a4e86e17364a">uAttributes</a> = 0</td></tr>
 <tr class="separator:a94a3da1a81766cd91795a4e86e17364a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb5132e79a5f7999c3e79f47e9839c00"><td class="memItemLeft" align="right" valign="top">std::array&lt; uint16_t, 20 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#aeb5132e79a5f7999c3e79f47e9839c00">pVertexIDs</a> = {{}}</td></tr>
-<tr class="separator:aeb5132e79a5f7999c3e79f47e9839c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842166c15b1be37ec51e8972b4db67bf"><td class="memItemLeft" align="right" valign="top">std::array&lt; int16_t, 20 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a842166c15b1be37ec51e8972b4db67bf">pVertexIDs</a> = {{}}</td></tr>
+<tr class="separator:a842166c15b1be37ec51e8972b4db67bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63ab96124fed6a1715bf7b6e21dcc5ca"><td class="memItemLeft" align="right" valign="top">std::array&lt; int16_t, 20 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a63ab96124fed6a1715bf7b6e21dcc5ca">pTextureUIDs</a> = {{}}</td></tr>
 <tr class="separator:a63ab96124fed6a1715bf7b6e21dcc5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6079712ca781d8a90210cf2946e1100"><td class="memItemLeft" align="right" valign="top">std::array&lt; int16_t, 20 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#ab6079712ca781d8a90210cf2946e1100">pTextureVIDs</a> = {{}}</td></tr>
 <tr class="separator:ab6079712ca781d8a90210cf2946e1100"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3f55de7001423f01dcbef5a662ebcff"><td class="memItemLeft" align="right" valign="top">std::array&lt; int16_t, 20 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#ae3f55de7001423f01dcbef5a662ebcff">pXInterceptDisplacements</a> = {{}}</td></tr>
-<tr class="separator:ae3f55de7001423f01dcbef5a662ebcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d8678511173a2c451458ad221b7e273"><td class="memItemLeft" align="right" valign="top">std::array&lt; int16_t, 20 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a9d8678511173a2c451458ad221b7e273">pYInterceptDisplacements</a> = {{}}</td></tr>
-<tr class="separator:a9d8678511173a2c451458ad221b7e273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60cc4df8e96afdaffae8a7554b5569a2"><td class="memItemLeft" align="right" valign="top">std::array&lt; int16_t, 20 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a60cc4df8e96afdaffae8a7554b5569a2">pZInterceptDisplacements</a> = {{}}</td></tr>
-<tr class="separator:a60cc4df8e96afdaffae8a7554b5569a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4867a2d7e1ed52e717987c1eaf4e3175"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a4867a2d7e1ed52e717987c1eaf4e3175">resource</a> = nullptr</td></tr>
 <tr class="separator:a4867a2d7e1ed52e717987c1eaf4e3175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a185ba5f2e9118a879e544598396f4a79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a185ba5f2e9118a879e544598396f4a79">texunit</a> = -1</td></tr>
@@ -152,30 +144,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa2d95170953e29dd0ff47292bd5a7f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7d0e1820dd0080cb8b25ebc39f86d00"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#ae7d0e1820dd0080cb8b25ebc39f86d00">sCogTriggerType</a> = 0</td></tr>
 <tr class="separator:ae7d0e1820dd0080cb8b25ebc39f86d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b8a5ed9013e4e6739f4ab3b80f84ead"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a3b8a5ed9013e4e6739f4ab3b80f84ead">field_128</a> = 0</td></tr>
-<tr class="separator:a3b8a5ed9013e4e6739f4ab3b80f84ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cf01fa7eb005ec492b0e6ea87f03b35"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a2cf01fa7eb005ec492b0e6ea87f03b35">field_129</a> = 0</td></tr>
-<tr class="separator:a2cf01fa7eb005ec492b0e6ea87f03b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43741cd1f2cbf187fc16461e05d5c37a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a43741cd1f2cbf187fc16461e05d5c37a">uGradientVertex1</a> = 0</td></tr>
-<tr class="separator:a43741cd1f2cbf187fc16461e05d5c37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95f439f2c772d60d00b1ec95a604f185"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a95f439f2c772d60d00b1ec95a604f185">uGradientVertex2</a> = 0</td></tr>
-<tr class="separator:a95f439f2c772d60d00b1ec95a604f185"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc993ac78d3ea8e244dd9f30f1140e90"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#adc993ac78d3ea8e244dd9f30f1140e90">uGradientVertex3</a> = 0</td></tr>
-<tr class="separator:adc993ac78d3ea8e244dd9f30f1140e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a100be3a43fd78ddfc947ace073a4b240"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a100be3a43fd78ddfc947ace073a4b240">uGradientVertex4</a> = 0</td></tr>
-<tr class="separator:a100be3a43fd78ddfc947ace073a4b240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9f355f60b9b1a64d25e72eebcc79ae9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#ab9f355f60b9b1a64d25e72eebcc79ae9">uNumVertices</a> = 0</td></tr>
 <tr class="separator:ab9f355f60b9b1a64d25e72eebcc79ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa09496c61fcd51722d8b7a775f887a3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BSPModel_8h.html#a91fb3e69af7609c2810f12d81ecf6fab">PolygonType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#aa09496c61fcd51722d8b7a775f887a3f">uPolygonType</a> = <a class="el" href="BSPModel_8h.html#a91fb3e69af7609c2810f12d81ecf6faba597fb17cf30b3b17a81e48e8a33abdc7">POLYGON_Invalid</a></td></tr>
+<tr class="memitem:aa09496c61fcd51722d8b7a775f887a3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="FaceEnums_8h.html#a91fb3e69af7609c2810f12d81ecf6fab">PolygonType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#aa09496c61fcd51722d8b7a775f887a3f">uPolygonType</a> = <a class="el" href="FaceEnums_8h.html#a91fb3e69af7609c2810f12d81ecf6faba597fb17cf30b3b17a81e48e8a33abdc7">POLYGON_Invalid</a></td></tr>
 <tr class="separator:aa09496c61fcd51722d8b7a775f887a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a730f1982a78b860296918228b121a100"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a730f1982a78b860296918228b121a100">uShadeType</a> = 0</td></tr>
 <tr class="separator:a730f1982a78b860296918228b121a100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58b2f9f03de81c6646ea70fe9fa23c0f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#a58b2f9f03de81c6646ea70fe9fa23c0f">bVisible</a> = 0</td></tr>
 <tr class="separator:a58b2f9f03de81c6646ea70fe9fa23c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3af8c453b7317d4b58efbf03999f5f7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#aa3af8c453b7317d4b58efbf03999f5f7">field_132</a> = 0</td></tr>
-<tr class="separator:aa3af8c453b7317d4b58efbf03999f5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad25b6b353fed02dd61ed91d2db8e7ca5"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODMFace.html#ad25b6b353fed02dd61ed91d2db8e7ca5">field_133</a> = 0</td></tr>
-<tr class="separator:ad25b6b353fed02dd61ed91d2db8e7ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab7eda202e1f28d1fa2248f3f1592da95" name="ab7eda202e1f28d1fa2248f3f1592da95"></a>
@@ -294,14 +270,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1976ef5bca3950db4f02443406e4ae39" name="a1976ef5bca3950db4f02443406e4ae39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1976ef5bca3950db4f02443406e4ae39">&#9670;&#160;</a></span>GetTexture()</h2>
+<a id="ae09168196203a4b98257dad3b27ab221" name="ae09168196203a4b98257dad3b27ab221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae09168196203a4b98257dad3b27ab221">&#9670;&#160;</a></span>GetTexture()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classTexture.html">Texture</a> * ODMFace::GetTexture </td>
+          <td class="memname"><a class="el" href="classGraphicsImage.html">GraphicsImage</a> * ODMFace::GetTexture </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -536,56 +512,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3b8a5ed9013e4e6739f4ab3b80f84ead" name="a3b8a5ed9013e4e6739f4ab3b80f84ead"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b8a5ed9013e4e6739f4ab3b80f84ead">&#9670;&#160;</a></span>field_128</h2>
+<a id="a54a5273377ffa115b61316a89feea466" name="a54a5273377ffa115b61316a89feea466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a5273377ffa115b61316a89feea466">&#9670;&#160;</a></span>facePlane</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char ODMFace::field_128 = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2cf01fa7eb005ec492b0e6ea87f03b35" name="a2cf01fa7eb005ec492b0e6ea87f03b35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cf01fa7eb005ec492b0e6ea87f03b35">&#9670;&#160;</a></span>field_129</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char ODMFace::field_129 = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa3af8c453b7317d4b58efbf03999f5f7" name="aa3af8c453b7317d4b58efbf03999f5f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3af8c453b7317d4b58efbf03999f5f7">&#9670;&#160;</a></span>field_132</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char ODMFace::field_132 = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad25b6b353fed02dd61ed91d2db8e7ca5" name="ad25b6b353fed02dd61ed91d2db8e7ca5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad25b6b353fed02dd61ed91d2db8e7ca5">&#9670;&#160;</a></span>field_133</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char ODMFace::field_133 = 0</td>
+          <td class="memname"><a class="el" href="structPlanef.html">Planef</a> ODMFace::facePlane</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -620,34 +554,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ace32d7400221884427d376c2785e5dcd" name="ace32d7400221884427d376c2785e5dcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace32d7400221884427d376c2785e5dcd">&#9670;&#160;</a></span>pFacePlane</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structPlanef.html">Planef</a> ODMFace::pFacePlane</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a76b12aec874f17cb98c9be5c71672822" name="a76b12aec874f17cb98c9be5c71672822"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76b12aec874f17cb98c9be5c71672822">&#9670;&#160;</a></span>pFacePlaneOLD</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structPlanei.html">Planei</a> ODMFace::pFacePlaneOLD</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a63ab96124fed6a1715bf7b6e21dcc5ca" name="a63ab96124fed6a1715bf7b6e21dcc5ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63ab96124fed6a1715bf7b6e21dcc5ca">&#9670;&#160;</a></span>pTextureUIDs</h2>
 
@@ -676,56 +582,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aeb5132e79a5f7999c3e79f47e9839c00" name="aeb5132e79a5f7999c3e79f47e9839c00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb5132e79a5f7999c3e79f47e9839c00">&#9670;&#160;</a></span>pVertexIDs</h2>
+<a id="a842166c15b1be37ec51e8972b4db67bf" name="a842166c15b1be37ec51e8972b4db67bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842166c15b1be37ec51e8972b4db67bf">&#9670;&#160;</a></span>pVertexIDs</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;uint16_t, 20&gt; ODMFace::pVertexIDs = {{}}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae3f55de7001423f01dcbef5a662ebcff" name="ae3f55de7001423f01dcbef5a662ebcff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3f55de7001423f01dcbef5a662ebcff">&#9670;&#160;</a></span>pXInterceptDisplacements</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::array&lt;int16_t, 20&gt; ODMFace::pXInterceptDisplacements = {{}}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9d8678511173a2c451458ad221b7e273" name="a9d8678511173a2c451458ad221b7e273"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d8678511173a2c451458ad221b7e273">&#9670;&#160;</a></span>pYInterceptDisplacements</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::array&lt;int16_t, 20&gt; ODMFace::pYInterceptDisplacements = {{}}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a60cc4df8e96afdaffae8a7554b5569a2" name="a60cc4df8e96afdaffae8a7554b5569a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60cc4df8e96afdaffae8a7554b5569a2">&#9670;&#160;</a></span>pZInterceptDisplacements</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::array&lt;int16_t, 20&gt; ODMFace::pZInterceptDisplacements = {{}}</td>
+          <td class="memname">std::array&lt;int16_t, 20&gt; ODMFace::pVertexIDs = {{}}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -858,62 +722,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a43741cd1f2cbf187fc16461e05d5c37a" name="a43741cd1f2cbf187fc16461e05d5c37a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43741cd1f2cbf187fc16461e05d5c37a">&#9670;&#160;</a></span>uGradientVertex1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t ODMFace::uGradientVertex1 = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a95f439f2c772d60d00b1ec95a604f185" name="a95f439f2c772d60d00b1ec95a604f185"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95f439f2c772d60d00b1ec95a604f185">&#9670;&#160;</a></span>uGradientVertex2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t ODMFace::uGradientVertex2 = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adc993ac78d3ea8e244dd9f30f1140e90" name="adc993ac78d3ea8e244dd9f30f1140e90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc993ac78d3ea8e244dd9f30f1140e90">&#9670;&#160;</a></span>uGradientVertex3</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t ODMFace::uGradientVertex3 = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a100be3a43fd78ddfc947ace073a4b240" name="a100be3a43fd78ddfc947ace073a4b240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a100be3a43fd78ddfc947ace073a4b240">&#9670;&#160;</a></span>uGradientVertex4</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t ODMFace::uGradientVertex4 = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ab9f355f60b9b1a64d25e72eebcc79ae9" name="ab9f355f60b9b1a64d25e72eebcc79ae9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9f355f60b9b1a64d25e72eebcc79ae9">&#9670;&#160;</a></span>uNumVertices</h2>
 
@@ -935,7 +743,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="BSPModel_8h.html#a91fb3e69af7609c2810f12d81ecf6fab">PolygonType</a> ODMFace::uPolygonType = <a class="el" href="BSPModel_8h.html#a91fb3e69af7609c2810f12d81ecf6faba597fb17cf30b3b17a81e48e8a33abdc7">POLYGON_Invalid</a></td>
+          <td class="memname"><a class="el" href="FaceEnums_8h.html#a91fb3e69af7609c2810f12d81ecf6fab">PolygonType</a> ODMFace::uPolygonType = <a class="el" href="FaceEnums_8h.html#a91fb3e69af7609c2810f12d81ecf6faba597fb17cf30b3b17a81e48e8a33abdc7">POLYGON_Invalid</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -956,14 +764,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aec5c3cd27b5359a8ba853665b632d5d2" name="aec5c3cd27b5359a8ba853665b632d5d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec5c3cd27b5359a8ba853665b632d5d2">&#9670;&#160;</a></span>zCalc</h2>
+<a id="a95d369cb5bfedef2ab3cd688a4839ebb" name="a95d369cb5bfedef2ab3cd688a4839ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95d369cb5bfedef2ab3cd688a4839ebb">&#9670;&#160;</a></span>zCalc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structPlaneZCalcll.html">PlaneZCalcll</a> ODMFace::zCalc</td>
+          <td class="memname"><a class="el" href="structPlaneZCalcf.html">PlaneZCalcf</a> ODMFace::zCalc</td>
         </tr>
       </table>
 </div><div class="memdoc">

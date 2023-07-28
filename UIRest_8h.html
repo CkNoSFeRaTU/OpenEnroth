@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/GUI/UI/UIRest.h File Reference</title>
+<title>OpenEnroth: src/GUI/UI/UIRest.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -75,29 +75,43 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">UIRest.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="GUIWindow_8h.html">GUI/GUIWindow.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Time_8h.html">Engine/Time.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGUIWindow__Rest.html">GUIWindow_Rest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGUIWindow__RestWindow.html">GUIWindow_RestWindow</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:aff0fc472b81b176add891fc1d3552e3e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIRest_8h.html#aff0fc472b81b176add891fc1d3552e3e">RestType</a> { <a class="el" href="UIRest_8h.html#aff0fc472b81b176add891fc1d3552e3ea927097aad1753ddbc2cceb64d0e707b0">REST_NONE</a> = 0
+, <a class="el" href="UIRest_8h.html#aff0fc472b81b176add891fc1d3552e3eac8ae8e51a1028218be4f458ba7a3810e">REST_WAIT</a> = 1
+, <a class="el" href="UIRest_8h.html#aff0fc472b81b176add891fc1d3552e3ea6563ab8cd0c338553e1e852a87b57d08">REST_HEAL</a> = 2
+ }</td></tr>
+<tr class="separator:aff0fc472b81b176add891fc1d3552e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ac296e29920fa5a1a196659518808e6b6"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIRest_8h.html#ac296e29920fa5a1a196659518808e6b6">rest_ui_sky_frame_current</a></td></tr>
-<tr class="separator:ac296e29920fa5a1a196659518808e6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4b42419d859256a2497406abf4fd09"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIRest_8h.html#aff4b42419d859256a2497406abf4fd09">rest_ui_hourglass_frame_current</a></td></tr>
-<tr class="separator:aff4b42419d859256a2497406abf4fd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f7f05ad7988456d14060caba8f9bd4"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIRest_8h.html#a63f7f05ad7988456d14060caba8f9bd4">rest_ui_sky_frame_current</a></td></tr>
+<tr class="separator:a63f7f05ad7988456d14060caba8f9bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81d94ca3e6239a22ef1aa9934c2b93c"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIRest_8h.html#af81d94ca3e6239a22ef1aa9934c2b93c">rest_ui_hourglass_frame_current</a></td></tr>
+<tr class="separator:af81d94ca3e6239a22ef1aa9934c2b93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20a6782fe60f25eb2e1a0f0850375a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIRest_8h.html#ab20a6782fe60f25eb2e1a0f0850375a2">foodRequiredToRest</a></td></tr>
+<tr class="separator:ab20a6782fe60f25eb2e1a0f0850375a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84d4b1450f4ed811984e662fca790de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGameTime.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIRest_8h.html#aa84d4b1450f4ed811984e662fca790de">remainingRestTime</a></td></tr>
+<tr class="separator:aa84d4b1450f4ed811984e662fca790de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f7c2681f3e87a05f32ba6490b5e7133"><td class="memItemLeft" align="right" valign="top"><a class="el" href="UIRest_8h.html#aff0fc472b81b176add891fc1d3552e3e">RestType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIRest_8h.html#a1f7c2681f3e87a05f32ba6490b5e7133">currentRestType</a></td></tr>
+<tr class="separator:a1f7c2681f3e87a05f32ba6490b5e7133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="aff4b42419d859256a2497406abf4fd09" name="aff4b42419d859256a2497406abf4fd09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff4b42419d859256a2497406abf4fd09">&#9670;&#160;</a></span>rest_ui_hourglass_frame_current</h2>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="aff0fc472b81b176add891fc1d3552e3e" name="aff0fc472b81b176add891fc1d3552e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff0fc472b81b176add891fc1d3552e3e">&#9670;&#160;</a></span>RestType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -106,7 +120,35 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">class <a class="el" href="classImage.html">Image</a>* rest_ui_hourglass_frame_current</td>
+          <td class="memname">enum class <a class="el" href="UIRest_8h.html#aff0fc472b81b176add891fc1d3552e3e">RestType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aff0fc472b81b176add891fc1d3552e3ea927097aad1753ddbc2cceb64d0e707b0" name="aff0fc472b81b176add891fc1d3552e3ea927097aad1753ddbc2cceb64d0e707b0"></a>REST_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aff0fc472b81b176add891fc1d3552e3eac8ae8e51a1028218be4f458ba7a3810e" name="aff0fc472b81b176add891fc1d3552e3eac8ae8e51a1028218be4f458ba7a3810e"></a>REST_WAIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aff0fc472b81b176add891fc1d3552e3ea6563ab8cd0c338553e1e852a87b57d08" name="aff0fc472b81b176add891fc1d3552e3ea6563ab8cd0c338553e1e852a87b57d08"></a>REST_HEAL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a1f7c2681f3e87a05f32ba6490b5e7133" name="a1f7c2681f3e87a05f32ba6490b5e7133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7c2681f3e87a05f32ba6490b5e7133">&#9670;&#160;</a></span>currentRestType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="UIRest_8h.html#aff0fc472b81b176add891fc1d3552e3e">RestType</a> currentRestType</td>
         </tr>
       </table>
   </td>
@@ -118,8 +160,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac296e29920fa5a1a196659518808e6b6" name="ac296e29920fa5a1a196659518808e6b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac296e29920fa5a1a196659518808e6b6">&#9670;&#160;</a></span>rest_ui_sky_frame_current</h2>
+<a id="ab20a6782fe60f25eb2e1a0f0850375a2" name="ab20a6782fe60f25eb2e1a0f0850375a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20a6782fe60f25eb2e1a0f0850375a2">&#9670;&#160;</a></span>foodRequiredToRest</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +170,73 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">class <a class="el" href="classImage.html">Image</a>* rest_ui_sky_frame_current</td>
+          <td class="memname">int foodRequiredToRest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa84d4b1450f4ed811984e662fca790de" name="aa84d4b1450f4ed811984e662fca790de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84d4b1450f4ed811984e662fca790de">&#9670;&#160;</a></span>remainingRestTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGameTime.html">GameTime</a> remainingRestTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af81d94ca3e6239a22ef1aa9934c2b93c" name="af81d94ca3e6239a22ef1aa9934c2b93c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81d94ca3e6239a22ef1aa9934c2b93c">&#9670;&#160;</a></span>rest_ui_hourglass_frame_current</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="classGraphicsImage.html">GraphicsImage</a>* rest_ui_hourglass_frame_current</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63f7f05ad7988456d14060caba8f9bd4" name="a63f7f05ad7988456d14060caba8f9bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f7f05ad7988456d14060caba8f9bd4">&#9670;&#160;</a></span>rest_ui_sky_frame_current</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="classGraphicsImage.html">GraphicsImage</a>* rest_ui_sky_frame_current</td>
         </tr>
       </table>
   </td>

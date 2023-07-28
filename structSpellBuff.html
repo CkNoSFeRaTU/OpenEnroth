@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: SpellBuff Struct Reference</title>
+<title>OpenEnroth: SpellBuff Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -77,35 +77,39 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;Spells.h&gt;</code></p>
+<p><code>#include &lt;SpellBuff.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a97c8659ac06abf002c98f80715d03820"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a97c8659ac06abf002c98f80715d03820">Apply</a> (<a class="el" href="structGameTime.html">GameTime</a> time, <a class="el" href="PlayerEnums_8h.html#ae7fdd356d1b4ddbdd59bcba036e6f942">PLAYER_SKILL_MASTERY</a> <a class="el" href="structSpellBuff.html#ac07af7ac70cbacd4ff9d6280355a29ee">uSkillMastery</a>, <a class="el" href="PlayerEnums_8h.html#adb9cb0391b2119e3d28341d2f340964e">PLAYER_SKILL_LEVEL</a> <a class="el" href="structSpellBuff.html#a5ea1251f2855415b5f8aabfb1f9a056d">uPower</a>, int <a class="el" href="structSpellBuff.html#a82fb44fa9a3abd9d8d4c14f9068526d9">uOverlayID</a>, uint8_t caster)</td></tr>
-<tr class="separator:a97c8659ac06abf002c98f80715d03820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e71d5d43fda9c201dd5e36250a771cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a3e71d5d43fda9c201dd5e36250a771cf">Apply</a> (<a class="el" href="structGameTime.html">GameTime</a> time, <a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2a">CharacterSkillMastery</a> uSkillMastery, int uPower, int uOverlayID, uint8_t <a class="el" href="structSpellBuff.html#adf2074d8fdab23ce076b6a0327e300b6">caster</a>)</td></tr>
+<tr class="separator:a3e71d5d43fda9c201dd5e36250a771cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05bb78040b623168fa0fcc66764d1871"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a05bb78040b623168fa0fcc66764d1871">Reset</a> ()</td></tr>
 <tr class="separator:a05bb78040b623168fa0fcc66764d1871"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01a6d12114f06b996d5e57a5c8196519"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a01a6d12114f06b996d5e57a5c8196519">IsBuffExpiredToTime</a> (<a class="el" href="structGameTime.html">GameTime</a> time)</td></tr>
 <tr class="separator:a01a6d12114f06b996d5e57a5c8196519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8120188fb27f4eac35052ee945cce00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#aa8120188fb27f4eac35052ee945cce00">Active</a> () const</td></tr>
 <tr class="separator:aa8120188fb27f4eac35052ee945cce00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80a70cb1a986d65d532f46adfac4d55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#ac80a70cb1a986d65d532f46adfac4d55">Inactive</a> () const</td></tr>
+<tr class="separator:ac80a70cb1a986d65d532f46adfac4d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82ae66dc29fa0c9404dc1044aa0ae922"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a82ae66dc29fa0c9404dc1044aa0ae922">Expired</a> () const</td></tr>
 <tr class="separator:a82ae66dc29fa0c9404dc1044aa0ae922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8dde3d1b4e2cfa61afc98a692545c72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGameTime.html">GameTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#ac8dde3d1b4e2cfa61afc98a692545c72">GetExpireTime</a> ()</td></tr>
+<tr class="separator:ac8dde3d1b4e2cfa61afc98a692545c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:af39ece8d281254a31a4e65db8a1139a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGameTime.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#af39ece8d281254a31a4e65db8a1139a9">expire_time</a></td></tr>
-<tr class="separator:af39ece8d281254a31a4e65db8a1139a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ea1251f2855415b5f8aabfb1f9a056d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a5ea1251f2855415b5f8aabfb1f9a056d">uPower</a> = 0</td></tr>
-<tr class="separator:a5ea1251f2855415b5f8aabfb1f9a056d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac07af7ac70cbacd4ff9d6280355a29ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="PlayerEnums_8h.html#ae7fdd356d1b4ddbdd59bcba036e6f942">PLAYER_SKILL_MASTERY</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#ac07af7ac70cbacd4ff9d6280355a29ee">uSkillMastery</a> = <a class="el" href="PlayerEnums_8h.html#ae7fdd356d1b4ddbdd59bcba036e6f942a6f3821fb98b55732e07a3fe35c53bd7d">PLAYER_SKILL_MASTERY_NONE</a></td></tr>
-<tr class="separator:ac07af7ac70cbacd4ff9d6280355a29ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82fb44fa9a3abd9d8d4c14f9068526d9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a82fb44fa9a3abd9d8d4c14f9068526d9">uOverlayID</a> = 0</td></tr>
-<tr class="separator:a82fb44fa9a3abd9d8d4c14f9068526d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b79c155a778d40584556ccb28aaca97"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a8b79c155a778d40584556ccb28aaca97">uCaster</a> = 0</td></tr>
-<tr class="separator:a8b79c155a778d40584556ccb28aaca97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2da946a1c8319079947e73c16c3ac7d7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a2da946a1c8319079947e73c16c3ac7d7">uFlags</a> = 0</td></tr>
-<tr class="separator:a2da946a1c8319079947e73c16c3ac7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9441304a879a45110889cf211ac973b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGameTime.html">GameTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a9441304a879a45110889cf211ac973b0">expireTime</a></td></tr>
+<tr class="separator:a9441304a879a45110889cf211ac973b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c138cf54a2fe18af6c23144b673b796"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a0c138cf54a2fe18af6c23144b673b796">power</a> = 0</td></tr>
+<tr class="separator:a0c138cf54a2fe18af6c23144b673b796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2ca1aca900592ff831d0a76c62f696b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2a">CharacterSkillMastery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#ac2ca1aca900592ff831d0a76c62f696b">skillMastery</a> = <a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2aaed21722ac41def1fe6ca65f31d5638f2">CHARACTER_SKILL_MASTERY_NONE</a></td></tr>
+<tr class="separator:ac2ca1aca900592ff831d0a76c62f696b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71246715e120b97bffc46a7f6941ce6e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a71246715e120b97bffc46a7f6941ce6e">overlayID</a> = 0</td></tr>
+<tr class="separator:a71246715e120b97bffc46a7f6941ce6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2074d8fdab23ce076b6a0327e300b6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#adf2074d8fdab23ce076b6a0327e300b6">caster</a> = 0</td></tr>
+<tr class="separator:adf2074d8fdab23ce076b6a0327e300b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64220ef41c029b19e9e7c36c3e9bcb2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpellBuff.html#a64220ef41c029b19e9e7c36c3e9bcb2c">isGMBuff</a> = false</td></tr>
+<tr class="separator:a64220ef41c029b19e9e7c36c3e9bcb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa8120188fb27f4eac35052ee945cce00" name="aa8120188fb27f4eac35052ee945cce00"></a>
@@ -130,11 +134,12 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x42EB31 Active is state where spell buff is in effect </dd></dl>
 
 </div>
 </div>
-<a id="a97c8659ac06abf002c98f80715d03820" name="a97c8659ac06abf002c98f80715d03820"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97c8659ac06abf002c98f80715d03820">&#9670;&#160;</a></span>Apply()</h2>
+<a id="a3e71d5d43fda9c201dd5e36250a771cf" name="a3e71d5d43fda9c201dd5e36250a771cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e71d5d43fda9c201dd5e36250a771cf">&#9670;&#160;</a></span>Apply()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,13 +153,13 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="PlayerEnums_8h.html#ae7fdd356d1b4ddbdd59bcba036e6f942">PLAYER_SKILL_MASTERY</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2a">CharacterSkillMastery</a>&#160;</td>
           <td class="paramname"><em>uSkillMastery</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="PlayerEnums_8h.html#adb9cb0391b2119e3d28341d2f340964e">PLAYER_SKILL_LEVEL</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>uPower</em>, </td>
         </tr>
         <tr>
@@ -176,6 +181,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x4584E0 </dd></dl>
 
 </div>
 </div>
@@ -201,6 +207,58 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Expired is state where spell buff is not in effect after previously being active </p>
+
+</div>
+</div>
+<a id="ac8dde3d1b4e2cfa61afc98a692545c72" name="ac8dde3d1b4e2cfa61afc98a692545c72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8dde3d1b4e2cfa61afc98a692545c72">&#9670;&#160;</a></span>GetExpireTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGameTime.html">GameTime</a> &amp; SpellBuff::GetExpireTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac80a70cb1a986d65d532f46adfac4d55" name="ac80a70cb1a986d65d532f46adfac4d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80a70cb1a986d65d532f46adfac4d55">&#9670;&#160;</a></span>Inactive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SpellBuff::Inactive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Inactive is state where spell buff is not in effect (includes state expired) </p>
 
 </div>
 </div>
@@ -219,6 +277,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x4585CA </dd></dl>
 
 </div>
 </div>
@@ -236,88 +295,89 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x458585 </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af39ece8d281254a31a4e65db8a1139a9" name="af39ece8d281254a31a4e65db8a1139a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af39ece8d281254a31a4e65db8a1139a9">&#9670;&#160;</a></span>expire_time</h2>
+<a id="adf2074d8fdab23ce076b6a0327e300b6" name="adf2074d8fdab23ce076b6a0327e300b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2074d8fdab23ce076b6a0327e300b6">&#9670;&#160;</a></span>caster</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structGameTime.html">GameTime</a> SpellBuff::expire_time</td>
+          <td class="memname">uint8_t SpellBuff::caster = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8b79c155a778d40584556ccb28aaca97" name="a8b79c155a778d40584556ccb28aaca97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b79c155a778d40584556ccb28aaca97">&#9670;&#160;</a></span>uCaster</h2>
+<a id="a9441304a879a45110889cf211ac973b0" name="a9441304a879a45110889cf211ac973b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9441304a879a45110889cf211ac973b0">&#9670;&#160;</a></span>expireTime</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t SpellBuff::uCaster = 0</td>
+          <td class="memname"><a class="el" href="structGameTime.html">GameTime</a> SpellBuff::expireTime</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a2da946a1c8319079947e73c16c3ac7d7" name="a2da946a1c8319079947e73c16c3ac7d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2da946a1c8319079947e73c16c3ac7d7">&#9670;&#160;</a></span>uFlags</h2>
+<a id="a64220ef41c029b19e9e7c36c3e9bcb2c" name="a64220ef41c029b19e9e7c36c3e9bcb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64220ef41c029b19e9e7c36c3e9bcb2c">&#9670;&#160;</a></span>isGMBuff</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t SpellBuff::uFlags = 0</td>
+          <td class="memname">bool SpellBuff::isGMBuff = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a82fb44fa9a3abd9d8d4c14f9068526d9" name="a82fb44fa9a3abd9d8d4c14f9068526d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82fb44fa9a3abd9d8d4c14f9068526d9">&#9670;&#160;</a></span>uOverlayID</h2>
+<a id="a71246715e120b97bffc46a7f6941ce6e" name="a71246715e120b97bffc46a7f6941ce6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71246715e120b97bffc46a7f6941ce6e">&#9670;&#160;</a></span>overlayID</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t SpellBuff::uOverlayID = 0</td>
+          <td class="memname">uint16_t SpellBuff::overlayID = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a5ea1251f2855415b5f8aabfb1f9a056d" name="a5ea1251f2855415b5f8aabfb1f9a056d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ea1251f2855415b5f8aabfb1f9a056d">&#9670;&#160;</a></span>uPower</h2>
+<a id="a0c138cf54a2fe18af6c23144b673b796" name="a0c138cf54a2fe18af6c23144b673b796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c138cf54a2fe18af6c23144b673b796">&#9670;&#160;</a></span>power</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t SpellBuff::uPower = 0</td>
+          <td class="memname">uint16_t SpellBuff::power = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac07af7ac70cbacd4ff9d6280355a29ee" name="ac07af7ac70cbacd4ff9d6280355a29ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac07af7ac70cbacd4ff9d6280355a29ee">&#9670;&#160;</a></span>uSkillMastery</h2>
+<a id="ac2ca1aca900592ff831d0a76c62f696b" name="ac2ca1aca900592ff831d0a76c62f696b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ca1aca900592ff831d0a76c62f696b">&#9670;&#160;</a></span>skillMastery</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="PlayerEnums_8h.html#ae7fdd356d1b4ddbdd59bcba036e6f942">PLAYER_SKILL_MASTERY</a> SpellBuff::uSkillMastery = <a class="el" href="PlayerEnums_8h.html#ae7fdd356d1b4ddbdd59bcba036e6f942a6f3821fb98b55732e07a3fe35c53bd7d">PLAYER_SKILL_MASTERY_NONE</a></td>
+          <td class="memname"><a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2a">CharacterSkillMastery</a> SpellBuff::skillMastery = <a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2aaed21722ac41def1fe6ca65f31d5638f2">CHARACTER_SKILL_MASTERY_NONE</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -325,7 +385,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>src/Engine/Spells/<a class="el" href="Spells_8h.html">Spells.h</a></li>
+<li>src/Engine/Spells/<a class="el" href="SpellBuff_8h.html">SpellBuff.h</a></li>
 <li>src/Engine/Spells/<a class="el" href="Spells_8cpp.html">Spells.cpp</a></li>
 </ul>
 </div><!-- contents -->

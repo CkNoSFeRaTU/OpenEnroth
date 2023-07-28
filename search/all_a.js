@@ -1,12 +1,22 @@
 var searchData=
 [
-  ['j_0',['J',['../PlatformKey_8h.html#a2ba59747730ab559dd1191f51081eeccaff44570aca8241914870afbc310cdb85',1,'PlatformKey.h']]],
-  ['jaildialog_1',['JailDialog',['../UIHouses_8cpp.html#a94fd0881c896a6e2864b9b8a7c14c851',1,'JailDialog():&#160;UIHouses.cpp'],['../UIHouses_8h.html#a94fd0881c896a6e2864b9b8a7c14c851',1,'JailDialog():&#160;UIHouses.cpp']]],
-  ['joins_2',['joins',['../structNPCData__MM7.html#a1a5eba161a2e10eaa05163f4c29b1439',1,'NPCData_MM7']]],
-  ['jonquil_3',['Jonquil',['../classColorTable.html#a0b1450c62b0fbda79be93426ffc034ff',1,'ColorTable']]],
-  ['journal_5flimitation_5ffactor_4',['Journal_limitation_factor',['../mm7__data_8cpp.html#ad205251143e8030a5ad4fecd95f17b31',1,'Journal_limitation_factor():&#160;mm7_data.cpp'],['../mm7__data_8h.html#ad205251143e8030a5ad4fecd95f17b31',1,'Journal_limitation_factor():&#160;mm7_data.cpp']]],
-  ['journalbook_2ecpp_5',['JournalBook.cpp',['../JournalBook_8cpp.html',1,'']]],
-  ['journalbook_2eh_6',['JournalBook.h',['../JournalBook_8h.html',1,'']]],
-  ['jump_7',['Jump',['../classApplication_1_1GameConfig_1_1Keybindings.html#a5fdfeb0779427c666569f12c9c259e7f',1,'Application::GameConfig::Keybindings::Jump()'],['../namespaceIo.html#a547e2ba6c6a5bb3a0b5987131e62a90ca101f693f72287a2819a364f64ca1c0ed',1,'Io::Jump()']]],
-  ['jump_5fstrength_8',['jump_strength',['../structParty.html#a1efcbe6f1717323a6d81a69ded63b472',1,'Party::jump_strength()'],['../structParty__MM7.html#a5b84f9390c4ddc7b2de132ddfc8cd57f',1,'Party_MM7::jump_strength()']]]
+  ['jail_2ecpp_0',['Jail.cpp',['../Jail_8cpp.html',1,'']]],
+  ['jail_2eh_1',['Jail.h',['../Jail_8h.html',1,'']]],
+  ['jazzberryjam_2',['JazzberryJam',['../classColorTable.html#a064068157c526aa27ca8c5d98a6d880f',1,'ColorTable']]],
+  ['joined_3',['joined',['../classCombinedSkillValue.html#a2df8715a7459c3bde0d6c7ef6af5b36b',1,'CombinedSkillValue']]],
+  ['joins_4',['joins',['../structNPCData__MM7.html#a1a5eba161a2e10eaa05163f4c29b1439',1,'NPCData_MM7']]],
+  ['jonquil_5',['Jonquil',['../classColorTable.html#abdedc7ac662efceef4ed2863bd6d9c16',1,'ColorTable']]],
+  ['journalbook_2ecpp_6',['JournalBook.cpp',['../JournalBook_8cpp.html',1,'']]],
+  ['journalbook_2eh_7',['JournalBook.h',['../JournalBook_8h.html',1,'']]],
+  ['json_8',['json',['../Json__ut_8cpp.html#a4c3566a3ad94ebebe2ea64e7a5c445f9',1,'Json_ut.cpp']]],
+  ['json_9',['Json',['../JsonFwd_8h.html#af13a1979f9e8f62c101433fac6511cc6',1,'JsonFwd.h']]],
+  ['json_2eh_10',['Json.h',['../Json_8h.html',1,'']]],
+  ['json_5fdisable_5fenum_5fserialization_11',['JSON_DISABLE_ENUM_SERIALIZATION',['../Json_8h.html#a403780be256f6a39874e76b5ce1a7a3b',1,'Json.h']]],
+  ['json_5fut_2ecpp_12',['Json_ut.cpp',['../Json__ut_8cpp.html',1,'']]],
+  ['jsonexceptions_2ecpp_13',['JsonExceptions.cpp',['../JsonExceptions_8cpp.html',1,'']]],
+  ['jsonexceptions_2eh_14',['JsonExceptions.h',['../JsonExceptions_8h.html',1,'']]],
+  ['jsonfwd_2eh_15',['JsonFwd.h',['../JsonFwd_8h.html',1,'']]],
+  ['jump_16',['Jump',['../classGameConfig_1_1Gamepad.html#ade63a0c7d485ff10cce7bc53c31a06c7',1,'GameConfig::Gamepad::Jump()'],['../classGameConfig_1_1Keybindings.html#a3301a2f11424af52b6d5fb8a92d2526f',1,'GameConfig::Keybindings::Jump()'],['../namespaceIo.html#a547e2ba6c6a5bb3a0b5987131e62a90ca101f693f72287a2819a364f64ca1c0ed',1,'Io::Jump()']]],
+  ['jump_5fstrength_17',['jump_strength',['../structParty.html#a1efcbe6f1717323a6d81a69ded63b472',1,'Party']]],
+  ['jumpstrength_18',['jumpStrength',['../structParty__MM7.html#a5d8b56ab0a5907d71c5e84186673bfcc',1,'Party_MM7']]]
 ];

@@ -1,16 +1,20 @@
 var searchData=
 [
-  ['nk_5fdevice_0',['nk_device',['../structRenderOpenGL_1_1nk__device.html',1,'RenderOpenGL']]],
-  ['nk_5ftex_5ffont_1',['nk_tex_font',['../structnk__tex__font.html',1,'']]],
-  ['nk_5fvertex_2',['nk_vertex',['../structRenderOpenGL_1_1nk__vertex.html',1,'RenderOpenGL']]],
-  ['node_3',['Node',['../structVideoList_1_1Node.html',1,'VideoList']]],
-  ['npcdata_4',['NPCData',['../structNPCData.html',1,'']]],
-  ['npcdata_5fmm7_5',['NPCData_MM7',['../structNPCData__MM7.html',1,'']]],
-  ['npcgreeting_6',['NPCGreeting',['../structNPCGreeting.html',1,'']]],
-  ['npcprofession_7',['NPCProfession',['../structNPCProfession.html',1,'']]],
-  ['npcprofessionchance_8',['NPCProfessionChance',['../structNPCProfessionChance.html',1,'']]],
-  ['npcstats_9',['NPCStats',['../structNPCStats.html',1,'']]],
-  ['npctopic_10',['NPCTopic',['../structNPCTopic.html',1,'']]],
-  ['nuklear_11',['Nuklear',['../classNuklear.html',1,'']]],
-  ['nukleareventhandler_12',['NuklearEventHandler',['../classNuklearEventHandler.html',1,'']]]
+  ['nativestate_0',['NativeState',['../enumorg_1_1libsdl_1_1app_1_1SDLActivity_1_1NativeState.html',1,'org::libsdl::app::SDLActivity']]],
+  ['nk_5fdevice_1',['nk_device',['../structnk__device.html',1,'']]],
+  ['nk_5fstate_2',['nk_state',['../structnk__state.html',1,'']]],
+  ['nk_5ftex_5ffont_3',['nk_tex_font',['../structnk__tex__font.html',1,'']]],
+  ['nk_5fvertex_4',['nk_vertex',['../structnk__vertex.html',1,'']]],
+  ['node_5',['Node',['../structVideoList_1_1Node.html',1,'VideoList']]],
+  ['nonrandomengine_6',['NonRandomEngine',['../classNonRandomEngine.html',1,'']]],
+  ['npcdata_7',['NPCData',['../structNPCData.html',1,'']]],
+  ['npcdata_5fmm7_8',['NPCData_MM7',['../structNPCData__MM7.html',1,'']]],
+  ['npcgreeting_9',['NPCGreeting',['../structNPCGreeting.html',1,'']]],
+  ['npcprofession_10',['NPCProfession',['../structNPCProfession.html',1,'']]],
+  ['npcprofessionchance_11',['NPCProfessionChance',['../structNPCProfessionChance.html',1,'']]],
+  ['npcstats_12',['NPCStats',['../structNPCStats.html',1,'']]],
+  ['npctopic_13',['NPCTopic',['../structNPCTopic.html',1,'']]],
+  ['nuklear_14',['Nuklear',['../classNuklear.html',1,'']]],
+  ['nukleareventhandler_15',['NuklearEventHandler',['../classNuklearEventHandler.html',1,'']]],
+  ['nullopenglcontext_16',['NullOpenGLContext',['../classNullOpenGLContext.html',1,'']]]
 ];

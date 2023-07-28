@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Engine/Objects/NPC.h File Reference</title>
+<title>OpenEnroth: src/Engine/Objects/NPC.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -75,88 +75,76 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">NPC.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="IndexedArray_8h.html">Utility/IndexedArray.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="NPCEnums_8h.html">Engine/Objects/NPCEnums.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNPCTopic.html">NPCTopic</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNPCData.html">NPCData</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNPCProfession.html">NPCProfession</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNPCProfessionChance.html">NPCProfessionChance</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNPCGreeting.html">NPCGreeting</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNPCStats.html">NPCStats</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlatHirelings.html">FlatHirelings</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a1c8f4a8828794aed19879a9034c04ae4"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a1c8f4a8828794aed19879a9034c04ae4">NpcType</a> { <a class="el" href="NPC_8h.html#a1c8f4a8828794aed19879a9034c04ae4a0005c911c832c91f0e0d50af3c56d9fd">NPC_TYPE_QUEST</a> = 1
+, <a class="el" href="NPC_8h.html#a1c8f4a8828794aed19879a9034c04ae4a9f651b1dd5d548db78e0d97d05960f13">NPC_TYPE_HIREABLE</a> = 2
+ }</td></tr>
+<tr class="separator:a1c8f4a8828794aed19879a9034c04ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a6d278e794fb881e57be9005d353099da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a6d278e794fb881e57be9005d353099da">CheckPortretAgainstSex</a> (int a1, int)</td></tr>
+<tr class="separator:a6d278e794fb881e57be9005d353099da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0b7197f3a0cdc35557d678ccaacdd7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#ab0b7197f3a0cdc35557d678ccaacdd7f">PartyHasDragon</a> ()</td></tr>
 <tr class="separator:ab0b7197f3a0cdc35557d678ccaacdd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab58ca502d5ddc0986473507003e4412c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#ab58ca502d5ddc0986473507003e4412c">CheckHiredNPCSpeciality</a> (<a class="el" href="NPCEnums_8h.html#ae6501f571f97d74c2c78fddcb371bad4">NPCProf</a> prof)</td></tr>
 <tr class="separator:ab58ca502d5ddc0986473507003e4412c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfce0b79ca64a3c666c5bc7781622842"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#acfce0b79ca64a3c666c5bc7781622842">UseNPCSkill</a> (<a class="el" href="NPCEnums_8h.html#ae6501f571f97d74c2c78fddcb371bad4">NPCProf</a> profession)</td></tr>
-<tr class="separator:acfce0b79ca64a3c666c5bc7781622842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d9b50c44576de7da3caff7d301ddab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a0d9b50c44576de7da3caff7d301ddab1">NPCHireableDialogPrepare</a> ()</td></tr>
-<tr class="separator:a0d9b50c44576de7da3caff7d301ddab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58a376999ccce3cb142578b812b47124"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a58a376999ccce3cb142578b812b47124">_4B4224_UpdateNPCTopics</a> (int _this)</td></tr>
-<tr class="separator:a58a376999ccce3cb142578b812b47124"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcced0757c52caa3a575af2b433994fd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#abcced0757c52caa3a575af2b433994fd">GetProfessionActionText</a> (<a class="el" href="NPCEnums_8h.html#ae6501f571f97d74c2c78fddcb371bad4">NPCProf</a> prof)</td></tr>
-<tr class="separator:abcced0757c52caa3a575af2b433994fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aeee0ab4551b7821d0306c4d9257f88"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structNPCData.html">NPCData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a2aeee0ab4551b7821d0306c4d9257f88">GetNPCData</a> (signed int npcid)</td></tr>
-<tr class="separator:a2aeee0ab4551b7821d0306c4d9257f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86808836a96ee1acd272210838eac2bf"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structNPCData.html">NPCData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a86808836a96ee1acd272210838eac2bf">GetNewNPCData</a> (signed int npcid, int *npc_indx)</td></tr>
-<tr class="separator:a86808836a96ee1acd272210838eac2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac86fab3323cdfca65990849099e87551"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#ac86fab3323cdfca65990849099e87551">GetGreetType</a> (signed int SpeakingNPC_ID)</td></tr>
-<tr class="separator:ac86fab3323cdfca65990849099e87551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f5ad4c1104c3263e8eb304ebdf7e2e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a1f5ad4c1104c3263e8eb304ebdf7e2e1">NPCDialogueEventProcessor</a> (int npc_event_id, int entry_line=0)</td></tr>
-<tr class="separator:a1f5ad4c1104c3263e8eb304ebdf7e2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a3d734cab11768d224a1da23c14417de6"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="structNPCTopic.html">NPCTopic</a>, 789 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a3d734cab11768d224a1da23c14417de6">pNPCTopics</a></td></tr>
-<tr class="separator:a3d734cab11768d224a1da23c14417de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87917bc65a38cef119e06260bbc6ad6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a87917bc65a38cef119e06260bbc6ad6e">pDialogueNPCCount</a></td></tr>
-<tr class="separator:a87917bc65a38cef119e06260bbc6ad6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d7a91739796949290831b69c2b8530c"><td class="memItemLeft" align="right" valign="top">std::array&lt; class <a class="el" href="classImage.html">Image</a> *, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a1d7a91739796949290831b69c2b8530c">pDialogueNPCPortraits</a></td></tr>
-<tr class="separator:a1d7a91739796949290831b69c2b8530c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacd86f6c26e7b363a1be22693d7e1406"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#aacd86f6c26e7b363a1be22693d7e1406">uNumDialogueNPCPortraits</a></td></tr>
-<tr class="separator:aacd86f6c26e7b363a1be22693d7e1406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c8b4db1afd780cdf7ff9ccd02e7a542"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structNPCStats.html">NPCStats</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a5c8b4db1afd780cdf7ff9ccd02e7a542">pNPCStats</a></td></tr>
-<tr class="separator:a5c8b4db1afd780cdf7ff9ccd02e7a542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57fa6cc058304f87cdb110cb5c342d8d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a57fa6cc058304f87cdb110cb5c342d8d">UseNPCSkill</a> (<a class="el" href="NPCEnums_8h.html#ae6501f571f97d74c2c78fddcb371bad4">NPCProf</a> profession, int id)</td></tr>
+<tr class="separator:a57fa6cc058304f87cdb110cb5c342d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad252a7d74524dd954b5eb1499f92d1a6"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#ad252a7d74524dd954b5eb1499f92d1a6">GetProfessionActionText</a> (<a class="el" href="NPCEnums_8h.html#ae6501f571f97d74c2c78fddcb371bad4">NPCProf</a> prof)</td></tr>
+<tr class="separator:ad252a7d74524dd954b5eb1499f92d1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4517f2a0e834d6f33d1a06c3a6e00a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNPCData.html">NPCData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a8f4517f2a0e834d6f33d1a06c3a6e00a">GetNPCData</a> (signed int npcid)</td></tr>
+<tr class="separator:a8f4517f2a0e834d6f33d1a06c3a6e00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408fb53a7de2aaa96655eace44672b52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNPCData.html">NPCData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#a408fb53a7de2aaa96655eace44672b52">GetNewNPCData</a> (signed int npcid, int *npc_indx)</td></tr>
+<tr class="separator:a408fb53a7de2aaa96655eace44672b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af99c60563044b67e7ad60fbaef48bfda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="NPC_8h.html#a1c8f4a8828794aed19879a9034c04ae4">NpcType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NPC_8h.html#af99c60563044b67e7ad60fbaef48bfda">getNPCType</a> (int npcId)</td></tr>
+<tr class="separator:af99c60563044b67e7ad60fbaef48bfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a58a376999ccce3cb142578b812b47124" name="a58a376999ccce3cb142578b812b47124"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58a376999ccce3cb142578b812b47124">&#9670;&#160;</a></span>_4B4224_UpdateNPCTopics()</h2>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a1c8f4a8828794aed19879a9034c04ae4" name="a1c8f4a8828794aed19879a9034c04ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c8f4a8828794aed19879a9034c04ae4">&#9670;&#160;</a></span>NpcType</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void _4B4224_UpdateNPCTopics </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_this</em></td><td>)</td>
-          <td></td>
+          <td class="memname">enum class <a class="el" href="NPC_8h.html#a1c8f4a8828794aed19879a9034c04ae4">NpcType</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1c8f4a8828794aed19879a9034c04ae4a0005c911c832c91f0e0d50af3c56d9fd" name="a1c8f4a8828794aed19879a9034c04ae4a0005c911c832c91f0e0d50af3c56d9fd"></a>NPC_TYPE_QUEST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c8f4a8828794aed19879a9034c04ae4a9f651b1dd5d548db78e0d97d05960f13" name="a1c8f4a8828794aed19879a9034c04ae4a9f651b1dd5d548db78e0d97d05960f13"></a>NPC_TYPE_HIREABLE&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="ab58ca502d5ddc0986473507003e4412c" name="ab58ca502d5ddc0986473507003e4412c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab58ca502d5ddc0986473507003e4412c">&#9670;&#160;</a></span>CheckHiredNPCSpeciality()</h2>
 
@@ -175,32 +163,50 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac86fab3323cdfca65990849099e87551" name="ac86fab3323cdfca65990849099e87551"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac86fab3323cdfca65990849099e87551">&#9670;&#160;</a></span>GetGreetType()</h2>
+<a id="a6d278e794fb881e57be9005d353099da" name="a6d278e794fb881e57be9005d353099da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d278e794fb881e57be9005d353099da">&#9670;&#160;</a></span>CheckPortretAgainstSex()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int GetGreetType </td>
+          <td class="memname">bool CheckPortretAgainstSex </td>
           <td>(</td>
-          <td class="paramtype">signed int&#160;</td>
-          <td class="paramname"><em>SpeakingNPC_ID</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a86808836a96ee1acd272210838eac2bf" name="a86808836a96ee1acd272210838eac2bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86808836a96ee1acd272210838eac2bf">&#9670;&#160;</a></span>GetNewNPCData()</h2>
+<a id="a408fb53a7de2aaa96655eace44672b52" name="a408fb53a7de2aaa96655eace44672b52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a408fb53a7de2aaa96655eace44672b52">&#9670;&#160;</a></span>GetNewNPCData()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structNPCData.html">NPCData</a> * GetNewNPCData </td>
+          <td class="memname"><a class="el" href="structNPCData.html">NPCData</a> * GetNewNPCData </td>
           <td>(</td>
           <td class="paramtype">signed int&#160;</td>
           <td class="paramname"><em>npcid</em>, </td>
@@ -221,14 +227,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2aeee0ab4551b7821d0306c4d9257f88" name="a2aeee0ab4551b7821d0306c4d9257f88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2aeee0ab4551b7821d0306c4d9257f88">&#9670;&#160;</a></span>GetNPCData()</h2>
+<a id="a8f4517f2a0e834d6f33d1a06c3a6e00a" name="a8f4517f2a0e834d6f33d1a06c3a6e00a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f4517f2a0e834d6f33d1a06c3a6e00a">&#9670;&#160;</a></span>GetNPCData()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structNPCData.html">NPCData</a> * GetNPCData </td>
+          <td class="memname"><a class="el" href="structNPCData.html">NPCData</a> * GetNPCData </td>
           <td>(</td>
           <td class="paramtype">signed int&#160;</td>
           <td class="paramname"><em>npcid</em></td><td>)</td>
@@ -239,62 +245,36 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="abcced0757c52caa3a575af2b433994fd" name="abcced0757c52caa3a575af2b433994fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcced0757c52caa3a575af2b433994fd">&#9670;&#160;</a></span>GetProfessionActionText()</h2>
+<a id="af99c60563044b67e7ad60fbaef48bfda" name="af99c60563044b67e7ad60fbaef48bfda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af99c60563044b67e7ad60fbaef48bfda">&#9670;&#160;</a></span>getNPCType()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * GetProfessionActionText </td>
+          <td class="memname"><a class="el" href="NPC_8h.html#a1c8f4a8828794aed19879a9034c04ae4">NpcType</a> getNPCType </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>npcId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x445C8B </dd></dl>
+
+</div>
+</div>
+<a id="ad252a7d74524dd954b5eb1499f92d1a6" name="ad252a7d74524dd954b5eb1499f92d1a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad252a7d74524dd954b5eb1499f92d1a6">&#9670;&#160;</a></span>GetProfessionActionText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; GetProfessionActionText </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="NPCEnums_8h.html#ae6501f571f97d74c2c78fddcb371bad4">NPCProf</a>&#160;</td>
           <td class="paramname"><em>prof</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1f5ad4c1104c3263e8eb304ebdf7e2e1" name="a1f5ad4c1104c3263e8eb304ebdf7e2e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f5ad4c1104c3263e8eb304ebdf7e2e1">&#9670;&#160;</a></span>NPCDialogueEventProcessor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int NPCDialogueEventProcessor </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>npc_event_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>entry_line</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0d9b50c44576de7da3caff7d301ddab1" name="a0d9b50c44576de7da3caff7d301ddab1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d9b50c44576de7da3caff7d301ddab1">&#9670;&#160;</a></span>NPCHireableDialogPrepare()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NPCHireableDialogPrepare </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -319,8 +299,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="acfce0b79ca64a3c666c5bc7781622842" name="acfce0b79ca64a3c666c5bc7781622842"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfce0b79ca64a3c666c5bc7781622842">&#9670;&#160;</a></span>UseNPCSkill()</h2>
+<a id="a57fa6cc058304f87cdb110cb5c342d8d" name="a57fa6cc058304f87cdb110cb5c342d8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57fa6cc058304f87cdb110cb5c342d8d">&#9670;&#160;</a></span>UseNPCSkill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,121 +309,20 @@ Variables</h2></td></tr>
           <td class="memname">int UseNPCSkill </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="NPCEnums_8h.html#ae6501f571f97d74c2c78fddcb371bad4">NPCProf</a>&#160;</td>
-          <td class="paramname"><em>profession</em></td><td>)</td>
+          <td class="paramname"><em>profession</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a87917bc65a38cef119e06260bbc6ad6e" name="a87917bc65a38cef119e06260bbc6ad6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87917bc65a38cef119e06260bbc6ad6e">&#9670;&#160;</a></span>pDialogueNPCCount</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">int pDialogueNPCCount</td>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1d7a91739796949290831b69c2b8530c" name="a1d7a91739796949290831b69c2b8530c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d7a91739796949290831b69c2b8530c">&#9670;&#160;</a></span>pDialogueNPCPortraits</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::array&lt;class <a class="el" href="classImage.html">Image</a> *, 6&gt; pDialogueNPCPortraits</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5c8b4db1afd780cdf7ff9ccd02e7a542" name="a5c8b4db1afd780cdf7ff9ccd02e7a542"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c8b4db1afd780cdf7ff9ccd02e7a542">&#9670;&#160;</a></span>pNPCStats</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structNPCStats.html">NPCStats</a>* pNPCStats</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3d734cab11768d224a1da23c14417de6" name="a3d734cab11768d224a1da23c14417de6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d734cab11768d224a1da23c14417de6">&#9670;&#160;</a></span>pNPCTopics</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::array&lt;<a class="el" href="structNPCTopic.html">NPCTopic</a>, 789&gt; pNPCTopics</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aacd86f6c26e7b363a1be22693d7e1406" name="aacd86f6c26e7b363a1be22693d7e1406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacd86f6c26e7b363a1be22693d7e1406">&#9670;&#160;</a></span>uNumDialogueNPCPortraits</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int uNumDialogueNPCPortraits</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

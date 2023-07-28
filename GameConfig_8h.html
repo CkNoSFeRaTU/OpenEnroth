@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Application/GameConfig.h File Reference</title>
+<title>OpenEnroth: src/Application/GameConfig.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -75,36 +75,72 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">GameConfig.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &quot;<a class="el" href="Config_8h.html">Library/Config/Config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="RenderEnums_8h.html">Engine/Graphics/RenderEnums.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Key_8h.html">Io/Key.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="PlatformEnums_8h.html">Platform/PlatformEnums.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApplication_1_1GameConfig.html">Application::GameConfig</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameConfig.html">GameConfig</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApplication_1_1GameConfig_1_1Debug.html">Application::GameConfig::Debug</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameConfig_1_1Debug.html">GameConfig::Debug</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApplication_1_1GameConfig_1_1Gameplay.html">Application::GameConfig::Gameplay</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameConfig_1_1Gameplay.html">GameConfig::Gameplay</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApplication_1_1GameConfig_1_1Graphics.html">Application::GameConfig::Graphics</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameConfig_1_1Gamepad.html">GameConfig::Gamepad</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApplication_1_1GameConfig_1_1Keybindings.html">Application::GameConfig::Keybindings</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameConfig_1_1Graphics.html">GameConfig::Graphics</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApplication_1_1GameConfig_1_1Settings.html">Application::GameConfig::Settings</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameConfig_1_1Keybindings.html">GameConfig::Keybindings</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApplication_1_1GameConfig_1_1Window.html">Application::GameConfig::Window</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameConfig_1_1Settings.html">GameConfig::Settings</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameConfig_1_1Window.html">GameConfig::Window</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespaceApplication"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceApplication.html">Application</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a6a9866164f69f22ef82f741d3aa8a007"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameConfig_8h.html#a6a9866164f69f22ef82f741d3aa8a007">ConfigRenderer</a>&#160;&#160;&#160;<a class="el" href="RenderEnums_8h.html#ae9c668e3a273ce92b9f4e134d0cbd6ceaabec05925625d4334be9435e9fab05c6">RENDERER_OPENGL</a></td></tr>
+<tr class="separator:a6a9866164f69f22ef82f741d3aa8a007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1c5b84911d53bfb633b2ac3eab53fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameConfig_8h.html#a1e1c5b84911d53bfb633b2ac3eab53fe">ConfigWindowMode</a>&#160;&#160;&#160;<a class="el" href="PlatformEnums_8h.html#a7772d16a8207ba672642f139658d8f14ac1aeae4a2f4ef2ed71913aca8cd3567d">WINDOW_MODE_WINDOWED</a></td></tr>
+<tr class="separator:a1e1c5b84911d53bfb633b2ac3eab53fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a6a9866164f69f22ef82f741d3aa8a007" name="a6a9866164f69f22ef82f741d3aa8a007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9866164f69f22ef82f741d3aa8a007">&#9670;&#160;</a></span>ConfigRenderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ConfigRenderer&#160;&#160;&#160;<a class="el" href="RenderEnums_8h.html#ae9c668e3a273ce92b9f4e134d0cbd6ceaabec05925625d4334be9435e9fab05c6">RENDERER_OPENGL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e1c5b84911d53bfb633b2ac3eab53fe" name="a1e1c5b84911d53bfb633b2ac3eab53fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1c5b84911d53bfb633b2ac3eab53fe">&#9670;&#160;</a></span>ConfigWindowMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ConfigWindowMode&#160;&#160;&#160;<a class="el" href="PlatformEnums_8h.html#a7772d16a8207ba672642f139658d8f14ac1aeae4a2f4ef2ed71913aca8cd3567d">WINDOW_MODE_WINDOWED</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

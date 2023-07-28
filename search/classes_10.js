@@ -1,18 +1,17 @@
 var searchData=
 [
   ['randomengine_0',['RandomEngine',['../classRandomEngine.html',1,'']]],
-  ['rangeiterator_1',['RangeIterator',['../classdetail_1_1RangeIterator.html',1,'detail']]],
-  ['rect_2',['Rect',['../structRect.html',1,'']]],
-  ['rect_3c_20int_20_3e_3',['Rect&lt; int &gt;',['../structRect.html',1,'']]],
-  ['render_4',['Render',['../classRender.html',1,'']]],
+  ['rangecomparator_1',['RangeComparator',['../classorg_1_1libsdl_1_1app_1_1SDLJoystickHandler__API16_1_1RangeComparator.html',1,'org::libsdl::app::SDLJoystickHandler_API16']]],
+  ['rangeiterator_2',['RangeIterator',['../classdetail_1_1RangeIterator.html',1,'detail']]],
+  ['rect_3',['Rect',['../structRect.html',1,'']]],
+  ['rect_3c_20int_20_3e_4',['Rect&lt; int &gt;',['../structRect.html',1,'']]],
   ['renderbase_5',['RenderBase',['../classRenderBase.html',1,'']]],
   ['renderbillboard_6',['RenderBillboard',['../structRenderBillboard.html',1,'']]],
   ['renderbillboardd3d_7',['RenderBillboardD3D',['../structRenderBillboardD3D.html',1,'']]],
-  ['renderd3d_8',['RenderD3D',['../classRenderD3D.html',1,'']]],
-  ['renderd3d_5f_5fdevinfo_9',['RenderD3D__DevInfo',['../structRenderD3D____DevInfo.html',1,'']]],
-  ['renderd3d_5faux_10',['RenderD3D_aux',['../structRenderD3D__aux.html',1,'']]],
-  ['renderd3d_5fd3ddevdesc_11',['RenderD3D_D3DDevDesc',['../structRenderD3D__D3DDevDesc.html',1,'']]],
-  ['renderopengl_12',['RenderOpenGL',['../classRenderOpenGL.html',1,'']]],
-  ['rendervertexd3d3_13',['RenderVertexD3D3',['../structRenderVertexD3D3.html',1,'']]],
-  ['rendervertexsoft_14',['RenderVertexSoft',['../structRenderVertexSoft.html',1,'']]]
+  ['rendernull_8',['RenderNull',['../classRenderNull.html',1,'']]],
+  ['renderopengl_9',['RenderOpenGL',['../classRenderOpenGL.html',1,'']]],
+  ['rendervertexd3d3_10',['RenderVertexD3D3',['../structRenderVertexD3D3.html',1,'']]],
+  ['rendervertexsoft_11',['RenderVertexSoft',['../structRenderVertexSoft.html',1,'']]],
+  ['retraceoptions_12',['RetraceOptions',['../structOpenEnrothOptions_1_1RetraceOptions.html',1,'OpenEnrothOptions']]],
+  ['reversedrange_13',['ReversedRange',['../classdetail_1_1ReversedRange.html',1,'detail']]]
 ];

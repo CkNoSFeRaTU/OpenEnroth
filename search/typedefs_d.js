@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['uchar_0',['uchar',['../MM7_8h.html#a65f85814a8290f9797005d3b28e7e5fc',1,'MM7.h']]],
-  ['uint_1',['uint',['../MM7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14',1,'MM7.h']]],
-  ['ulong_2',['ulong',['../MM7_8h.html#a718b4eb2652c286f4d42dc18a8e71a1a',1,'MM7.h']]],
-  ['underlying_5ftype_3',['underlying_type',['../classFlags.html#a61795b8383eadabecb8bd837898f74fb',1,'Flags']]],
-  ['ushort_4',['ushort',['../MM7_8h.html#ab95f123a6c9bcfee6a343170ef8c5f69',1,'MM7.h']]]
+  ['recti_0',['Recti',['../Rect_8h.html#a32073cc1967b01302be5d39e09079649',1,'Rect.h']]],
+  ['reference_1',['reference',['../classdetail_1_1RangeIterator.html#ae8c8fbfa4ba36b2ce4382fa136b792db',1,'detail::RangeIterator::reference()'],['../classSegment.html#af0ff246cdf8ecd8984307446636ea09c',1,'Segment::reference()']]],
+  ['rgbaimage_2',['RgbaImage',['../Library_2Image_2Image_8h.html#ada8411436fef9ac499121bebb98f43cd',1,'Image.h']]],
+  ['rgbaimageview_3',['RgbaImageView',['../Library_2Image_2Image_8h.html#ab46117a6bb4ec93c50bc59858278d567',1,'Image.h']]]
 ];

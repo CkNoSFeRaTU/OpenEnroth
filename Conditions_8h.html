@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Engine/Conditions.h File Reference</title>
+<title>OpenEnroth: src/Engine/Conditions.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -74,107 +74,57 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Conditions.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;array&gt;</code><br />
-<code>#include &quot;<a class="el" href="Items_8h.html">Engine/Objects/Items.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="IndexedArray_8h.html">Utility/IndexedArray.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CharacterEnums_8h.html">Engine/Objects/CharacterEnums.h</a>&quot;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConditionProcessor.html">ConditionProcessor</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a1675b922b385cf7d28bd256fd487a681"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681">Condition</a> : uint32_t { <br />
-&#160;&#160;<a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a588b0404ffcd6297bf8b31deb54a8072">Condition_Cursed</a> = 0
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a8461a24e643fe671695d31cbc7f75a6d">Condition_Weak</a> = 1
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681aadc88e1bbc34208633f267dec055482a">Condition_Sleep</a> = 2
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a301b80cffd50ea5009d2bde2a7d74ed7">Condition_Fear</a> = 3
-, <br />
-&#160;&#160;<a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a86064d62999c362bce08c23e55530270">Condition_Drunk</a> = 4
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681ab5e89e2b991e5f2156d452b7a048ef58">Condition_Insane</a> = 5
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a35b12bea0e676589c3b7d8a5545adb88">Condition_Poison_Weak</a> = 6
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a9877f07572ed4a219f77a9db632432be">Condition_Disease_Weak</a> = 7
-, <br />
-&#160;&#160;<a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681ab1863753c048e6d04c8f68446cbb695a">Condition_Poison_Medium</a> = 8
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a55f6dafe976aeae1cccbf0241a8d82fa">Condition_Disease_Medium</a> = 9
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681afc83e47d0236a48e9848e3823595045d">Condition_Poison_Severe</a> = 10
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681aa086f1f6f16b57c1f9377ca56e966337">Condition_Disease_Severe</a> = 11
-, <br />
-&#160;&#160;<a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681ad4f23e1b8081690e2d8fded21b74ce62">Condition_Paralyzed</a> = 12
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a19cf6da6bb40f6e877a2fb35a1b23ca2">Condition_Unconscious</a> = 13
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681ad3e4632ba1c4d2278657351d4c66d883">Condition_Dead</a> = 14
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a3ce96cbbd6ce34a0d465b80bb96472ca">Condition_Petrified</a> = 15
-, <br />
-&#160;&#160;<a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a63fa0e80f000b84331dbc1972a9ad403">Condition_Eradicated</a> = 16
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681afc7f9b9b287229a1ff184d550dfb4827">Condition_Zombie</a> = 17
-, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a4b50670baa6c362a1e429ab68c18c2b4">Condition_Good</a> = 18
-<br />
- }</td></tr>
-<tr class="separator:a1675b922b385cf7d28bd256fd487a681"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adf1015e7a3727a95e56fb2282351f0fc"><td class="memItemLeft" align="right" valign="top">const std::array&lt; <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681">Condition</a>, 18 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Conditions_8h.html#adf1015e7a3727a95e56fb2282351f0fc">conditionImportancyTable</a> ()</td></tr>
+<tr class="memitem:ad98633c264fbfc5753e96532e030dbd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Conditions_8h.html#ad98633c264fbfc5753e96532e030dbd4">blockCondition</a> (<a class="el" href="classCharacter.html">Character</a> *character, <a class="el" href="CharacterEnums_8h.html#a1675b922b385cf7d28bd256fd487a681">Condition</a> condition)</td></tr>
+<tr class="separator:ad98633c264fbfc5753e96532e030dbd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1015e7a3727a95e56fb2282351f0fc"><td class="memItemLeft" align="right" valign="top">const std::array&lt; <a class="el" href="CharacterEnums_8h.html#a1675b922b385cf7d28bd256fd487a681">Condition</a>, 18 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Conditions_8h.html#adf1015e7a3727a95e56fb2282351f0fc">conditionImportancyTable</a> ()</td></tr>
 <tr class="separator:adf1015e7a3727a95e56fb2282351f0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a230c571009268e73d19c244649f63dc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIndexedArray.html">IndexedArray</a>&lt; <a class="el" href="classConditionProcessor.html">ConditionProcessor</a>, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a588b0404ffcd6297bf8b31deb54a8072">Condition_Cursed</a>, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681afc7f9b9b287229a1ff184d550dfb4827">Condition_Zombie</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Conditions_8h.html#a230c571009268e73d19c244649f63dc6">conditionArray</a></td></tr>
-<tr class="separator:a230c571009268e73d19c244649f63dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a1675b922b385cf7d28bd256fd487a681" name="a1675b922b385cf7d28bd256fd487a681"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1675b922b385cf7d28bd256fd487a681">&#9670;&#160;</a></span>Condition</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ad98633c264fbfc5753e96532e030dbd4" name="ad98633c264fbfc5753e96532e030dbd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad98633c264fbfc5753e96532e030dbd4">&#9670;&#160;</a></span>blockCondition()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681">Condition</a> : uint32_t</td>
+          <td class="memname">bool blockCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCharacter.html">Character</a> *&#160;</td>
+          <td class="paramname"><em>character</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="CharacterEnums_8h.html#a1675b922b385cf7d28bd256fd487a681">Condition</a>&#160;</td>
+          <td class="paramname"><em>condition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a588b0404ffcd6297bf8b31deb54a8072" name="a1675b922b385cf7d28bd256fd487a681a588b0404ffcd6297bf8b31deb54a8072"></a>Condition_Cursed&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a8461a24e643fe671695d31cbc7f75a6d" name="a1675b922b385cf7d28bd256fd487a681a8461a24e643fe671695d31cbc7f75a6d"></a>Condition_Weak&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681aadc88e1bbc34208633f267dec055482a" name="a1675b922b385cf7d28bd256fd487a681aadc88e1bbc34208633f267dec055482a"></a>Condition_Sleep&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a301b80cffd50ea5009d2bde2a7d74ed7" name="a1675b922b385cf7d28bd256fd487a681a301b80cffd50ea5009d2bde2a7d74ed7"></a>Condition_Fear&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a86064d62999c362bce08c23e55530270" name="a1675b922b385cf7d28bd256fd487a681a86064d62999c362bce08c23e55530270"></a>Condition_Drunk&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681ab5e89e2b991e5f2156d452b7a048ef58" name="a1675b922b385cf7d28bd256fd487a681ab5e89e2b991e5f2156d452b7a048ef58"></a>Condition_Insane&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a35b12bea0e676589c3b7d8a5545adb88" name="a1675b922b385cf7d28bd256fd487a681a35b12bea0e676589c3b7d8a5545adb88"></a>Condition_Poison_Weak&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a9877f07572ed4a219f77a9db632432be" name="a1675b922b385cf7d28bd256fd487a681a9877f07572ed4a219f77a9db632432be"></a>Condition_Disease_Weak&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681ab1863753c048e6d04c8f68446cbb695a" name="a1675b922b385cf7d28bd256fd487a681ab1863753c048e6d04c8f68446cbb695a"></a>Condition_Poison_Medium&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a55f6dafe976aeae1cccbf0241a8d82fa" name="a1675b922b385cf7d28bd256fd487a681a55f6dafe976aeae1cccbf0241a8d82fa"></a>Condition_Disease_Medium&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681afc83e47d0236a48e9848e3823595045d" name="a1675b922b385cf7d28bd256fd487a681afc83e47d0236a48e9848e3823595045d"></a>Condition_Poison_Severe&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681aa086f1f6f16b57c1f9377ca56e966337" name="a1675b922b385cf7d28bd256fd487a681aa086f1f6f16b57c1f9377ca56e966337"></a>Condition_Disease_Severe&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681ad4f23e1b8081690e2d8fded21b74ce62" name="a1675b922b385cf7d28bd256fd487a681ad4f23e1b8081690e2d8fded21b74ce62"></a>Condition_Paralyzed&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a19cf6da6bb40f6e877a2fb35a1b23ca2" name="a1675b922b385cf7d28bd256fd487a681a19cf6da6bb40f6e877a2fb35a1b23ca2"></a>Condition_Unconscious&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681ad3e4632ba1c4d2278657351d4c66d883" name="a1675b922b385cf7d28bd256fd487a681ad3e4632ba1c4d2278657351d4c66d883"></a>Condition_Dead&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a3ce96cbbd6ce34a0d465b80bb96472ca" name="a1675b922b385cf7d28bd256fd487a681a3ce96cbbd6ce34a0d465b80bb96472ca"></a>Condition_Petrified&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a63fa0e80f000b84331dbc1972a9ad403" name="a1675b922b385cf7d28bd256fd487a681a63fa0e80f000b84331dbc1972a9ad403"></a>Condition_Eradicated&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681afc7f9b9b287229a1ff184d550dfb4827" name="a1675b922b385cf7d28bd256fd487a681afc7f9b9b287229a1ff184d550dfb4827"></a>Condition_Zombie&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1675b922b385cf7d28bd256fd487a681a4b50670baa6c362a1e429ab68c18c2b4" name="a1675b922b385cf7d28bd256fd487a681a4b50670baa6c362a1e429ab68c18c2b4"></a>Condition_Good&#160;</td><td class="fielddoc"></td></tr>
-</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">character</td><td><a class="el" href="classCharacter.html">Character</a> that's about to receive a condition. </td></tr>
+    <tr><td class="paramname">condition</td><td>Condition in question. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether the condition was successfully blocked, either by protection from magic spell, or by an item. In the former case, this function will decrement the protection from magic counter &amp; expire the buff if the counter reaches zero. </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
 <a id="adf1015e7a3727a95e56fb2282351f0fc" name="adf1015e7a3727a95e56fb2282351f0fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf1015e7a3727a95e56fb2282351f0fc">&#9670;&#160;</a></span>conditionImportancyTable()</h2>
 
@@ -182,35 +132,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::array&lt; <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681">Condition</a>, 18 &gt; &amp; conditionImportancyTable </td>
+          <td class="memname">const std::array&lt; <a class="el" href="CharacterEnums_8h.html#a1675b922b385cf7d28bd256fd487a681">Condition</a>, 18 &gt; &amp; conditionImportancyTable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a230c571009268e73d19c244649f63dc6" name="a230c571009268e73d19c244649f63dc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a230c571009268e73d19c244649f63dc6">&#9670;&#160;</a></span>conditionArray</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classIndexedArray.html">IndexedArray</a>&lt;<a class="el" href="classConditionProcessor.html">ConditionProcessor</a>, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681a588b0404ffcd6297bf8b31deb54a8072">Condition_Cursed</a>, <a class="el" href="Conditions_8h.html#a1675b922b385cf7d28bd256fd487a681afc7f9b9b287229a1ff184d550dfb4827">Condition_Zombie</a>&gt; conditionArray</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

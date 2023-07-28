@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Engine/Graphics/Viewport.cpp File Reference</title>
+<title>OpenEnroth: src/Engine/Graphics/Viewport.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -80,23 +80,25 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="Viewport_8h.html">Engine/Graphics/Viewport.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Engine_8h.html">Engine/Engine.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Events_8h.html">Engine/Events.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Processor_8h.html">Engine/Events/Processor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="DecorationList_8h.html">Engine/Graphics/DecorationList.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Decoration_8h.html">Engine/Graphics/Level/Decoration.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Outdoor_8h.html">Engine/Graphics/Outdoor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Indoor_8h.html">Engine/Graphics/Indoor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Vis_8h.html">Engine/Graphics/Vis.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Localization_8h.html">Engine/Localization.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Actor_8h.html">Engine/Objects/Actor.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ItemTable_8h.html">Engine/Objects/ItemTable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ObjectList_8h.html">Engine/Objects/ObjectList.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SpriteObject_8h.html">Engine/Objects/SpriteObject.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ItemTable_8h.html">Engine/Tables/ItemTable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Spells_8h.html">Engine/Spells/Spells.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="OurMath_8h.html">Engine/OurMath.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Party_8h.html">Engine/Party.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TurnEngine_8h.html">Engine/TurnEngine/TurnEngine.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="stru123_8h.html">Engine/stru123.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIWindow_8h.html">GUI/GUIWindow.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GUIMessageQueue_8h.html">GUI/GUIMessageQueue.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="UIDialogue_8h.html">GUI/UI/UIDialogue.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="UIStatusBar_8h.html">GUI/UI/UIStatusBar.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AudioPlayer_8h.html">Media/Audio/AudioPlayer.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -106,8 +108,8 @@ Functions</h2></td></tr>
 <tr class="separator:a48380c5530b9109dcfb881dd33d41425"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8c9383af884c44f2f354f58f3555929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Viewport_8cpp.html#ad8c9383af884c44f2f354f58f3555929">InteractWithActor</a> (unsigned int id)</td></tr>
 <tr class="separator:ad8c9383af884c44f2f354f58f3555929"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5fd167f78f03f865122445749988f17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Viewport_8cpp.html#ad5fd167f78f03f865122445749988f17">DecorationInteraction</a> (unsigned int id, unsigned int pid)</td></tr>
-<tr class="separator:ad5fd167f78f03f865122445749988f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a270585879f1bc18ca7541ff2f842824d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Viewport_8cpp.html#a270585879f1bc18ca7541ff2f842824d">DecorationInteraction</a> (unsigned int id, <a class="el" href="classPid.html">Pid</a> pid)</td></tr>
+<tr class="separator:a270585879f1bc18ca7541ff2f842824d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a48380c5530b9109dcfb881dd33d41425" name="a48380c5530b9109dcfb881dd33d41425"></a>
@@ -128,8 +130,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad5fd167f78f03f865122445749988f17" name="ad5fd167f78f03f865122445749988f17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5fd167f78f03f865122445749988f17">&#9670;&#160;</a></span>DecorationInteraction()</h2>
+<a id="a270585879f1bc18ca7541ff2f842824d" name="a270585879f1bc18ca7541ff2f842824d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a270585879f1bc18ca7541ff2f842824d">&#9670;&#160;</a></span>DecorationInteraction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,7 +145,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
           <td class="paramname"><em>pid</em>&#160;</td>
         </tr>
         <tr>

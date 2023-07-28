@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: AVVideoStream Class Reference</title>
+<title>OpenEnroth: AVVideoStream Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -90,8 +90,8 @@ Inheritance diagram for AVVideoStream:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d9d5e9fba1737f796394dde1218a3ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVVideoStream.html#a3d9d5e9fba1737f796394dde1218a3ac">AVVideoStream</a> ()</td></tr>
 <tr class="separator:a3d9d5e9fba1737f796394dde1218a3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac32fbd6e47df0bd132882058984683cb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVVideoStream.html#ac32fbd6e47df0bd132882058984683cb">open</a> (AVFormatContext *format_ctx)</td></tr>
-<tr class="separator:ac32fbd6e47df0bd132882058984683cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acde764709a3637895ebbc8bbd3e2ea6a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVVideoStream.html#acde764709a3637895ebbc8bbd3e2ea6a">open</a> (AVFormatContext *format_ctx) override</td></tr>
+<tr class="separator:acde764709a3637895ebbc8bbd3e2ea6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a660f4e5ff566f7d9c1655dfc2a8f06f7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classBlob.html">Blob</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVVideoStream.html#a660f4e5ff566f7d9c1655dfc2a8f06f7">decode_frame</a> (AVPacket *avpacket)</td></tr>
 <tr class="separator:a660f4e5ff566f7d9c1655dfc2a8f06f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAVStreamWrapper"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAVStreamWrapper')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAVStreamWrapper.html">AVStreamWrapper</a></td></tr>
@@ -133,8 +133,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a9a1e544168b50c6b941f1757af093a40 inherit pub_attribs_classAVStreamWrapper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac80a1570804999a58ef2624c4aad2d0e inherit pub_attribs_classAVStreamWrapper"><td class="memItemLeft" align="right" valign="top">AVCodecContext *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVStreamWrapper.html#ac80a1570804999a58ef2624c4aad2d0e">dec_ctx</a></td></tr>
 <tr class="separator:ac80a1570804999a58ef2624c4aad2d0e inherit pub_attribs_classAVStreamWrapper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5199aa0b20de746a7aae409c1a92eadb inherit pub_attribs_classAVStreamWrapper"><td class="memItemLeft" align="right" valign="top">std::queue&lt; std::shared_ptr&lt; <a class="el" href="classBlob.html">Blob</a> &gt;, std::deque&lt; std::shared_ptr&lt; <a class="el" href="classBlob.html">Blob</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVStreamWrapper.html#a5199aa0b20de746a7aae409c1a92eadb">queue</a></td></tr>
-<tr class="separator:a5199aa0b20de746a7aae409c1a92eadb inherit pub_attribs_classAVStreamWrapper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d5d3c4fd13d03aa706aebc202bda05 inherit pub_attribs_classAVStreamWrapper"><td class="memItemLeft" align="right" valign="top">std::queue&lt; std::shared_ptr&lt; <a class="el" href="classBlob.html">Blob</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVStreamWrapper.html#af9d5d3c4fd13d03aa706aebc202bda05">queue</a></td></tr>
+<tr class="separator:af9d5d3c4fd13d03aa706aebc202bda05 inherit pub_attribs_classAVStreamWrapper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3d9d5e9fba1737f796394dde1218a3ac" name="a3d9d5e9fba1737f796394dde1218a3ac"></a>
@@ -189,8 +189,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac32fbd6e47df0bd132882058984683cb" name="ac32fbd6e47df0bd132882058984683cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac32fbd6e47df0bd132882058984683cb">&#9670;&#160;</a></span>open()</h2>
+<a id="acde764709a3637895ebbc8bbd3e2ea6a" name="acde764709a3637895ebbc8bbd3e2ea6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde764709a3637895ebbc8bbd3e2ea6a">&#9670;&#160;</a></span>open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +208,7 @@ Public Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

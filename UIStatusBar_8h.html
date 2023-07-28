@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/GUI/UI/UIStatusBar.h File Reference</title>
+<title>OpenEnroth: src/GUI/UI/UIStatusBar.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -79,6 +79,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="Localization_8h.html">Engine/Localization.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Color_8h.html">Library/Color/Color.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -88,12 +91,17 @@ Functions</h2></td></tr>
 <tr class="separator:a4deffde6a3eb7a758e7b484230094f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4202575cabf1a91950ea3efb176895f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#a4202575cabf1a91950ea3efb176895f7">GameUI_StatusBar_Set</a> (const std::string &amp;str)</td></tr>
 <tr class="separator:a4202575cabf1a91950ea3efb176895f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78db3918e44288bea5f0df5976effe57"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#a78db3918e44288bea5f0df5976effe57">GameUI_StatusBar_Get</a> ()</td></tr>
+<tr class="separator:a78db3918e44288bea5f0df5976effe57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e726ffc3354113fbc3415e7cb658603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#a7e726ffc3354113fbc3415e7cb658603">GameUI_StatusBar_Clear</a> ()</td></tr>
 <tr class="separator:a7e726ffc3354113fbc3415e7cb658603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b96e1322181e03168c7c7e7796142f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#a31b96e1322181e03168c7c7e7796142f">GameUI_StatusBar_Update</a> (bool force_hide=false)</td></tr>
+<tr class="separator:a31b96e1322181e03168c7c7e7796142f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac05660fee59d7b8d772a357ffe8f85e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#ac05660fee59d7b8d772a357ffe8f85e8">GameUI_SetStatusBar</a> (const std::string &amp;str)</td></tr>
 <tr class="separator:ac05660fee59d7b8d772a357ffe8f85e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c0979a3712c630dabad50686419c9ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#a0c0979a3712c630dabad50686419c9ee">GameUI_SetStatusBar</a> (int localization_string_id,...)</td></tr>
-<tr class="separator:a0c0979a3712c630dabad50686419c9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b366138c14c69da81613ba69a8b25ad"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a5b366138c14c69da81613ba69a8b25ad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#a5b366138c14c69da81613ba69a8b25ad">GameUI_SetStatusBar</a> (int localization_string_id, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a5b366138c14c69da81613ba69a8b25ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4d30a14b422f66521a582f85c1c7456"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#ad4d30a14b422f66521a582f85c1c7456">GameUI_SetStatusBarShortNotification</a> (const std::string &amp;str)</td></tr>
 <tr class="separator:ad4d30a14b422f66521a582f85c1c7456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a127f5066d006717bae55e25121fa782e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#a127f5066d006717bae55e25121fa782e">GameUI_StatusBar_ClearEventString</a> ()</td></tr>
@@ -106,8 +114,8 @@ Functions</h2></td></tr>
 <tr class="separator:a50d78866e6dd14f38f59c0bbb5fe22ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f9f821959278c0f7d6d2200c38e247c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#a2f9f821959278c0f7d6d2200c38e247c">GameUI_StatusBar_NothingHere</a> ()</td></tr>
 <tr class="separator:a2f9f821959278c0f7d6d2200c38e247c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac204944cd5baee197565bbe7b84cad0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#ac204944cd5baee197565bbe7b84cad0f">GameUI_StatusBar_DrawImmediate</a> (const std::string &amp;str, int color)</td></tr>
-<tr class="separator:ac204944cd5baee197565bbe7b84cad0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af380ab369066b67db2fd0876c80d5315"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIStatusBar_8h.html#af380ab369066b67db2fd0876c80d5315">GameUI_StatusBar_DrawImmediate</a> (const std::string &amp;str, <a class="el" href="structColor.html">Color</a> color)</td></tr>
+<tr class="separator:af380ab369066b67db2fd0876c80d5315"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ac05660fee59d7b8d772a357ffe8f85e8" name="ac05660fee59d7b8d772a357ffe8f85e8"></a>
@@ -128,11 +136,13 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0c0979a3712c630dabad50686419c9ee" name="a0c0979a3712c630dabad50686419c9ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c0979a3712c630dabad50686419c9ee">&#9670;&#160;</a></span>GameUI_SetStatusBar() <span class="overload">[2/2]</span></h2>
+<a id="a5b366138c14c69da81613ba69a8b25ad" name="a5b366138c14c69da81613ba69a8b25ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b366138c14c69da81613ba69a8b25ad">&#9670;&#160;</a></span>GameUI_SetStatusBar() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class... Args&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void GameUI_SetStatusBar </td>
@@ -143,8 +153,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -259,8 +269,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac204944cd5baee197565bbe7b84cad0f" name="ac204944cd5baee197565bbe7b84cad0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac204944cd5baee197565bbe7b84cad0f">&#9670;&#160;</a></span>GameUI_StatusBar_DrawImmediate()</h2>
+<a id="af380ab369066b67db2fd0876c80d5315" name="af380ab369066b67db2fd0876c80d5315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af380ab369066b67db2fd0876c80d5315">&#9670;&#160;</a></span>GameUI_StatusBar_DrawImmediate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,13 +284,30 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="structColor.html">Color</a>&#160;</td>
           <td class="paramname"><em>color</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78db3918e44288bea5f0df5976effe57" name="a78db3918e44288bea5f0df5976effe57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78db3918e44288bea5f0df5976effe57">&#9670;&#160;</a></span>GameUI_StatusBar_Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; GameUI_StatusBar_Get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -350,6 +377,24 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31b96e1322181e03168c7c7e7796142f" name="a31b96e1322181e03168c7c7e7796142f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b96e1322181e03168c7c7e7796142f">&#9670;&#160;</a></span>GameUI_StatusBar_Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameUI_StatusBar_Update </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force_hide</em> = <code>false</code></td><td>)</td>
           <td></td>
         </tr>
       </table>

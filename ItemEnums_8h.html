@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Engine/Objects/ItemEnums.h File Reference</title>
+<title>OpenEnroth: src/Engine/Objects/ItemEnums.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -80,10 +80,12 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
-<code>#include &quot;<a class="el" href="ErrorHandling_8h.html">Engine/ErrorHandling.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CharacterEnums_8h.html">Engine/Objects/CharacterEnums.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Flags_8h.html">Utility/Flags.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Segment_8h.html">Utility/Segment.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ToUnderlying_8h.html">Utility/Workaround/ToUnderlying.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -104,115 +106,115 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a55231e9660ce1c5b6f7613a3f9d66891"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0cd6a52bd80bbba3041a5598559975c"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975c">ITEM_FLAG</a> : uint32_t { <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975caba107fa990059f948376afb3a508c578">ITEM_IDENTIFIED</a> = 0x1
-, <a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975ca09372d60b6bcb7ee182efcd6dae34cf6">ITEM_BROKEN</a> = 0x2
-, <a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975cadf79354492c5ac7053d6c3d32610b7c3">ITEM_TEMP_BONUS</a> = 0x8
-, <a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975caf45f690fad021ef5d13e2d24491fab37">ITEM_AURA_EFFECT_RED</a> = 0x10
+<tr class="memitem:a5685ba28d9855504dffcfd0e3cbf3732"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732">ItemFlag</a> : uint32_t { <br />
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732aba107fa990059f948376afb3a508c578">ITEM_IDENTIFIED</a> = 0x1
+, <a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732a09372d60b6bcb7ee182efcd6dae34cf6">ITEM_BROKEN</a> = 0x2
+, <a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732adf79354492c5ac7053d6c3d32610b7c3">ITEM_TEMP_BONUS</a> = 0x8
+, <a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732af45f690fad021ef5d13e2d24491fab37">ITEM_AURA_EFFECT_RED</a> = 0x10
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975ca7395b7e5c25611497699878622082c4f">ITEM_AURA_EFFECT_BLUE</a> = 0x20
-, <a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975ca8170d06a9bfa476c8a9fe042677d898c">ITEM_AURA_EFFECT_GREEN</a> = 0x40
-, <a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975ca5171d18dcd01b7da8b82db8c320e2472">ITEM_AURA_EFFECT_PURPLE</a> = 0x80
-, <a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975ca948f583995a1834c22669fc3224bf677">ITEM_ENCHANT_ANIMATION_MASK</a> = 0xF0
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732a7395b7e5c25611497699878622082c4f">ITEM_AURA_EFFECT_BLUE</a> = 0x20
+, <a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732a8170d06a9bfa476c8a9fe042677d898c">ITEM_AURA_EFFECT_GREEN</a> = 0x40
+, <a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732a5171d18dcd01b7da8b82db8c320e2472">ITEM_AURA_EFFECT_PURPLE</a> = 0x80
+, <a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732a948f583995a1834c22669fc3224bf677">ITEM_ENCHANT_ANIMATION_MASK</a> = 0xF0
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975ca0bdfc5f5d3da6a73dd5a3b66582654a8">ITEM_STOLEN</a> = 0x100
-, <a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975ca85354462199f81dc94c2ea61a9820d67">ITEM_HARDENED</a> = 0x200
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732a0bdfc5f5d3da6a73dd5a3b66582654a8">ITEM_STOLEN</a> = 0x100
+, <a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732a85354462199f81dc94c2ea61a9820d67">ITEM_HARDENED</a> = 0x200
 <br />
  }</td></tr>
-<tr class="separator:af0cd6a52bd80bbba3041a5598559975c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a5685ba28d9855504dffcfd0e3cbf3732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32eb1d58cce67b93f07281e8a3464d19"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19">ITEM_ENCHANTMENT</a> : unsigned int { <br />
 &#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a1b165f33de669ea48df78787334f3645">ITEM_ENCHANTMENT_NULL</a> = 0
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a496c886d109247b22d3ee9e5008d4d78">ITEM_ENCHANTMENT_FIRST_VALID</a> = 1
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a8890f30003ec17f9463cd14613e91989">ITEM_ENCHANTMENT_OF_PROTECTION</a> = 1
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a8bb09fb2feb415a2ce004230d10c8bd8">ITEM_ENCHANTMENT_OF_GODS</a> = 2
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a8a087ac27f39d50e7b287410fc5ee01b">ITEM_ENCHANTMENT_OF_CARNAGE</a> = 3
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a8a087ac27f39d50e7b287410fc5ee01b">ITEM_ENCHANTMENT_OF_CARNAGE</a> = 3
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ac15891c04ce67097f42f69edaef7928f">ITEM_ENCHANTMENT_OF_COLD</a> = 4
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ac15891c04ce67097f42f69edaef7928f">ITEM_ENCHANTMENT_OF_COLD</a> = 4
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a4d3a2851e2953d0b6bb6ce4be16635e5">ITEM_ENCHANTMENT_OF_FROST</a> = 5
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a847ca2096a1ca8ecc670aca6a9148d36">ITEM_ENCHANTMENT_OF_ICE</a> = 6
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a564b75ba2248f3c877f3df1b35050d67">ITEM_ENCHANTMENT_OF_SPARKS</a> = 7
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a564b75ba2248f3c877f3df1b35050d67">ITEM_ENCHANTMENT_OF_SPARKS</a> = 7
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a7c7715282975a444f2964a112e7d76c0">ITEM_ENCHANTMENT_OF_LIGHTNING</a> = 8
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a7c7715282975a444f2964a112e7d76c0">ITEM_ENCHANTMENT_OF_LIGHTNING</a> = 8
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a48f3b946c187b4b9aefdfe9299e9279b">ITEM_ENCHANTMENT_OF_THUNDERBOLTS</a> = 9
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a68b38d33b784299430093dab41796221">ITEM_ENCHANTMENT_OF_FIRE</a> = 10
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a697bdcfde635d9323d60b3bbaa10c120">ITEM_ENCHANTMENT_OF_FLAME</a> = 11
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a697bdcfde635d9323d60b3bbaa10c120">ITEM_ENCHANTMENT_OF_FLAME</a> = 11
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ad3a2e5702d5b2fe0faf3ce8422901353">ITEM_ENCHANTMENT_OF_INFERNOS</a> = 12
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ad3a2e5702d5b2fe0faf3ce8422901353">ITEM_ENCHANTMENT_OF_INFERNOS</a> = 12
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a011c27e21243e2e01466685214fe6a09">ITEM_ENCHANTMENT_OF_POISON</a> = 13
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a22400cf214475d5a73c9bb1053a37d2c">ITEM_ENCHANTMENT_OF_VENOM</a> = 14
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a73b8dc0a7b214abdcc0b51a197b38e9a">ITEM_ENCHANTMENT_OF_ACID</a> = 15
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a73b8dc0a7b214abdcc0b51a197b38e9a">ITEM_ENCHANTMENT_OF_ACID</a> = 15
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ab6707c6568fcec934e745c60a6caaf80">ITEM_ENCHANTMENT_VAMPIRIC</a> = 16
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ab6707c6568fcec934e745c60a6caaf80">ITEM_ENCHANTMENT_VAMPIRIC</a> = 16
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19aeec84d91eb8a4c17781a536f638d3836">ITEM_ENCHANTMENT_OF_RECOVERY</a> = 17
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19abe5fac46d65a8fc3240f2e7af6b5a719">ITEM_ENCHANTMENT_OF_IMMUNITY</a> = 18
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a6fe926afbcb5b4042ed3876e3f4288d0">ITEM_ENCHANTMENT_OF_SANITY</a> = 19
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a6fe926afbcb5b4042ed3876e3f4288d0">ITEM_ENCHANTMENT_OF_SANITY</a> = 19
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a95cc1ed8356f7aaad53f1ee074f0aa6b">ITEM_ENCHANTMENT_OF_FREEDOM</a> = 20
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a95cc1ed8356f7aaad53f1ee074f0aa6b">ITEM_ENCHANTMENT_OF_FREEDOM</a> = 20
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a8b1a8b3dcdda79f967770869562985e7">ITEM_ENCHANTMENT_OF_ANTIDOTES</a> = 21
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a5432cae0f3c3c4a182c55ebcf1c025fc">ITEM_ENCHANTMENT_OF_ALARMS</a> = 22
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a083d59e53595dd64b8f22d12503e89f6">ITEM_ENCHANTMENT_OF_MEDUSA</a> = 23
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a083d59e53595dd64b8f22d12503e89f6">ITEM_ENCHANTMENT_OF_MEDUSA</a> = 23
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a3ae9348ad13a4e6caf634955b29640e3">ITEM_ENCHANTMENT_OF_FORCE</a> = 24
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a3ae9348ad13a4e6caf634955b29640e3">ITEM_ENCHANTMENT_OF_FORCE</a> = 24
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a74ceecb3a726e8cb81fcd3aa33400934">ITEM_ENCHANTMENT_OF_POWER</a> = 25
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a8b1da3098cbcfb5dd4f4bafde8ac9211">ITEM_ENCHANTMENT_OF_AIR_MAGIC</a> = 26
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19aa7d8748f41c497e5ecde22b55413e219">ITEM_ENCHANTMENT_OF_BODY_MAGIC</a> = 27
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19aa7d8748f41c497e5ecde22b55413e219">ITEM_ENCHANTMENT_OF_BODY_MAGIC</a> = 27
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19acf18e77f23b6b457033aaa1cecdcb3e2">ITEM_ENCHANTMENT_OF_DARK_MAGIC</a> = 28
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19acf18e77f23b6b457033aaa1cecdcb3e2">ITEM_ENCHANTMENT_OF_DARK_MAGIC</a> = 28
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ac27b53354103ee26be8f7766a58d25b3">ITEM_ENCHANTMENT_OF_EARTH_MAGIC</a> = 29
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a75a563f43a744cd37b9de256bfe07098">ITEM_ENCHANTMENT_OF_FIRE_MAGIC</a> = 30
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a8a4860b62473c71c8837043d39947753">ITEM_ENCHANTMENT_OF_LIGHT_MAGIC</a> = 31
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a8a4860b62473c71c8837043d39947753">ITEM_ENCHANTMENT_OF_LIGHT_MAGIC</a> = 31
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a68965d8f2f4df7ab5160046d06f11227">ITEM_ENCHANTMENT_OF_MIND_MAGIC</a> = 32
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a68965d8f2f4df7ab5160046d06f11227">ITEM_ENCHANTMENT_OF_MIND_MAGIC</a> = 32
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a4be8165a260b6a55020a513bf86c603c">ITEM_ENCHANTMENT_OF_SPIRIT_MAGIC</a> = 33
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a8da64a77329d05116a2e8d6942f31d6a">ITEM_ENCHANTMENT_OF_WATER_MAGIC</a> = 34
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a3c8540bd4431e05231a90e7fd5f23405">ITEM_ENCHANTMENT_OF_THIEVERY</a> = 35
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a3c8540bd4431e05231a90e7fd5f23405">ITEM_ENCHANTMENT_OF_THIEVERY</a> = 35
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ae5212f043f9686200aa9b05f7eea3d6e">ITEM_ENCHANTMENT_OF_SHIELDING</a> = 36
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ae5212f043f9686200aa9b05f7eea3d6e">ITEM_ENCHANTMENT_OF_SHIELDING</a> = 36
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a7687c9e17f4162e4d061ae3057e9115f">ITEM_ENCHANTMENT_OF_REGENERATION</a> = 37
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ac13db62ac39c0bfc28f79c886c1d217c">ITEM_ENCHANTMENT_OF_MANA</a> = 38
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19aeb7336299d35b5000d6151c46f1d7515">ITEM_ENCHANTMENT_DEMON_SLAYING</a> = 39
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19aeb7336299d35b5000d6151c46f1d7515">ITEM_ENCHANTMENT_DEMON_SLAYING</a> = 39
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a9971d160c3f630251cb1c5b001eefbfa">ITEM_ENCHANTMENT_DRAGON_SLAYING</a> = 40
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a9971d160c3f630251cb1c5b001eefbfa">ITEM_ENCHANTMENT_DRAGON_SLAYING</a> = 40
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a285f460306071e15113cb43a63e1c480">ITEM_ENCHANTMENT_OF_DARKNESS</a> = 41
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a2999b6efd020bfce66635bde80b3c370">ITEM_ENCHANTMENT_OF_DOOM</a> = 42
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a3c727048b414c81bb51ff6650c5ad960">ITEM_ENCHANTMENT_OF_EARTH</a> = 43
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a3c727048b414c81bb51ff6650c5ad960">ITEM_ENCHANTMENT_OF_EARTH</a> = 43
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a3e5e2ae5a5847bb7ea68c68893a29d4b">ITEM_ENCHANTMENT_OF_LIFE</a> = 44
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a3e5e2ae5a5847bb7ea68c68893a29d4b">ITEM_ENCHANTMENT_OF_LIFE</a> = 44
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a782e0483a3d07f5155adef9003c70f54">ITEM_ENCHANTMENT_ROGUES</a> = 45
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19aafeb767290f2b22f3033c38dd4e6fc9b">ITEM_ENCHANTMENT_OF_DRAGON</a> = 46
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ad0744aa61c99b8a7173a595622a3c4b2">ITEM_ENCHANTMENT_OF_ECLIPSE</a> = 47
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ad0744aa61c99b8a7173a595622a3c4b2">ITEM_ENCHANTMENT_OF_ECLIPSE</a> = 47
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a0b11c2998885e559cc2a4451d71e5f94">ITEM_ENCHANTMENT_OF_GOLEM</a> = 48
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a0b11c2998885e559cc2a4451d71e5f94">ITEM_ENCHANTMENT_OF_GOLEM</a> = 48
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a212040736bfe1b06727ab03e87ac48f2">ITEM_ENCHANTMENT_OF_MOON</a> = 49
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a5f9751cbfefcbec32df689465caab96a">ITEM_ENCHANTMENT_OF_PHOENIX</a> = 50
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a67977499fd23bf9246f6fe32eb5df7d8">ITEM_ENCHANTMENT_OF_SKY</a> = 51
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a67977499fd23bf9246f6fe32eb5df7d8">ITEM_ENCHANTMENT_OF_SKY</a> = 51
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a7fa51601625b899457cd7a661f574935">ITEM_ENCHANTMENT_OF_STARS</a> = 52
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a7fa51601625b899457cd7a661f574935">ITEM_ENCHANTMENT_OF_STARS</a> = 52
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a494c6238c1086165fe91d98a959f74a1">ITEM_ENCHANTMENT_OF_SUN</a> = 53
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19acb7986c8bb1ebdd3d2b69465e4ee65a1">ITEM_ENCHANTMENT_OF_TROLL</a> = 54
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a4f722fdff56e8e4a821b3bd4aa4e8dcd">ITEM_ENCHANTMENT_OF_UNICORN</a> = 55
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a4f722fdff56e8e4a821b3bd4aa4e8dcd">ITEM_ENCHANTMENT_OF_UNICORN</a> = 55
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19af0357cddf40b3981044a5a21c06d2112">ITEM_ENCHANTMENT_WARRIORS</a> = 56
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19af0357cddf40b3981044a5a21c06d2112">ITEM_ENCHANTMENT_WARRIORS</a> = 56
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19aa7067c30f9d1483f4ad16aa8eb46bbab">ITEM_ENCHANTMENT_WIZARDS</a> = 57
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a805fe4f047083c8f665b16ac66025c4b">ITEM_ENCHANTMENT_ANTIQUE</a> = 58
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a6eff0e186590a48d07752ce426d1844f">ITEM_ENCHANTMENT_SWIFT</a> = 59
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a6eff0e186590a48d07752ce426d1844f">ITEM_ENCHANTMENT_SWIFT</a> = 59
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a1e07c64aba2d2414139d1a0226d0d817">ITEM_ENCHANTMENT_MONKS</a> = 60
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a1e07c64aba2d2414139d1a0226d0d817">ITEM_ENCHANTMENT_MONKS</a> = 60
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ace986142c5af23bb2853c622767b0d74">ITEM_ENCHANTMENT_THIEVES</a> = 61
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a0f21b6cb9589b29bbc2ae5974ff67d4b">ITEM_ENCHANTMENT_OF_IDENTIFYING</a> = 62
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a894c2a61ca90f518a0bbd4ae365900d5">ITEM_ENCHANTMENT_ELF_SLAYING</a> = 63
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a894c2a61ca90f518a0bbd4ae365900d5">ITEM_ENCHANTMENT_ELF_SLAYING</a> = 63
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a1b6b294e2890506aca388ffb29a50c29">ITEM_ENCHANTMENT_UNDEAD_SLAYING</a> = 64
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a1b6b294e2890506aca388ffb29a50c29">ITEM_ENCHANTMENT_UNDEAD_SLAYING</a> = 64
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a991218e083b51e607ca5699bc075de28">ITEM_ENCHANTMENT_TITAN_SLAYING</a> = 65
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a5fe632aa007a7ce10c97d72538f08abd">ITEM_ENCHANTMENT_OF_PLENTY</a> = 66
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a5d814f450e1ea3426b6f4267dedfc51e">ITEM_ENCHANTMENT_ASSASINS</a> = 67
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a5d814f450e1ea3426b6f4267dedfc51e">ITEM_ENCHANTMENT_ASSASINS</a> = 67
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a937f58a14e29a5a5e7db4c769914ed10">ITEM_ENCHANTMENT_BARBARIANS</a> = 68
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a937f58a14e29a5a5e7db4c769914ed10">ITEM_ENCHANTMENT_BARBARIANS</a> = 68
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a81761e6ef221d42896b923c9086d686c">ITEM_ENCHANTMENT_OF_STORM</a> = 69
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19ac28eb6e5c296806d6316dca64a7c4bd1">ITEM_ENCHANTMENT_OF_OCEAN</a> = 70
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a10d7128fda08f5a201c6c55611692c42">ITEM_ENCHANTMENT_OF_WATER_WALKING</a> = 71
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a10d7128fda08f5a201c6c55611692c42">ITEM_ENCHANTMENT_OF_WATER_WALKING</a> = 71
-, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19af26db9d201d6dcf7ec109a051c1c4455">ITEM_ENCHANTMENT_OF_FEATHER_FALLING</a> = 72
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19af26db9d201d6dcf7ec109a051c1c4455">ITEM_ENCHANTMENT_OF_FEATHER_FALLING</a> = 72
+, <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a496c886d109247b22d3ee9e5008d4d78">ITEM_ENCHANTMENT_FIRST_VALID</a> = 1
 , <a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19a9498d29c932d1f77871fece08cb633fe">ITEM_ENCHANTMENT_LAST_VALID</a> = 72
 <br />
  }</td></tr>
@@ -231,13 +233,13 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9ca63ba1cb7cd2a85d9dbe2ddf3d423b291">ITEM_TREASURE_LEVEL_4</a> = 4
 , <a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9caa75efd62506770ffa26bc595c4a7f668">ITEM_TREASURE_LEVEL_5</a> = 5
-, <a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9ca8c7fb064583e9b8a89782caabdf72b60">ITEM_TREASURE_LEVEL_ARTIFACT</a> = 6
+, <a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9ca533854c20d42c3393e81dd9a0827cf89">ITEM_TREASURE_LEVEL_6</a> = 6
 , <a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9caeb8ea0ba42501726420879e859f422f8">ITEM_TREASURE_LEVEL_GUARANTEED_ARTIFACT</a> = 7
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9ca6d3381917764215a40fa0aba0ca1e2a2">ITEM_FIRST_VALID_TREASURE_LEVEL</a> = ITEM_TREASURE_LEVEL_1
-, <a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9ca035da1c58e7777c26ef6039993b1c0be">ITEM_LAST_VALID_TREASURE_LEVEL</a> = ITEM_TREASURE_LEVEL_GUARANTEED_ARTIFACT
-, <a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9ca801ff9ce76582aad4e67f87ec526dec8">ITEM_FIRST_RANDOM_TREASURE_LEVEL</a> = ITEM_TREASURE_LEVEL_1
-, <a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9cae955400b473aa2c834fe9d318e00d045">ITEM_LAST_RANDOM_TREASURE_LEVEL</a> = ITEM_TREASURE_LEVEL_ARTIFACT
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9cab0e107698d8e2818619d31abd6340a61">ITEM_TREASURE_LEVEL_FIRST_VALID</a> = ITEM_TREASURE_LEVEL_1
+, <a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9ca03f43298b41c4ef72a246ff276a89228">ITEM_TREASURE_LEVEL_LAST_VALID</a> = ITEM_TREASURE_LEVEL_GUARANTEED_ARTIFACT
+, <a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9caac07e81dfe77d97b7a164ca533bc72db">ITEM_TREASURE_LEVEL_FIRST_RANDOM</a> = ITEM_TREASURE_LEVEL_1
+, <a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9ca75b906d7cb85a8038b93e86c9d8a3f11">ITEM_TREASURE_LEVEL_LAST_RANDOM</a> = ITEM_TREASURE_LEVEL_6
 <br />
  }</td></tr>
 <tr class="separator:ad20c3ee7b5967d80cee8e0ec3e061a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1258,18 +1260,28 @@ Enumerations</h2></td></tr>
 , <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a349d7029a7ea68716c1020a09fb00537">ITEM_FIRST_REGULAR</a> = ITEM_CRUDE_LONGSWORD
 , <br />
 &#160;&#160;<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a0a5ff3f1b0f76f90895815b2521ea318">ITEM_LAST_REGULAR</a> = ITEM_SUN_AMULET
+, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a7ed891b365132913a7681dcc328d4a64">ITEM_FIRST_ARTIFACT</a> = ITEM_ARTIFACT_PUCK
+, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a6c8f81e9f555bcf4f7fd9a9436b81e12">ITEM_LAST_ARTIFACT</a> = ITEM_RARE_GROGNARDS_CUTLASS
 , <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a6acdca67ac974faed51c570e1bc62c5c">ITEM_FIRST_SPAWNABLE_ARTIFACT</a> = ITEM_ARTIFACT_PUCK
-, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a55eb6ec2bad38e1c8049b288122171ec">ITEM_LAST_SPAWNABLE_ARTIFACT</a> = ITEM_RELIC_MEKORIGS_HAMMER
+, <br />
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a55eb6ec2bad38e1c8049b288122171ec">ITEM_LAST_SPAWNABLE_ARTIFACT</a> = ITEM_RELIC_MEKORIGS_HAMMER
 , <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5aad5907bf1548807261f7b2448fc08f3a">ITEM_FIRST_MESSAGE_SCROLL</a> = ITEM_MESSAGE_FROM_ERATHIA
-, <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5aa0d4005bcb683e5c8b2f638bbdf9e074">ITEM_LAST_MESSAGE_SCROLL</a> = ITEM_781
+, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5aa0d4005bcb683e5c8b2f638bbdf9e074">ITEM_LAST_MESSAGE_SCROLL</a> = ITEM_781
 , <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5ab7e97c57e8dfef60b0ae324740469c64">ITEM_FIRST_RECIPE</a> = ITEM_RECIPE_REJUVENATION
-, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a126b01004e36221b971b64ba4919075d">ITEM_LAST_RECIPE</a> = ITEM_RECIPE_BODY_RESISTANCE
-, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a1d1d66b17c655523c1b95d0a19ea097a">ITEM_FIRST_ENCHANTING_POTION</a> = ITEM_POTION_MIGHT_BOOST
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5adc502aee7fddb45bbe48dfa68241cd6b">ITEM_LAST_ENCHANTING_POTION</a> = ITEM_POTION_SWIFT
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a126b01004e36221b971b64ba4919075d">ITEM_LAST_RECIPE</a> = ITEM_RECIPE_BODY_RESISTANCE
+, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5af61cce92d6da2ff9987f8958393000ca">ITEM_FIRST_REAGENT</a> = ITEM_REAGENT_WIDOWSWEEP_BERRIES
+, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a53877ef3b02e0c29f408e497b3b2f7a1">ITEM_LAST_REAGENT</a> = ITEM_REAGENT_PHILOSOPHERS_STONE
+, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a859de30d9a0e47025d29cb2b29837c23">ITEM_FIRST_REAL_POTION</a> = ITEM_POTION_CURE_WOUNDS
+, <br />
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a4676c1c7cc21c228872c51ba9ba10320">ITEM_LAST_REAL_POTION</a> = ITEM_POTION_REJUVENATION
 , <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5ae12ad2fa1c22d08f1b9d32f44008603e">ITEM_FIRST_WAND</a> = ITEM_WAND_OF_FIRE
 , <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5aaa08704e5f1ed6255a3a2f225f6358cd">ITEM_LAST_WAND</a> = ITEM_MYSTIC_WAND_OF_INCINERATION
+, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5aa5e671f65a5d3ff28654f82be3e25ecf">ITEM_FIRST_SPELL_SCROLL</a> = ITEM_SCROLL_TORCH_LIGHT
+, <br />
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a3249047f2eec93afdde27f57fd1b7d31">ITEM_LAST_SPELL_SCROLL</a> = ITEM_SCROLL_SOULDRINKER
+, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a37763236d9e494d2379d07104e321194">ITEM_FIRST_SPELL_BOOK</a> = ITEM_SPELLBOOK_TORCH_LIGHT
+, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5a08fc927a7a7b07163d3b83ad68e7a253">ITEM_LAST_SPELL_BOOK</a> = ITEM_SPELLBOOK_SOULDRINKER
 , <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5ad627edad39a83de809e6a5e385f28c81">ITEM_FIRST_POTION</a> = ITEM_POTION_CATALYST
 , <br />
 &#160;&#160;<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5ab7e1fbc4619507ab6f24ad407655faa9">ITEM_LAST_POTION</a> = ITEM_POTION_REJUVENATION
@@ -1305,11 +1317,12 @@ Enumerations</h2></td></tr>
 , <a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2da548b2a7554d4369a7ec6eb06781f34e4">EQUIP_GEM</a> = 19
 , <br />
 &#160;&#160;<a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2dad6fa04eaa04bd43dab5ce062f958d5c4">EQUIP_NONE</a> = 20
-, <a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2da060709b3eac69668fef7ad3b22984e2a">EQUIP_TYPE_COUNT</a>
+, <a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2da552cfc15d6917760654f4dad6e87c22f">EQUIP_FIRST</a> = EQUIP_SINGLE_HANDED
+, <a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2dab9da594b4154972bafab291a9d96f6dd">EQUIP_LAST</a> = EQUIP_NONE
 , <a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2da8ab79447bec46b497f00b10ecf708a6d">EQUIP_FIRST_SPECIAL_ENCHANTABLE</a> = EQUIP_SINGLE_HANDED
-, <a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2da9aaf1ae442d2d47a379c83ffdb8caa38">EQUIP_LAST_SPECIAL_ENCHANTABLE</a> = EQUIP_AMULET
 , <br />
-&#160;&#160;<a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2da91bc44ee8f21241bd1ac1467cc97f32c">EQUIP_FIRST_NORMAL_ENCHANTABLE</a> = EQUIP_ARMOUR
+&#160;&#160;<a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2da9aaf1ae442d2d47a379c83ffdb8caa38">EQUIP_LAST_SPECIAL_ENCHANTABLE</a> = EQUIP_AMULET
+, <a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2da91bc44ee8f21241bd1ac1467cc97f32c">EQUIP_FIRST_NORMAL_ENCHANTABLE</a> = EQUIP_ARMOUR
 , <a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2dac5d375b6b7c365cb2616dbcebdb675cb">EQUIP_LAST_NORMAL_ENCHANTABLE</a> = EQUIP_AMULET
 <br />
  }</td></tr>
@@ -1345,44 +1358,56 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a45b46209caf53e3f8bcf49e03c1652a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a45b46209caf53e3f8bcf49e03c1652a0">IsRandomTreasureLevel</a> (<a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9c">ITEM_TREASURE_LEVEL</a> level)</td></tr>
-<tr class="separator:a45b46209caf53e3f8bcf49e03c1652a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a088a9a4f41b9f4508213e3df98ca5c28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a088a9a4f41b9f4508213e3df98ca5c28">IsRegular</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
-<tr class="separator:a088a9a4f41b9f4508213e3df98ca5c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10d359f0497ee3de431e6df362f729b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a10d359f0497ee3de431e6df362f729b9">IsRecipe</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
-<tr class="separator:a10d359f0497ee3de431e6df362f729b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefbd861100f6d0f682fec531dab92f9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#aefbd861100f6d0f682fec531dab92f9f">IsWand</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
-<tr class="separator:aefbd861100f6d0f682fec531dab92f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5816d4a7953ca896c189b558910b5244"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a5816d4a7953ca896c189b558910b5244">IsPotion</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
-<tr class="separator:a5816d4a7953ca896c189b558910b5244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accee2e31f7639686653da933662f73be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#accee2e31f7639686653da933662f73be">IsMessageScroll</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
-<tr class="separator:accee2e31f7639686653da933662f73be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad93066aa6cc36ffe23d3465114a67970"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ad93066aa6cc36ffe23d3465114a67970">IsSpawnableArtifact</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
-<tr class="separator:ad93066aa6cc36ffe23d3465114a67970"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3123b3b2667b360deae5073d0eca3f71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a3123b3b2667b360deae5073d0eca3f71">IsRandomItem</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
-<tr class="separator:a3123b3b2667b360deae5073d0eca3f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a540e45669646183436f137826e7539ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9c">ITEM_TREASURE_LEVEL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a540e45669646183436f137826e7539ea">RandomItemTreasureLevel</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
-<tr class="separator:a540e45669646183436f137826e7539ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab653e3911f809fef66bffe5873cc277c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ab653e3911f809fef66bffe5873cc277c">RecipeScrolls</a> ()</td></tr>
-<tr class="separator:ab653e3911f809fef66bffe5873cc277c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6eb674f4327d1a09bfbbb696ee87c9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ab6eb674f4327d1a09bfbbb696ee87c9f">SpawnableItems</a> ()</td></tr>
-<tr class="separator:ab6eb674f4327d1a09bfbbb696ee87c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95c0617df3ec5a654df8124c8418625e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a95c0617df3ec5a654df8124c8418625e">SpawnableArtifacts</a> ()</td></tr>
-<tr class="separator:a95c0617df3ec5a654df8124c8418625e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab21efc0cda5178acc18e8b50deefeb0f"><td class="memItemLeft" align="right" valign="top">std::initializer_list&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ab21efc0cda5178acc18e8b50deefeb0f">Level1Reagents</a> ()</td></tr>
-<tr class="separator:ab21efc0cda5178acc18e8b50deefeb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae25a25bf904bfae4ebd5befcc33e3854"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ae25a25bf904bfae4ebd5befcc33e3854">IsPassiveEquipment</a> (<a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2d">ITEM_EQUIP_TYPE</a> type)</td></tr>
-<tr class="separator:ae25a25bf904bfae4ebd5befcc33e3854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a373ced6e6e8db1f1e3ae20abd8e636cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a373ced6e6e8db1f1e3ae20abd8e636cb">IsArmor</a> (<a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2d">ITEM_EQUIP_TYPE</a> type)</td></tr>
-<tr class="separator:a373ced6e6e8db1f1e3ae20abd8e636cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb78326919a640c726c85c38c5033ac0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#acb78326919a640c726c85c38c5033ac0">IsWeapon</a> (<a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2d">ITEM_EQUIP_TYPE</a> type)</td></tr>
-<tr class="separator:acb78326919a640c726c85c38c5033ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d59af3eaebaba842ba302895beb7868"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a5d59af3eaebaba842ba302895beb7868">RingSlots</a> ()</td></tr>
-<tr class="separator:a5d59af3eaebaba842ba302895beb7868"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07cdb10f484a6d1b62c66f7a06656d8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a07cdb10f484a6d1b62c66f7a06656d8c">RingSlot</a> (int index)</td></tr>
-<tr class="separator:a07cdb10f484a6d1b62c66f7a06656d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dfb7060ff8e1a084668154de231810d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a1dfb7060ff8e1a084668154de231810d">AllItemSlots</a> ()</td></tr>
-<tr class="separator:a1dfb7060ff8e1a084668154de231810d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ccb0c0360c9e3fcfefca14681124b24"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a8ccb0c0360c9e3fcfefca14681124b24">isRandomTreasureLevel</a> (<a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9c">ITEM_TREASURE_LEVEL</a> level)</td></tr>
+<tr class="separator:a8ccb0c0360c9e3fcfefca14681124b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4501fe5b9bf53af43da17ebe8c3005c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ab4501fe5b9bf53af43da17ebe8c3005c">isRegular</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:ab4501fe5b9bf53af43da17ebe8c3005c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537865cfdb87cd12c843110c0e3276f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a537865cfdb87cd12c843110c0e3276f5">isRecipe</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:a537865cfdb87cd12c843110c0e3276f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708d801884fb2052584b2b057d885d8c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a708d801884fb2052584b2b057d885d8c">isWand</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:a708d801884fb2052584b2b057d885d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0fe3f3361169ae5e00cb7504f040ae4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ac0fe3f3361169ae5e00cb7504f040ae4">isPotion</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:ac0fe3f3361169ae5e00cb7504f040ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb7b3de55f92f8615e6eb0dc41242e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#abcb7b3de55f92f8615e6eb0dc41242e5">isReagent</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:abcb7b3de55f92f8615e6eb0dc41242e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af812bcd86819291ad45e1b39d4cfbd7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#af812bcd86819291ad45e1b39d4cfbd7b">isEnchantingPotion</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:af812bcd86819291ad45e1b39d4cfbd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c786e62a0dea227fef56c5a880ec18e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a3c786e62a0dea227fef56c5a880ec18e">isMessageScroll</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:a3c786e62a0dea227fef56c5a880ec18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ef90d6f6febcc9fcc205369c3834e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#af3ef90d6f6febcc9fcc205369c3834e7">isArtifact</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:af3ef90d6f6febcc9fcc205369c3834e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e80cdfb25bed361ae301aa5f9a1bc5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ad0e80cdfb25bed361ae301aa5f9a1bc5">isSpawnableArtifact</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:ad0e80cdfb25bed361ae301aa5f9a1bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0fa51a0354ce6f51896313ba3d3a894"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ad0fa51a0354ce6f51896313ba3d3a894">isRandomItem</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:ad0fa51a0354ce6f51896313ba3d3a894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d0eb1e97725dee4b07d1433aec576b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9c">ITEM_TREASURE_LEVEL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a42d0eb1e97725dee4b07d1433aec576b">randomItemTreasureLevel</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> type)</td></tr>
+<tr class="separator:a42d0eb1e97725dee4b07d1433aec576b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8466bb12236601205d9a6736990db52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ab8466bb12236601205d9a6736990db52">spellCountForMastery</a> (<a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2a">CharacterSkillMastery</a> maxMastery)</td></tr>
+<tr class="separator:ab8466bb12236601205d9a6736990db52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83fdf36d5238c1e054edd4a7166c99e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a83fdf36d5238c1e054edd4a7166c99e6">spellbooksOfSchool</a> (<a class="el" href="ItemEnums_8h.html#a55231e9660ce1c5b6f7613a3f9d66891">DAMAGE_TYPE</a> damage, <a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2a">CharacterSkillMastery</a> maxMastery=<a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2aa3bf2aa76560f36066814a5e95692838e">CHARACTER_SKILL_MASTERY_GRANDMASTER</a>)</td></tr>
+<tr class="separator:a83fdf36d5238c1e054edd4a7166c99e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0883c74c019b32dbc8f8f2ae6f7f6c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ae0883c74c019b32dbc8f8f2ae6f7f6c1">allRecipeScrolls</a> ()</td></tr>
+<tr class="separator:ae0883c74c019b32dbc8f8f2ae6f7f6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ad2be2408897c7f5a079b5415fb223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ad7ad2be2408897c7f5a079b5415fb223">allSpawnableItems</a> ()</td></tr>
+<tr class="separator:ad7ad2be2408897c7f5a079b5415fb223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa59b07b45059372ddcc17304b21c22bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#aa59b07b45059372ddcc17304b21c22bc">allSpawnableArtifacts</a> ()</td></tr>
+<tr class="separator:aa59b07b45059372ddcc17304b21c22bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a308bd94f1aad65fce26e4314adaf2e20"><td class="memItemLeft" align="right" valign="top">std::initializer_list&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a308bd94f1aad65fce26e4314adaf2e20">allLevel1Reagents</a> ()</td></tr>
+<tr class="separator:a308bd94f1aad65fce26e4314adaf2e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a51da692662c79a6607a5984583f10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19">ITEM_ENCHANTMENT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ad0a51da692662c79a6607a5984583f10">potionEnchantment</a> (<a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> enchantingPotion)</td></tr>
+<tr class="separator:ad0a51da692662c79a6607a5984583f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad038c8d0ef8245b29876143d04aeca50"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#ad038c8d0ef8245b29876143d04aeca50">isPassiveEquipment</a> (<a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2d">ITEM_EQUIP_TYPE</a> type)</td></tr>
+<tr class="separator:ad038c8d0ef8245b29876143d04aeca50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa524ca60652dba0722f0efecc7cc41b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#aa524ca60652dba0722f0efecc7cc41b4">isArmor</a> (<a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2d">ITEM_EQUIP_TYPE</a> type)</td></tr>
+<tr class="separator:aa524ca60652dba0722f0efecc7cc41b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02882abc6fb039a61aa578c63fbf901f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a02882abc6fb039a61aa578c63fbf901f">isWeapon</a> (<a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2d">ITEM_EQUIP_TYPE</a> type)</td></tr>
+<tr class="separator:a02882abc6fb039a61aa578c63fbf901f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ac19c6295764c508f4440e19e67dde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a64ac19c6295764c508f4440e19e67dde">allRingSlots</a> ()</td></tr>
+<tr class="separator:a64ac19c6295764c508f4440e19e67dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e86d70a5e389ba9adb84568b07c1c6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#a7e86d70a5e389ba9adb84568b07c1c6b">ringSlot</a> (int index)</td></tr>
+<tr class="separator:a7e86d70a5e389ba9adb84568b07c1c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfd8273ffb40a344ff784d6fad7a735"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ItemEnums_8h.html#aecfd8273ffb40a344ff784d6fad7a735">allItemSlots</a> ()</td></tr>
+<tr class="separator:aecfd8273ffb40a344ff784d6fad7a735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a55231e9660ce1c5b6f7613a3f9d66891" name="a55231e9660ce1c5b6f7613a3f9d66891"></a>
@@ -1433,7 +1458,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a32eb1d58cce67b93f07281e8a3464d19a1b165f33de669ea48df78787334f3645" name="a32eb1d58cce67b93f07281e8a3464d19a1b165f33de669ea48df78787334f3645"></a>ITEM_ENCHANTMENT_NULL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a32eb1d58cce67b93f07281e8a3464d19a496c886d109247b22d3ee9e5008d4d78" name="a32eb1d58cce67b93f07281e8a3464d19a496c886d109247b22d3ee9e5008d4d78"></a>ITEM_ENCHANTMENT_FIRST_VALID&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a32eb1d58cce67b93f07281e8a3464d19a8890f30003ec17f9463cd14613e91989" name="a32eb1d58cce67b93f07281e8a3464d19a8890f30003ec17f9463cd14613e91989"></a>ITEM_ENCHANTMENT_OF_PROTECTION&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a32eb1d58cce67b93f07281e8a3464d19a8bb09fb2feb415a2ce004230d10c8bd8" name="a32eb1d58cce67b93f07281e8a3464d19a8bb09fb2feb415a2ce004230d10c8bd8"></a>ITEM_ENCHANTMENT_OF_GODS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a32eb1d58cce67b93f07281e8a3464d19a8a087ac27f39d50e7b287410fc5ee01b" name="a32eb1d58cce67b93f07281e8a3464d19a8a087ac27f39d50e7b287410fc5ee01b"></a>ITEM_ENCHANTMENT_OF_CARNAGE&#160;</td><td class="fielddoc"></td></tr>
@@ -1506,6 +1530,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a32eb1d58cce67b93f07281e8a3464d19ac28eb6e5c296806d6316dca64a7c4bd1" name="a32eb1d58cce67b93f07281e8a3464d19ac28eb6e5c296806d6316dca64a7c4bd1"></a>ITEM_ENCHANTMENT_OF_OCEAN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a32eb1d58cce67b93f07281e8a3464d19a10d7128fda08f5a201c6c55611692c42" name="a32eb1d58cce67b93f07281e8a3464d19a10d7128fda08f5a201c6c55611692c42"></a>ITEM_ENCHANTMENT_OF_WATER_WALKING&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a32eb1d58cce67b93f07281e8a3464d19af26db9d201d6dcf7ec109a051c1c4455" name="a32eb1d58cce67b93f07281e8a3464d19af26db9d201d6dcf7ec109a051c1c4455"></a>ITEM_ENCHANTMENT_OF_FEATHER_FALLING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a32eb1d58cce67b93f07281e8a3464d19a496c886d109247b22d3ee9e5008d4d78" name="a32eb1d58cce67b93f07281e8a3464d19a496c886d109247b22d3ee9e5008d4d78"></a>ITEM_ENCHANTMENT_FIRST_VALID&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a32eb1d58cce67b93f07281e8a3464d19a9498d29c932d1f77871fece08cb633fe" name="a32eb1d58cce67b93f07281e8a3464d19a9498d29c932d1f77871fece08cb633fe"></a>ITEM_ENCHANTMENT_LAST_VALID&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -1552,45 +1577,12 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a6efba91e38f0848b5e0d1d4cc6011a2da9ae413defa92cf6e38d6072e2e7e68d9" name="a6efba91e38f0848b5e0d1d4cc6011a2da9ae413defa92cf6e38d6072e2e7e68d9"></a>EQUIP_GOLD&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6efba91e38f0848b5e0d1d4cc6011a2da548b2a7554d4369a7ec6eb06781f34e4" name="a6efba91e38f0848b5e0d1d4cc6011a2da548b2a7554d4369a7ec6eb06781f34e4"></a>EQUIP_GEM&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6efba91e38f0848b5e0d1d4cc6011a2dad6fa04eaa04bd43dab5ce062f958d5c4" name="a6efba91e38f0848b5e0d1d4cc6011a2dad6fa04eaa04bd43dab5ce062f958d5c4"></a>EQUIP_NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a6efba91e38f0848b5e0d1d4cc6011a2da060709b3eac69668fef7ad3b22984e2a" name="a6efba91e38f0848b5e0d1d4cc6011a2da060709b3eac69668fef7ad3b22984e2a"></a>EQUIP_TYPE_COUNT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6efba91e38f0848b5e0d1d4cc6011a2da552cfc15d6917760654f4dad6e87c22f" name="a6efba91e38f0848b5e0d1d4cc6011a2da552cfc15d6917760654f4dad6e87c22f"></a>EQUIP_FIRST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6efba91e38f0848b5e0d1d4cc6011a2dab9da594b4154972bafab291a9d96f6dd" name="a6efba91e38f0848b5e0d1d4cc6011a2dab9da594b4154972bafab291a9d96f6dd"></a>EQUIP_LAST&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6efba91e38f0848b5e0d1d4cc6011a2da8ab79447bec46b497f00b10ecf708a6d" name="a6efba91e38f0848b5e0d1d4cc6011a2da8ab79447bec46b497f00b10ecf708a6d"></a>EQUIP_FIRST_SPECIAL_ENCHANTABLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6efba91e38f0848b5e0d1d4cc6011a2da9aaf1ae442d2d47a379c83ffdb8caa38" name="a6efba91e38f0848b5e0d1d4cc6011a2da9aaf1ae442d2d47a379c83ffdb8caa38"></a>EQUIP_LAST_SPECIAL_ENCHANTABLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6efba91e38f0848b5e0d1d4cc6011a2da91bc44ee8f21241bd1ac1467cc97f32c" name="a6efba91e38f0848b5e0d1d4cc6011a2da91bc44ee8f21241bd1ac1467cc97f32c"></a>EQUIP_FIRST_NORMAL_ENCHANTABLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6efba91e38f0848b5e0d1d4cc6011a2dac5d375b6b7c365cb2616dbcebdb675cb" name="a6efba91e38f0848b5e0d1d4cc6011a2dac5d375b6b7c365cb2616dbcebdb675cb"></a>EQUIP_LAST_NORMAL_ENCHANTABLE&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="af0cd6a52bd80bbba3041a5598559975c" name="af0cd6a52bd80bbba3041a5598559975c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0cd6a52bd80bbba3041a5598559975c">&#9670;&#160;</a></span>ITEM_FLAG</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="ItemEnums_8h.html#af0cd6a52bd80bbba3041a5598559975c">ITEM_FLAG</a> : uint32_t</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af0cd6a52bd80bbba3041a5598559975caba107fa990059f948376afb3a508c578" name="af0cd6a52bd80bbba3041a5598559975caba107fa990059f948376afb3a508c578"></a>ITEM_IDENTIFIED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0cd6a52bd80bbba3041a5598559975ca09372d60b6bcb7ee182efcd6dae34cf6" name="af0cd6a52bd80bbba3041a5598559975ca09372d60b6bcb7ee182efcd6dae34cf6"></a>ITEM_BROKEN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0cd6a52bd80bbba3041a5598559975cadf79354492c5ac7053d6c3d32610b7c3" name="af0cd6a52bd80bbba3041a5598559975cadf79354492c5ac7053d6c3d32610b7c3"></a>ITEM_TEMP_BONUS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0cd6a52bd80bbba3041a5598559975caf45f690fad021ef5d13e2d24491fab37" name="af0cd6a52bd80bbba3041a5598559975caf45f690fad021ef5d13e2d24491fab37"></a>ITEM_AURA_EFFECT_RED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0cd6a52bd80bbba3041a5598559975ca7395b7e5c25611497699878622082c4f" name="af0cd6a52bd80bbba3041a5598559975ca7395b7e5c25611497699878622082c4f"></a>ITEM_AURA_EFFECT_BLUE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0cd6a52bd80bbba3041a5598559975ca8170d06a9bfa476c8a9fe042677d898c" name="af0cd6a52bd80bbba3041a5598559975ca8170d06a9bfa476c8a9fe042677d898c"></a>ITEM_AURA_EFFECT_GREEN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0cd6a52bd80bbba3041a5598559975ca5171d18dcd01b7da8b82db8c320e2472" name="af0cd6a52bd80bbba3041a5598559975ca5171d18dcd01b7da8b82db8c320e2472"></a>ITEM_AURA_EFFECT_PURPLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0cd6a52bd80bbba3041a5598559975ca948f583995a1834c22669fc3224bf677" name="af0cd6a52bd80bbba3041a5598559975ca948f583995a1834c22669fc3224bf677"></a>ITEM_ENCHANT_ANIMATION_MASK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0cd6a52bd80bbba3041a5598559975ca0bdfc5f5d3da6a73dd5a3b66582654a8" name="af0cd6a52bd80bbba3041a5598559975ca0bdfc5f5d3da6a73dd5a3b66582654a8"></a>ITEM_STOLEN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af0cd6a52bd80bbba3041a5598559975ca85354462199f81dc94c2ea61a9820d67" name="af0cd6a52bd80bbba3041a5598559975ca85354462199f81dc94c2ea61a9820d67"></a>ITEM_HARDENED&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -1694,12 +1686,12 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9ca23a3f3592095f08dfbe5e598e4c81d84" name="ad20c3ee7b5967d80cee8e0ec3e061a9ca23a3f3592095f08dfbe5e598e4c81d84"></a>ITEM_TREASURE_LEVEL_3&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9ca63ba1cb7cd2a85d9dbe2ddf3d423b291" name="ad20c3ee7b5967d80cee8e0ec3e061a9ca63ba1cb7cd2a85d9dbe2ddf3d423b291"></a>ITEM_TREASURE_LEVEL_4&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9caa75efd62506770ffa26bc595c4a7f668" name="ad20c3ee7b5967d80cee8e0ec3e061a9caa75efd62506770ffa26bc595c4a7f668"></a>ITEM_TREASURE_LEVEL_5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9ca8c7fb064583e9b8a89782caabdf72b60" name="ad20c3ee7b5967d80cee8e0ec3e061a9ca8c7fb064583e9b8a89782caabdf72b60"></a>ITEM_TREASURE_LEVEL_ARTIFACT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9ca533854c20d42c3393e81dd9a0827cf89" name="ad20c3ee7b5967d80cee8e0ec3e061a9ca533854c20d42c3393e81dd9a0827cf89"></a>ITEM_TREASURE_LEVEL_6&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9caeb8ea0ba42501726420879e859f422f8" name="ad20c3ee7b5967d80cee8e0ec3e061a9caeb8ea0ba42501726420879e859f422f8"></a>ITEM_TREASURE_LEVEL_GUARANTEED_ARTIFACT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9ca6d3381917764215a40fa0aba0ca1e2a2" name="ad20c3ee7b5967d80cee8e0ec3e061a9ca6d3381917764215a40fa0aba0ca1e2a2"></a>ITEM_FIRST_VALID_TREASURE_LEVEL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9ca035da1c58e7777c26ef6039993b1c0be" name="ad20c3ee7b5967d80cee8e0ec3e061a9ca035da1c58e7777c26ef6039993b1c0be"></a>ITEM_LAST_VALID_TREASURE_LEVEL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9ca801ff9ce76582aad4e67f87ec526dec8" name="ad20c3ee7b5967d80cee8e0ec3e061a9ca801ff9ce76582aad4e67f87ec526dec8"></a>ITEM_FIRST_RANDOM_TREASURE_LEVEL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9cae955400b473aa2c834fe9d318e00d045" name="ad20c3ee7b5967d80cee8e0ec3e061a9cae955400b473aa2c834fe9d318e00d045"></a>ITEM_LAST_RANDOM_TREASURE_LEVEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9cab0e107698d8e2818619d31abd6340a61" name="ad20c3ee7b5967d80cee8e0ec3e061a9cab0e107698d8e2818619d31abd6340a61"></a>ITEM_TREASURE_LEVEL_FIRST_VALID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9ca03f43298b41c4ef72a246ff276a89228" name="ad20c3ee7b5967d80cee8e0ec3e061a9ca03f43298b41c4ef72a246ff276a89228"></a>ITEM_TREASURE_LEVEL_LAST_VALID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9caac07e81dfe77d97b7a164ca533bc72db" name="ad20c3ee7b5967d80cee8e0ec3e061a9caac07e81dfe77d97b7a164ca533bc72db"></a>ITEM_TREASURE_LEVEL_FIRST_RANDOM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad20c3ee7b5967d80cee8e0ec3e061a9ca75b906d7cb85a8038b93e86c9d8a3f11" name="ad20c3ee7b5967d80cee8e0ec3e061a9ca75b906d7cb85a8038b93e86c9d8a3f11"></a>ITEM_TREASURE_LEVEL_LAST_RANDOM&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -1725,7 +1717,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Enum of all item types in the game.</p>
 <p >DON'T EDIT, THIS IS AUTOGENERATED CODE.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structItemTable.html#a578c2cbc00135bdd80a8a51854e4e6f3">ItemTable::PrintItemTypesEnum</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="CodeGen_8cpp.html#a83846a3c10ca6cf68603daabc7fd502c">runItemIdCodeGen</a> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5ac038a004f35849b7d2c38e5ba310f384" name="a3423a9b7221dd99ce926bcad62ae96a5ac038a004f35849b7d2c38e5ba310f384"></a>ITEM_NULL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a2af5a71ce7ea08b51907c8aa492204ff" name="a3423a9b7221dd99ce926bcad62ae96a5a2af5a71ce7ea08b51907c8aa492204ff"></a>ITEM_CRUDE_LONGSWORD&#160;</td><td class="fielddoc"></td></tr>
@@ -2540,16 +2532,24 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5aa9f1c5ed1a3ba61ac59d78e5489a4471" name="a3423a9b7221dd99ce926bcad62ae96a5aa9f1c5ed1a3ba61ac59d78e5489a4471"></a>ITEM_LAST_VALID&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a349d7029a7ea68716c1020a09fb00537" name="a3423a9b7221dd99ce926bcad62ae96a5a349d7029a7ea68716c1020a09fb00537"></a>ITEM_FIRST_REGULAR&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a0a5ff3f1b0f76f90895815b2521ea318" name="a3423a9b7221dd99ce926bcad62ae96a5a0a5ff3f1b0f76f90895815b2521ea318"></a>ITEM_LAST_REGULAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a7ed891b365132913a7681dcc328d4a64" name="a3423a9b7221dd99ce926bcad62ae96a5a7ed891b365132913a7681dcc328d4a64"></a>ITEM_FIRST_ARTIFACT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a6c8f81e9f555bcf4f7fd9a9436b81e12" name="a3423a9b7221dd99ce926bcad62ae96a5a6c8f81e9f555bcf4f7fd9a9436b81e12"></a>ITEM_LAST_ARTIFACT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a6acdca67ac974faed51c570e1bc62c5c" name="a3423a9b7221dd99ce926bcad62ae96a5a6acdca67ac974faed51c570e1bc62c5c"></a>ITEM_FIRST_SPAWNABLE_ARTIFACT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a55eb6ec2bad38e1c8049b288122171ec" name="a3423a9b7221dd99ce926bcad62ae96a5a55eb6ec2bad38e1c8049b288122171ec"></a>ITEM_LAST_SPAWNABLE_ARTIFACT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5aad5907bf1548807261f7b2448fc08f3a" name="a3423a9b7221dd99ce926bcad62ae96a5aad5907bf1548807261f7b2448fc08f3a"></a>ITEM_FIRST_MESSAGE_SCROLL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5aa0d4005bcb683e5c8b2f638bbdf9e074" name="a3423a9b7221dd99ce926bcad62ae96a5aa0d4005bcb683e5c8b2f638bbdf9e074"></a>ITEM_LAST_MESSAGE_SCROLL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5ab7e97c57e8dfef60b0ae324740469c64" name="a3423a9b7221dd99ce926bcad62ae96a5ab7e97c57e8dfef60b0ae324740469c64"></a>ITEM_FIRST_RECIPE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a126b01004e36221b971b64ba4919075d" name="a3423a9b7221dd99ce926bcad62ae96a5a126b01004e36221b971b64ba4919075d"></a>ITEM_LAST_RECIPE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a1d1d66b17c655523c1b95d0a19ea097a" name="a3423a9b7221dd99ce926bcad62ae96a5a1d1d66b17c655523c1b95d0a19ea097a"></a>ITEM_FIRST_ENCHANTING_POTION&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5adc502aee7fddb45bbe48dfa68241cd6b" name="a3423a9b7221dd99ce926bcad62ae96a5adc502aee7fddb45bbe48dfa68241cd6b"></a>ITEM_LAST_ENCHANTING_POTION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5af61cce92d6da2ff9987f8958393000ca" name="a3423a9b7221dd99ce926bcad62ae96a5af61cce92d6da2ff9987f8958393000ca"></a>ITEM_FIRST_REAGENT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a53877ef3b02e0c29f408e497b3b2f7a1" name="a3423a9b7221dd99ce926bcad62ae96a5a53877ef3b02e0c29f408e497b3b2f7a1"></a>ITEM_LAST_REAGENT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a859de30d9a0e47025d29cb2b29837c23" name="a3423a9b7221dd99ce926bcad62ae96a5a859de30d9a0e47025d29cb2b29837c23"></a>ITEM_FIRST_REAL_POTION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a4676c1c7cc21c228872c51ba9ba10320" name="a3423a9b7221dd99ce926bcad62ae96a5a4676c1c7cc21c228872c51ba9ba10320"></a>ITEM_LAST_REAL_POTION&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5ae12ad2fa1c22d08f1b9d32f44008603e" name="a3423a9b7221dd99ce926bcad62ae96a5ae12ad2fa1c22d08f1b9d32f44008603e"></a>ITEM_FIRST_WAND&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5aaa08704e5f1ed6255a3a2f225f6358cd" name="a3423a9b7221dd99ce926bcad62ae96a5aaa08704e5f1ed6255a3a2f225f6358cd"></a>ITEM_LAST_WAND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5aa5e671f65a5d3ff28654f82be3e25ecf" name="a3423a9b7221dd99ce926bcad62ae96a5aa5e671f65a5d3ff28654f82be3e25ecf"></a>ITEM_FIRST_SPELL_SCROLL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a3249047f2eec93afdde27f57fd1b7d31" name="a3423a9b7221dd99ce926bcad62ae96a5a3249047f2eec93afdde27f57fd1b7d31"></a>ITEM_LAST_SPELL_SCROLL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a37763236d9e494d2379d07104e321194" name="a3423a9b7221dd99ce926bcad62ae96a5a37763236d9e494d2379d07104e321194"></a>ITEM_FIRST_SPELL_BOOK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a08fc927a7a7b07163d3b83ad68e7a253" name="a3423a9b7221dd99ce926bcad62ae96a5a08fc927a7a7b07163d3b83ad68e7a253"></a>ITEM_LAST_SPELL_BOOK&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5ad627edad39a83de809e6a5e385f28c81" name="a3423a9b7221dd99ce926bcad62ae96a5ad627edad39a83de809e6a5e385f28c81"></a>ITEM_FIRST_POTION&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5ab7e1fbc4619507ab6f24ad407655faa9" name="a3423a9b7221dd99ce926bcad62ae96a5ab7e1fbc4619507ab6f24ad407655faa9"></a>ITEM_LAST_POTION&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3423a9b7221dd99ce926bcad62ae96a5a4babb8c6cc11aaf403ad7a4da49a3baa" name="a3423a9b7221dd99ce926bcad62ae96a5a4babb8c6cc11aaf403ad7a4da49a3baa"></a>ITEM_FIRST_SPAWNABLE&#160;</td><td class="fielddoc"></td></tr>
@@ -2558,9 +2558,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a1dfb7060ff8e1a084668154de231810d" name="a1dfb7060ff8e1a084668154de231810d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dfb7060ff8e1a084668154de231810d">&#9670;&#160;</a></span>AllItemSlots()</h2>
+<a id="a5685ba28d9855504dffcfd0e3cbf3732" name="a5685ba28d9855504dffcfd0e3cbf3732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5685ba28d9855504dffcfd0e3cbf3732">&#9670;&#160;</a></span>ItemFlag</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2569,7 +2568,42 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a> &gt; AllItemSlots </td>
+          <td class="memname">enum class <a class="el" href="ItemEnums_8h.html#a5685ba28d9855504dffcfd0e3cbf3732">ItemFlag</a> : uint32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5685ba28d9855504dffcfd0e3cbf3732aba107fa990059f948376afb3a508c578" name="a5685ba28d9855504dffcfd0e3cbf3732aba107fa990059f948376afb3a508c578"></a>ITEM_IDENTIFIED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5685ba28d9855504dffcfd0e3cbf3732a09372d60b6bcb7ee182efcd6dae34cf6" name="a5685ba28d9855504dffcfd0e3cbf3732a09372d60b6bcb7ee182efcd6dae34cf6"></a>ITEM_BROKEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5685ba28d9855504dffcfd0e3cbf3732adf79354492c5ac7053d6c3d32610b7c3" name="a5685ba28d9855504dffcfd0e3cbf3732adf79354492c5ac7053d6c3d32610b7c3"></a>ITEM_TEMP_BONUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5685ba28d9855504dffcfd0e3cbf3732af45f690fad021ef5d13e2d24491fab37" name="a5685ba28d9855504dffcfd0e3cbf3732af45f690fad021ef5d13e2d24491fab37"></a>ITEM_AURA_EFFECT_RED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5685ba28d9855504dffcfd0e3cbf3732a7395b7e5c25611497699878622082c4f" name="a5685ba28d9855504dffcfd0e3cbf3732a7395b7e5c25611497699878622082c4f"></a>ITEM_AURA_EFFECT_BLUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5685ba28d9855504dffcfd0e3cbf3732a8170d06a9bfa476c8a9fe042677d898c" name="a5685ba28d9855504dffcfd0e3cbf3732a8170d06a9bfa476c8a9fe042677d898c"></a>ITEM_AURA_EFFECT_GREEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5685ba28d9855504dffcfd0e3cbf3732a5171d18dcd01b7da8b82db8c320e2472" name="a5685ba28d9855504dffcfd0e3cbf3732a5171d18dcd01b7da8b82db8c320e2472"></a>ITEM_AURA_EFFECT_PURPLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5685ba28d9855504dffcfd0e3cbf3732a948f583995a1834c22669fc3224bf677" name="a5685ba28d9855504dffcfd0e3cbf3732a948f583995a1834c22669fc3224bf677"></a>ITEM_ENCHANT_ANIMATION_MASK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5685ba28d9855504dffcfd0e3cbf3732a0bdfc5f5d3da6a73dd5a3b66582654a8" name="a5685ba28d9855504dffcfd0e3cbf3732a0bdfc5f5d3da6a73dd5a3b66582654a8"></a>ITEM_STOLEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5685ba28d9855504dffcfd0e3cbf3732a85354462199f81dc94c2ea61a9820d67" name="a5685ba28d9855504dffcfd0e3cbf3732a85354462199f81dc94c2ea61a9820d67"></a>ITEM_HARDENED&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aecfd8273ffb40a344ff784d6fad7a735" name="aecfd8273ffb40a344ff784d6fad7a735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecfd8273ffb40a344ff784d6fad7a735">&#9670;&#160;</a></span>allItemSlots()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a> &gt; allItemSlots </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2584,8 +2618,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a373ced6e6e8db1f1e3ae20abd8e636cb" name="a373ced6e6e8db1f1e3ae20abd8e636cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a373ced6e6e8db1f1e3ae20abd8e636cb">&#9670;&#160;</a></span>IsArmor()</h2>
+<a id="a308bd94f1aad65fce26e4314adaf2e20" name="a308bd94f1aad65fce26e4314adaf2e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a308bd94f1aad65fce26e4314adaf2e20">&#9670;&#160;</a></span>allLevel1Reagents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2594,7 +2628,135 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsArmor </td>
+          <td class="memname">std::initializer_list&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt; allLevel1Reagents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>List of lowest level (power=1) alchemical reagents. </dd></dl>
+
+</div>
+</div>
+<a id="ae0883c74c019b32dbc8f8f2ae6f7f6c1" name="ae0883c74c019b32dbc8f8f2ae6f7f6c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0883c74c019b32dbc8f8f2ae6f7f6c1">&#9670;&#160;</a></span>allRecipeScrolls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt; allRecipeScrolls </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64ac19c6295764c508f4440e19e67dde" name="a64ac19c6295764c508f4440e19e67dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ac19c6295764c508f4440e19e67dde">&#9670;&#160;</a></span>allRingSlots()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a> &gt; allRingSlots </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa59b07b45059372ddcc17304b21c22bc" name="aa59b07b45059372ddcc17304b21c22bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa59b07b45059372ddcc17304b21c22bc">&#9670;&#160;</a></span>allSpawnableArtifacts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt; allSpawnableArtifacts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Range of all artifacts and relics that can be randomly generated as loot (e.g. picked up from a dragon corpse). Note that not all artifacts can be generated this way, e.g. Hermes' Sandals can only be picked up from a Mega Dragon's corpse. </dd></dl>
+
+</div>
+</div>
+<a id="ad7ad2be2408897c7f5a079b5415fb223" name="ad7ad2be2408897c7f5a079b5415fb223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7ad2be2408897c7f5a079b5415fb223">&#9670;&#160;</a></span>allSpawnableItems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt; allSpawnableItems </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Range of all items that can be randomly generated as loot. Note that not all of the entries might actually be valid. </dd></dl>
+
+</div>
+</div>
+<a id="aa524ca60652dba0722f0efecc7cc41b4" name="aa524ca60652dba0722f0efecc7cc41b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa524ca60652dba0722f0efecc7cc41b4">&#9670;&#160;</a></span>isArmor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isArmor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2d">ITEM_EQUIP_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2617,8 +2779,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="accee2e31f7639686653da933662f73be" name="accee2e31f7639686653da933662f73be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accee2e31f7639686653da933662f73be">&#9670;&#160;</a></span>IsMessageScroll()</h2>
+<a id="af3ef90d6f6febcc9fcc205369c3834e7" name="af3ef90d6f6febcc9fcc205369c3834e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ef90d6f6febcc9fcc205369c3834e7">&#9670;&#160;</a></span>isArtifact()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2627,7 +2789,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsMessageScroll </td>
+          <td class="memname">bool isArtifact </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2643,8 +2805,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae25a25bf904bfae4ebd5befcc33e3854" name="ae25a25bf904bfae4ebd5befcc33e3854"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae25a25bf904bfae4ebd5befcc33e3854">&#9670;&#160;</a></span>IsPassiveEquipment()</h2>
+<a id="af812bcd86819291ad45e1b39d4cfbd7b" name="af812bcd86819291ad45e1b39d4cfbd7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af812bcd86819291ad45e1b39d4cfbd7b">&#9670;&#160;</a></span>isEnchantingPotion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2653,7 +2815,59 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsPassiveEquipment </td>
+          <td class="memname">bool isEnchantingPotion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c786e62a0dea227fef56c5a880ec18e" name="a3c786e62a0dea227fef56c5a880ec18e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c786e62a0dea227fef56c5a880ec18e">&#9670;&#160;</a></span>isMessageScroll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isMessageScroll </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad038c8d0ef8245b29876143d04aeca50" name="ad038c8d0ef8245b29876143d04aeca50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad038c8d0ef8245b29876143d04aeca50">&#9670;&#160;</a></span>isPassiveEquipment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPassiveEquipment </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2d">ITEM_EQUIP_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2676,8 +2890,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5816d4a7953ca896c189b558910b5244" name="a5816d4a7953ca896c189b558910b5244"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5816d4a7953ca896c189b558910b5244">&#9670;&#160;</a></span>IsPotion()</h2>
+<a id="ac0fe3f3361169ae5e00cb7504f040ae4" name="ac0fe3f3361169ae5e00cb7504f040ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0fe3f3361169ae5e00cb7504f040ae4">&#9670;&#160;</a></span>isPotion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2686,7 +2900,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsPotion </td>
+          <td class="memname">bool isPotion </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2702,8 +2916,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3123b3b2667b360deae5073d0eca3f71" name="a3123b3b2667b360deae5073d0eca3f71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3123b3b2667b360deae5073d0eca3f71">&#9670;&#160;</a></span>IsRandomItem()</h2>
+<a id="ad0fa51a0354ce6f51896313ba3d3a894" name="ad0fa51a0354ce6f51896313ba3d3a894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0fa51a0354ce6f51896313ba3d3a894">&#9670;&#160;</a></span>isRandomItem()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2712,7 +2926,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsRandomItem </td>
+          <td class="memname">bool isRandomItem </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2728,8 +2942,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a45b46209caf53e3f8bcf49e03c1652a0" name="a45b46209caf53e3f8bcf49e03c1652a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45b46209caf53e3f8bcf49e03c1652a0">&#9670;&#160;</a></span>IsRandomTreasureLevel()</h2>
+<a id="a8ccb0c0360c9e3fcfefca14681124b24" name="a8ccb0c0360c9e3fcfefca14681124b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ccb0c0360c9e3fcfefca14681124b24">&#9670;&#160;</a></span>isRandomTreasureLevel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2738,7 +2952,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsRandomTreasureLevel </td>
+          <td class="memname">bool isRandomTreasureLevel </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9c">ITEM_TREASURE_LEVEL</a>&#160;</td>
           <td class="paramname"><em>level</em></td><td>)</td>
@@ -2754,8 +2968,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a10d359f0497ee3de431e6df362f729b9" name="a10d359f0497ee3de431e6df362f729b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10d359f0497ee3de431e6df362f729b9">&#9670;&#160;</a></span>IsRecipe()</h2>
+<a id="abcb7b3de55f92f8615e6eb0dc41242e5" name="abcb7b3de55f92f8615e6eb0dc41242e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb7b3de55f92f8615e6eb0dc41242e5">&#9670;&#160;</a></span>isReagent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2764,7 +2978,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsRecipe </td>
+          <td class="memname">bool isReagent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2780,8 +2994,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a088a9a4f41b9f4508213e3df98ca5c28" name="a088a9a4f41b9f4508213e3df98ca5c28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a088a9a4f41b9f4508213e3df98ca5c28">&#9670;&#160;</a></span>IsRegular()</h2>
+<a id="a537865cfdb87cd12c843110c0e3276f5" name="a537865cfdb87cd12c843110c0e3276f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537865cfdb87cd12c843110c0e3276f5">&#9670;&#160;</a></span>isRecipe()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2790,7 +3004,33 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsRegular </td>
+          <td class="memname">bool isRecipe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4501fe5b9bf53af43da17ebe8c3005c" name="ab4501fe5b9bf53af43da17ebe8c3005c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4501fe5b9bf53af43da17ebe8c3005c">&#9670;&#160;</a></span>isRegular()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isRegular </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2815,8 +3055,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad93066aa6cc36ffe23d3465114a67970" name="ad93066aa6cc36ffe23d3465114a67970"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad93066aa6cc36ffe23d3465114a67970">&#9670;&#160;</a></span>IsSpawnableArtifact()</h2>
+<a id="ad0e80cdfb25bed361ae301aa5f9a1bc5" name="ad0e80cdfb25bed361ae301aa5f9a1bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0e80cdfb25bed361ae301aa5f9a1bc5">&#9670;&#160;</a></span>isSpawnableArtifact()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2825,7 +3065,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsSpawnableArtifact </td>
+          <td class="memname">bool isSpawnableArtifact </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2841,8 +3081,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aefbd861100f6d0f682fec531dab92f9f" name="aefbd861100f6d0f682fec531dab92f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefbd861100f6d0f682fec531dab92f9f">&#9670;&#160;</a></span>IsWand()</h2>
+<a id="a708d801884fb2052584b2b057d885d8c" name="a708d801884fb2052584b2b057d885d8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708d801884fb2052584b2b057d885d8c">&#9670;&#160;</a></span>isWand()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2851,7 +3091,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsWand </td>
+          <td class="memname">bool isWand </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2867,8 +3107,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acb78326919a640c726c85c38c5033ac0" name="acb78326919a640c726c85c38c5033ac0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb78326919a640c726c85c38c5033ac0">&#9670;&#160;</a></span>IsWeapon()</h2>
+<a id="a02882abc6fb039a61aa578c63fbf901f" name="a02882abc6fb039a61aa578c63fbf901f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02882abc6fb039a61aa578c63fbf901f">&#9670;&#160;</a></span>isWeapon()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2877,7 +3117,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsWeapon </td>
+          <td class="memname">bool isWeapon </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a6efba91e38f0848b5e0d1d4cc6011a2d">ITEM_EQUIP_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2900,8 +3140,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab21efc0cda5178acc18e8b50deefeb0f" name="ab21efc0cda5178acc18e8b50deefeb0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab21efc0cda5178acc18e8b50deefeb0f">&#9670;&#160;</a></span>Level1Reagents()</h2>
+<a id="ad0a51da692662c79a6607a5984583f10" name="ad0a51da692662c79a6607a5984583f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a51da692662c79a6607a5984583f10">&#9670;&#160;</a></span>potionEnchantment()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2910,9 +3150,10 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::initializer_list&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt; Level1Reagents </td>
+          <td class="memname"><a class="el" href="ItemEnums_8h.html#a32eb1d58cce67b93f07281e8a3464d19">ITEM_ENCHANTMENT</a> potionEnchantment </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>enchantingPotion</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2922,12 +3163,11 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>List of lowest level (power=1) alchemical reagents. </dd></dl>
 
 </div>
 </div>
-<a id="a540e45669646183436f137826e7539ea" name="a540e45669646183436f137826e7539ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a540e45669646183436f137826e7539ea">&#9670;&#160;</a></span>RandomItemTreasureLevel()</h2>
+<a id="a42d0eb1e97725dee4b07d1433aec576b" name="a42d0eb1e97725dee4b07d1433aec576b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d0eb1e97725dee4b07d1433aec576b">&#9670;&#160;</a></span>randomItemTreasureLevel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2936,7 +3176,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9c">ITEM_TREASURE_LEVEL</a> RandomItemTreasureLevel </td>
+          <td class="memname"><a class="el" href="ItemEnums_8h.html#ad20c3ee7b5967d80cee8e0ec3e061a9c">ITEM_TREASURE_LEVEL</a> randomItemTreasureLevel </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -2952,8 +3192,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab653e3911f809fef66bffe5873cc277c" name="ab653e3911f809fef66bffe5873cc277c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab653e3911f809fef66bffe5873cc277c">&#9670;&#160;</a></span>RecipeScrolls()</h2>
+<a id="a7e86d70a5e389ba9adb84568b07c1c6b" name="a7e86d70a5e389ba9adb84568b07c1c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e86d70a5e389ba9adb84568b07c1c6b">&#9670;&#160;</a></span>ringSlot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2962,32 +3202,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt; RecipeScrolls </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a07cdb10f484a6d1b62c66f7a06656d8c" name="a07cdb10f484a6d1b62c66f7a06656d8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07cdb10f484a6d1b62c66f7a06656d8c">&#9670;&#160;</a></span>RingSlot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a> RingSlot </td>
+          <td class="memname"><a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a> ringSlot </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -3003,8 +3218,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5d59af3eaebaba842ba302895beb7868" name="a5d59af3eaebaba842ba302895beb7868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d59af3eaebaba842ba302895beb7868">&#9670;&#160;</a></span>RingSlots()</h2>
+<a id="a83fdf36d5238c1e054edd4a7166c99e6" name="a83fdf36d5238c1e054edd4a7166c99e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83fdf36d5238c1e054edd4a7166c99e6">&#9670;&#160;</a></span>spellbooksOfSchool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3013,10 +3228,21 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a0d39a5522e687048169a274163e6e2a6">ITEM_SLOT</a> &gt; RingSlots </td>
+          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt; spellbooksOfSchool </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a55231e9660ce1c5b6f7613a3f9d66891">DAMAGE_TYPE</a>&#160;</td>
+          <td class="paramname"><em>damage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2a">CharacterSkillMastery</a>&#160;</td>
+          <td class="paramname"><em>maxMastery</em> = <code><a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2aa3bf2aa76560f36066814a5e95692838e">CHARACTER_SKILL_MASTERY_GRANDMASTER</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -3028,8 +3254,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a95c0617df3ec5a654df8124c8418625e" name="a95c0617df3ec5a654df8124c8418625e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95c0617df3ec5a654df8124c8418625e">&#9670;&#160;</a></span>SpawnableArtifacts()</h2>
+<a id="ab8466bb12236601205d9a6736990db52" name="ab8466bb12236601205d9a6736990db52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8466bb12236601205d9a6736990db52">&#9670;&#160;</a></span>spellCountForMastery()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3038,9 +3264,10 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt; SpawnableArtifacts </td>
+          <td class="memname">int spellCountForMastery </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2a">CharacterSkillMastery</a>&#160;</td>
+          <td class="paramname"><em>maxMastery</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3050,33 +3277,6 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Range of all artifacts and relics that can be randomly generated as loot (e.g. picked up from a dragon corpse). Note that not all artifacts can be generated this way, e.g. Hermes' Sandals can only be picked up from a Mega Dragon's corpse. </dd></dl>
-
-</div>
-</div>
-<a id="ab6eb674f4327d1a09bfbbb696ee87c9f" name="ab6eb674f4327d1a09bfbbb696ee87c9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6eb674f4327d1a09bfbbb696ee87c9f">&#9670;&#160;</a></span>SpawnableItems()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSegment.html">Segment</a>&lt; <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> &gt; SpawnableItems </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Range of all items that can be randomly generated as loot. Note that not all of the entries might actually be valid. </dd></dl>
 
 </div>
 </div>

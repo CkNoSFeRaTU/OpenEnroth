@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/GUI/GUIButton.cpp File Reference</title>
+<title>OpenEnroth: src/GUI/GUIButton.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -74,7 +74,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">GUIButton.cpp File Reference</div></div>
 </div><!--header-->
@@ -85,20 +84,10 @@ $(function() {
 <code>#include &quot;<a class="el" href="EngineGlobals_8h.html">Engine/EngineGlobals.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LOD_8h.html">Engine/LOD.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Localization_8h.html">Engine/Localization.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IRender_8h.html">Engine/Graphics/IRender.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIFont_8h.html">GUI/GUIFont.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIWindow_8h.html">GUI/GUIWindow.h</a>&quot;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a92154ceae324134007b0503b5d78753f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a92154ceae324134007b0503b5d78753f">CreateShopDialogueButtonAtRow</a> (int row, <a class="el" href="GUIDialogues_8h.html#afcd7885d9ec6583fa04d9e8f0f641d00">DIALOGUE_TYPE</a> type)</td></tr>
-<tr class="separator:a92154ceae324134007b0503b5d78753f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1be680d09c7856adcc5a118749b5b22c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a1be680d09c7856adcc5a118749b5b22c">ReleaseAwardsScrollBar</a> ()</td></tr>
-<tr class="separator:a1be680d09c7856adcc5a118749b5b22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cf6586950b3784174a42f869060eb8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a9cf6586950b3784174a42f869060eb8f">CreateAwardsScrollBar</a> ()</td></tr>
-<tr class="separator:a9cf6586950b3784174a42f869060eb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58afdf15eae2bb542d066aca66c30691"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a58afdf15eae2bb542d066aca66c30691">UI_CreateEndConversationButton</a> ()</td></tr>
-<tr class="separator:a58afdf15eae2bb542d066aca66c30691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a516b6e7d58cfc4cd62c36f52bcf1b2de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a516b6e7d58cfc4cd62c36f52bcf1b2de">pBtn_CloseBook</a></td></tr>
@@ -193,8 +182,8 @@ Variables</h2></td></tr>
 <tr class="separator:a252377932940d5140aa360f0963224e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33e713f2ed579119ccffb9aa37ef4481"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a33e713f2ed579119ccffb9aa37ef4481">pBtn_Down</a></td></tr>
 <tr class="separator:a33e713f2ed579119ccffb9aa37ef4481"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae18fd766b01349bfb49c8a6dc0f95904"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#ae18fd766b01349bfb49c8a6dc0f95904">ptr_507BA4</a></td></tr>
-<tr class="separator:ae18fd766b01349bfb49c8a6dc0f95904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa14b22142f91cba0a8e2af3df533938"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#afa14b22142f91cba0a8e2af3df533938">pBtn_Scroll</a></td></tr>
+<tr class="separator:afa14b22142f91cba0a8e2af3df533938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b864b8f9fe322548f237c409242ad6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a8b864b8f9fe322548f237c409242ad6d">pBtn_Resume</a></td></tr>
 <tr class="separator:a8b864b8f9fe322548f237c409242ad6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f4544a0c9270dfb2019a712e723578f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a6f4544a0c9270dfb2019a712e723578f">pBtn_QuitGame</a></td></tr>
@@ -211,6 +200,10 @@ Variables</h2></td></tr>
 <tr class="separator:a89191c555a8e151398d93da25ee97c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab66d8cae7ce0354a1cc44a304385201d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#ab66d8cae7ce0354a1cc44a304385201d">pBtn_SliderLeft</a></td></tr>
 <tr class="separator:ab66d8cae7ce0354a1cc44a304385201d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb35f37fb1ea74721b29afe8e6b6b49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#acfb35f37fb1ea74721b29afe8e6b6b49">pBtn_ZoomOut</a></td></tr>
+<tr class="separator:acfb35f37fb1ea74721b29afe8e6b6b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f3697609449cc1e28e2a33620c0b25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a82f3697609449cc1e28e2a33620c0b25">pBtn_ZoomIn</a></td></tr>
+<tr class="separator:a82f3697609449cc1e28e2a33620c0b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a476725d2aebac056c33865bb61b34828"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a476725d2aebac056c33865bb61b34828">pBtnDownArrow</a></td></tr>
 <tr class="separator:a476725d2aebac056c33865bb61b34828"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa41fcc3efe123004c386d1d208c1fe15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGUIButton.html">GUIButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#aa41fcc3efe123004c386d1d208c1fe15">pBtnArrowUp</a></td></tr>
@@ -228,86 +221,6 @@ Variables</h2></td></tr>
 <tr class="memitem:a097659cdf1b3ddca0a156931e2fd0227"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="classGUIButton.html">GUIButton</a> *, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GUIButton_8cpp.html#a097659cdf1b3ddca0a156931e2fd0227">pCreationUI_BtnPressRight</a></td></tr>
 <tr class="separator:a097659cdf1b3ddca0a156931e2fd0227"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a9cf6586950b3784174a42f869060eb8f" name="a9cf6586950b3784174a42f869060eb8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cf6586950b3784174a42f869060eb8f">&#9670;&#160;</a></span>CreateAwardsScrollBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CreateAwardsScrollBar </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a92154ceae324134007b0503b5d78753f" name="a92154ceae324134007b0503b5d78753f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92154ceae324134007b0503b5d78753f">&#9670;&#160;</a></span>CreateShopDialogueButtonAtRow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CreateShopDialogueButtonAtRow </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>row</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="GUIDialogues_8h.html#afcd7885d9ec6583fa04d9e8f0f641d00">DIALOGUE_TYPE</a>&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1be680d09c7856adcc5a118749b5b22c" name="a1be680d09c7856adcc5a118749b5b22c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1be680d09c7856adcc5a118749b5b22c">&#9670;&#160;</a></span>ReleaseAwardsScrollBar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ReleaseAwardsScrollBar </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a58afdf15eae2bb542d066aca66c30691" name="a58afdf15eae2bb542d066aca66c30691"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58afdf15eae2bb542d066aca66c30691">&#9670;&#160;</a></span>UI_CreateEndConversationButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UI_CreateEndConversationButton </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="a27f623a95666b9c69d0fdade5ad8e2f8" name="a27f623a95666b9c69d0fdade5ad8e2f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27f623a95666b9c69d0fdade5ad8e2f8">&#9670;&#160;</a></span>pBtn_Autonotes</h2>
@@ -715,6 +628,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="afa14b22142f91cba0a8e2af3df533938" name="afa14b22142f91cba0a8e2af3df533938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa14b22142f91cba0a8e2af3df533938">&#9670;&#160;</a></span>pBtn_Scroll</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGUIButton.html">GUIButton</a>* pBtn_Scroll</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab66d8cae7ce0354a1cc44a304385201d" name="ab66d8cae7ce0354a1cc44a304385201d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab66d8cae7ce0354a1cc44a304385201d">&#9670;&#160;</a></span>pBtn_SliderLeft</h2>
 
@@ -765,6 +692,34 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classGUIButton.html">GUIButton</a>* pBtn_YES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82f3697609449cc1e28e2a33620c0b25" name="a82f3697609449cc1e28e2a33620c0b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f3697609449cc1e28e2a33620c0b25">&#9670;&#160;</a></span>pBtn_ZoomIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGUIButton.html">GUIButton</a>* pBtn_ZoomIn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfb35f37fb1ea74721b29afe8e6b6b49" name="acfb35f37fb1ea74721b29afe8e6b6b49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb35f37fb1ea74721b29afe8e6b6b49">&#9670;&#160;</a></span>pBtn_ZoomOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGUIButton.html">GUIButton</a>* pBtn_ZoomOut</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1171,20 +1126,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classGUIButton.html">GUIButton</a>* pPlayerCreationUI_BtnReset</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae18fd766b01349bfb49c8a6dc0f95904" name="ae18fd766b01349bfb49c8a6dc0f95904"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae18fd766b01349bfb49c8a6dc0f95904">&#9670;&#160;</a></span>ptr_507BA4</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classGUIButton.html">GUIButton</a>* ptr_507BA4</td>
         </tr>
       </table>
 </div><div class="memdoc">

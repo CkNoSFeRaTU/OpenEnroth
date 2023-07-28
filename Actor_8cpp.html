@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Engine/Objects/Actor.cpp File Reference</title>
+<title>OpenEnroth: src/Engine/Objects/Actor.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -74,7 +74,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">Actor.cpp File Reference</div></div>
@@ -85,79 +84,72 @@ $(function() {
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="Awards_8h.html">Engine/Awards.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Engine_8h.html">Engine/Engine.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Camera_8h.html">Engine/Graphics/Camera.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="DecalBuilder_8h.html">Engine/Graphics/DecalBuilder.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Decoration_8h.html">Engine/Graphics/Level/Decoration.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Outdoor_8h.html">Engine/Graphics/Outdoor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Indoor_8h.html">Engine/Graphics/Indoor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IRender_8h.html">Engine/Graphics/IRender.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Overlays_8h.html">Engine/Graphics/Overlays.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="PaletteManager_8h.html">Engine/Graphics/PaletteManager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Sprites_8h.html">Engine/Graphics/Sprites.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Viewport_8h.html">Engine/Graphics/Viewport.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Vis_8h.html">Engine/Graphics/Vis.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Localization_8h.html">Engine/Localization.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LOD_8h.html">Engine/LOD.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ItemTable_8h.html">Engine/Objects/ItemTable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ObjectList_8h.html">Engine/Objects/ObjectList.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SpriteObject_8h.html">Engine/Objects/SpriteObject.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="OurMath_8h.html">Engine/OurMath.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Party_8h.html">Engine/Party.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="LegacyImages_8h.html">Engine/Serialization/LegacyImages.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SpellFxRenderer_8h.html">Engine/SpellFxRenderer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="CastSpellInfo_8h.html">Engine/Spells/CastSpellInfo.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="stru298_8h.html">Engine/stru298.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Spells_8h.html">Engine/Spells/Spells.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AttackList_8h.html">Engine/AttackList.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ItemTable_8h.html">Engine/Tables/ItemTable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="FactionTable_8h.html">Engine/Tables/FactionTable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AwardTable_8h.html">Engine/Tables/AwardTable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Time_8h.html">Engine/Time.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TurnEngine_8h.html">Engine/TurnEngine/TurnEngine.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MapInfo_8h.html">Engine/MapInfo.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIWindow_8h.html">GUI/GUIWindow.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="UIGame_8h.html">GUI/UI/UIGame.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="UIStatusBar_8h.html">GUI/UI/UIStatusBar.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="AudioPlayer_8h.html">Media/Audio/AudioPlayer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Random_8h.html">Library/Random/Random.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Logger_8h.html">Library/Logger/Logger.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TrigLut_8h.html">Utility/Math/TrigLut.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Random_8h.html">Utility/Random/Random.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FixPoint_8h.html">Utility/Math/FixPoint.h</a>&quot;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a8df51996eaa93ee226542e4ebb9d6f14"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a8df51996eaa93ee226542e4ebb9d6f14">EngineIoc</a> = <a class="el" href="classEngine___1_1IocContainer.html">Engine_::IocContainer</a></td></tr>
-<tr class="separator:a8df51996eaa93ee226542e4ebb9d6f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adc78161bd1155cbb06e33705c9ca286d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#adc78161bd1155cbb06e33705c9ca286d">ShouldMonsterPlayAttackAnim</a> (signed int spell_id)</td></tr>
-<tr class="separator:adc78161bd1155cbb06e33705c9ca286d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1cd92de6655f8d76309c51732fe416b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#aa1cd92de6655f8d76309c51732fe416b">sub_448518_npc_set_item</a> (int npc, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> item, int a3)</td></tr>
-<tr class="separator:aa1cd92de6655f8d76309c51732fe416b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34e8d30f2a18b20999b6cad99ee56c27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a34e8d30f2a18b20999b6cad99ee56c27">IsActorAlive</a> (unsigned int uType, unsigned int uParam, unsigned int uNumAlive)</td></tr>
-<tr class="separator:a34e8d30f2a18b20999b6cad99ee56c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a856df71e13fa0a8a9cc73caf88f1b038"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a856df71e13fa0a8a9cc73caf88f1b038">ShouldMonsterPlayAttackAnim</a> (<a class="el" href="SpellEnums_8h.html#a6ac7ece38acd196bf750bc353e00d088">SPELL_TYPE</a> spell_id)</td></tr>
+<tr class="separator:a856df71e13fa0a8a9cc73caf88f1b038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1de5d39efd4c35ab1d72516f79bb945"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#ac1de5d39efd4c35ab1d72516f79bb945">npcSetItem</a> (int npc, <a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a> item, int a3)</td></tr>
+<tr class="separator:ac1de5d39efd4c35ab1d72516f79bb945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82db211ce9edf640d79405a96c1a191f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a82db211ce9edf640d79405a96c1a191f">CheckActors_proximity</a> ()</td></tr>
 <tr class="separator:a82db211ce9edf640d79405a96c1a191f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af08f3d2ed82a06ea6acaba75724d03dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#af08f3d2ed82a06ea6acaba75724d03dd">StatusBarItemFound</a> (int num_gold_found, const char *item_unidentified_name)</td></tr>
-<tr class="separator:af08f3d2ed82a06ea6acaba75724d03dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a351d18506b9d30cf48a805b30dc0ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a8a351d18506b9d30cf48a805b30dc0ed">ToggleActorGroupFlag</a> (unsigned int uGroupID, <a class="el" href="ActorEnums_8h.html#a0449589ea79a89a7e564d1cf1b0a9b5f">ActorAttribute</a> uFlag, bool bValue)</td></tr>
-<tr class="separator:a8a351d18506b9d30cf48a805b30dc0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad98ef34ccd5beb3aa2c086853f73b9bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#ad98ef34ccd5beb3aa2c086853f73b9bc">Detect_Between_Objects</a> (unsigned int uObjID, unsigned int uObj2ID)</td></tr>
-<tr class="separator:ad98ef34ccd5beb3aa2c086853f73b9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57b7705f43a1e465a9aef921d9d68b05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a57b7705f43a1e465a9aef921d9d68b05">SpawnActor</a> (unsigned int uMonsterID)</td></tr>
-<tr class="separator:a57b7705f43a1e465a9aef921d9d68b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a722b2ecccd947cc76c8a7fa1151bd41d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a722b2ecccd947cc76c8a7fa1151bd41d">Spawn_Light_Elemental</a> (int spell_power, <a class="el" href="PlayerEnums_8h.html#ae7fdd356d1b4ddbdd59bcba036e6f942">PLAYER_SKILL_MASTERY</a> caster_skill_mastery, int duration_game_seconds)</td></tr>
-<tr class="separator:a722b2ecccd947cc76c8a7fa1151bd41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7840a11e16fb5fb62c7d2926a5eb76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#aad7840a11e16fb5fb62c7d2926a5eb76">StatusBarItemFound</a> (int num_gold_found, const std::string &amp;item_unidentified_name)</td></tr>
+<tr class="separator:aad7840a11e16fb5fb62c7d2926a5eb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88921894f5038c49be5897f9d61ba47b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a88921894f5038c49be5897f9d61ba47b">toggleActorGroupFlag</a> (unsigned int uGroupID, <a class="el" href="ActorEnums_8h.html#a0449589ea79a89a7e564d1cf1b0a9b5f">ActorAttribute</a> uFlag, bool bValue)</td></tr>
+<tr class="separator:a88921894f5038c49be5897f9d61ba47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cbd5c9f5e2b9c934bac6d2e7ef3124f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a0cbd5c9f5e2b9c934bac6d2e7ef3124f">Detect_Between_Objects</a> (<a class="el" href="classPid.html">Pid</a> uObjID, <a class="el" href="classPid.html">Pid</a> uObj2ID)</td></tr>
+<tr class="separator:a0cbd5c9f5e2b9c934bac6d2e7ef3124f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3c0acf25d60543a83a32525ebc04bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#aed3c0acf25d60543a83a32525ebc04bb">Spawn_Light_Elemental</a> (int spell_power, <a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2a">CharacterSkillMastery</a> caster_skill_mastery, int duration_game_seconds)</td></tr>
+<tr class="separator:aed3c0acf25d60543a83a32525ebc04bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fc426036d1f21ce2be74ada5511f840"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a1fc426036d1f21ce2be74ada5511f840">SpawnEncounter</a> (<a class="el" href="structMapInfo.html">MapInfo</a> *pMapInfo, <a class="el" href="structSpawnPoint.html">SpawnPoint</a> *spawn, int a3, int a4, int a5)</td></tr>
 <tr class="separator:a1fc426036d1f21ce2be74ada5511f840"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9d9c1bc5e3c38f0827c69299622b850"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#aa9d9c1bc5e3c38f0827c69299622b850">area_of_effect__damage_evaluate</a> ()</td></tr>
-<tr class="separator:aa9d9c1bc5e3c38f0827c69299622b850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522877adf494c0d2e73b4c4c0f100028"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a522877adf494c0d2e73b4c4c0f100028">evaluateAoeDamage</a> ()</td></tr>
+<tr class="separator:a522877adf494c0d2e73b4c4c0f100028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56a1c5009cf33ef6363ecf94804686c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a56a1c5009cf33ef6363ecf94804686c4">sub_43AE12</a> (signed int a1)</td></tr>
 <tr class="separator:a56a1c5009cf33ef6363ecf94804686c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a812345669ace3abe38c75ec103db7ab5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a812345669ace3abe38c75ec103db7ab5">ItemDamageFromActor</a> (unsigned int uObjID, unsigned int uActorID, <a class="el" href="Vec_8h.html#adf6e1d7d066bb09da957cc89f2b3ceb2">Vec3i</a> *pVelocity)</td></tr>
-<tr class="separator:a812345669ace3abe38c75ec103db7ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a3499483c420189193183f9bb46a4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#ae7a3499483c420189193183f9bb46a4a">ItemDamageFromActor</a> (<a class="el" href="classPid.html">Pid</a> uObjID, unsigned int uActorID, <a class="el" href="Vec_8h.html#adf6e1d7d066bb09da957cc89f2b3ceb2">Vec3i</a> *pVelocity)</td></tr>
+<tr class="separator:ae7a3499483c420189193183f9bb46a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11f0e5830746921e41b31a47ea54fe69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classActor.html">Actor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a11f0e5830746921e41b31a47ea54fe69">AllocateActor</a> (bool appendOnly)</td></tr>
 <tr class="separator:a11f0e5830746921e41b31a47ea54fe69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4be5eddf8db91559b1d06e3390387cc6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structDecalBuilder.html">DecalBuilder</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a4be5eddf8db91559b1d06e3390387cc6">decal_builder</a> = EngineIoc::ResolveDecalBuilder()</td></tr>
+<tr class="memitem:a4be5eddf8db91559b1d06e3390387cc6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structDecalBuilder.html">DecalBuilder</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a4be5eddf8db91559b1d06e3390387cc6">decal_builder</a> = <a class="el" href="classEngineIocContainer.html#aa98cfa56243c2eb114b8917c4de6d2e6">EngineIocContainer::ResolveDecalBuilder</a>()</td></tr>
 <tr class="separator:a4be5eddf8db91559b1d06e3390387cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad751f48ec25997384265298b15224f31"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structSpellFxRenderer.html">SpellFxRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a> = EngineIoc::ResolveSpellFxRenderer()</td></tr>
+<tr class="memitem:ad751f48ec25997384265298b15224f31"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structSpellFxRenderer.html">SpellFxRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#ad751f48ec25997384265298b15224f31">spell_fx_renderer</a> = <a class="el" href="classEngineIocContainer.html#a691e969b21ea43ae5a5f013015507bf2">EngineIocContainer::ResolveSpellFxRenderer</a>()</td></tr>
 <tr class="separator:ad751f48ec25997384265298b15224f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fe394cffecd5254e16a215e32b31039"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classActor.html">Actor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a6fe394cffecd5254e16a215e32b31039">pActors</a></td></tr>
 <tr class="separator:a6fe394cffecd5254e16a215e32b31039"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,22 +157,9 @@ Variables</h2></td></tr>
 <tr class="separator:a1e9db421e817e41cc0c9363376c4b037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a322cec2b652af3f7d0ed42a5b3fa2edb"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="MM7_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, 5 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a322cec2b652af3f7d0ed42a5b3fa2edb">_4DF380_hostilityRanges</a> = {0, 1024, 2560, 5120, 10240}</td></tr>
 <tr class="separator:a322cec2b652af3f7d0ed42a5b3fa2edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770c130797a0a50a7ef18fdc4869a9b2"><td class="memItemLeft" align="right" valign="top">std::array&lt; int16_t, 11 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Actor_8cpp.html#a770c130797a0a50a7ef18fdc4869a9b2">word_4E8152</a> = {{0, 0, 0, 90, 8, 2, 70, 20, 10, 50, 30}}</td></tr>
+<tr class="separator:a770c130797a0a50a7ef18fdc4869a9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a8df51996eaa93ee226542e4ebb9d6f14" name="a8df51996eaa93ee226542e4ebb9d6f14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8df51996eaa93ee226542e4ebb9d6f14">&#9670;&#160;</a></span>EngineIoc</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="Game_8h.html#a8df51996eaa93ee226542e4ebb9d6f14">EngineIoc</a> =  <a class="el" href="classEngine___1_1IocContainer.html">Engine_::IocContainer</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a11f0e5830746921e41b31a47ea54fe69" name="a11f0e5830746921e41b31a47ea54fe69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11f0e5830746921e41b31a47ea54fe69">&#9670;&#160;</a></span>AllocateActor()</h2>
@@ -208,23 +187,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa9d9c1bc5e3c38f0827c69299622b850" name="aa9d9c1bc5e3c38f0827c69299622b850"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9d9c1bc5e3c38f0827c69299622b850">&#9670;&#160;</a></span>area_of_effect__damage_evaluate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void area_of_effect__damage_evaluate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a82db211ce9edf640d79405a96c1a191f" name="a82db211ce9edf640d79405a96c1a191f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82db211ce9edf640d79405a96c1a191f">&#9670;&#160;</a></span>CheckActors_proximity()</h2>
 
@@ -242,8 +204,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad98ef34ccd5beb3aa2c086853f73b9bc" name="ad98ef34ccd5beb3aa2c086853f73b9bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad98ef34ccd5beb3aa2c086853f73b9bc">&#9670;&#160;</a></span>Detect_Between_Objects()</h2>
+<a id="a0cbd5c9f5e2b9c934bac6d2e7ef3124f" name="a0cbd5c9f5e2b9c934bac6d2e7ef3124f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cbd5c9f5e2b9c934bac6d2e7ef3124f">&#9670;&#160;</a></span>Detect_Between_Objects()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,13 +213,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">bool Detect_Between_Objects </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
           <td class="paramname"><em>uObjID</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
           <td class="paramname"><em>uObj2ID</em>&#160;</td>
         </tr>
         <tr>
@@ -270,42 +232,26 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a34e8d30f2a18b20999b6cad99ee56c27" name="a34e8d30f2a18b20999b6cad99ee56c27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34e8d30f2a18b20999b6cad99ee56c27">&#9670;&#160;</a></span>IsActorAlive()</h2>
+<a id="a522877adf494c0d2e73b4c4c0f100028" name="a522877adf494c0d2e73b4c4c0f100028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a522877adf494c0d2e73b4c4c0f100028">&#9670;&#160;</a></span>evaluateAoeDamage()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int IsActorAlive </td>
+          <td class="memname">void evaluateAoeDamage </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>uType</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>uParam</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>uNumAlive</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x438F8F </dd></dl>
 
 </div>
 </div>
-<a id="a812345669ace3abe38c75ec103db7ab5" name="a812345669ace3abe38c75ec103db7ab5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a812345669ace3abe38c75ec103db7ab5">&#9670;&#160;</a></span>ItemDamageFromActor()</h2>
+<a id="ae7a3499483c420189193183f9bb46a4a" name="ae7a3499483c420189193183f9bb46a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a3499483c420189193183f9bb46a4a">&#9670;&#160;</a></span>ItemDamageFromActor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,7 +259,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void ItemDamageFromActor </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
           <td class="paramname"><em>uObjID</em>, </td>
         </tr>
         <tr>
@@ -338,8 +284,43 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="adc78161bd1155cbb06e33705c9ca286d" name="adc78161bd1155cbb06e33705c9ca286d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc78161bd1155cbb06e33705c9ca286d">&#9670;&#160;</a></span>ShouldMonsterPlayAttackAnim()</h2>
+<a id="ac1de5d39efd4c35ab1d72516f79bb945" name="ac1de5d39efd4c35ab1d72516f79bb945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1de5d39efd4c35ab1d72516f79bb945">&#9670;&#160;</a></span>npcSetItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void npcSetItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>npc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x448518 </dd></dl>
+
+</div>
+</div>
+<a id="a856df71e13fa0a8a9cc73caf88f1b038" name="a856df71e13fa0a8a9cc73caf88f1b038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a856df71e13fa0a8a9cc73caf88f1b038">&#9670;&#160;</a></span>ShouldMonsterPlayAttackAnim()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -347,7 +328,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">bool ShouldMonsterPlayAttackAnim </td>
           <td>(</td>
-          <td class="paramtype">signed int&#160;</td>
+          <td class="paramtype"><a class="el" href="SpellEnums_8h.html#a6ac7ece38acd196bf750bc353e00d088">SPELL_TYPE</a>&#160;</td>
           <td class="paramname"><em>spell_id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -356,8 +337,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a722b2ecccd947cc76c8a7fa1151bd41d" name="a722b2ecccd947cc76c8a7fa1151bd41d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a722b2ecccd947cc76c8a7fa1151bd41d">&#9670;&#160;</a></span>Spawn_Light_Elemental()</h2>
+<a id="aed3c0acf25d60543a83a32525ebc04bb" name="aed3c0acf25d60543a83a32525ebc04bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3c0acf25d60543a83a32525ebc04bb">&#9670;&#160;</a></span>Spawn_Light_Elemental()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -371,7 +352,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="PlayerEnums_8h.html#ae7fdd356d1b4ddbdd59bcba036e6f942">PLAYER_SKILL_MASTERY</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="CharacterEnums_8h.html#acabc944d4fe41d7186df3033b0607d2a">CharacterSkillMastery</a>&#160;</td>
           <td class="paramname"><em>caster_skill_mastery</em>, </td>
         </tr>
         <tr>
@@ -384,24 +365,6 @@ Variables</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a57b7705f43a1e465a9aef921d9d68b05" name="a57b7705f43a1e465a9aef921d9d68b05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57b7705f43a1e465a9aef921d9d68b05">&#9670;&#160;</a></span>SpawnActor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SpawnActor </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>uMonsterID</em></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -454,8 +417,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af08f3d2ed82a06ea6acaba75724d03dd" name="af08f3d2ed82a06ea6acaba75724d03dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af08f3d2ed82a06ea6acaba75724d03dd">&#9670;&#160;</a></span>StatusBarItemFound()</h2>
+<a id="aad7840a11e16fb5fb62c7d2926a5eb76" name="aad7840a11e16fb5fb62c7d2926a5eb76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7840a11e16fb5fb62c7d2926a5eb76">&#9670;&#160;</a></span>StatusBarItemFound()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -469,7 +432,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>item_unidentified_name</em>&#160;</td>
         </tr>
         <tr>
@@ -500,48 +463,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa1cd92de6655f8d76309c51732fe416b" name="aa1cd92de6655f8d76309c51732fe416b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1cd92de6655f8d76309c51732fe416b">&#9670;&#160;</a></span>sub_448518_npc_set_item()</h2>
+<a id="a88921894f5038c49be5897f9d61ba47b" name="a88921894f5038c49be5897f9d61ba47b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88921894f5038c49be5897f9d61ba47b">&#9670;&#160;</a></span>toggleActorGroupFlag()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sub_448518_npc_set_item </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>npc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ItemEnums_8h.html#a3423a9b7221dd99ce926bcad62ae96a5">ITEM_TYPE</a>&#160;</td>
-          <td class="paramname"><em>item</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a3</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8a351d18506b9d30cf48a805b30dc0ed" name="a8a351d18506b9d30cf48a805b30dc0ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a351d18506b9d30cf48a805b30dc0ed">&#9670;&#160;</a></span>ToggleActorGroupFlag()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ToggleActorGroupFlag </td>
+          <td class="memname">void toggleActorGroupFlag </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>uGroupID</em>, </td>
@@ -565,6 +494,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x448A98 </dd></dl>
 
 </div>
 </div>
@@ -593,7 +523,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDecalBuilder.html">DecalBuilder</a>* decal_builder = EngineIoc::ResolveDecalBuilder()</td>
+          <td class="memname"><a class="el" href="structDecalBuilder.html">DecalBuilder</a>* decal_builder = <a class="el" href="classEngineIocContainer.html#aa98cfa56243c2eb114b8917c4de6d2e6">EngineIocContainer::ResolveDecalBuilder</a>()</td>
         </tr>
       </table>
   </td>
@@ -629,7 +559,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structSpellFxRenderer.html">SpellFxRenderer</a>* spell_fx_renderer = EngineIoc::ResolveSpellFxRenderer()</td>
+          <td class="memname"><a class="el" href="structSpellFxRenderer.html">SpellFxRenderer</a>* spell_fx_renderer = <a class="el" href="classEngineIocContainer.html#a691e969b21ea43ae5a5f013015507bf2">EngineIocContainer::ResolveSpellFxRenderer</a>()</td>
         </tr>
       </table>
   </td>
@@ -649,6 +579,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structstru319.html">stru319</a> stru_50C198</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a770c130797a0a50a7ef18fdc4869a9b2" name="a770c130797a0a50a7ef18fdc4869a9b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a770c130797a0a50a7ef18fdc4869a9b2">&#9670;&#160;</a></span>word_4E8152</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;int16_t, 11&gt; word_4E8152 = {{0, 0, 0, 90, 8, 2, 70, 20, 10, 50, 30}}</td>
         </tr>
       </table>
 </div><div class="memdoc">

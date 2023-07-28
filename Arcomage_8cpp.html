@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Arcomage/Arcomage.cpp File Reference</title>
+<title>OpenEnroth: src/Arcomage/Arcomage.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -82,22 +82,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="Arcomage_8h.html">Arcomage/Arcomage.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Awards_8h.html">Engine/Awards.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Engine_8h.html">Engine/Engine.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="EngineGlobals_8h.html">Engine/EngineGlobals.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="IRender_8h.html">Engine/Graphics/IRender.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Viewport_8h.html">Engine/Graphics/Viewport.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ImageLoader_8h.html">Engine/Graphics/ImageLoader.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Engine_2Graphics_2Image_8h.html">Engine/Graphics/Image.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Localization_8h.html">Engine/Localization.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Party_8h.html">Engine/Party.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Time_8h.html">Engine/Time.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AwardTable_8h.html">Engine/Tables/AwardTable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AssetsManager_8h.html">Engine/AssetsManager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIFont_8h.html">GUI/GUIFont.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIWindow_8h.html">GUI/GUIWindow.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="UIHouses_8h.html">GUI/UI/UIHouses.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="AudioPlayer_8h.html">Media/Audio/AudioPlayer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="MediaPlayer_8h.html">Media/MediaPlayer.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="String_8h.html">Utility/String.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Random_8h.html">Utility/Random/Random.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Random_8h.html">Library/Random/Random.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -185,10 +185,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2d1b32dd8b02b183f7e49d5e19061e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd1d9b9cff02426ea89dc75c412901be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Arcomage_8cpp.html#afd1d9b9cff02426ea89dc75c412901be">am_DrawText</a> (const std::string &amp;str, <a class="el" href="Point_8h.html#a8b0ce454185fa95a760b07d84d3decb4">Pointi</a> *pXY)</td></tr>
 <tr class="separator:afd1d9b9cff02426ea89dc75c412901be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee85eaf8e1ca54240b4c3035525d8577"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Arcomage_8cpp.html#aee85eaf8e1ca54240b4c3035525d8577">DrawRect</a> (<a class="el" href="Rect_8h.html#a32073cc1967b01302be5d39e09079649">Recti</a> *pRect, uint16_t uColor, char bSolidFill)</td></tr>
-<tr class="separator:aee85eaf8e1ca54240b4c3035525d8577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16d9ea87fd2b8843a00e28d1014f903a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Arcomage_8cpp.html#a16d9ea87fd2b8843a00e28d1014f903a">R8G8B8_to_TargetFormat</a> (int uColor)</td></tr>
-<tr class="separator:a16d9ea87fd2b8843a00e28d1014f903a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99b99c909e2c5d6bb49e1a31d74b154"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Arcomage_8cpp.html#ab99b99c909e2c5d6bb49e1a31d74b154">DrawRect</a> (<a class="el" href="Rect_8h.html#a32073cc1967b01302be5d39e09079649">Recti</a> *pRect, <a class="el" href="structColor.html">Color</a> uColor, char bSolidFill)</td></tr>
+<tr class="separator:ab99b99c909e2c5d6bb49e1a31d74b154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc7fa71c0782bc6edd73578da1d83a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Arcomage_8cpp.html#a1cc7fa71c0782bc6edd73578da1d83a0">OpponentsAITurn</a> (int player_num)</td></tr>
 <tr class="separator:a1cc7fa71c0782bc6edd73578da1d83a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ba381fb6f5ed9cf91c1cc05195f6a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Arcomage_8cpp.html#ac1ba381fb6f5ed9cf91c1cc05195f6a4">set_stru1_field_8_InArcomage</a> (int inValue)</td></tr>
@@ -897,8 +895,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aee85eaf8e1ca54240b4c3035525d8577" name="aee85eaf8e1ca54240b4c3035525d8577"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee85eaf8e1ca54240b4c3035525d8577">&#9670;&#160;</a></span>DrawRect()</h2>
+<a id="ab99b99c909e2c5d6bb49e1a31d74b154" name="ab99b99c909e2c5d6bb49e1a31d74b154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99b99c909e2c5d6bb49e1a31d74b154">&#9670;&#160;</a></span>DrawRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -912,7 +910,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype"><a class="el" href="structColor.html">Color</a>&#160;</td>
           <td class="paramname"><em>uColor</em>, </td>
         </tr>
         <tr>
@@ -1190,24 +1188,6 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>player_num</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a16d9ea87fd2b8843a00e28d1014f903a" name="a16d9ea87fd2b8843a00e28d1014f903a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16d9ea87fd2b8843a00e28d1014f903a">&#9670;&#160;</a></span>R8G8B8_to_TargetFormat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int R8G8B8_to_TargetFormat </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>uColor</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

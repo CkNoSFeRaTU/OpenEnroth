@@ -1,12 +1,12 @@
 var searchData=
 [
   ['mapinfo_0',['MapInfo',['../structMapInfo.html',1,'']]],
-  ['mapslongtimer_1',['MapsLongTimer',['../structMapsLongTimer.html',1,'']]],
-  ['mapstats_2',['MapStats',['../structMapStats.html',1,'']]],
+  ['mapstats_1',['MapStats',['../structMapStats.html',1,'']]],
+  ['maptimer_2',['MapTimer',['../structMapTimer.html',1,'']]],
   ['margins_3',['Margins',['../structMargins.html',1,'']]],
   ['medialogger_4',['MediaLogger',['../classMediaLogger.html',1,'']]],
   ['memoryinputstream_5',['MemoryInputStream',['../classMemoryInputStream.html',1,'']]],
-  ['menu_6',['Menu',['../classApplication_1_1Menu.html',1,'Application']]],
+  ['menu_6',['Menu',['../classMenu.html',1,'']]],
   ['mersennetwisterrandomengine_7',['MersenneTwisterRandomEngine',['../classMersenneTwisterRandomEngine.html',1,'']]],
   ['mobilelight_8',['MobileLight',['../structMobileLight.html',1,'']]],
   ['monsterdesc_9',['MonsterDesc',['../structMonsterDesc.html',1,'']]],

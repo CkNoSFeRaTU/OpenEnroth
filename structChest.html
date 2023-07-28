@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: Chest Struct Reference</title>
+<title>OpenEnroth: Chest Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -101,10 +101,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ab1f451279007eb5cda35c0d3c2b81444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f6bb82d50b588a3ff3dd99a829a28be"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#a9f6bb82d50b588a3ff3dd99a829a28be">PlaceItems</a> (int uChestID)</td></tr>
 <tr class="separator:a9f6bb82d50b588a3ff3dd99a829a28be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af128ccad12c7983f8dac3e7ef38596f1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#af128ccad12c7983f8dac3e7ef38596f1">Open</a> (int uChestID)</td></tr>
-<tr class="separator:af128ccad12c7983f8dac3e7ef38596f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1593d6e167c52d3e903b695213396b60"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#a1593d6e167c52d3e903b695213396b60">ToggleFlag</a> (int uChestID, <a class="el" href="Chest_8h.html#a8f7fde712c696f88932a1416622a983c">CHEST_FLAG</a> uFlag, bool bValue)</td></tr>
-<tr class="separator:a1593d6e167c52d3e903b695213396b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282f15390e80ce1b41200bdc59bfbc18"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#a282f15390e80ce1b41200bdc59bfbc18">open</a> (int uChestID, <a class="el" href="classPid.html">Pid</a> objectPid)</td></tr>
+<tr class="separator:a282f15390e80ce1b41200bdc59bfbc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8202d1ab2f8ce4cf0d077543e308d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#a0d8202d1ab2f8ce4cf0d077543e308d4">toggleFlag</a> (int uChestID, <a class="el" href="ChestEnums_8h.html#ab09bcbde1ca9f5b5e9a8b7ddbdef2372">ChestFlag</a> uFlag, bool bValue)</td></tr>
+<tr class="separator:a0d8202d1ab2f8ce4cf0d077543e308d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc09b9527a9960368cc4982e245b0924"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#afc09b9527a9960368cc4982e245b0924">ChestUI_WritePointedObjectStatusString</a> ()</td></tr>
 <tr class="separator:afc09b9527a9960368cc4982e245b0924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c1784c3f2b90957cde7323661f73118"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#a2c1784c3f2b90957cde7323661f73118">OnChestLeftClick</a> ()</td></tr>
@@ -114,14 +114,14 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa35029c6f9e97d6b013e3a61e76adf0c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#aa35029c6f9e97d6b013e3a61e76adf0c">uChestBitmapID</a></td></tr>
+<tr class="memitem:aa35029c6f9e97d6b013e3a61e76adf0c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#aa35029c6f9e97d6b013e3a61e76adf0c">uChestBitmapID</a> = 0</td></tr>
 <tr class="separator:aa35029c6f9e97d6b013e3a61e76adf0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa48b34c9c66b1e14e6ebe17a20990020"><td class="memItemLeft" align="right" valign="top">CHEST_FLAGS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#aa48b34c9c66b1e14e6ebe17a20990020">uFlags</a></td></tr>
-<tr class="separator:aa48b34c9c66b1e14e6ebe17a20990020"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeabe7e861f198346d31ba627a0783ba6"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structItemGen.html">ItemGen</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#aeabe7e861f198346d31ba627a0783ba6">igChestItems</a> [140]</td></tr>
-<tr class="separator:aeabe7e861f198346d31ba627a0783ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4cda01f1110c28d47baaae558d02e67"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#ae4cda01f1110c28d47baaae558d02e67">pInventoryIndices</a> [140]</td></tr>
-<tr class="separator:ae4cda01f1110c28d47baaae558d02e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e6bbb561b635482980bab1bbf5a046"><td class="memItemLeft" align="right" valign="top">ChestFlags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#a69e6bbb561b635482980bab1bbf5a046">uFlags</a></td></tr>
+<tr class="separator:a69e6bbb561b635482980bab1bbf5a046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb6b29dc3abcfcb3bf384445c97ff43"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="structItemGen.html">ItemGen</a>, 140 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#a5cb6b29dc3abcfcb3bf384445c97ff43">igChestItems</a></td></tr>
+<tr class="separator:a5cb6b29dc3abcfcb3bf384445c97ff43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade78619c803a46133590ac58fb52ba53"><td class="memItemLeft" align="right" valign="top">std::array&lt; int16_t, 140 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structChest.html#ade78619c803a46133590ac58fb52ba53">pInventoryIndices</a> = {{}}</td></tr>
+<tr class="separator:ade78619c803a46133590ac58fb52ba53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8fbf409afdbfb3ffe16c12c721e2f75a" name="a8fbf409afdbfb3ffe16c12c721e2f75a"></a>
@@ -293,8 +293,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af128ccad12c7983f8dac3e7ef38596f1" name="af128ccad12c7983f8dac3e7ef38596f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af128ccad12c7983f8dac3e7ef38596f1">&#9670;&#160;</a></span>Open()</h2>
+<a id="a282f15390e80ce1b41200bdc59bfbc18" name="a282f15390e80ce1b41200bdc59bfbc18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a282f15390e80ce1b41200bdc59bfbc18">&#9670;&#160;</a></span>open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,11 +303,21 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Chest::Open </td>
+          <td class="memname">bool Chest::open </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>uChestID</em></td><td>)</td>
+          <td class="paramname"><em>uChestID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
+          <td class="paramname"><em>objectPid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -455,8 +465,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1593d6e167c52d3e903b695213396b60" name="a1593d6e167c52d3e903b695213396b60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1593d6e167c52d3e903b695213396b60">&#9670;&#160;</a></span>ToggleFlag()</h2>
+<a id="a0d8202d1ab2f8ce4cf0d077543e308d4" name="a0d8202d1ab2f8ce4cf0d077543e308d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d8202d1ab2f8ce4cf0d077543e308d4">&#9670;&#160;</a></span>toggleFlag()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -465,7 +475,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Chest::ToggleFlag </td>
+          <td class="memname">void Chest::toggleFlag </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>uChestID</em>, </td>
@@ -473,7 +483,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="Chest_8h.html#a8f7fde712c696f88932a1416622a983c">CHEST_FLAG</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="ChestEnums_8h.html#ab09bcbde1ca9f5b5e9a8b7ddbdef2372">ChestFlag</a>&#160;</td>
           <td class="paramname"><em>uFlag</em>, </td>
         </tr>
         <tr>
@@ -523,28 +533,28 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aeabe7e861f198346d31ba627a0783ba6" name="aeabe7e861f198346d31ba627a0783ba6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeabe7e861f198346d31ba627a0783ba6">&#9670;&#160;</a></span>igChestItems</h2>
+<a id="a5cb6b29dc3abcfcb3bf384445c97ff43" name="a5cb6b29dc3abcfcb3bf384445c97ff43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb6b29dc3abcfcb3bf384445c97ff43">&#9670;&#160;</a></span>igChestItems</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structItemGen.html">ItemGen</a> Chest::igChestItems[140]</td>
+          <td class="memname">std::array&lt;<a class="el" href="structItemGen.html">ItemGen</a>, 140&gt; Chest::igChestItems</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae4cda01f1110c28d47baaae558d02e67" name="ae4cda01f1110c28d47baaae558d02e67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4cda01f1110c28d47baaae558d02e67">&#9670;&#160;</a></span>pInventoryIndices</h2>
+<a id="ade78619c803a46133590ac58fb52ba53" name="ade78619c803a46133590ac58fb52ba53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade78619c803a46133590ac58fb52ba53">&#9670;&#160;</a></span>pInventoryIndices</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int16_t Chest::pInventoryIndices[140]</td>
+          <td class="memname">std::array&lt;int16_t, 140&gt; Chest::pInventoryIndices = {{}}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -558,21 +568,21 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t Chest::uChestBitmapID</td>
+          <td class="memname">uint16_t Chest::uChestBitmapID = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aa48b34c9c66b1e14e6ebe17a20990020" name="aa48b34c9c66b1e14e6ebe17a20990020"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa48b34c9c66b1e14e6ebe17a20990020">&#9670;&#160;</a></span>uFlags</h2>
+<a id="a69e6bbb561b635482980bab1bbf5a046" name="a69e6bbb561b635482980bab1bbf5a046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e6bbb561b635482980bab1bbf5a046">&#9670;&#160;</a></span>uFlags</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CHEST_FLAGS Chest::uFlags</td>
+          <td class="memname">ChestFlags Chest::uFlags</td>
         </tr>
       </table>
 </div><div class="memdoc">

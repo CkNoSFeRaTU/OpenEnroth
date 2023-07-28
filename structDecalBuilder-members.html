@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: Member List</title>
+<title>OpenEnroth: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -75,15 +75,15 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="structDecalBuilder.html">DecalBuilder</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#ad0584c1099bd0fe1780af4b35e1b9a38">AddBloodsplat</a>(float x, float y, float z, float r, float g, float b, float radius)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#a225024e0b202a244b524cfc0346d9d62">AddBloodsplat</a>(const Vec3f &amp;pos, Color color, float radius)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#addfbb7a18569b72ad34eec3607b3a333">ApplyBloodSplat_OutdoorFace</a>(ODMFace *pFace)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#ad0e9f1b9e141c341bd78ad61466fb09b">ApplyBloodsplatDecals_IndoorFace</a>(unsigned int uFaceID)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#a0268265eb76ce668c16e1d6af0a8c766">ApplyBloodSplatToTerrain</a>(struct Polygon *a2, Vec3f *a3, float *a4, struct RenderVertexSoft *a5, unsigned int uStripType, char a7)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#a407f2431709ba2390074cfbf3840cbe8">ApplyBloodsplatDecals_IndoorFace</a>(int uFaceID)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#a82e71dcabc0ed7a02aeb34b1c15ae292">ApplyBloodSplatToTerrain</a>(const int terrainFlags, Vec3f *terrnorm, float *tridotdist, RenderVertexSoft *triverts, const int whichsplat)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#a9f8efc31cc7c72c87324419c94325483">bloodsplat_container</a></td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#aedde8b2ae1bfe2003beaf869f8f78841">Build_Decal_Geometry</a>(int LightLevel, LocationFlags locationFlags, Bloodsplat *blood, float DecalRadius, unsigned int uColorMultiplier, float DecalDotDist, struct stru314 *FacetNormals, signed int numfaceverts, RenderVertexSoft *faceverts, char uClipFlags)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#a8f3407474b54f3b9d8317575c6b889ff">BuildAndApplyDecals</a>(int light_level, LocationFlags locationFlags, struct stru154 *FacePlane, int NumFaceVerts, RenderVertexSoft *FaceVerts, char ClipFlags, unsigned int uSectorID)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#a44edf12e0fc088d01f11bbe0a117ec5c">DecalBuilder</a>()</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#aecd839bbc96fd027a6e1f99f0414be84">Decals</a></td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#a85e56d39413c7f0565e9e2d587ea12e6">Build_Decal_Geometry</a>(int LightLevel, LocationFlags locationFlags, Bloodsplat *blood, float DecalRadius, Color uColorMultiplier, float DecalDotDist, struct stru314 *FacetNormals, int numfaceverts, RenderVertexSoft *faceverts, char uClipFlags)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#afc571fc403c716d8fbe394aa76555632">BuildAndApplyDecals</a>(int light_level, LocationFlags locationFlags, const Planef &amp;FacePlane, int NumFaceVerts, RenderVertexSoft *FaceVerts, char ClipFlags, int uSectorID)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#a44edf12e0fc088d01f11bbe0a117ec5c">DecalBuilder</a>()</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#a9ee0c2d22a63c396fe14920b7d511105">Decals</a></td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#a4fa899f66e0b488a76fa5bab328e2f67">DecalsCount</a></td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#a3982759e9876a20204c3470d6ce4bb23">DrawBloodsplats</a>()</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#a8e0f0fb01b607f76b0515ff059832cb9">DrawDecalDebugOutlines</a>()</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
@@ -101,7 +101,7 @@ $(function() {
   <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#a9138a04eb4a3a2dd69e13d6a4eabaa75">log</a></td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#a9640c823a8bbddae5ca2d1c61a4b9161">Reset</a>(bool bPreserveBloodsplats)</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#a5cb3685fc4e351b1c8e0a64b67e9340c">uNumSplatsThisFace</a></td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#a8e2a237a7f07860f7f89dc6d37d88463">WhichSplatsOnThisFace</a></td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structDecalBuilder.html#a5a4ac6d3c1624d8501b38015507c4650">WhichSplatsOnThisFace</a></td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="structDecalBuilder.html#ac0197587922e57d3136b03d3af8fed2c">~DecalBuilder</a>()</td><td class="entry"><a class="el" href="structDecalBuilder.html">DecalBuilder</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/GUI/UI/UIHouses.h File Reference</title>
+<title>OpenEnroth: src/GUI/UI/UIHouses.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -82,310 +82,113 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="BuildingTable_8h.html">Engine/Tables/BuildingTable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AwardTable_8h.html">Engine/Tables/AwardTable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MapEnums_8h.html">Engine/MapEnums.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GUIWindow_8h.html">GUI/GUIWindow.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Events2D_8h.html">Engine/Events2D.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IndexedArray_8h.html">Utility/IndexedArray.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="UIHouseEnums_8h.html">UIHouseEnums.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHouseNpcDesc.html">HouseNpcDesc</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGUIWindow__House.html">GUIWindow_House</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHouseAnimDescr.html">HouseAnimDescr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:aaee3335261c70d04921051c52287405f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a> { <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa70e69054aa8b9e8ef6fe58ea1416625b">HOUSE_SMITH_EMERALD_ISLE</a> = 1
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa539e98b97b52cd5d97d8736de6d321bc">HOUSE_ARMOURER_EMERALD_ISLE</a> = 15
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fac2694df9cb43d6b4cbceca6ef6b1efb2">HOUSE_MAGE_EMERALD_ISLE</a> = 29
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa7ef1ad3da8541fc7997950b409e08b3f">HOUSE_MAGE_HARMONDALE</a> = 30
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa058a608a3672f1115db42faefe216a5d">HOUSE_ALCHEMIST_EMERALD_ISLE</a> = 42
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fadbc9cca6d22613b678f0d4372649b3a8">HOUSE_ALCHEMIST_HARMONDALE</a> = 43
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa54fb2056ca292a3635f28d643fb66a41">HOUSE_STABLES_HARMONDALE</a> = 54
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fab23c97d64721e12368fe95df1290acf9">HOUSE_STABLES_STEADWICK</a> = 55
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa7fbefdd211c350bc003441182bca3e31">HOUSE_STABLES_TULAREAN_FOREST</a> = 56
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa8f1a555a7b498a1931d3f76b163d9e5e">HOUSE_STABLES_DEYJA</a> = 57
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405face1c8c73e60154c77e0db22089c2507e">HOUSE_STABLES_BRACADA_DESERT</a> = 58
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405faa2e0aa4129a8de37ced32fecde66121c">HOUSE_STABLES_TATALIA</a> = 59
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa455c26eef2f1c4feac4b59de5d69a4ee">HOUSE_STABLES_AVLEE</a> = 60
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa982391a1172b05934cbd0c5e850d452b">HOUSE_STABLES_PLACEHOLDER_1</a> = 61
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405faef597e429f1b506c611a684341c350cb">HOUSE_STABLES_PLACEHOLDER_2</a> = 62
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa087681939391134119cad2f51a216bc7">HOUSE_BOATS_EMERALD_ISLE</a> = 63
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa9dd652f0ad10b32ec5b6ef782d395504">HOUSE_BOATS_ERATHIA</a> = 64
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa812e6bccaf42f823eb5d509a76cbc60b">HOUSE_BOATS_TULAREAN_FOREST</a> = 65
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fadc5c282c916698c72983449be050427b">HOUSE_BOATS_BRACADA_DESERT</a> = 66
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405facaee9cc2072e7c4a346f5d823c9a3439">HOUSE_BOATS_EVENMORN_ISLAND</a> = 67
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa20d32b065989d7442adf1663d0112777">HOUSE_BOATS_PIT</a> = 68
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fadd879d25c841621ee1176bfbff522895">HOUSE_BOATS_TATALIA</a> = 69
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa5657c16474829d5357a1c0acc2b18c0c">HOUSE_BOATS_AVLEE</a> = 70
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa1f7d74262e4be50a2a697a10b3b93d69">HOUSE_BOATS_CELESTE</a> = 71
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa517fdbf25070d09eee38927348933c15">HOUSE_BOATS_PLACEHOLDER_1</a> = 72
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa4fda89e1ff4113349e3751fe1056f977">HOUSE_BOATS_PLACEHOLDER_2</a> = 73
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fad3a82624c63be5ff73f27e73a939b071">HOUSE_TEMPLE_EMERALD_ISLE</a> = 74
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa5989d2d3748c7da82a987f988950f2d7">HOUSE_TEMPLE_HARMONDALE</a> = 75
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405faabcc8f98ad5c4802559f93ea8a38bf59">HOUSE_TRAINING_HALL_EMERALD_ISLE</a> = 89
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa756c441955de6ff77ed13016ac499fa4">HOUSE_TRAINING_HALL_HARMONDALE</a> = 90
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa1a00b0c8e3e8de791dff398308597073">HOUSE_TRAINING_HALL_STEADWICK</a> = 91
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa1873d508c04172815844e11e3f8f3075">HOUSE_TRAINING_HALL_PIERPOINT</a> = 92
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fada66601e675af4d6b72a903f05524690">HOUSE_TRAINING_HALL_CELESTE</a> = 93
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa9e7086f5cc0d735dcd326aa54049192d">HOUSE_TRAINING_HALL_PIT</a> = 94
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fac2b62247208d238c1547f4a9103b72ef">HOUSE_TRAINING_HALL_NIGHON</a> = 95
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fafba7311b9b3a8d9c36437caaa3f200eb">HOUSE_TRAINING_HALL_AVLEE</a> = 97
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fabf2fa918c53e062572f19deaaa633921">HOUSE_TOWNHALL_HARMONDALE</a> = 102
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa7bfebb75fb14e7924c0fd749301c7818">HOUSE_TAVERN_EMERALD_ISLE</a> = 107
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa8b7eaff1b6b7ee406560d227b556d59c">HOUSE_TAVERN_STONE_CITY</a> = 120
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa744994922d773638a2a8415f3ad46df5">HOUSE_BANK_HARMONDALE</a> = 128
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa2c6d0bbdcc6940409be4a3fd9c277129">HOUSE_FIRE_GUILD_INITIATE_EMERALD_ISLE</a> = 139
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fabf65ea9e1ae9f905d48e7bfe55d0cf3d">HOUSE_AIR_GUILD_INITIATE_EMERALD_ISLE</a> = 143
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa60433f675280c37360ac0224ec25bbb7">HOUSE_SPIRIT_GUILD_INITIATE_EMERALD_ISLE</a> = 155
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa30051da3eb7524228161e20aa522e1ca">HOUSE_BODY_GUILD_INITIATE_EMERALD_ISLE</a> = 163
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa85b98ed177f3c460a36b24f9b76fbe98">HOUSE_BODY_GUILD_ERATHIA</a> = 165
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405facc377c5086130991a905649b8e0c5c14">HOUSE_DARK_GUILD_PIT</a> = 170
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fae1747136a91dfef0f9d34c5a917e597d">HOUSE_SELF_GUILD_1</a> = 171
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa490a83427aa793da273b22381dcb17cc">HOUSE_SELF_GUILD_2</a> = 172
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fadc97ba55877497c162d7508196c30deb">HOUSE_LORD_AND_JUDGE_EMERALD_ISLE</a> = 186
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa7b16d082078654fe972ded0fe528dab0">HOUSE_JAIL</a> = 187
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa0f3ccdfd32cb4546f6a4b1a5b9161aaa">HOUSE_JUDGE_HARMONDALE</a> = 190
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa8f49c7ee8ca774e67dc08bd5b4a3c07e">HOUSE_224_EMERALD_ISLE</a> = 224
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa8bf00c30d7fc25fa8841b085b8f682ab">HOUSE_225_EMERALD_ISLE</a> = 225
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fae3810e60b7fda600f1ca43f04dd866f7">HOUSE_238_EMERALD_ISLE</a> = 238
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa7d665a6d24d215c2a518df417819798e">HOUSE_466_HARMONDALE</a> = 466
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fad55ac60141d231f8e1c783c3df086f06">HOUSE_467_HARMONDALE</a> = 467
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa34307be8830fdf9cc2eecd8831e2df56">HOUSE_468_HARMONDALE</a> = 468
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fad7fb84cbfe4d1543e52a6a48c24223dc">HOUSE_472_HARMONDALE</a> = 472
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa76343bffcd56ab7499f715eddb83cd4b">HOUSE_488_HARMONDALE</a> = 488
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa6310298c6c9782c9db5c5d675f0995a2">HOUSE_489_HARMONDALE</a> = 489
-, <br />
-&#160;&#160;<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405faa25ecfbf4a601b4a3cf04726eb4bc1bc">HOUSE_THRONEROOM_WIN_GOOD</a> = 600
-, <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405fa3b2bec7e03472a18e73e6600d1440199">HOUSE_THRONEROOM_WIN_EVIL</a> = 601
-<br />
+<tr class="memitem:a9faa43960b72a34903c1b46437828914"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a9faa43960b72a34903c1b46437828914">HouseNpcType</a> { <a class="el" href="UIHouses_8h.html#a9faa43960b72a34903c1b46437828914aff58d829104537858f5182c6ae79107c">HOUSE_PROPRIETOR</a>
+, <a class="el" href="UIHouses_8h.html#a9faa43960b72a34903c1b46437828914a2f1de6576d71eff54ce1ccbee715f00f">HOUSE_NPC</a>
+, <a class="el" href="UIHouses_8h.html#a9faa43960b72a34903c1b46437828914a78defe546c6239800dff8e59073d356f">HOUSE_TRANSITION</a>
  }</td></tr>
-<tr class="separator:aaee3335261c70d04921051c52287405f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e9b41a32161066fa074c8e5b1e15b69"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a6e9b41a32161066fa074c8e5b1e15b69">HouseSoundID</a> : uint32_t { <a class="el" href="UIHouses_8h.html#a6e9b41a32161066fa074c8e5b1e15b69a26571d4ab21f7594c8691d81c10f8d58">HouseSound_Greeting</a> = 1
-, <a class="el" href="UIHouses_8h.html#a6e9b41a32161066fa074c8e5b1e15b69a9b35e43f24798b7a054f3165dbeffad5">HouseSound_NotEnoughMoney</a> = 2
-, <a class="el" href="UIHouses_8h.html#a6e9b41a32161066fa074c8e5b1e15b69a6f5bf798f5ad28c66e3207b4056205ae">HouseSound_Greeting_2</a> = 3
-, <a class="el" href="UIHouses_8h.html#a6e9b41a32161066fa074c8e5b1e15b69a9037adbf118668e4ba5c4fbe69cf3cd5">HouseSound_Goodbye</a> = 4
- }</td></tr>
-<tr class="separator:a6e9b41a32161066fa074c8e5b1e15b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a9faa43960b72a34903c1b46437828914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aaef68534ab4d38fece496837509e8dd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#aaef68534ab4d38fece496837509e8dd7">HouseUI_CheckIfPlayerCanInteract</a> ()</td></tr>
-<tr class="separator:aaef68534ab4d38fece496837509e8dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a508cd0b3e4de36620322bbefc36c56cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a508cd0b3e4de36620322bbefc36c56cf">TrainingDialog</a> (const char *s)</td></tr>
-<tr class="separator:a508cd0b3e4de36620322bbefc36c56cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94fd0881c896a6e2864b9b8a7c14c851"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a94fd0881c896a6e2864b9b8a7c14c851">JailDialog</a> ()</td></tr>
-<tr class="separator:a94fd0881c896a6e2864b9b8a7c14c851"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4ce274e60dd3f8b559423cbb991361d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#ae4ce274e60dd3f8b559423cbb991361d">MagicShopDialog</a> ()</td></tr>
-<tr class="separator:ae4ce274e60dd3f8b559423cbb991361d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fbb26f3fd48a15ffdcb709219220a74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a7fbb26f3fd48a15ffdcb709219220a74">GuildDialog</a> ()</td></tr>
-<tr class="separator:a7fbb26f3fd48a15ffdcb709219220a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a245c59f82d964d80c2f0ed2b246fb637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a245c59f82d964d80c2f0ed2b246fb637">MercenaryGuildDialog</a> ()</td></tr>
-<tr class="memdesc:a245c59f82d964d80c2f0ed2b246fb637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mercenary guild in MM6.  <a href="UIHouses_8h.html#a245c59f82d964d80c2f0ed2b246fb637">More...</a><br /></td></tr>
-<tr class="separator:a245c59f82d964d80c2f0ed2b246fb637"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe12e4594f668c5e407da94cc554cad4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#afe12e4594f668c5e407da94cc554cad4">IsTravelAvailable</a> (int a1)</td></tr>
-<tr class="separator:afe12e4594f668c5e407da94cc554cad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34fb0d2c92f963a57d7568e4293a5a20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a34fb0d2c92f963a57d7568e4293a5a20">GetTravelTimeTransportDays</a> (int schedule_id)</td></tr>
-<tr class="memdesc:a34fb0d2c92f963a57d7568e4293a5a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">New function.  <a href="UIHouses_8h.html#a34fb0d2c92f963a57d7568e4293a5a20">More...</a><br /></td></tr>
-<tr class="separator:a34fb0d2c92f963a57d7568e4293a5a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a051a9386ff5f507d34162a116de3f434"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a051a9386ff5f507d34162a116de3f434">TravelByTransport</a> ()</td></tr>
-<tr class="separator:a051a9386ff5f507d34162a116de3f434"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bf47183b95e701104b8fede3df5a993"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a3bf47183b95e701104b8fede3df5a993">TempleDialog</a> ()</td></tr>
-<tr class="separator:a3bf47183b95e701104b8fede3df5a993"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdce028ca6920ad78a2a8f39fb093b04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#afdce028ca6920ad78a2a8f39fb093b04">TownHallDialog</a> ()</td></tr>
-<tr class="separator:afdce028ca6920ad78a2a8f39fb093b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a8b5b55aa413db9c82a54e32b0e6ca6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a6a8b5b55aa413db9c82a54e32b0e6ca6">BankDialog</a> ()</td></tr>
-<tr class="separator:a6a8b5b55aa413db9c82a54e32b0e6ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85ed65d74da96b17f506a5b39248fc84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a85ed65d74da96b17f506a5b39248fc84">TavernDialog</a> ()</td></tr>
-<tr class="separator:a85ed65d74da96b17f506a5b39248fc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af131a9157367a2d529da9174e1319534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#af131a9157367a2d529da9174e1319534">PlayHouseSound</a> (unsigned int uHouseID, <a class="el" href="UIHouses_8h.html#a6e9b41a32161066fa074c8e5b1e15b69">HouseSoundID</a> sound)</td></tr>
-<tr class="separator:af131a9157367a2d529da9174e1319534"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af61c121dc37dbb99e2b840b538ec6f1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#af61c121dc37dbb99e2b840b538ec6f1e">WeaponShopDialog</a> ()</td></tr>
-<tr class="separator:af61c121dc37dbb99e2b840b538ec6f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9611aa004e0f31fd99be43d980eb28d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a9611aa004e0f31fd99be43d980eb28d5">AlchemistDialog</a> ()</td></tr>
-<tr class="separator:a9611aa004e0f31fd99be43d980eb28d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a6b5f0e1883960347080bc9e45f894"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#ac6a6b5f0e1883960347080bc9e45f894">ArmorShopDialog</a> ()</td></tr>
-<tr class="separator:ac6a6b5f0e1883960347080bc9e45f894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24aa347826f0bbf037cee75945dec5d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a24aa347826f0bbf037cee75945dec5d1">SimpleHouseDialog</a> ()</td></tr>
-<tr class="separator:a24aa347826f0bbf037cee75945dec5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50274f38af972747404b73f4c835a51d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a50274f38af972747404b73f4c835a51d">OnSelectShopDialogueOption</a> (<a class="el" href="GUIDialogues_8h.html#afcd7885d9ec6583fa04d9e8f0f641d00">DIALOGUE_TYPE</a> option)</td></tr>
-<tr class="separator:a50274f38af972747404b73f4c835a51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5340de19eef94b2e764511479a8e612"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#ad5340de19eef94b2e764511479a8e612">PrepareHouse</a> (<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a> house)</td></tr>
-<tr class="separator:ad5340de19eef94b2e764511479a8e612"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29eb100de9b441858b5e1289dd0d958e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a29eb100de9b441858b5e1289dd0d958e">EnterHouse</a> (<a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a> uHouseID)</td></tr>
-<tr class="separator:a29eb100de9b441858b5e1289dd0d958e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a367ca93a4c306e3d85e764d52a71a2d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a367ca93a4c306e3d85e764d52a71a2d2">BackToHouseMenu</a> ()</td></tr>
 <tr class="separator:a367ca93a4c306e3d85e764d52a71a2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac550075052fced91028753139e30ac47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#ac550075052fced91028753139e30ac47">InitializaDialogueOptions_Tavern</a> (<a class="el" href="Events2D_8h.html#a1e6330273dfb88062f9ac99d61322e80">BuildingType</a> type)</td></tr>
-<tr class="separator:ac550075052fced91028753139e30ac47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cd8d335ba0f4412b26d44e32543441d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a2cd8d335ba0f4412b26d44e32543441d">InitializaDialogueOptions_Shops</a> (<a class="el" href="Events2D_8h.html#a1e6330273dfb88062f9ac99d61322e80">BuildingType</a> type)</td></tr>
-<tr class="separator:a2cd8d335ba0f4412b26d44e32543441d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9526e72e0e7c2cd241371b27129c4cdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a9526e72e0e7c2cd241371b27129c4cdc">InitializaDialogueOptions</a> (<a class="el" href="Events2D_8h.html#a1e6330273dfb88062f9ac99d61322e80">BuildingType</a> type)</td></tr>
-<tr class="separator:a9526e72e0e7c2cd241371b27129c4cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1ffa34217d6e8c77a5d011259a493e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#aa1ffa34217d6e8c77a5d011259a493e6">InitializeBuildingResidents</a> ()</td></tr>
-<tr class="separator:aa1ffa34217d6e8c77a5d011259a493e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a719e7a9d096a2515e32cc2f594b027f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a719e7a9d096a2515e32cc2f594b027f7">HouseDialogPressCloseBtn</a> ()</td></tr>
-<tr class="separator:a719e7a9d096a2515e32cc2f594b027f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aefd8af8fa5224b6a82bda2f0ae3018"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a2aefd8af8fa5224b6a82bda2f0ae3018">selectProprietorDialogueOption</a> (<a class="el" href="GUIDialogues_8h.html#afcd7885d9ec6583fa04d9e8f0f641d00">DIALOGUE_TYPE</a> option)</td></tr>
+<tr class="separator:a2aefd8af8fa5224b6a82bda2f0ae3018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58b665d1bdb988484c3412007e6fb261"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a58b665d1bdb988484c3412007e6fb261">prepareHouse</a> (<a class="el" href="UIHouseEnums_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a> house)</td></tr>
+<tr class="separator:a58b665d1bdb988484c3412007e6fb261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809e0009f8310b87192d91e636d58ee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a809e0009f8310b87192d91e636d58ee5">createHouseUI</a> (<a class="el" href="UIHouseEnums_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a> houseId)</td></tr>
+<tr class="separator:a809e0009f8310b87192d91e636d58ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6c0486935e2c520b805471c35d21f46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#ad6c0486935e2c520b805471c35d21f46">enterHouse</a> (<a class="el" href="UIHouseEnums_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a> uHouseID)</td></tr>
+<tr class="separator:ad6c0486935e2c520b805471c35d21f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab50814e24f412098388cc3a206867ea1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#ab50814e24f412098388cc3a206867ea1">houseDialogPressEscape</a> ()</td></tr>
+<tr class="separator:ab50814e24f412098388cc3a206867ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54f0f46c4baa7db59a42190ce9fcc01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#ad54f0f46c4baa7db59a42190ce9fcc01">playHouseSound</a> (<a class="el" href="UIHouseEnums_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a> houseID, <a class="el" href="UIHouseEnums_8h.html#af4c8362015fce1a0c3c9f9a7924dcada">HouseSoundType</a> type)</td></tr>
+<tr class="separator:ad54f0f46c4baa7db59a42190ce9fcc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab0780802cc2e4149a29016c43050ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a1ab0780802cc2e4149a29016c43050ea">selectHouseNPCDialogueOption</a> (<a class="el" href="GUIDialogues_8h.html#afcd7885d9ec6583fa04d9e8f0f641d00">DIALOGUE_TYPE</a> topic)</td></tr>
+<tr class="separator:a1ab0780802cc2e4149a29016c43050ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfbd1d898fd51368b8eb7f1bfbbd43e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a0bfbd1d898fd51368b8eb7f1bfbbd43e">updateHouseNPCTopics</a> (int npc)</td></tr>
+<tr class="separator:a0bfbd1d898fd51368b8eb7f1bfbbd43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:afabe273f991a402547b13229063de7a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#afabe273f991a402547b13229063de7a4">uHouse_ExitPic</a></td></tr>
-<tr class="separator:afabe273f991a402547b13229063de7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1057a5f41f2b75913de9a61d9b646ce3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a1057a5f41f2b75913de9a61d9b646ce3">dword_591080</a></td></tr>
-<tr class="separator:a1057a5f41f2b75913de9a61d9b646ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85651c284396b6ffb0cb6c2c67ea3b12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Events2D_8h.html#a1e6330273dfb88062f9ac99d61322e80">BuildingType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a85651c284396b6ffb0cb6c2c67ea3b12">in_current_building_type</a></td></tr>
+<tr class="memitem:a2975c9e88583d17df414eee5515a3751"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a2975c9e88583d17df414eee5515a3751">SIDE_TEXT_BOX_WIDTH</a> = 144</td></tr>
+<tr class="separator:a2975c9e88583d17df414eee5515a3751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4056c3e0be63e7402c51dd00bc892847"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a4056c3e0be63e7402c51dd00bc892847">SIDE_TEXT_BOX_POS_X</a> = 484</td></tr>
+<tr class="separator:a4056c3e0be63e7402c51dd00bc892847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab05c928d45c21f51cf1386f20dcdac"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a0ab05c928d45c21f51cf1386f20dcdac">SIDE_TEXT_BOX_POS_Z</a> = 334</td></tr>
+<tr class="separator:a0ab05c928d45c21f51cf1386f20dcdac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ac98772ed6f73410c7939b964bafa75"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a1ac98772ed6f73410c7939b964bafa75">SIDE_TEXT_BOX_POS_Y</a> = 113</td></tr>
+<tr class="separator:a1ac98772ed6f73410c7939b964bafa75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0688751906262ec5c76c0499c2f4e156"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a0688751906262ec5c76c0499c2f4e156">SIDE_TEXT_BOX_BODY_TEXT_HEIGHT</a> = 174</td></tr>
+<tr class="separator:a0688751906262ec5c76c0499c2f4e156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3b2ac50cf54ef16e90f17a357359dd"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#abe3b2ac50cf54ef16e90f17a357359dd">SIDE_TEXT_BOX_BODY_TEXT_OFFSET</a> = 138</td></tr>
+<tr class="separator:abe3b2ac50cf54ef16e90f17a357359dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131401fb3a5cd8e2cc270046da6d41dc"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a131401fb3a5cd8e2cc270046da6d41dc">SIDE_TEXT_BOX_MAX_SPACING</a> = 32</td></tr>
+<tr class="separator:a131401fb3a5cd8e2cc270046da6d41dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85651c284396b6ffb0cb6c2c67ea3b12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BuildingTable_8h.html#a1e6330273dfb88062f9ac99d61322e80">BuildingType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a85651c284396b6ffb0cb6c2c67ea3b12">in_current_building_type</a></td></tr>
 <tr class="separator:a85651c284396b6ffb0cb6c2c67ea3b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4942fe38fe8a78d5ef85727f2b2e1436"><td class="memItemLeft" align="right" valign="top"><a class="el" href="GUIDialogues_8h.html#afcd7885d9ec6583fa04d9e8f0f641d00">DIALOGUE_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a4942fe38fe8a78d5ef85727f2b2e1436">dialog_menu_id</a></td></tr>
 <tr class="separator:a4942fe38fe8a78d5ef85727f2b2e1436"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ac0a417e06089051fc6f8852277d81b"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a6ac0a417e06089051fc6f8852277d81b">_591428_endcap</a></td></tr>
-<tr class="separator:a6ac0a417e06089051fc6f8852277d81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99712b947a6851afa422aeb4d0a37ad"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classGraphicsImage.html">GraphicsImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#ae99712b947a6851afa422aeb4d0a37ad">_591428_endcap</a></td></tr>
+<tr class="separator:ae99712b947a6851afa422aeb4d0a37ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afca7bc064d88227f64fa87f84f66d632"><td class="memItemLeft" align="right" valign="top">std::array&lt; const <a class="el" href="structHouseAnimDescr.html">HouseAnimDescr</a>, 196 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#afca7bc064d88227f64fa87f84f66d632">pAnimatedRooms</a></td></tr>
+<tr class="separator:afca7bc064d88227f64fa87f84f66d632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bccd008c0f617f9cad0bf5892d89a31"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classIndexedArray.html">IndexedArray</a>&lt; int, <a class="el" href="BuildingTable_8h.html#a1e6330273dfb88062f9ac99d61322e80a4e88bbd32e5a5de530f70a87fc669b1d">BUILDING_WEAPON_SHOP</a>, <a class="el" href="BuildingTable_8h.html#a1e6330273dfb88062f9ac99d61322e80a8202bb3067b3dd43e620004f98f368bc">BUILDING_DARK_GUILD</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a7bccd008c0f617f9cad0bf5892d89a31">itemAmountInShop</a></td></tr>
+<tr class="separator:a7bccd008c0f617f9cad0bf5892d89a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab315df385cac435b083f113ce91eb9a4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structHouseNpcDesc.html">HouseNpcDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#ab315df385cac435b083f113ce91eb9a4">houseNpcs</a></td></tr>
+<tr class="separator:ab315df385cac435b083f113ce91eb9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a186e5864d5cfc7e4f2f6d3d756216b43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UIHouses_8h.html#a186e5864d5cfc7e4f2f6d3d756216b43">currentHouseNpc</a></td></tr>
+<tr class="separator:a186e5864d5cfc7e4f2f6d3d756216b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="aaee3335261c70d04921051c52287405f" name="aaee3335261c70d04921051c52287405f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaee3335261c70d04921051c52287405f">&#9670;&#160;</a></span>HOUSE_ID</h2>
+<a id="a9faa43960b72a34903c1b46437828914" name="a9faa43960b72a34903c1b46437828914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9faa43960b72a34903c1b46437828914">&#9670;&#160;</a></span>HouseNpcType</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a></td>
+          <td class="memname">enum class <a class="el" href="UIHouses_8h.html#a9faa43960b72a34903c1b46437828914">HouseNpcType</a></td>
         </tr>
       </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa70e69054aa8b9e8ef6fe58ea1416625b" name="aaee3335261c70d04921051c52287405fa70e69054aa8b9e8ef6fe58ea1416625b"></a>HOUSE_SMITH_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa539e98b97b52cd5d97d8736de6d321bc" name="aaee3335261c70d04921051c52287405fa539e98b97b52cd5d97d8736de6d321bc"></a>HOUSE_ARMOURER_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fac2694df9cb43d6b4cbceca6ef6b1efb2" name="aaee3335261c70d04921051c52287405fac2694df9cb43d6b4cbceca6ef6b1efb2"></a>HOUSE_MAGE_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa7ef1ad3da8541fc7997950b409e08b3f" name="aaee3335261c70d04921051c52287405fa7ef1ad3da8541fc7997950b409e08b3f"></a>HOUSE_MAGE_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa058a608a3672f1115db42faefe216a5d" name="aaee3335261c70d04921051c52287405fa058a608a3672f1115db42faefe216a5d"></a>HOUSE_ALCHEMIST_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fadbc9cca6d22613b678f0d4372649b3a8" name="aaee3335261c70d04921051c52287405fadbc9cca6d22613b678f0d4372649b3a8"></a>HOUSE_ALCHEMIST_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa54fb2056ca292a3635f28d643fb66a41" name="aaee3335261c70d04921051c52287405fa54fb2056ca292a3635f28d643fb66a41"></a>HOUSE_STABLES_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fab23c97d64721e12368fe95df1290acf9" name="aaee3335261c70d04921051c52287405fab23c97d64721e12368fe95df1290acf9"></a>HOUSE_STABLES_STEADWICK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa7fbefdd211c350bc003441182bca3e31" name="aaee3335261c70d04921051c52287405fa7fbefdd211c350bc003441182bca3e31"></a>HOUSE_STABLES_TULAREAN_FOREST&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa8f1a555a7b498a1931d3f76b163d9e5e" name="aaee3335261c70d04921051c52287405fa8f1a555a7b498a1931d3f76b163d9e5e"></a>HOUSE_STABLES_DEYJA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405face1c8c73e60154c77e0db22089c2507e" name="aaee3335261c70d04921051c52287405face1c8c73e60154c77e0db22089c2507e"></a>HOUSE_STABLES_BRACADA_DESERT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405faa2e0aa4129a8de37ced32fecde66121c" name="aaee3335261c70d04921051c52287405faa2e0aa4129a8de37ced32fecde66121c"></a>HOUSE_STABLES_TATALIA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa455c26eef2f1c4feac4b59de5d69a4ee" name="aaee3335261c70d04921051c52287405fa455c26eef2f1c4feac4b59de5d69a4ee"></a>HOUSE_STABLES_AVLEE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa982391a1172b05934cbd0c5e850d452b" name="aaee3335261c70d04921051c52287405fa982391a1172b05934cbd0c5e850d452b"></a>HOUSE_STABLES_PLACEHOLDER_1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405faef597e429f1b506c611a684341c350cb" name="aaee3335261c70d04921051c52287405faef597e429f1b506c611a684341c350cb"></a>HOUSE_STABLES_PLACEHOLDER_2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa087681939391134119cad2f51a216bc7" name="aaee3335261c70d04921051c52287405fa087681939391134119cad2f51a216bc7"></a>HOUSE_BOATS_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa9dd652f0ad10b32ec5b6ef782d395504" name="aaee3335261c70d04921051c52287405fa9dd652f0ad10b32ec5b6ef782d395504"></a>HOUSE_BOATS_ERATHIA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa812e6bccaf42f823eb5d509a76cbc60b" name="aaee3335261c70d04921051c52287405fa812e6bccaf42f823eb5d509a76cbc60b"></a>HOUSE_BOATS_TULAREAN_FOREST&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fadc5c282c916698c72983449be050427b" name="aaee3335261c70d04921051c52287405fadc5c282c916698c72983449be050427b"></a>HOUSE_BOATS_BRACADA_DESERT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405facaee9cc2072e7c4a346f5d823c9a3439" name="aaee3335261c70d04921051c52287405facaee9cc2072e7c4a346f5d823c9a3439"></a>HOUSE_BOATS_EVENMORN_ISLAND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa20d32b065989d7442adf1663d0112777" name="aaee3335261c70d04921051c52287405fa20d32b065989d7442adf1663d0112777"></a>HOUSE_BOATS_PIT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fadd879d25c841621ee1176bfbff522895" name="aaee3335261c70d04921051c52287405fadd879d25c841621ee1176bfbff522895"></a>HOUSE_BOATS_TATALIA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa5657c16474829d5357a1c0acc2b18c0c" name="aaee3335261c70d04921051c52287405fa5657c16474829d5357a1c0acc2b18c0c"></a>HOUSE_BOATS_AVLEE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa1f7d74262e4be50a2a697a10b3b93d69" name="aaee3335261c70d04921051c52287405fa1f7d74262e4be50a2a697a10b3b93d69"></a>HOUSE_BOATS_CELESTE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa517fdbf25070d09eee38927348933c15" name="aaee3335261c70d04921051c52287405fa517fdbf25070d09eee38927348933c15"></a>HOUSE_BOATS_PLACEHOLDER_1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa4fda89e1ff4113349e3751fe1056f977" name="aaee3335261c70d04921051c52287405fa4fda89e1ff4113349e3751fe1056f977"></a>HOUSE_BOATS_PLACEHOLDER_2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fad3a82624c63be5ff73f27e73a939b071" name="aaee3335261c70d04921051c52287405fad3a82624c63be5ff73f27e73a939b071"></a>HOUSE_TEMPLE_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa5989d2d3748c7da82a987f988950f2d7" name="aaee3335261c70d04921051c52287405fa5989d2d3748c7da82a987f988950f2d7"></a>HOUSE_TEMPLE_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405faabcc8f98ad5c4802559f93ea8a38bf59" name="aaee3335261c70d04921051c52287405faabcc8f98ad5c4802559f93ea8a38bf59"></a>HOUSE_TRAINING_HALL_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa756c441955de6ff77ed13016ac499fa4" name="aaee3335261c70d04921051c52287405fa756c441955de6ff77ed13016ac499fa4"></a>HOUSE_TRAINING_HALL_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa1a00b0c8e3e8de791dff398308597073" name="aaee3335261c70d04921051c52287405fa1a00b0c8e3e8de791dff398308597073"></a>HOUSE_TRAINING_HALL_STEADWICK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa1873d508c04172815844e11e3f8f3075" name="aaee3335261c70d04921051c52287405fa1873d508c04172815844e11e3f8f3075"></a>HOUSE_TRAINING_HALL_PIERPOINT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fada66601e675af4d6b72a903f05524690" name="aaee3335261c70d04921051c52287405fada66601e675af4d6b72a903f05524690"></a>HOUSE_TRAINING_HALL_CELESTE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa9e7086f5cc0d735dcd326aa54049192d" name="aaee3335261c70d04921051c52287405fa9e7086f5cc0d735dcd326aa54049192d"></a>HOUSE_TRAINING_HALL_PIT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fac2b62247208d238c1547f4a9103b72ef" name="aaee3335261c70d04921051c52287405fac2b62247208d238c1547f4a9103b72ef"></a>HOUSE_TRAINING_HALL_NIGHON&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fafba7311b9b3a8d9c36437caaa3f200eb" name="aaee3335261c70d04921051c52287405fafba7311b9b3a8d9c36437caaa3f200eb"></a>HOUSE_TRAINING_HALL_AVLEE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fabf2fa918c53e062572f19deaaa633921" name="aaee3335261c70d04921051c52287405fabf2fa918c53e062572f19deaaa633921"></a>HOUSE_TOWNHALL_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa7bfebb75fb14e7924c0fd749301c7818" name="aaee3335261c70d04921051c52287405fa7bfebb75fb14e7924c0fd749301c7818"></a>HOUSE_TAVERN_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa8b7eaff1b6b7ee406560d227b556d59c" name="aaee3335261c70d04921051c52287405fa8b7eaff1b6b7ee406560d227b556d59c"></a>HOUSE_TAVERN_STONE_CITY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa744994922d773638a2a8415f3ad46df5" name="aaee3335261c70d04921051c52287405fa744994922d773638a2a8415f3ad46df5"></a>HOUSE_BANK_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa2c6d0bbdcc6940409be4a3fd9c277129" name="aaee3335261c70d04921051c52287405fa2c6d0bbdcc6940409be4a3fd9c277129"></a>HOUSE_FIRE_GUILD_INITIATE_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fabf65ea9e1ae9f905d48e7bfe55d0cf3d" name="aaee3335261c70d04921051c52287405fabf65ea9e1ae9f905d48e7bfe55d0cf3d"></a>HOUSE_AIR_GUILD_INITIATE_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa60433f675280c37360ac0224ec25bbb7" name="aaee3335261c70d04921051c52287405fa60433f675280c37360ac0224ec25bbb7"></a>HOUSE_SPIRIT_GUILD_INITIATE_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa30051da3eb7524228161e20aa522e1ca" name="aaee3335261c70d04921051c52287405fa30051da3eb7524228161e20aa522e1ca"></a>HOUSE_BODY_GUILD_INITIATE_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa85b98ed177f3c460a36b24f9b76fbe98" name="aaee3335261c70d04921051c52287405fa85b98ed177f3c460a36b24f9b76fbe98"></a>HOUSE_BODY_GUILD_ERATHIA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405facc377c5086130991a905649b8e0c5c14" name="aaee3335261c70d04921051c52287405facc377c5086130991a905649b8e0c5c14"></a>HOUSE_DARK_GUILD_PIT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fae1747136a91dfef0f9d34c5a917e597d" name="aaee3335261c70d04921051c52287405fae1747136a91dfef0f9d34c5a917e597d"></a>HOUSE_SELF_GUILD_1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa490a83427aa793da273b22381dcb17cc" name="aaee3335261c70d04921051c52287405fa490a83427aa793da273b22381dcb17cc"></a>HOUSE_SELF_GUILD_2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fadc97ba55877497c162d7508196c30deb" name="aaee3335261c70d04921051c52287405fadc97ba55877497c162d7508196c30deb"></a>HOUSE_LORD_AND_JUDGE_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa7b16d082078654fe972ded0fe528dab0" name="aaee3335261c70d04921051c52287405fa7b16d082078654fe972ded0fe528dab0"></a>HOUSE_JAIL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa0f3ccdfd32cb4546f6a4b1a5b9161aaa" name="aaee3335261c70d04921051c52287405fa0f3ccdfd32cb4546f6a4b1a5b9161aaa"></a>HOUSE_JUDGE_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa8f49c7ee8ca774e67dc08bd5b4a3c07e" name="aaee3335261c70d04921051c52287405fa8f49c7ee8ca774e67dc08bd5b4a3c07e"></a>HOUSE_224_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa8bf00c30d7fc25fa8841b085b8f682ab" name="aaee3335261c70d04921051c52287405fa8bf00c30d7fc25fa8841b085b8f682ab"></a>HOUSE_225_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fae3810e60b7fda600f1ca43f04dd866f7" name="aaee3335261c70d04921051c52287405fae3810e60b7fda600f1ca43f04dd866f7"></a>HOUSE_238_EMERALD_ISLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa7d665a6d24d215c2a518df417819798e" name="aaee3335261c70d04921051c52287405fa7d665a6d24d215c2a518df417819798e"></a>HOUSE_466_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fad55ac60141d231f8e1c783c3df086f06" name="aaee3335261c70d04921051c52287405fad55ac60141d231f8e1c783c3df086f06"></a>HOUSE_467_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa34307be8830fdf9cc2eecd8831e2df56" name="aaee3335261c70d04921051c52287405fa34307be8830fdf9cc2eecd8831e2df56"></a>HOUSE_468_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fad7fb84cbfe4d1543e52a6a48c24223dc" name="aaee3335261c70d04921051c52287405fad7fb84cbfe4d1543e52a6a48c24223dc"></a>HOUSE_472_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa76343bffcd56ab7499f715eddb83cd4b" name="aaee3335261c70d04921051c52287405fa76343bffcd56ab7499f715eddb83cd4b"></a>HOUSE_488_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa6310298c6c9782c9db5c5d675f0995a2" name="aaee3335261c70d04921051c52287405fa6310298c6c9782c9db5c5d675f0995a2"></a>HOUSE_489_HARMONDALE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405faa25ecfbf4a601b4a3cf04726eb4bc1bc" name="aaee3335261c70d04921051c52287405faa25ecfbf4a601b4a3cf04726eb4bc1bc"></a>HOUSE_THRONEROOM_WIN_GOOD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aaee3335261c70d04921051c52287405fa3b2bec7e03472a18e73e6600d1440199" name="aaee3335261c70d04921051c52287405fa3b2bec7e03472a18e73e6600d1440199"></a>HOUSE_THRONEROOM_WIN_EVIL&#160;</td><td class="fielddoc"></td></tr>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
 </table>
-
-</div>
-</div>
-<a id="a6e9b41a32161066fa074c8e5b1e15b69" name="a6e9b41a32161066fa074c8e5b1e15b69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e9b41a32161066fa074c8e5b1e15b69">&#9670;&#160;</a></span>HouseSoundID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="UIHouses_8h.html#a6e9b41a32161066fa074c8e5b1e15b69">HouseSoundID</a> : uint32_t</td>
-        </tr>
-      </table>
 </div><div class="memdoc">
+<p >Type of NPC you can have dialogue with inside house. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6e9b41a32161066fa074c8e5b1e15b69a26571d4ab21f7594c8691d81c10f8d58" name="a6e9b41a32161066fa074c8e5b1e15b69a26571d4ab21f7594c8691d81c10f8d58"></a>HouseSound_Greeting&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a6e9b41a32161066fa074c8e5b1e15b69a9b35e43f24798b7a054f3165dbeffad5" name="a6e9b41a32161066fa074c8e5b1e15b69a9b35e43f24798b7a054f3165dbeffad5"></a>HouseSound_NotEnoughMoney&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a6e9b41a32161066fa074c8e5b1e15b69a6f5bf798f5ad28c66e3207b4056205ae" name="a6e9b41a32161066fa074c8e5b1e15b69a6f5bf798f5ad28c66e3207b4056205ae"></a>HouseSound_Greeting_2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a6e9b41a32161066fa074c8e5b1e15b69a9037adbf118668e4ba5c4fbe69cf3cd5" name="a6e9b41a32161066fa074c8e5b1e15b69a9037adbf118668e4ba5c4fbe69cf3cd5"></a>HouseSound_Goodbye&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9faa43960b72a34903c1b46437828914aff58d829104537858f5182c6ae79107c" name="a9faa43960b72a34903c1b46437828914aff58d829104537858f5182c6ae79107c"></a>HOUSE_PROPRIETOR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9faa43960b72a34903c1b46437828914a2f1de6576d71eff54ce1ccbee715f00f" name="a9faa43960b72a34903c1b46437828914a2f1de6576d71eff54ce1ccbee715f00f"></a>HOUSE_NPC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9faa43960b72a34903c1b46437828914a78defe546c6239800dff8e59073d356f" name="a9faa43960b72a34903c1b46437828914a78defe546c6239800dff8e59073d356f"></a>HOUSE_TRANSITION&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9611aa004e0f31fd99be43d980eb28d5" name="a9611aa004e0f31fd99be43d980eb28d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9611aa004e0f31fd99be43d980eb28d5">&#9670;&#160;</a></span>AlchemistDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AlchemistDialog </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac6a6b5f0e1883960347080bc9e45f894" name="ac6a6b5f0e1883960347080bc9e45f894"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6a6b5f0e1883960347080bc9e45f894">&#9670;&#160;</a></span>ArmorShopDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ArmorShopDialog </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a367ca93a4c306e3d85e764d52a71a2d2" name="a367ca93a4c306e3d85e764d52a71a2d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a367ca93a4c306e3d85e764d52a71a2d2">&#9670;&#160;</a></span>BackToHouseMenu()</h2>
 
@@ -403,16 +206,17 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6a8b5b55aa413db9c82a54e32b0e6ca6" name="a6a8b5b55aa413db9c82a54e32b0e6ca6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a8b5b55aa413db9c82a54e32b0e6ca6">&#9670;&#160;</a></span>BankDialog()</h2>
+<a id="a809e0009f8310b87192d91e636d58ee5" name="a809e0009f8310b87192d91e636d58ee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809e0009f8310b87192d91e636d58ee5">&#9670;&#160;</a></span>createHouseUI()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void BankDialog </td>
+          <td class="memname">void createHouseUI </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="UIHouseEnums_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a>&#160;</td>
+          <td class="paramname"><em>houseId</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -420,59 +224,33 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a29eb100de9b441858b5e1289dd0d958e" name="a29eb100de9b441858b5e1289dd0d958e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29eb100de9b441858b5e1289dd0d958e">&#9670;&#160;</a></span>EnterHouse()</h2>
+<a id="ad6c0486935e2c520b805471c35d21f46" name="ad6c0486935e2c520b805471c35d21f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6c0486935e2c520b805471c35d21f46">&#9670;&#160;</a></span>enterHouse()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool EnterHouse </td>
+          <td class="memname">bool enterHouse </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="UIHouseEnums_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a>&#160;</td>
           <td class="paramname"><em>uHouseID</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x44622E </dd></dl>
 
 </div>
 </div>
-<a id="a34fb0d2c92f963a57d7568e4293a5a20" name="a34fb0d2c92f963a57d7568e4293a5a20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34fb0d2c92f963a57d7568e4293a5a20">&#9670;&#160;</a></span>GetTravelTimeTransportDays()</h2>
+<a id="ab50814e24f412098388cc3a206867ea1" name="ab50814e24f412098388cc3a206867ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50814e24f412098388cc3a206867ea1">&#9670;&#160;</a></span>houseDialogPressEscape()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int GetTravelTimeTransportDays </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>schedule_id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>New function. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">schedule_id</td><td>Index to transport_schedule.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of days travel by transport will take with hireling modifiers. </dd></dl>
-
-</div>
-</div>
-<a id="a7fbb26f3fd48a15ffdcb709219220a74" name="a7fbb26f3fd48a15ffdcb709219220a74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fbb26f3fd48a15ffdcb709219220a74">&#9670;&#160;</a></span>GuildDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GuildDialog </td>
+          <td class="memname">bool houseDialogPressEscape </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -482,218 +260,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a719e7a9d096a2515e32cc2f594b027f7" name="a719e7a9d096a2515e32cc2f594b027f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a719e7a9d096a2515e32cc2f594b027f7">&#9670;&#160;</a></span>HouseDialogPressCloseBtn()</h2>
+<a id="ad54f0f46c4baa7db59a42190ce9fcc01" name="ad54f0f46c4baa7db59a42190ce9fcc01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54f0f46c4baa7db59a42190ce9fcc01">&#9670;&#160;</a></span>playHouseSound()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int HouseDialogPressCloseBtn </td>
+          <td class="memname">void playHouseSound </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aaef68534ab4d38fece496837509e8dd7" name="aaef68534ab4d38fece496837509e8dd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaef68534ab4d38fece496837509e8dd7">&#9670;&#160;</a></span>HouseUI_CheckIfPlayerCanInteract()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool HouseUI_CheckIfPlayerCanInteract </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9526e72e0e7c2cd241371b27129c4cdc" name="a9526e72e0e7c2cd241371b27129c4cdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9526e72e0e7c2cd241371b27129c4cdc">&#9670;&#160;</a></span>InitializaDialogueOptions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitializaDialogueOptions </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="Events2D_8h.html#a1e6330273dfb88062f9ac99d61322e80">BuildingType</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2cd8d335ba0f4412b26d44e32543441d" name="a2cd8d335ba0f4412b26d44e32543441d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cd8d335ba0f4412b26d44e32543441d">&#9670;&#160;</a></span>InitializaDialogueOptions_Shops()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitializaDialogueOptions_Shops </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="Events2D_8h.html#a1e6330273dfb88062f9ac99d61322e80">BuildingType</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac550075052fced91028753139e30ac47" name="ac550075052fced91028753139e30ac47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac550075052fced91028753139e30ac47">&#9670;&#160;</a></span>InitializaDialogueOptions_Tavern()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitializaDialogueOptions_Tavern </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="Events2D_8h.html#a1e6330273dfb88062f9ac99d61322e80">BuildingType</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa1ffa34217d6e8c77a5d011259a493e6" name="aa1ffa34217d6e8c77a5d011259a493e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1ffa34217d6e8c77a5d011259a493e6">&#9670;&#160;</a></span>InitializeBuildingResidents()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitializeBuildingResidents </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afe12e4594f668c5e407da94cc554cad4" name="afe12e4594f668c5e407da94cc554cad4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe12e4594f668c5e407da94cc554cad4">&#9670;&#160;</a></span>IsTravelAvailable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsTravelAvailable </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a1</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a94fd0881c896a6e2864b9b8a7c14c851" name="a94fd0881c896a6e2864b9b8a7c14c851"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94fd0881c896a6e2864b9b8a7c14c851">&#9670;&#160;</a></span>JailDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void JailDialog </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae4ce274e60dd3f8b559423cbb991361d" name="ae4ce274e60dd3f8b559423cbb991361d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4ce274e60dd3f8b559423cbb991361d">&#9670;&#160;</a></span>MagicShopDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MagicShopDialog </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a245c59f82d964d80c2f0ed2b246fb637" name="a245c59f82d964d80c2f0ed2b246fb637"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a245c59f82d964d80c2f0ed2b246fb637">&#9670;&#160;</a></span>MercenaryGuildDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MercenaryGuildDialog </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Mercenary guild in MM6. </p>
-<dl class="section user"><dt>Original binary offset:</dt><dd>0x004B6478. </dd></dl>
-
-</div>
-</div>
-<a id="a50274f38af972747404b73f4c835a51d" name="a50274f38af972747404b73f4c835a51d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50274f38af972747404b73f4c835a51d">&#9670;&#160;</a></span>OnSelectShopDialogueOption()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void OnSelectShopDialogueOption </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="GUIDialogues_8h.html#afcd7885d9ec6583fa04d9e8f0f641d00">DIALOGUE_TYPE</a>&#160;</td>
-          <td class="paramname"><em>option</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af131a9157367a2d529da9174e1319534" name="af131a9157367a2d529da9174e1319534"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af131a9157367a2d529da9174e1319534">&#9670;&#160;</a></span>PlayHouseSound()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PlayHouseSound </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>uHouseID</em>, </td>
+          <td class="paramtype"><a class="el" href="UIHouseEnums_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a>&#160;</td>
+          <td class="paramname"><em>houseID</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="UIHouses_8h.html#a6e9b41a32161066fa074c8e5b1e15b69">HouseSoundID</a>&#160;</td>
-          <td class="paramname"><em>sound</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="UIHouseEnums_8h.html#af4c8362015fce1a0c3c9f9a7924dcada">HouseSoundType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -702,37 +285,40 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x4B1E92 </dd></dl>
 
 </div>
 </div>
-<a id="ad5340de19eef94b2e764511479a8e612" name="ad5340de19eef94b2e764511479a8e612"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5340de19eef94b2e764511479a8e612">&#9670;&#160;</a></span>PrepareHouse()</h2>
+<a id="a58b665d1bdb988484c3412007e6fb261" name="a58b665d1bdb988484c3412007e6fb261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b665d1bdb988484c3412007e6fb261">&#9670;&#160;</a></span>prepareHouse()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void PrepareHouse </td>
+          <td class="memname">void prepareHouse </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="UIHouses_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="UIHouseEnums_8h.html#aaee3335261c70d04921051c52287405f">HOUSE_ID</a>&#160;</td>
           <td class="paramname"><em>house</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x44606A </dd></dl>
 
 </div>
 </div>
-<a id="a24aa347826f0bbf037cee75945dec5d1" name="a24aa347826f0bbf037cee75945dec5d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24aa347826f0bbf037cee75945dec5d1">&#9670;&#160;</a></span>SimpleHouseDialog()</h2>
+<a id="a1ab0780802cc2e4149a29016c43050ea" name="a1ab0780802cc2e4149a29016c43050ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab0780802cc2e4149a29016c43050ea">&#9670;&#160;</a></span>selectHouseNPCDialogueOption()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SimpleHouseDialog </td>
+          <td class="memname">void selectHouseNPCDialogueOption </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="GUIDialogues_8h.html#afcd7885d9ec6583fa04d9e8f0f641d00">DIALOGUE_TYPE</a>&#160;</td>
+          <td class="paramname"><em>topic</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -740,112 +326,47 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a85ed65d74da96b17f506a5b39248fc84" name="a85ed65d74da96b17f506a5b39248fc84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85ed65d74da96b17f506a5b39248fc84">&#9670;&#160;</a></span>TavernDialog()</h2>
+<a id="a2aefd8af8fa5224b6a82bda2f0ae3018" name="a2aefd8af8fa5224b6a82bda2f0ae3018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aefd8af8fa5224b6a82bda2f0ae3018">&#9670;&#160;</a></span>selectProprietorDialogueOption()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TavernDialog </td>
+          <td class="memname">void selectProprietorDialogueOption </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="GUIDialogues_8h.html#afcd7885d9ec6583fa04d9e8f0f641d00">DIALOGUE_TYPE</a>&#160;</td>
+          <td class="paramname"><em>option</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x4BCACC </dd></dl>
 
 </div>
 </div>
-<a id="a3bf47183b95e701104b8fede3df5a993" name="a3bf47183b95e701104b8fede3df5a993"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bf47183b95e701104b8fede3df5a993">&#9670;&#160;</a></span>TempleDialog()</h2>
+<a id="a0bfbd1d898fd51368b8eb7f1bfbbd43e" name="a0bfbd1d898fd51368b8eb7f1bfbbd43e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfbd1d898fd51368b8eb7f1bfbbd43e">&#9670;&#160;</a></span>updateHouseNPCTopics()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TempleDialog </td>
+          <td class="memname">void updateHouseNPCTopics </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>npc</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="afdce028ca6920ad78a2a8f39fb093b04" name="afdce028ca6920ad78a2a8f39fb093b04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdce028ca6920ad78a2a8f39fb093b04">&#9670;&#160;</a></span>TownHallDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TownHallDialog </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a508cd0b3e4de36620322bbefc36c56cf" name="a508cd0b3e4de36620322bbefc36c56cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a508cd0b3e4de36620322bbefc36c56cf">&#9670;&#160;</a></span>TrainingDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TrainingDialog </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a051a9386ff5f507d34162a116de3f434" name="a051a9386ff5f507d34162a116de3f434"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a051a9386ff5f507d34162a116de3f434">&#9670;&#160;</a></span>TravelByTransport()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TravelByTransport </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af61c121dc37dbb99e2b840b538ec6f1e" name="af61c121dc37dbb99e2b840b538ec6f1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af61c121dc37dbb99e2b840b538ec6f1e">&#9670;&#160;</a></span>WeaponShopDialog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void WeaponShopDialog </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x4B4224 </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a6ac0a417e06089051fc6f8852277d81b" name="a6ac0a417e06089051fc6f8852277d81b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ac0a417e06089051fc6f8852277d81b">&#9670;&#160;</a></span>_591428_endcap</h2>
+<a id="ae99712b947a6851afa422aeb4d0a37ad" name="ae99712b947a6851afa422aeb4d0a37ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99712b947a6851afa422aeb4d0a37ad">&#9670;&#160;</a></span>_591428_endcap</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -854,7 +375,29 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">class <a class="el" href="classImage.html">Image</a>* _591428_endcap</td>
+          <td class="memname">class <a class="el" href="classGraphicsImage.html">GraphicsImage</a>* _591428_endcap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a186e5864d5cfc7e4f2f6d3d756216b43" name="a186e5864d5cfc7e4f2f6d3d756216b43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a186e5864d5cfc7e4f2f6d3d756216b43">&#9670;&#160;</a></span>currentHouseNpc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentHouseNpc</td>
         </tr>
       </table>
   </td>
@@ -888,8 +431,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a1057a5f41f2b75913de9a61d9b646ce3" name="a1057a5f41f2b75913de9a61d9b646ce3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1057a5f41f2b75913de9a61d9b646ce3">&#9670;&#160;</a></span>dword_591080</h2>
+<a id="ab315df385cac435b083f113ce91eb9a4" name="ab315df385cac435b083f113ce91eb9a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab315df385cac435b083f113ce91eb9a4">&#9670;&#160;</a></span>houseNpcs</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -898,7 +441,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int dword_591080</td>
+          <td class="memname">std::vector&lt;<a class="el" href="structHouseNpcDesc.html">HouseNpcDesc</a>&gt; houseNpcs</td>
         </tr>
       </table>
   </td>
@@ -920,7 +463,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="Events2D_8h.html#a1e6330273dfb88062f9ac99d61322e80">BuildingType</a> in_current_building_type</td>
+          <td class="memname"><a class="el" href="BuildingTable_8h.html#a1e6330273dfb88062f9ac99d61322e80">BuildingType</a> in_current_building_type</td>
         </tr>
       </table>
   </td>
@@ -932,8 +475,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="afabe273f991a402547b13229063de7a4" name="afabe273f991a402547b13229063de7a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afabe273f991a402547b13229063de7a4">&#9670;&#160;</a></span>uHouse_ExitPic</h2>
+<a id="a7bccd008c0f617f9cad0bf5892d89a31" name="a7bccd008c0f617f9cad0bf5892d89a31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bccd008c0f617f9cad0bf5892d89a31">&#9670;&#160;</a></span>itemAmountInShop</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -942,12 +485,188 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int uHouse_ExitPic</td>
+          <td class="memname">const <a class="el" href="classIndexedArray.html">IndexedArray</a>&lt;int, <a class="el" href="BuildingTable_8h.html#a1e6330273dfb88062f9ac99d61322e80a4e88bbd32e5a5de530f70a87fc669b1d">BUILDING_WEAPON_SHOP</a>, <a class="el" href="BuildingTable_8h.html#a1e6330273dfb88062f9ac99d61322e80a8202bb3067b3dd43e620004f98f368bc">BUILDING_DARK_GUILD</a>&gt; itemAmountInShop</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afca7bc064d88227f64fa87f84f66d632" name="afca7bc064d88227f64fa87f84f66d632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afca7bc064d88227f64fa87f84f66d632">&#9670;&#160;</a></span>pAnimatedRooms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;const <a class="el" href="structHouseAnimDescr.html">HouseAnimDescr</a>, 196&gt; pAnimatedRooms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0688751906262ec5c76c0499c2f4e156" name="a0688751906262ec5c76c0499c2f4e156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0688751906262ec5c76c0499c2f4e156">&#9670;&#160;</a></span>SIDE_TEXT_BOX_BODY_TEXT_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SIDE_TEXT_BOX_BODY_TEXT_HEIGHT = 174</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe3b2ac50cf54ef16e90f17a357359dd" name="abe3b2ac50cf54ef16e90f17a357359dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3b2ac50cf54ef16e90f17a357359dd">&#9670;&#160;</a></span>SIDE_TEXT_BOX_BODY_TEXT_OFFSET</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SIDE_TEXT_BOX_BODY_TEXT_OFFSET = 138</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a131401fb3a5cd8e2cc270046da6d41dc" name="a131401fb3a5cd8e2cc270046da6d41dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a131401fb3a5cd8e2cc270046da6d41dc">&#9670;&#160;</a></span>SIDE_TEXT_BOX_MAX_SPACING</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SIDE_TEXT_BOX_MAX_SPACING = 32</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4056c3e0be63e7402c51dd00bc892847" name="a4056c3e0be63e7402c51dd00bc892847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4056c3e0be63e7402c51dd00bc892847">&#9670;&#160;</a></span>SIDE_TEXT_BOX_POS_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SIDE_TEXT_BOX_POS_X = 484</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ac98772ed6f73410c7939b964bafa75" name="a1ac98772ed6f73410c7939b964bafa75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac98772ed6f73410c7939b964bafa75">&#9670;&#160;</a></span>SIDE_TEXT_BOX_POS_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SIDE_TEXT_BOX_POS_Y = 113</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ab05c928d45c21f51cf1386f20dcdac" name="a0ab05c928d45c21f51cf1386f20dcdac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab05c928d45c21f51cf1386f20dcdac">&#9670;&#160;</a></span>SIDE_TEXT_BOX_POS_Z</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SIDE_TEXT_BOX_POS_Z = 334</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2975c9e88583d17df414eee5515a3751" name="a2975c9e88583d17df414eee5515a3751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2975c9e88583d17df414eee5515a3751">&#9670;&#160;</a></span>SIDE_TEXT_BOX_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SIDE_TEXT_BOX_WIDTH = 144</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

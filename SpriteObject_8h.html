@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>World of Might and Magic: src/Engine/Objects/SpriteObject.h File Reference</title>
+<title>OpenEnroth: src/Engine/Objects/SpriteObject.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">World of Might and Magic<span id="projectnumber">&#160;4d2d173</span>
+   <div id="projectname">OpenEnroth<span id="projectnumber">&#160;e029f51</span>
    </div>
   </td>
  </tr>
@@ -82,8 +82,12 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="Items_8h.html">Engine/Objects/Items.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="SpriteObjectType_8h.html">Engine/Objects/SpriteObjectType.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Actor_8h.html">Engine/Objects/Actor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SpriteObjectEnums_8h.html">Engine/Objects/SpriteObjectEnums.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ActorEnums_8h.html">Engine/Objects/ActorEnums.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SpellEnums_8h.html">Engine/Spells/SpellEnums.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Pid_8h.html">Engine/Pid.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Color_8h.html">Library/Color/Color.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Vec_8h.html">Utility/Geometry/Vec.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -94,12 +98,12 @@ Classes</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:aaba2939e1540dd4a568dbcdb4591117b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpriteObject_8h.html#aaba2939e1540dd4a568dbcdb4591117b">CompactLayingItemsList</a> ()</td></tr>
 <tr class="separator:aaba2939e1540dd4a568dbcdb4591117b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bde0bc236e1ef5fca63b0c2832d3dc6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpriteObject_8h.html#a6bde0bc236e1ef5fca63b0c2832d3dc6">_46BFFA_update_spell_fx</a> (unsigned int uLayingItemID, signed int pid)</td></tr>
-<tr class="separator:a6bde0bc236e1ef5fca63b0c2832d3dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9764142f3e6f9e522796585ce90f6d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpriteObject_8h.html#ad9764142f3e6f9e522796585ce90f6d3">Apply_Spell_Sprite_Damage</a> (unsigned int uLayingItemID, signed int pid)</td></tr>
-<tr class="separator:ad9764142f3e6f9e522796585ce90f6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15a65ec19265009a1699566111bb60a5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpriteObject_8h.html#a15a65ec19265009a1699566111bb60a5">sub_46DEF2</a> (signed int pid, unsigned int uLayingItemID)</td></tr>
-<tr class="separator:a15a65ec19265009a1699566111bb60a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f504ebb21bca2e33450d1f3a169410"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpriteObject_8h.html#ac0f504ebb21bca2e33450d1f3a169410">processSpellImpact</a> (unsigned int uLayingItemID, <a class="el" href="classPid.html">Pid</a> pid)</td></tr>
+<tr class="separator:ac0f504ebb21bca2e33450d1f3a169410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05792bf427333387c886d99477eab9b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpriteObject_8h.html#a05792bf427333387c886d99477eab9b8">applySpellSpriteDamage</a> (unsigned int uLayingItemID, <a class="el" href="classPid.html">Pid</a> pid)</td></tr>
+<tr class="separator:a05792bf427333387c886d99477eab9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d0e34156d1f10e9c6b68a09e7f8a4f2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpriteObject_8h.html#a1d0e34156d1f10e9c6b68a09e7f8a4f2">collideWithActor</a> (unsigned int uLayingItemID, <a class="el" href="classPid.html">Pid</a> pid)</td></tr>
+<tr class="separator:a1d0e34156d1f10e9c6b68a09e7f8a4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -107,14 +111,14 @@ Variables</h2></td></tr>
 <tr class="separator:aceba8dd0b2ca450110c9841f8e87aed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a6bde0bc236e1ef5fca63b0c2832d3dc6" name="a6bde0bc236e1ef5fca63b0c2832d3dc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bde0bc236e1ef5fca63b0c2832d3dc6">&#9670;&#160;</a></span>_46BFFA_update_spell_fx()</h2>
+<a id="a05792bf427333387c886d99477eab9b8" name="a05792bf427333387c886d99477eab9b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05792bf427333387c886d99477eab9b8">&#9670;&#160;</a></span>applySpellSpriteDamage()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool _46BFFA_update_spell_fx </td>
+          <td class="memname">void applySpellSpriteDamage </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>uLayingItemID</em>, </td>
@@ -122,7 +126,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">signed int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
           <td class="paramname"><em>pid</em>&#160;</td>
         </tr>
         <tr>
@@ -132,17 +136,18 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x43A97E </dd></dl>
 
 </div>
 </div>
-<a id="ad9764142f3e6f9e522796585ce90f6d3" name="ad9764142f3e6f9e522796585ce90f6d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9764142f3e6f9e522796585ce90f6d3">&#9670;&#160;</a></span>Apply_Spell_Sprite_Damage()</h2>
+<a id="a1d0e34156d1f10e9c6b68a09e7f8a4f2" name="a1d0e34156d1f10e9c6b68a09e7f8a4f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d0e34156d1f10e9c6b68a09e7f8a4f2">&#9670;&#160;</a></span>collideWithActor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Apply_Spell_Sprite_Damage </td>
+          <td class="memname">unsigned int collideWithActor </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>uLayingItemID</em>, </td>
@@ -150,7 +155,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">signed int&#160;</td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
           <td class="paramname"><em>pid</em>&#160;</td>
         </tr>
         <tr>
@@ -160,6 +165,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x46DEF2 </dd></dl>
 
 </div>
 </div>
@@ -180,23 +186,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a15a65ec19265009a1699566111bb60a5" name="a15a65ec19265009a1699566111bb60a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15a65ec19265009a1699566111bb60a5">&#9670;&#160;</a></span>sub_46DEF2()</h2>
+<a id="ac0f504ebb21bca2e33450d1f3a169410" name="ac0f504ebb21bca2e33450d1f3a169410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f504ebb21bca2e33450d1f3a169410">&#9670;&#160;</a></span>processSpellImpact()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int sub_46DEF2 </td>
+          <td class="memname">bool processSpellImpact </td>
           <td>(</td>
-          <td class="paramtype">signed int&#160;</td>
-          <td class="paramname"><em>pid</em>, </td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>uLayingItemID</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>uLayingItemID</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classPid.html">Pid</a>&#160;</td>
+          <td class="paramname"><em>pid</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -205,6 +211,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section user"><dt>Original binary offset:</dt><dd>0x46BFFA </dd></dl>
 
 </div>
 </div>
